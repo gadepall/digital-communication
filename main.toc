@@ -1,0 +1,16 @@
+\vskip -8pt
+\contentsline {schapter}{Introduction}{iii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Two Dice}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sum of Independent Random Variables}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Random Numbers}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Uniform Random Numbers}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Central Limit Theorem}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}From Uniform to Other}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Triangular Distribution}{12}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Maximum Likelihood Detection: BPSK}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Maximum Likelihood}{13}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Transformation of Random Variables}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Gaussian to Other}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Conditional Probability}{16}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Bivariate Random Variables: FSK}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Two Dimensions}{17}{section.5.1}%

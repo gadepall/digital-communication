@@ -1,0 +1,118 @@
+First we find orthogonal vectors $\vec{m_1}$ and $\vec{m_2}$ to the given plane $\vec{n}$. Let, $\vec{m} = \myvec{a\\b\\c}$, then
+\begin{align}
+\vec{m^T}\vec{n} &= 0 \nonumber \\
+\implies \myvec{a & b & c} \myvec{2 \\ -3 \\ 1} &= 0 \nonumber \\
+\implies 2a-3b+c &= 0 \label{eq:solutions/4/45/2/4/eq:eq_1}
+\end{align}
+By substituting $a=1;b=0$ in \eqref{eq:solutions/4/45/2/4/eq:eq_1},
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_2}
+    \vec{m_1} = \myvec{1 \\ 0 \\ -2} 
+\end{align}
+By substituting $a=0;b=1$ in \eqref{eq:solutions/4/45/2/4/eq:eq_1},
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_3}
+    \vec{m_2} = \myvec{0 \\ 1 \\ 3} 
+\end{align}
+Now $\vec{M}$ can be written as,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_4}
+    \vec{M} = \myvec{\vec{m_1} & \vec{m_2}} = \myvec{1 & 0 \\ 0 & 1 \\ -2 & 3}
+\end{align}
+such that solving $\vec{M}\vec{x}=\vec{b}$ gives the required solution. 
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_5}
+    \implies \myvec{1 & 0 \\ 0 & 1 \\ -2 & 3}\vec{x} = \myvec{1 \\ 0 \\ 2}
+\end{align}
+Applying Singular Value Decomposition on $\vec{M}$,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_6}
+    \vec{M}=\vec{U}\vec{S}\vec{V}^T
+\end{align}
+Where the columns of $\vec{V}$ are the eigenvectors of $\vec{M}^T\vec{M}$, the columns of $\vec{U}$ are the eigenvectors of $\vec{M}\vec{M}^T$ and $\vec{S}$ is diagonal matrix of singular values of $\vec{M}^T\vec{M}$.
+\begin{align}
+    \vec{M}^T \vec{M} &= \myvec{5 & -6 \\ -6 & 10}\label{eq:solutions/4/45/2/4/eq:eq_7} \\
+    \vec{M} \vec{M}^T &= \myvec{1 & 0 & -2\\ 0 & 1 & 3 \\ -2 & 3 & 13} \label{eq:solutions/4/45/2/4/eq:eq_8}
+\end{align}
+From \eqref{eq:solutions/4/45/2/4/eq:eq_5} and \eqref{eq:solutions/4/45/2/4/eq:eq_6},
+\begin{align}
+    \vec{U} \vec{S} \vec{V}^T \vec{x} = \vec{b} \nonumber \\
+    \implies \vec{x} = \vec{V} \vec{S_+} \vec{U^T} \vec{b} \label{eq:solutions/4/45/2/4/eq:eq_9}
+\end{align}
+Where $\vec{S_+}$ is Moore-Penrose Pseudo-Inverse of $\vec{S}$. Calculating eigenvalues of $\vec{M}\vec{M}^T$,
+\begin{align}
+    \mydet{\vec{M} \vec{M}^T - \lambda \vec{I}} = 0 \nonumber \\
+    \implies \mydet{1-\lambda & 0 & -2 \\ 0 & 1-\lambda & 3 \\ -2 & 3 & 13-\lambda} &= 0 \nonumber \\
+    \implies \lambda^3 + 15\lambda^2 - 14\lambda =0 \nonumber
+\end{align}
+Hence eigenvalues of $\vec{M}\vec{M}^T$ are,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_10}
+    \lambda_1 = 14; \quad \lambda_2 = 1; \quad \lambda_3 =0
+\end{align}
+And the corresponding eigenvectors are,
+\begin{align}
+    \vec{u_1} = \myvec{\frac{-2}{13} \\ \frac{3}{13} \\ 1}; \quad \vec{u_2} = \myvec{\frac{3}{2} \\ 1 \\ 0}; \quad
+    \vec{u_3} = \myvec{2 \\ -3 \\ 1} \label{eq:solutions/4/45/2/4/eq:eq_11} 
+\end{align}
+Normalizing the above eigenvectors,
+\begin{align} 
+    \vec{u_1} = \myvec{\frac{-2}{\sqrt{182}} \\ \frac{3}{\sqrt{182}} \\ \frac{13}{\sqrt{182}}}; \quad 
+    \vec{u_2} = \myvec{\frac{3}{\sqrt{13}} \\ \frac{2}{\sqrt{13}} \\ 0}; \quad
+    \vec{u_3} = \myvec{\frac{2}{\sqrt{14}} \\ \frac{-3}{\sqrt{14}} \\ \frac{1}{\sqrt{14}}} \label{eq:solutions/4/45/2/4/eq:eq_12}
+\end{align}
+From \eqref{eq:solutions/4/45/2/4/eq:eq_12} we obtain $\vec{U}$ as,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_13}
+    \vec{U} = \myvec{\frac{-2}{\sqrt{182}} & \frac{3}{\sqrt{13}} & \frac{2}{\sqrt{14}} \\ \frac{3}{\sqrt{182}} & \frac{2}{\sqrt{13}} & \frac{-3}{\sqrt{14}} \\ \frac{13}{\sqrt{182}} & 0 & \frac{1}{\sqrt{14}}}
+\end{align}
+Using values from \eqref{eq:solutions/4/45/2/4/eq:eq_10},
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_14}
+    \vec{S} = \myvec{\sqrt{14} & 0 \\ 0 & 1 \\ 0 & 0} 
+\end{align}
+Calculating the eigenvalues of $\vec{M}^T\vec{M}$,
+\begin{align}
+    \mydet{\vec{M}^T\vec{M} - \lambda \vec{I}} = 0 \nonumber \\
+    \implies \mydet{5-\lambda & -6 \\ -6 & 10-\lambda} &= 0 \nonumber \\
+    \implies \lambda^2 - 15\lambda + 14 &= 0 \nonumber
+\end{align}
+Hence, eigenvalues of $\vec{M}^T\vec{M}$ are,
+\begin{align}
+    \lambda_4 = 14; \quad \lambda_5 = 1 \nonumber
+\end{align}
+And the corresponding eigenvectors are,
+\begin{align}
+    \vec{v}_1 = \myvec{\frac{-2}{3} \\ 1}; \quad 
+    \vec{v}_2 = \myvec{\frac{3}{2} \\ 1} \nonumber
+    \intertext{Normalizing the above eigenvectors,}
+    \vec{v}_1 = \myvec{\frac{-2}{\sqrt{13}} \\ \frac{3}{\sqrt{13}}}; \quad 
+    \vec{v}_2 = \myvec{\frac{3}{\sqrt{13}} \\ \frac{2}{\sqrt{13}}} \label{eq:solutions/4/45/2/4/eq:eq_15}
+\end{align}
+From\eqref{eq:solutions/4/45/2/4/eq:eq_15} we obtain $\vec{V}$ as,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_16}
+    \vec{V} = \myvec{\frac{-2}{\sqrt{13}} & \frac{3}{\sqrt{13}} \\ \frac{3}{\sqrt{13}} & \frac{2}{\sqrt{13}}}
+\end{align}
+From \eqref{eq:solutions/4/45/2/4/eq:eq_6} we get the Singular Value Decomposition of $\vec{M}$,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_17}
+    \vec{M} = \myvec{\frac{-2}{\sqrt{182}} & \frac{3}{\sqrt{13}} & \frac{2}{\sqrt{14}} \\ \frac{3}{\sqrt{182}} & \frac{2}{\sqrt{13}} & \frac{-3}{\sqrt{14}} \\ \frac{13}{\sqrt{182}} & 0 & \frac{1}{\sqrt{14}}} \myvec{\sqrt{14} & 0 \\ 0 & 1 \\ 0 & 0} \myvec{\frac{-2}{\sqrt{13}} & \frac{3}{\sqrt{13}} \\ \frac{3}{\sqrt{13}} & \frac{2}{\sqrt{13}}}^T
+\end{align}
+Moore-Penrose Pseudo inverse of $\vec{S}$ is given by,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_18}
+    \vec{S_+} = \myvec{\frac{1}{\sqrt{14}} & 0 & 0 \\ 0 & 1 & 0}
+\end{align}
+From \eqref{eq:solutions/4/45/2/4/eq:eq_9},
+\begin{align}
+    \vec{U}^T\vec{b} &= \myvec{\frac{12\sqrt{2}}{\sqrt{91}} \\ 
+    \frac{3}{\sqrt{13}} \\ \frac{2\sqrt{2}}{7}} \nonumber \\
+    \vec{S_+}\vec{U}^T\vec{b} &= \myvec{\frac{12}{7\sqrt{13}} \\ \frac{3}{\sqrt{13}}} \nonumber \\
+    \vec{x} = \vec{V}\vec{S_+}\vec{U}^T\vec{b} &= \myvec{\frac{3}{7} \\ \frac{6}{7}} \label{eq:solutions/4/45/2/4/eq:eq_19}
+\end{align}
+To verify the solution obtained from \eqref{eq:solutions/4/45/2/4/eq:eq_19},
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_20}
+    \vec{M}^T\vec{M}\vec{x} = \vec{M}^T\vec{b}
+\end{align}
+Substituting the values from \eqref{eq:solutions/4/45/2/4/eq:eq_7} in \eqref{eq:solutions/4/45/2/4/eq:eq_20},
+\begin{align}
+    \myvec{5 & -6 \\ -6 & 10}\vec{x} = \myvec{-3 \\ 6} \nonumber
+\end{align}
+Converting the above equation into augmented form and solving for $\vec{x}$,
+\begin{align}
+    \myvec{5 & -6 & -3\\ -6 & 10 & 6} \xleftrightarrow[]{R_2 \leftarrow \frac{5R_2+6R_1}{14}} \myvec{5 & -6 & -3 \\ 0 & 1 & \frac{6}{7}} \nonumber \\ \xleftrightarrow[]{R_1 \leftarrow \frac{R_1+6R_2}{5}} \myvec{1 & 0 & \frac{3}{7} \\ 0 & 1 & \frac{6}{7}} \label{eq:solutions/4/45/2/4/eq:eq_21}
+\end{align}
+From \eqref{eq:solutions/4/45/2/4/eq:eq_21} it can be observed that,
+\begin{align} \label{eq:solutions/4/45/2/4/eq:eq_22}
+    \vec{x} = \myvec{\frac{3}{7} \\ \frac{6}{7}} 
+\end{align}

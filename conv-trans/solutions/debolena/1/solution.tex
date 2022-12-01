@@ -1,0 +1,24 @@
+%
+\begin{align}
+    E(X) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} x e^{-\frac{x^2}{2}}dx\\
+    &=0 \quad \brak{ \text{ odd function}}
+\end{align}
+\begin{align}
+    E\brak{X^2}&= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} x^2
+e^ {-\frac{x^2}{2}} dx \quad \brak{even function}\\
+    &= \frac{2}{\sqrt{2\pi}} \int_{0}^{\infty} x^2 e^{-\frac{x^2}{2}} dx\\
+    &= \frac{2}{\sqrt{2\pi}}\int_{0}^{\infty}\sqrt{2u}e^{-u} du \quad\brak{Let \frac{x^2}{2}= u}\\
+    &= \frac{2}{\sqrt{\pi}} \int_{0}^{\infty} e^{-u} u^{\frac{3}{2}-1} du\\
+    &= \frac{2}{\sqrt{\pi}} \Gamma\brak{{\frac{3}{2}}}\\
+    &= \frac{1}{\sqrt{\pi}}\Gamma\brak{\frac{1}{2}} \\
+    &= 1
+\end{align}
+where we have used the fact that
+\begin{align}
+\quad\because \Gamma(n)= (n-1)\Gamma(n-1); \Gamma\brak{\frac{1}{2}}=\sqrt{\pi}
+\end{align}
+%
+Thus, the  variance is
+\begin{align}
+    \sigma^2 =  E\brak X^2 - E^2\brak X = 1
+\end{align}

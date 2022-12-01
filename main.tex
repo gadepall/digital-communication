@@ -1,0 +1,320 @@
+%% Run LaTeX on this file several times to get Table of Contents,
+%% cross-references, and citations.
+
+\documentclass[11pt]{book}
+\usepackage{gvv-book}
+%\usepackage{Wiley-AuthoringTemplate}
+\usepackage[sectionbib,authoryear]{natbib}% for name-date citation comment the below line
+%\usepackage[sectionbib,numbers]{natbib}% for numbered citation comment the above line
+
+%%********************************************************************%%
+%%       How many levels of section head would you like numbered?     %%
+%% 0= no section numbers, 1= section, 2= subsection, 3= subsubsection %%
+\setcounter{secnumdepth}{3}
+%%********************************************************************%%
+%%**********************************************************************%%
+%%     How many levels of section head would you like to appear in the  %%
+%%				Table of Contents?			%%
+%% 0= chapter, 1= section, 2= subsection, 3= subsubsection titles.	%%
+\setcounter{tocdepth}{2}
+%%**********************************************************************%%
+
+%\includeonly{ch01}
+\makeindex
+
+\begin{document}
+
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title Pages
+%% Wiley will provide title and copyright page, but you can make
+%% your own titlepages if you'd like anyway
+%% Setting up title pages, type in the appropriate names here:
+
+\booktitle{Digital Communication}
+
+\subtitle{Through Simulations}
+
+\AuAff{G. V. V. Sharma}
+
+
+%% \\ will start a new line.
+%% You may add \affil{} for affiliation, ie,
+%\authors{Robert M. Groves\\
+%\affil{Universitat de les Illes Balears}
+%Floyd J. Fowler, Jr.\\
+%\affil{University of New Mexico}
+%}
+
+%% Print Half Title and Title Page:
+%\halftitlepage
+\titlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Copyright Page
+
+\begin{copyrightpage}{2022}
+%Title, etc
+\end{copyrightpage}
+
+% Note, you must use \ to start indented lines, ie,
+% 
+% \begin{copyrightpage}{2004}
+% Survey Methodology / Robert M. Groves . . . [et al.].
+% \       p. cm.---(Wiley series in survey methodology)
+% \    ``Wiley-Interscience."
+% \    Includes bibliographical references and index.
+% \    ISBN 0-471-48348-6 (pbk.)
+% \    1. Surveys---Methodology.  2. Social 
+% \  sciences---Research---Statistical methods.  I. Groves, Robert M.  II. %
+% Series.\\
+
+% HA31.2.S873 2004
+% 001.4'33---dc22                                             2004044064
+% \end{copyrightpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only Dedication (optional) 
+
+%\dedication{To my parents}
+
+\tableofcontents
+
+%\listoffigures %optional
+%\listoftables  %optional
+
+%% or Contributor Page for edited books
+%% before \tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Contributors Page for Edited Book
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If your book has chapters written by different authors,
+% you'll need a Contributors page.
+
+% Use \begin{contributors}...\end{contributors} and
+% then enter each author with the \name{} command, followed
+% by the affiliation information.
+
+% \begin{contributors}
+% \name{Masayki Abe,} Fujitsu Laboratories Ltd., Fujitsu Limited, Atsugi, Japan
+%
+% \name{L. A. Akers,} Center for Solid State Electronics Research, Arizona State University, Tempe, Arizona
+%
+% \name{G. H. Bernstein,} Department of Electrical and Computer Engineering, University of Notre Dame, Notre Dame, South Bend, Indiana; formerly of
+% Center for Solid State Electronics Research, Arizona
+% State University, Tempe, Arizona 
+% \end{contributors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Foreword:
+
+%\begin{foreword}
+%\lipsum[1-2]
+%\end{foreword}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Preface:
+
+%\begin{preface}
+%\lipsum[1-1]
+%\prefaceauthor{}
+%\where{place\\
+% date}
+%\end{preface}
+
+% ie,
+% \begin{preface}
+% This is an example preface.
+% \prefaceauthor{R. K. Watts}
+% \where{Durham, North Carolina\\
+% September, 2004}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Acknowledgments:
+
+%\acknowledgments
+%\lipsum[1-2]
+%\authorinitials{I. R. S.}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossary Type of Environment:
+
+% \begin{glossary}
+% \term{<term>}{<description>}
+% \end{glossary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{acronyms}
+%\acro{ASTA}{Arrivals See Time Averages}
+%\acro{BHCA}{Busy Hour Call Attempts}
+%\acro{BR}{Bandwidth Reservation}
+%\acro{b.u.}{bandwidth unit(s)}
+%\acro{CAC}{Call / Connection Admission Control}
+%\acro{CBP}{Call Blocking Probability(-ies)}
+%\acro{CCS}{Centum Call Seconds}
+%\acro{CDTM}{Connection Dependent Threshold Model}
+%\acro{CS}{Complete Sharing}
+%\acro{DiffServ}{Differentiated Services}
+%\acro{EMLM}{Erlang Multirate Loss Model}
+%\acro{erl}{The Erlang unit of traffic-load}
+%\acro{FIFO}{First in - First out}
+%\acro{GB}{Global balance}
+%\acro{GoS}{Grade of Service}
+%\acro{ICT}{Information and Communication Technology}
+%\acro{IntServ}{Integrated Services}
+%\acro{IP}{Internet Protocol}
+%\acro{ITU-T}{International Telecommunication Unit -- Standardization sector}
+%\acro{LB}{Local balance}
+%\acro{LHS}{Left hand side}
+%\acro{LIFO}{Last in - First out}
+%\acro{MMPP}{Markov Modulated Poisson Process}
+%\acro{MPLS}{Multiple Protocol Labeling Switching}
+%\acro{MRM}{Multi-Retry Model}
+%\acro{MTM}{Multi-Threshold Model}
+%\acro{PASTA}{Poisson Arrivals See Time Averages}
+%\acro{PDF}{Probability Distribution Function}
+%\acro{pdf}{probability density function}
+%\acro{PFS}{Product Form Solution}
+%\acro{QoS}{Quality of Service}
+%\acro{r.v.}{random variable(s)}
+%\acro{RED}{random early detection}
+%\acro{RHS}{Right hand side}
+%\acro{RLA}{Reduced Load Approximation}
+%\acro{SIRO}{service in random order}
+%\acro{SRM}{Single-Retry Model}
+%\acro{STM}{Single-Threshold Model}
+%\acro{TCP}{Transport Control Protocol}
+%\acro{TH}{Threshold(s)}
+%\acro{UDP}{User Datagram Protocol}
+%\end{acronyms}
+
+\setcounter{page}{1}
+
+\begin{introduction}
+This book introduces digital communication through probability.
+
+\end{introduction}
+
+\mainmatter
+
+\chapter{Two Dice}
+\input{conv-trans/main.tex}
+\chapter{Random Numbers}
+\input{probability/univar.tex}
+\chapter{Maximum Likelihood Detection: BPSK}
+\input{probability/ml.tex}
+\chapter{Transformation of Random Variables}
+\input{probability/trans.tex}
+\chapter{Bivariate Random Variables: FSK}
+\input{probability/bivar.tex}
+\iffalse
+\section{Line Preliminaries}
+\input{chapters/11/10/1.tex}
+\chapter{ Quadrilaterals}
+\input{chapters/9/8.tex}
+
+\chapter{Areas }
+\input{chapters/9/9.tex}
+\chapter{Line}
+\section{Equation of a Line}
+\input{chapters/11/10/2.tex}
+\section{General Equation of a Line}
+\input{chapters/11/10/3.tex}
+\section{Miscellaneous Exercises}
+
+
+
+\chapter{Circles}
+\section{Equation}
+\input{chapters/11/11/1.tex}
+\section{Equal Chords}
+\input{chapters/9/10/4.tex}
+\section{Inscribed Polygons }
+\input{chapters/9/10/5.tex}
+\section{Tangent to a Circle}
+\input{chapters/10/10/1.tex}
+\section{Tangents from a Point}
+\input{chapters/10/10/2.tex}
+\section{Construction of Tangents to a Circle}
+\input{chapters/10/11/2.tex}
+
+\chapter{Conics}
+\section{Parabola}
+\section{Ellipse}
+\section{Hyperbola}
+\section{Miscellaneous}
+\input{chapters/11/11/5.tex}
+
+\chapter{Tangent And Normal}
+\section{Properties}
+\input{chapters/12/6/3.tex}
+\section{Miscellaneous}
+\input{chapters/12/6/6.tex}
+
+\chapter{Triangle }
+\input{chapters/9/11.tex}
+\fi
+
+%\include{ch02} 
+\backmatter
+\appendix
+\iffalse
+\chapter{ Vectors}
+\section{$2\times 1$ vectors}
+\input{matrix/two.tex}
+%\include{app01}
+%\appendix
+\section{$3\times 1$ vectors}
+\input{matrix/three.tex}
+\chapter{Matrices}
+\input{matrix/mat.tex}
+
+\chapter{Linear Forms}
+\section{Two Dimensions}
+\input{linear/two.tex}
+\section{Three Dimensions}
+\input{linear/three.tex}
+\chapter{Quadratic Forms}
+%\numberwithin{equation}{subsection}
+%\numberwithin{equation}{section}
+\section{Conic equation }
+\input{quad/defs.tex}
+\section{Circles}
+\input{quad/circle.tex}
+
+\section{Standard Form}
+\input{quad/stddef.tex}
+\chapter{Conic Parameters}
+\section{Standard Form}
+\input{quad/standard.tex}
+\section{Quadratic Form }
+\input{quad/coroll.tex}
+
+\chapter{Conic Lines}
+\section{Pair of Straight Lines}
+%
+\input{quad/pair.tex}
+\section{Intersection of Conics}
+\input{quadlines/inter.tex}
+\section{ Chords of a Conic}
+\input{quadlines/chord.tex}
+\section{ Tangent and Normal}
+\input{quadlines/tangent.tex}
+\fi
+%\chapter{Proofs}
+%   \section{}
+%\input{apps/defs.tex}
+
+%  \section{}
+%\input{apps/parab.tex}
+%  \section{}
+%\input{apps/nonparab.tex}
+%		\section{}
+%\input{apps/params.tex}
+\latexprintindex
+
+\end{document}
+
+ 
