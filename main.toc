@@ -14,3 +14,10 @@
 \contentsline {section}{\numberline {4.2}Conditional Probability}{16}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Bivariate Random Variables: FSK}{17}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Two Dimensions}{17}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Exercises}{19}{chapter.6}%
+\contentsline {section}{\numberline {6.1}BPSK}{19}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Coherent BFSK}{22}{section.6.2}%
+\contentsline {section}{\numberline {6.3}QPSK}{24}{section.6.3}%
+\contentsline {section}{\numberline {6.4}$M$-PSK}{25}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Noncoherent BFSK}{26}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Craig's Formula and MGF}{30}{section.6.6}%
