@@ -1,0 +1,64 @@
+\iffalse
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}{}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\usepackage{listings}
+\usepackage{watermark}
+\usepackage{titlesec}
+\let\vec\mathbf
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    
+}
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\thiswatermark{\centering \put(0,-105.0}{\includegraphics[scale=0.5]{iith.png}} }
+
+\sloppy
+\title{\mytitle}
+\title{
+Probability Assignment-II
+}
+\author{Nikhil Nair}
+\begin{document}
+\maketitle
+%\tableofcontents
+\bigskip
+
+
+
+\section{\textbf{Problem }}
+\fi
+\solution
+\begin{enumerate}
+	\item 
+		In this case
+\begin{align}
+\pr{A + B} &=\pr{A} + \pr{B}&
+\\
+\implies \frac{3}{5}&=\frac{1}{2}+p&
+\\
+\therefore  p &= \frac{1}{10}&
+\end{align}
+\item 
+Given A and B are independent events,
+then,
+
+\begin{align}
+\pr{A + B} &=\pr{A} + \pr{B} - \pr{A B}& 
+\\
+\implies \pr{A + B} &=\pr{A} + \pr{B} - \pr{A}\pr{B}&
+\\
+\implies \frac{3}{5}&=\frac{1}{2}+ p - \frac{p}{2}&
+\\
+\therefore p &= \frac{1}{5}&
+\end{align}
+\end{enumerate}
