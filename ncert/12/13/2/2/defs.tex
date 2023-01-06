@@ -1,0 +1,61 @@
+\iffalse
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+%\documentclass{article}	% working
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large T SIVA PARVATHI - FWC22089}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{1}
+\setcounter{enumii}{2}
+
+
+	\solution
+	\fi
+	Table 
+\ref{tab:12/13/2/2/}
+summarizes the various events
+\begin{table}[h]\centering
+	\input{ncert/12/13/2/2/ctable.tex}
+	\caption{}
+\label{tab:12/13/2/2/}
+\end{table}
+	Given that the cards are drawn at random without replacement.
+Without replacement means only one card is random at a time and is excluded from the total while next card is drawn at random.
+Thus, the probability that both the cards are black is,
+\begin{align}
+\pr{00,10} =\frac{\comb{26}{1}}{\comb{52}{1}} \times \frac{\comb{25}{1}}{\comb{51}{1}} = \frac{1}{2} \times \frac{25}{51} = 0.24
+\end{align}

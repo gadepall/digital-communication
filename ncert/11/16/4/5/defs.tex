@@ -1,0 +1,59 @@
+\iffalse
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large T SIVA PARVATHI - FWC22089}
+\date{}
+
+\maketitle
+\begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+%\numberwithin{table}{enumi}
+\setcounter{enumi}{3}
+\setcounter{enumii}{5}
+
+
+\solution
+100 students divided into two sections 40 and 60,
+\fi
+Table 
+	 \ref{tab:11/16//5/1}
+	 summarises the given information.
+\begin{table}[h]\centering
+	\input{ncert/11/16/4/5/tables/table.tex}
+	 \caption{}
+	 \label{tab:11/16//5/1}
+\end{table}
+
+\begin{enumerate}
+\item When both enter the same section, the probability is
+\begin{align}
+\pr{001,101} = \frac{\comb{40}{2}} {\comb{100}{2}}+\frac{\comb{60}{2}} {\comb{100}{2}} = \frac{156}{990}+\frac{354}{990} = 0.51
+\end{align}
+\item When both enter different sections, the desired probability is 
+\begin{align}
+\pr{00,01,10,11} = 1-0.51 = 0.49
+\end{align}
+\end{enumerate}
