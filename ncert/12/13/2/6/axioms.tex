@@ -1,0 +1,41 @@
+\iffalse
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}  %black!50!blue
+}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large DIVYA SAI - FWC22094}
+\date{}
+
+\maketitle
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{1}
+\setcounter{enumii}{6}
+\fi
+From the given information,
+\begin{align}
+	\pr{E} \pr{F}&=\frac{3}{5} \times \frac{9}{50}
+\\
+	\pr{E F}&=\frac{1}{50}
+\\
+	\implies \pr{E F} &\neq P(E) P(F)
+\end{align}
+$\therefore$ $E$ and $F$ are not independent events.

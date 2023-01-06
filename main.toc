@@ -2,25 +2,26 @@
 \contentsline {schapter}{Introduction}{iii}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Axioms}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Conditional Probability}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Two Dice}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Sum of Independent Random Variables}{9}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Random Numbers}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Uniform Random Numbers}{15}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Central Limit Theorem}{17}{section.5.2}%
-\contentsline {section}{\numberline {5.3}From Uniform to Other}{20}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Triangular Distribution}{20}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Maximum Likelihood Detection: BPSK}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Maximum Likelihood}{21}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Transformation of Random Variables}{23}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Gaussian to Other}{23}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Conditional Probability}{24}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Bivariate Random Variables: FSK}{25}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Two Dimensions}{25}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Exercises}{27}{chapter.9}%
-\contentsline {section}{\numberline {9.1}BPSK}{27}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Coherent BFSK}{30}{section.9.2}%
-\contentsline {section}{\numberline {9.3}QPSK}{32}{section.9.3}%
-\contentsline {section}{\numberline {9.4}$M$-PSK}{33}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Noncoherent BFSK}{34}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Craig's Formula and MGF}{38}{section.9.6}%
+\contentsline {chapter}{\numberline {3}Definitions}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Conditional Probability}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Two Dice}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sum of Independent Random Variables}{15}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Random Numbers}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Uniform Random Numbers}{21}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Central Limit Theorem}{23}{section.6.2}%
+\contentsline {section}{\numberline {6.3}From Uniform to Other}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Triangular Distribution}{26}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Maximum Likelihood Detection: BPSK}{27}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Maximum Likelihood}{27}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Transformation of Random Variables}{29}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Gaussian to Other}{29}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Conditional Probability}{30}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Bivariate Random Variables: FSK}{31}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Two Dimensions}{31}{section.9.1}%
+\contentsline {chapter}{\numberline {10}Exercises}{33}{chapter.10}%
+\contentsline {section}{\numberline {10.1}BPSK}{33}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Coherent BFSK}{36}{section.10.2}%
+\contentsline {section}{\numberline {10.3}QPSK}{38}{section.10.3}%
+\contentsline {section}{\numberline {10.4}$M$-PSK}{39}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Noncoherent BFSK}{40}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Craig's Formula and MGF}{44}{section.10.6}%

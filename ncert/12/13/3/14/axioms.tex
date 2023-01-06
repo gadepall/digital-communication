@@ -1,0 +1,53 @@
+\iffalse
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large UDAY KUMAR - FWC22086}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%.ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{3}
+\setcounter{enumii}{14}
+
+	\solution\\
+	\fi
+		if $A \subset B $ and $\pr{B}\neq 0 $ then 
+\begin{align}
+	AB &=A\\
+	\text{or, } P(A|B) &= \frac{\pr{A B}}{\pr{B}}=\frac{\pr{A}}{\pr{B}}&\label{eq:12/13/3/143.0.1}
+	%\implies \pr{A} &< \pr{B}\\
+\end{align}
+we know that 
+\begin{align}
+	\pr{B} &\leq 1\\
+	\implies 1 &\leq \frac{1}{\pr{B}}
+\end{align}
+		Multiplying both sides with $\pr{A}$,
+\begin{align}
+	\pr{A} &\leq \frac{\pr{A}}{\pr{B}}
+\\
+	&= \pr{A \mid B}
+\end{align}
+from  \eqref{eq:12/13/3/143.0.1}.

@@ -1,0 +1,63 @@
+\iffalse
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+%\documentclass{article}	% working
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large UDAY KUMAR - FWC22086}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{3}
+\setcounter{enumii}{2}
+
+	\solution\\
+\fi	
+The given information is summarised in Table 
+\ref{table1:11/16/4/2}.
+\begin{table}[h]
+	\centering
+	\input{ncert/11/16/4/2/table.tex}
+	\caption{Random variables(RV) X,Y and X,Y}
+\label{table1:11/16/4/2}
+\end{table}
+yielding
+	\begin{align}
+	   \pr{00,10,20,31} &=\frac{\comb{13}{3} \times \comb{13}{1}}{\comb{52}{4}}\\ 
+%= \dfrac{\frac{13!}{3!(13-3)!} \times \frac{13!}{1!(13-1)!}}{\frac{52!}{4!(52-4)!}}\\
+%= \frac{\frac{13\times12\times11\times10!}{3!X10!}\times\frac{13\times12!}{1!\times12!}}{\frac{52\times51\times50\times49\times48!}{4!\times48!}}\\
+%= \frac{\frac{89232}{312}}{\frac{649700}{312}}\\
+%&\therefore \;\pr{00,10,20,31} 
+		&= \frac{286}{20285}&
+\end{align}
