@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  6 JAN 2023 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  6 JAN 2023 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1031,34 +1031,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4])
+(./ncert/12/13/2/1/axioms.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-(./ncert/12/13/2/7/axioms.tex) (./ncert/12/13/2/6/axioms.tex)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5])
+(./ncert/12/13/2/7/axioms.tex
+Underfull \vbox (badness 3439) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-(./ncert/12/13/3/14/axioms.tex))
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [6])
+(./ncert/12/13/2/6/axioms.tex) (./ncert/12/13/3/14/axioms.tex
+Underfull \vbox (badness 3168) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8
+ [7]))
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 Chapter 3.
 (./ncert/defs.tex (./ncert/11/16/4/2/defs.tex (./ncert/11/16/4/2/table.tex
 \gnumericTableWidth=\skip84
@@ -1095,7 +1103,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9])
+ [9
+
+])
 (./ncert/11/16/4/10/defs.tex (./ncert/11/16/4/10/tables/rvtable.tex
 Underfull \vbox (badness 10000) detected at line 215
  []
@@ -1184,7 +1194,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-<./figs/sum/pmf.png, id=399, 462.528pt x 346.896pt>
+<./figs/sum/pmf.png, id=405, 462.528pt x 346.896pt>
 File: ./figs/sum/pmf.png Graphic file (type png)
 <use ./figs/sum/pmf.png>
 Package pdftex.def Info: ./figs/sum/pmf.png  used on input line 469.
@@ -1204,7 +1214,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [20 <./figs/sum/pmf.png>]
 Chapter 6.
 (./probability/univar.tex
-<./figs/uni_cdf.pdf, id=419, 462.52798pt x 346.89601pt>
+<./figs/uni_cdf.pdf, id=424, 462.52798pt x 346.89601pt>
 File: ./figs/uni_cdf.pdf Graphic file (type pdf)
 <use ./figs/uni_cdf.pdf>
 Package pdftex.def Info: ./figs/uni_cdf.pdf  used on input line 549.
@@ -1224,7 +1234,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 <./figs/uni_cdf.pdf>]
-<./figs/gauss_cdf.pdf, id=463, 462.52798pt x 346.89601pt>
+<./figs/gauss_cdf.pdf, id=468, 462.52798pt x 346.89601pt>
 File: ./figs/gauss_cdf.pdf Graphic file (type pdf)
 <use ./figs/gauss_cdf.pdf>
 Package pdftex.def Info: ./figs/gauss_cdf.pdf  used on input line 601.
@@ -1245,7 +1255,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./figs/gauss_cdf.pdf>]
-<./figs/gauss_pdf.pdf, id=508, 462.52798pt x 346.89601pt>
+<./figs/gauss_pdf.pdf, id=513, 462.52798pt x 346.89601pt>
 File: ./figs/gauss_pdf.pdf Graphic file (type pdf)
 <use ./figs/gauss_pdf.pdf>
 Package pdftex.def Info: ./figs/gauss_pdf.pdf  used on input line 619.
@@ -1327,7 +1337,7 @@ pdf>
 ps-converted-to.pdf ./manual/figs/bpsk_const.eps>
 (epstopdf)             \includegraphics on input line 208.
 Package epstopdf Info: Output file is already uptodate.
-<./manual/figs/bpsk_const-eps-converted-to.pdf, id=637, 562.1pt x 308.15125pt>
+<./manual/figs/bpsk_const-eps-converted-to.pdf, id=642, 562.1pt x 308.15125pt>
 File: ./manual/figs/bpsk_const-eps-converted-to.pdf Graphic file (type pdf)
 <use ./manual/figs/bpsk_const-eps-converted-to.pdf>
 Package pdftex.def Info: ./manual/figs/bpsk_const-eps-converted-to.pdf  used on
@@ -1366,7 +1376,7 @@ f>
 -converted-to.pdf ./manual/figs/bpsk_ber.eps>
 (epstopdf)             \includegraphics on input line 282.
 Package epstopdf Info: Output file is already uptodate.
-<./manual/figs/bpsk_ber-eps-converted-to.pdf, id=662, 462.72874pt x 346.29375pt
+<./manual/figs/bpsk_ber-eps-converted-to.pdf, id=667, 462.72874pt x 346.29375pt
 >
 File: ./manual/figs/bpsk_ber-eps-converted-to.pdf Graphic file (type pdf)
 <use ./manual/figs/bpsk_ber-eps-converted-to.pdf>
@@ -1388,7 +1398,7 @@ pdf>
 ps-converted-to.pdf ./manual/figs/bfsk_const.eps>
 (epstopdf)             \includegraphics on input line 301.
 Package epstopdf Info: Output file is already uptodate.
-<./manual/figs/bfsk_const-eps-converted-to.pdf, id=664, 517.935pt x 303.1325pt>
+<./manual/figs/bfsk_const-eps-converted-to.pdf, id=669, 517.935pt x 303.1325pt>
 
 File: ./manual/figs/bfsk_const-eps-converted-to.pdf Graphic file (type pdf)
 <use ./manual/figs/bfsk_const-eps-converted-to.pdf>
@@ -1504,10 +1514,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 937939D06FFF58F6C6BF4E5605E4C357;1559.
  ) 
 Here is how much of TeX's memory you used:
- 19254 strings out of 479304
- 311472 string characters out of 5869780
+ 19263 strings out of 479304
+ 311638 string characters out of 5869780
  739662 words of memory out of 5000000
- 35592 multiletter control sequences out of 15000+600000
+ 35593 multiletter control sequences out of 15000+600000
  422611 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,15n,102p,761b,1146s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1529,10 +1539,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm0800.pfb>
-Output written on main.pdf (53 pages, 392826 bytes).
+Output written on main.pdf (53 pages, 393819 bytes).
 PDF statistics:
- 1003 PDF objects out of 1200 (max. 8388607)
- 827 compressed objects within 9 object streams
- 386 named destinations out of 1000 (max. 500000)
+ 1009 PDF objects out of 1200 (max. 8388607)
+ 833 compressed objects within 9 object streams
+ 391 named destinations out of 1000 (max. 500000)
  249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

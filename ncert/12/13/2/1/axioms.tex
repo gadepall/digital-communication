@@ -1,0 +1,57 @@
+\iffalse
+\def\mytitle{Assignment Probability}
+\def\myauthor{P PAVAN KUMAR}
+\def\mymodule{Future Wireless Communication (FWC)}
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\FWC22088\hspace{6.5em}IITH\hspace{0.5em}\mymodule\hspace{6em}Probability}
+\begin{document}
+	\maketitle
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]
+\numberwithin{equation}{enumi}
+\numberwithin{table}{enumi}
+
+\setcounter{enumi}{1}
+\setcounter{enumii}{1}
+solution:
+\fi
+From the given information,
+\begin{align}
+ \pr{A}&= \frac{3}{5}, \pr{B}=\frac{1}{5}.
+\end{align}
+Since $A$ and $B$ are independent,
+		\begin{align}
+ \pr{AB}&= \pr{A} \times \pr{B}\\
+ &= \frac{3}{5} \times \frac{1}{5}\\
+ &= \frac{3}{25}
+\end{align}
