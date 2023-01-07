@@ -1,4 +1,3 @@
-\iffalse
 \documentclass{article}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 
@@ -43,15 +42,18 @@
 \setcounter{enumi}{3}
 \setcounter{enumii}{3}
 
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}A die has two faces each with number ‘1’, three faces each with number ‘2’ and one face with number ‘3’. If die is rolled once, determine
+\begin{enumerate}
+\item $\pr{2}$
+\item $\pr{1 \text{ or } 3}$
+\item $\pr{\text{not } 3}$
+\end{enumerate}
 
 \solution
-\fi
-Table 
-	\ref{tables:16.4.3.2} summarises the given information.
 	\begin{table}[h]
 	\centering 
-	\input{ncert/11/16/4/3/tables/table.tex}
-	\caption{}
+	\input{tables/table.tex}
+	\caption{Variable Description.}
 	\label{tables:16.4.3.2}
 	\end{table}
 
@@ -62,8 +64,9 @@ Table
 \item 
 \begin{align}
 \pr{X_1 + X_3}	&= \pr{X_1} + \pr{X_3} - \pr{X_1X_3}\\
-				&= \frac{1}{3} + \frac{1}{6}   \quad (\because \pr{X_1X_3} = 0)\\
- 	&= \frac{1}{2}
+				&= \frac{1}{3} + \frac{1}{6}   (\therefore \pr{X_1X_3} = 0)\\
+				&= \frac{3}{6}\\
+\pr{X_1 + X_3} 	&= \frac{1}{2}
 \end{align}
 \item 
 \begin{align}
@@ -72,3 +75,5 @@ Table
 			   &= \frac{5}{6}
 \end{align}
 \end{enumerate}
+\end{enumerate}
+\end{document}

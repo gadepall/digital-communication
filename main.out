@@ -1,3 +1,26 @@
 \BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
 \BOOKMARK [0][-]{chapter.2}{Axioms}{}% 3
+\BOOKMARK [0][-]{chapter.3}{Definitions}{}% 4
+\BOOKMARK [0][-]{chapter.4}{Conditional Probability}{}% 5
+\BOOKMARK [0][-]{chapter.5}{Two Dice}{}% 6
+\BOOKMARK [1][-]{section.5.1}{Sum of Independent Random Variables}{chapter.5}% 7
+\BOOKMARK [0][-]{chapter.6}{Random Numbers}{}% 8
+\BOOKMARK [1][-]{section.6.1}{Uniform Random Numbers}{chapter.6}% 9
+\BOOKMARK [1][-]{section.6.2}{Central Limit Theorem}{chapter.6}% 10
+\BOOKMARK [1][-]{section.6.3}{From Uniform to Other}{chapter.6}% 11
+\BOOKMARK [1][-]{section.6.4}{Triangular Distribution}{chapter.6}% 12
+\BOOKMARK [0][-]{chapter.7}{Maximum Likelihood Detection: BPSK}{}% 13
+\BOOKMARK [1][-]{section.7.1}{Maximum Likelihood}{chapter.7}% 14
+\BOOKMARK [0][-]{chapter.8}{Transformation of Random Variables}{}% 15
+\BOOKMARK [1][-]{section.8.1}{Gaussian to Other}{chapter.8}% 16
+\BOOKMARK [1][-]{section.8.2}{Conditional Probability}{chapter.8}% 17
+\BOOKMARK [0][-]{chapter.9}{Bivariate Random Variables: FSK}{}% 18
+\BOOKMARK [1][-]{section.9.1}{Two Dimensions}{chapter.9}% 19
+\BOOKMARK [0][-]{chapter.10}{Exercises}{}% 20
+\BOOKMARK [1][-]{section.10.1}{BPSK}{chapter.10}% 21
+\BOOKMARK [1][-]{section.10.2}{Coherent BFSK}{chapter.10}% 22
+\BOOKMARK [1][-]{section.10.3}{QPSK}{chapter.10}% 23
+\BOOKMARK [1][-]{section.10.4}{M-PSK}{chapter.10}% 24
+\BOOKMARK [1][-]{section.10.5}{Noncoherent BFSK}{chapter.10}% 25
+\BOOKMARK [1][-]{section.10.6}{Craig's Formula and MGF}{chapter.10}% 26
