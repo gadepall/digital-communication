@@ -1,0 +1,59 @@
+\iffalse
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+%\documentclass{article}	% working
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large HARI VENKATESWARLU - FWC22058}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{2}
+\setcounter{enumii}{18}
+
+	\solution\\
+\fi	
+The given information is summarised in Table
+\ref{table:ncert/11/16/3/18/}.
+\begin{table}[h]\centering
+	\input{ncert/11/16/3/18/tables/table.tex}
+   	\caption{}
+\label{table:ncert/11/16/3/18/}
+\end{table}
+Thus,
+	\begin{align}
+\pr{M+B} &= \pr{M}+\pr{B}-\pr{M,B}\\
+	  &=0.6
+\end{align}
