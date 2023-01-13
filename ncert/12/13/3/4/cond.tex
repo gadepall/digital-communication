@@ -1,0 +1,72 @@
+\iffalse
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}  %black!50!blue
+}
+%\documentclass{article}	% working
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\numberwithin{table}{enumi}
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large B DHEERAJ KUMAR - FWC22008}
+\date{}
+
+\maketitle
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{2}
+\setcounter{enumii}{4}
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
+	\fi
+Let $X \in \cbrak{0,1}$ where 0 denotes a guess and 1 denotes that he knows the answer. Let $Y \in \cbrak{0,1}$ where 0 being the case when the answer is incorrect and 1 being the  case that the answer is correct.
+%From the given information,
+The given information is summarised in Tables
+	 \ref{tab:12/13/3/4/1}   
+	 and
+	 \ref{tab:12/13/3/4/2}   
+
+\begin{table}[h]
+\centering
+\input{ncert/12/13/3/4/tables/table2}
+	 \caption{Random variables $X$ and $Y$}
+	 \label{tab:12/13/3/4/2}   
+\end{table}
+
+\begin{table}[h]
+\centering
+	\input{ncert/12/13/3/4/tables/table1}
+	\caption{Probability of events $X$ and $Y$}
+	\label{tab:12/13/3/4/1} 
+\end{table}
+
+The probability that the student knows the answer and he answered it correctly is 
+
+\begin{align}
+\pr{X=1|Y=1} &=\frac{\pr{Y=1|X=1}\pr{X=1}}{\pr{Y=1|X=1}\pr{X=1}+\pr{Y=1|X=0}\pr{X=0}}\\
+&=\frac{0.25}{{0.25}+{0.25\times 0.75}}
+\\
+&=0.571
+\end{align}

@@ -1,0 +1,72 @@
+\iffalse
+\documentclass{article}
+
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+\setlist[enumerate]{font=\small\bfseries}
+
+\begin{document}
+
+\title{NCERT: Class XII}
+\author{\Large Pavan Kumar P - FWC22088}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]
+\numberwithin{equation}{enumi}
+\numberwithin{table}{enumi}
+
+\setcounter{enumi}{3}
+\setcounter{enumii}{4}
+\fi
+Table \ref{tab:13.4.4.4} summarises the given information.
+%
+\begin{table}[h]
+ \centering
+	\input{ncert/12/13/4/4/tables/table_d.tex}
+	\caption{Variable Description }
+	\label{tab:13.4.4.4}
+\end{table}
+% 
+\begin{enumerate} 
+\item Number of heads in two tosses of a coin.
+ \begin{align}
+  p_{X_1}(k) &= \comb{n}{k}p^{k}q^{n-k},  0\leq k\leq 2, n=2
+\end{align}
+
+\item Number of tails in the simultaneous tosses of three coins.
+ \begin{align}
+  p_{X_2}(k) &= \comb{n}{k}p^{k}q^{n-k},  0\leq k\leq 3, n=3 
+\end{align}
+
+\item Number of heads in four tosses of a coin.
+ \begin{align}
+  p_{X_3}(k) &= \comb{n}{k}p^{k}q^{n-k},  0\leq k\leq 4, n=4
+\end{align}
+
+\end{enumerate}
