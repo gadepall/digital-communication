@@ -1,0 +1,54 @@
+\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item 
+The $Z$-transform of $X$ is defined as
+\begin{align}
+M_X(z) = E\sbrak{z^{-X}} = \sum_{k=-\infty}^{\infty}p_X(k)z^{-k}
+\end{align}
+\item The $n$th moment of $X$ can be expressed as
+\begin{align}
+\label{eq:mgf-mean}
+E\sbrak{X^n}&= \frac{d^nM_{X}(z^{-1})}{dz^n}\vert_{z=1}
+\end{align}
+\item For a Bernoulli random variable $X$ with success probability $p$,
+\begin{align}
+M_X(z)= q+pz^{-1}
+\end{align}
+\item Let 
+$X_i$ be i.i.d.  For 
+\begin{align}
+X &= X_1+X_2+...+X_n,
+\\
+M_X(z)&=\prod_{=1}^{n}M_{X_i}(z)
+\end{align}
+\item For a Binomial random variable $X$ with parameters $n,p$,
+\begin{align}
+\label{eq:mgf-binom}
+M_X(z)= \brak{q+pz^{-1}}^n
+\end{align}
+\item The mean for the Binomial r.v. is
+\begin{align}
+\label{eq:mean-binom}
+E\sbrak{X}= np
+\end{align}
+\solution
+From 
+\eqref{eq:mgf-mean}
+and 
+\eqref{eq:mgf-binom},
+\begin{align}
+E\sbrak{X} 
+&= \frac{d(q + pz)^n}{dz}\vert_{z=1}
+\\
+&=np(q + pz)^{n-1}|_{z=1}
+\\
+&= np(q + p)^{n-1}
+\end{align}
+yielding
+\eqref{eq:mean-binom}
+\begin{align}
+\because p+q=1
+\end{align}
+\end{enumerate}

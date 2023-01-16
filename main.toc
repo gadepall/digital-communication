@@ -26,3 +26,4 @@
 \contentsline {section}{\numberline {11.4}$M$-PSK}{55}{section.11.4}%
 \contentsline {section}{\numberline {11.5}Noncoherent BFSK}{56}{section.11.5}%
 \contentsline {section}{\numberline {11.6}Craig's Formula and MGF}{60}{section.11.6}%
+\contentsline {chapter}{\numberline {A} Z-transform}{63}{appendix.A}%
