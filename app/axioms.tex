@@ -1,0 +1,89 @@
+\section{Definitions}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item 
+\begin{align}
+	0 \le \pr{A} \le 1	
+\end{align}
+\item If $AB = 0$,
+\begin{align}
+	\pr{A+B} = \pr{A} + \pr{B}.
+\end{align}
+\end{enumerate}
+\section{Boolean Logic}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item 
+\begin{align}
+	A + A^{\prime} = 1
+\end{align}
+\item 
+\begin{align}
+A^{\prime}B^{\prime} &=  \brak{A+B}^{\prime}
+\end{align}
+\item 
+\begin{align}
+A+B &= A\brak{B+B^{\prime}} + B
+\\
+&= B \brak{A +1} + A B^{\prime}
+\\
+&=B + A B^{\prime}
+\end{align}
+\item 
+\begin{align}
+A = A \brak{B+B^{\prime}} =  AB + AB^{\prime}
+\label{eq:axiom_sum_A}
+\end{align}
+and 
+\begin{align}
+\brak{ AB}\brak{  AB^{\prime}} = 0, \because BB^{\prime} = 0
+\label{eq:axiom_sum_AB0}
+\end{align}
+Hence, $AB$ and $AB^{\prime}$ are mutually exclusive.  
+%
+
+\end{enumerate}
+\section{Properties}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item 
+\begin{align}
+	\pr{A^{\prime}} = 1 - \pr{A}.
+\end{align}
+\item
+\begin{align}
+\pr{A^{\prime}B^{\prime}} &=  \pr{\brak{A+B}^{\prime}} 
+\\
+&= 1 - \pr{A+B} 
+\label{eq:axiom_sum_one}
+\end{align}
+\item 
+\begin{align}
+\pr{A+B} &= \pr{B + A B^{\prime} }
+\\
+&=\pr{B}+\pr{ A B^{\prime} } 
+\label{eq:axiom_sum_two}
+\\
+&\because B \brak{ A B^{\prime} } = 0
+\end{align}
+\item
+\begin{align}
+\pr{A} = \pr{AB} + \pr{AB^{\prime}}
+\\
+\implies 
+\pr{AB^{\prime}} =  \pr{A} - \pr{AB}
+\label{eq:axiom_sum_ABp}
+\end{align}
+\item Substituting \eqref{eq:axiom_sum_ABp} in \eqref{eq:axiom_sum_two}, 
+	\begin{align}
+\pr{A+B} &= \pr{A} + \pr{B} - \pr{AB} 
+\label{eq:axiom_sum_AB}
+\end{align}
+\end{enumerate}

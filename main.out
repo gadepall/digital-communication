@@ -4,25 +4,32 @@
 \BOOKMARK [0][-]{chapter.3}{Definitions}{}% 4
 \BOOKMARK [0][-]{chapter.4}{Conditional Probability}{}% 5
 \BOOKMARK [0][-]{chapter.5}{Distributions}{}% 6
-\BOOKMARK [0][-]{chapter.6}{Two Dice}{}% 7
-\BOOKMARK [1][-]{section.6.1}{Sum of Independent Random Variables}{chapter.6}% 8
-\BOOKMARK [0][-]{chapter.7}{Random Numbers}{}% 9
-\BOOKMARK [1][-]{section.7.1}{Uniform Random Numbers}{chapter.7}% 10
-\BOOKMARK [1][-]{section.7.2}{Central Limit Theorem}{chapter.7}% 11
-\BOOKMARK [1][-]{section.7.3}{From Uniform to Other}{chapter.7}% 12
-\BOOKMARK [1][-]{section.7.4}{Triangular Distribution}{chapter.7}% 13
-\BOOKMARK [0][-]{chapter.8}{Maximum Likelihood Detection: BPSK}{}% 14
-\BOOKMARK [1][-]{section.8.1}{Maximum Likelihood}{chapter.8}% 15
-\BOOKMARK [0][-]{chapter.9}{Transformation of Random Variables}{}% 16
-\BOOKMARK [1][-]{section.9.1}{Gaussian to Other}{chapter.9}% 17
-\BOOKMARK [1][-]{section.9.2}{Conditional Probability}{chapter.9}% 18
-\BOOKMARK [0][-]{chapter.10}{Bivariate Random Variables: FSK}{}% 19
-\BOOKMARK [1][-]{section.10.1}{Two Dimensions}{chapter.10}% 20
-\BOOKMARK [0][-]{chapter.11}{Exercises}{}% 21
-\BOOKMARK [1][-]{section.11.1}{BPSK}{chapter.11}% 22
-\BOOKMARK [1][-]{section.11.2}{Coherent BFSK}{chapter.11}% 23
-\BOOKMARK [1][-]{section.11.3}{QPSK}{chapter.11}% 24
-\BOOKMARK [1][-]{section.11.4}{M-PSK}{chapter.11}% 25
-\BOOKMARK [1][-]{section.11.5}{Noncoherent BFSK}{chapter.11}% 26
-\BOOKMARK [1][-]{section.11.6}{Craig's Formula and MGF}{chapter.11}% 27
-\BOOKMARK [0][-]{appendix.A}{ Z-transform}{}% 28
+\BOOKMARK [0][-]{chapter.6}{Random Numbers}{}% 7
+\BOOKMARK [1][-]{section.6.1}{Uniform Random Numbers}{chapter.6}% 8
+\BOOKMARK [1][-]{section.6.2}{Central Limit Theorem}{chapter.6}% 9
+\BOOKMARK [1][-]{section.6.3}{From Uniform to Other}{chapter.6}% 10
+\BOOKMARK [1][-]{section.6.4}{Triangular Distribution}{chapter.6}% 11
+\BOOKMARK [0][-]{chapter.7}{Maximum Likelihood Detection: BPSK}{}% 12
+\BOOKMARK [1][-]{section.7.1}{Maximum Likelihood}{chapter.7}% 13
+\BOOKMARK [0][-]{chapter.8}{Transformation of Random Variables}{}% 14
+\BOOKMARK [1][-]{section.8.1}{Gaussian to Other}{chapter.8}% 15
+\BOOKMARK [1][-]{section.8.2}{Conditional Probability}{chapter.8}% 16
+\BOOKMARK [0][-]{chapter.9}{Bivariate Random Variables: FSK}{}% 17
+\BOOKMARK [1][-]{section.9.1}{Two Dimensions}{chapter.9}% 18
+\BOOKMARK [0][-]{chapter.10}{Exercises}{}% 19
+\BOOKMARK [1][-]{section.10.1}{BPSK}{chapter.10}% 20
+\BOOKMARK [1][-]{section.10.2}{Coherent BFSK}{chapter.10}% 21
+\BOOKMARK [1][-]{section.10.3}{QPSK}{chapter.10}% 22
+\BOOKMARK [1][-]{section.10.4}{M-PSK}{chapter.10}% 23
+\BOOKMARK [1][-]{section.10.5}{Noncoherent BFSK}{chapter.10}% 24
+\BOOKMARK [1][-]{section.10.6}{Craig's Formula and MGF}{chapter.10}% 25
+\BOOKMARK [0][-]{appendix.A}{ Axioms }{}% 26
+\BOOKMARK [1][-]{section.A.1}{Definitions}{appendix.A}% 27
+\BOOKMARK [1][-]{section.A.2}{Boolean Logic}{appendix.A}% 28
+\BOOKMARK [1][-]{section.A.3}{Properties}{appendix.A}% 29
+\BOOKMARK [0][-]{appendix.B}{ Z-transform}{}% 30
+\BOOKMARK [0][-]{appendix.C}{Distributions}{}% 31
+\BOOKMARK [1][-]{section.C.1}{Bernoulli }{appendix.C}% 32
+\BOOKMARK [1][-]{section.C.2}{Binomial Distribution}{appendix.C}% 33
+\BOOKMARK [1][-]{section.C.3}{Uniform Distribution}{appendix.C}% 34
+\BOOKMARK [1][-]{section.C.4}{Triangular Distribution}{appendix.C}% 35

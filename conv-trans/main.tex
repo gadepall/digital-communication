@@ -294,9 +294,92 @@ Probability and Random Variables
 %\section{Axioms of Probability}
 %\input{./chapters/axioms.tex}
 \fi
-
-\section{Sum of Independent Random Variables}
-Two dice, one blue and one grey, are thrown at the same time.   The event defined by the sum of the two numbers appearing on the top of the dice can have 11 possible outcomes 2, 3, 4, 5, 6, 6, 8, 9, 10, 11 and 12.  A student argues that each of these outcomes has a probability $\frac{1}{11}$.  Do you agree with this argument?  Justify your answer.
+\section{Bernoulli }
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\item The pmf of a Bernoulli distribution is defined as
+\begin{align}
+	p_X(k) = 
+	\begin{cases}
+		q = 1-p & k = 0
+		\\
+		p & k = 1
+		\\
+		0 & \text{otherwise}
+	\end{cases}
+\end{align}
+\item For a Bernoulli random variable $X$ with success probability $p$,
+\begin{align}
+M_X(z)= q+pz^{-1}
+\end{align}
+\item The mean of the Bernoulli distribution is 
+\begin{align}
+	E\brak{X} = p
+\end{align}
+\end{enumerate}
+\section{Binomial Distribution}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\item The Binomial distribution is defined as 
+\begin{align}
+X &= X_1+X_2+...+X_n,
+\end{align}
+Where $X_i$ are i.i.d bernoulli.
+\item For a Binomial random variable $X$ with parameters $n,p$,
+\begin{align}
+\label{eq:mgf-binom}
+M_X(z)= \brak{q+pz^{-1}}^n
+\end{align}
+\item The mean for the Binomial r.v. is
+\begin{align}
+\label{eq:mean-binom}
+E\sbrak{X}= np
+\end{align}
+\solution
+From 
+\eqref{eq:mgf-mean}
+and 
+\eqref{eq:mgf-binom},
+\begin{align}
+E\sbrak{X} 
+&= \frac{d(q + pz)^n}{dz}\vert_{z=1}
+\\
+&=np(q + pz)^{n-1}|_{z=1}
+\\
+&= np(q + p)^{n-1}
+\end{align}
+yielding
+\eqref{eq:mean-binom}
+\begin{align}
+\because p+q=1
+\end{align}
+\end{enumerate}
+%
+\section{Uniform Distribution}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\item  Let $X \in \cbrak{1,2,3,4,5,6}$ be the random variables representing the outcome for a die.  Assuming the die to be fair, the probability mass function (pmf) is expressed as 
+\begin{align}
+\label{eq:dice_pmf_xi}
+p_{X}(n) = 
+\begin{cases}
+\frac{1}{6} & 1 \le n \le 6
+\\
+0 & otherwise
+\end{cases}
+\end{align}
+\item The $Z$-transform of $X$ is given by 
+\begin{align}
+P_{X}(z) =  \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
+=\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}, \quad \abs{z} > 1
+\label{eq:dice_xiz}
+\end{align}
+upon summing up the geometric progression.  
+\end{enumerate}
+\section{Triangular Distribution}
 
 \renewcommand{\theequation}{\theenumi}
 \renewcommand{\thefigure}{\theenumi}
@@ -306,17 +389,7 @@ Two dice, one blue and one grey, are thrown at the same time.   The event define
 
 %
 
-\item  {\em The Uniform Distribution: }Let $X_i \in \cbrak{1,2,3,4,5,6}, i = 1,2,$ be the random variables representing the outcome for each die.  Assuming the dice to be fair, the probability mass function (pmf) is expressed as 
-\begin{align}
-\label{eq:dice_pmf_xi}
-p_{X_i}(n) = \pr{X_i = n} = 
-\begin{cases}
-\frac{1}{6} & 1 \le n \le 6
-\\
-0 & otherwise
-\end{cases}
-\end{align}
-The desired outcome is
+\item The desired outcome is
 \begin{align}
 \label{eq:dice_xdef}
 X &= X_1 + X_2,
@@ -391,6 +464,7 @@ p_X(n) &=
 \end{align}
 satisfying \eqref{eq:dice_wrong}.
 \item {\em The $Z$-transform: }
+	\iffalse
 The $Z$-transform of $p_X(n)$ is defined as 
 %\cite{proakis_dsp}
 \begin{align}
@@ -406,13 +480,7 @@ P_{X_1}(z) =P_{X_2}(z) &= \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
 \label{eq:dice_xiz}
 \end{align}
 upon summing up the geometric progression.  
-\begin{align}
-\because p_X(n) &= p_{X_1}(n)*p_{X_2}(n),
-\\
-P_X(z) &= P_{X_1}(z)P_{X_2}(z)
-\label{eq:dice_xzprod_def}
-\end{align}
-The above property follows from Fourier analysis and is fundamental to signal processing. 
+\fi
 %\cite{proakis_dsp}. 
 From \eqref{eq:dice_xiz} and \eqref{eq:dice_xzprod_def},
 \begin{align}
@@ -470,10 +538,13 @@ The experiment of rolling the dice was simulated using Python for 10000 samples.
 \caption{Plot of $p_X(n)$.  Simulations are close to the analysis. }
 \label{fig:dice}
 \end{figure}
-\item The python code is available in 
+\item The python code is available below
+	\lstinputlisting{codes/sum/dice.py}
+	\iffalse
 \begin{lstlisting}
 /codes/sum/dice.py
 \end{lstlisting}
+\fi
 
 %\item 
 %We have shown how a simple problem of throwing a dice can be used for learning not just probability but concepts in  signal processing as well.  Inversion of the $Z$-transform for finding the pmf using contour integration, though not discussed here, opens a window to complex analysis too.  Note that the solutions that are provided  can be easily understood using high school math like arithmetic and geometric sums.  Thus, school students can use a bit of college level math to obtain simpler solutions to their problems.  College students can be exposed to advanced mathematics through simple problems from high school texts.  In addition, both can learn how to verify theoretical results through computer simulations.
