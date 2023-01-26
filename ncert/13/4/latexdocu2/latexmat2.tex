@@ -1,61 +1,59 @@
-\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{xfrac}
+\usepackage{array}  
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+\usepackage{gensymb}
+       \usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+\def\inputGnumericTable{}
 
-	\item 
-	A game consists of tossing a one rupee coin 3 times and noting its outcome each time. Hanif wins if all the tosses give the same result i.e., three heads or three tails, and loses otherwise. Calculate the probability that Hanif will lose the game
-\\
-%\input{ncert/12/13/1/1/cond.tex}
-\item A die is tossed thrice. Find the probability of getting an odd number at least once.
-		\label{ncert/12/13/2/11}
-\item Find the probability distribution of
+  % for having text in math mode
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+%
+
+\begin{document}
+
+\begin{center}
+\title{\textbf{EXERCISE 13.4}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+
+\setcounter{page}{1}
+
 \begin{enumerate}
-	\item number of heads in two tosses of a coin.
-	\item number of tails in the simultaneous tosses of three coins.
-	\item number of heads in four tosses of a coin.
-\end{enumerate}
-\solution
-\input{ncert/12/13/4/4/dist.tex}
-\item  The random variable $X$ has a probability distribution \pr{X} of the following form, where $k$ is some number 
-\begin{align}
-  \pr{X} =
-    \begin{cases}
-      k,  & x=0\\
-      2k, & x=1\\
-      3k, & x=2\\
-      0 , & \text{otherwise}
-    \end{cases}       
-\end{align}
-		\begin{enumerate}
-			\item
- Determine the value of $k$ 
-
-\item  Find \pr{X < 2},\pr{X \leq 2},\pr{X \geq 2}  
-		\end{enumerate}
-\solution
-\input{ncert/12/13/4/9/dist.tex}
-\item 
-Find the mean number of heads in three tosses of a fair coin.
-\\
-\solution
-\input{ncert/12/13/4/10/binom.tex}
 \item State which of the following are not the probability distributions of a random 
 variable. Give reasons for your answer
 \renewcommand{\labelenumii}{\roman{enumii}}
 \begin{enumerate}
 
 \item \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book.tex}
+\input{tables/Book.tex}
 \end{table}
 
 \item \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book2.tex}
+\input{tables/Book2.tex}
 \end{table}
 
 \item  \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book3.tex}	
+\input{tables/Book3.tex}	
 \end{table}
 
 \item  \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book5.tex}	
+\input{tables/Book5.tex}	
 \end{table} 
 
 
@@ -88,17 +86,13 @@ defective bulbs.
 
 \item A coin is biased so that the head is 3 times as likely to occur as tail. If the coin is
 tossed twice, find the probability distribution of number of tails.
-\item A coin is tossed twice, what is the probability that atleast one tail occurs?
-\\
-\solution
-\input{ncert/11/16/3/2/binom.tex}
 \item A random variable X has the following probability distribution\\
 
 Determine
 
 \begin{enumerate}
 \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book10.tex}
+\input{tables/Book10.tex}
 \end{table}
 \item k
 \item P$(X < 3)$
@@ -167,3 +161,5 @@ number of aces obtained. Then the value of E(X) is
 \end{enumerate}
 
 \end{enumerate}
+
+\end{document}
