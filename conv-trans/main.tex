@@ -317,6 +317,10 @@ M_X(z)= q+pz^{-1}
 \begin{align}
 	E\brak{X} = p
 \end{align}
+\item 	The following code simulates 100 coin tosses
+	\lstinputlisting{
+codes/bernoulli/coin.py
+}
 \end{enumerate}
 \section{Binomial Distribution}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
@@ -355,6 +359,10 @@ yielding
 \begin{align}
 \because p+q=1
 \end{align}
+\item In a hurdle race, a player has to cross 10 hurdles. The probability that he will
+clear each hurdle is $\frac{5}{6}$. What is the probability that he will knock down fewer than 2 hurdles?
+\solution See the following code
+		\lstinputlisting{codes/binomial/binomial.py}
 \end{enumerate}
 %
 \section{Uniform Distribution}
@@ -539,6 +547,7 @@ The experiment of rolling the dice was simulated using Python for 10000 samples.
 \label{fig:dice}
 \end{figure}
 \item The python code is available below
+
 	\lstinputlisting{codes/sum/dice.py}
 	\iffalse
 \begin{lstlisting}

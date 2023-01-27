@@ -527,11 +527,11 @@ Let $U$ be a uniform random variable between 0 and 1.
 ,ref=\thesection.\theenumi]
 \item Generate $10^6$ samples of $U$ using a C program and save into a file called uni.dat .
 \\
-\solution Download the following files and execute the  C program.
-\begin{lstlisting}
-codes/exrand.c
-codes/coeffs.h
-\end{lstlisting}
+\solution Execute the  following C program.
+		\lstinputlisting{
+			codes/exrand.c}
+		\lstinputlisting{
+			codes/coeffs.h}
 
 %
 \item
@@ -541,9 +541,9 @@ F_{U}(x) = \pr{U \le x}
 \end{align}
 \\
 \solution  The following code plots Fig. \ref{fig:uni_cdf}
-\begin{lstlisting}
+		\lstinputlisting{
 codes/cdf_plot.py
-\end{lstlisting}
+}
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{./figs/uni_cdf}
@@ -610,9 +610,9 @@ p_{X}(x) = \frac{d}{dx}F_{X}(x)
 What properties does the PDF have?
 \\
 \solution The PDF of $X$ is plotted in Fig. \ref{fig:gauss_pdf} using the code below
-\begin{lstlisting}
+		\lstinputlisting{
 codes/pdf_plot.py
-\end{lstlisting}
+}
 
 \begin{figure}
 \centering
