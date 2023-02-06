@@ -1,0 +1,53 @@
+\iffalse
+\documentclass[10pt,twocolumn]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+\title{
+Probability Assignment
+}
+\author{GINNA SHREYANI}
+\date{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+
+
+\begin{document}
+\maketitle
+
+
+\textbf{12.13.1.5}\\
+\subsection*{Solution}
+\fi
+\begin{enumerate}
+	\item Since
+\begin{align}
+	\pr{AB} &= \pr{A} + \pr{B} -\pr{A+B},
+	\label{eq:1}
+	\\
+	\pr{AB} &= \frac{6}{11} + \frac{5}{11} - \frac{7}{11}
+ = \frac{4}{11}
+\end{align}
+	\item Since
+\begin{align}
+	\pr{A \mid B} &= \frac{\pr{AB}}{\pr{B}},
+	\label{eq:2}
+	\\
+	\pr{A \mid B} &= \frac{\frac{4}{11}}{\frac{5}{11}}
+ = \frac{4}{5}
+\end{align}
+	\item Since
+\begin{align}
+	\pr{B \mid A}&=\frac{\pr{BA}}{\pr{A}},
+	\label{eq:3}
+	\\
+	\pr{B \mid A} &= \frac{\frac{4}{11}}{\frac{6}{11}}
+	 = \frac{2}{3}
+\end{align}
+\end{enumerate}

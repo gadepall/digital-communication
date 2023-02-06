@@ -1,0 +1,57 @@
+\iffalse
+\documentclass[12pt,twocolumn]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{gensymb}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+\let\vec\mathbf
+\title{
+Probability Assignment
+}
+\author{GINNA SHREYANI}
+\date{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+
+
+\begin{document}
+\maketitle
+
+\textbf{12.13.3.3}\\
+Of the students in a college, it is known that 60\% reside in hostel and 40\% are day scholars (not residing in hostel). Previous year results report that 30\% of all students who reside in hostel attain A grade and 20\% of day scholars attain A grade in their annual examination. At the end of the year, one student is chosen at random from the college and he has an A grade, what is the probability that the student is a hostlier?
+\subsection*{Solution}
+Using Baye's Rule:\\
+Let the probability of students living in hostel be $\pr{H=1}$, therefore the students who are day scholars can be given as $\pr{H=0}$\\
+The probability of the students getting grade A is given as $\pr{A=1}$.\\
+
+\begin{table}
+	\input{tables/table1.tex}
+\end{table}
+
+\begin{table}
+        \input{tables/table2.tex}
+\end{table}
+
+Thus,
+\begin{align}
+	\pr{A=1} &= \sum_{i=0}^1 \pr{A = 1 \mid H = i}\pr{H=i}
+\end{align}
+\begin{multline}
+	\pr{A=1} = \pr{A = 1 \mid H = 0}\pr{H = 0}\\
+	+\pr{A = 1 \mid H = 1}\pr{H = 1}
+\end{multline}
+\begin{align}
+	\pr{A=1} &= \left(\frac{20}{100} \times \frac{40}{100}\right)+\left(\frac{30}{100} \times \frac{60}{100}\right)\\
+	\pr{A=1} &= \frac{26}{100}\\
+	\pr{H=1 \mid A=1} &= \frac{\pr{A=1 \mid H=1}\pr{H=1}}{\pr{A=1}}\\
+	\pr{H=1 \mid A=1} &= \frac{9}{13}
+\end{align}
+The probability that the student is a hostlier who has A grade is $\frac{9}{13}$.
+\end{document}
+
