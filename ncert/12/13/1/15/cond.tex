@@ -115,12 +115,7 @@ columns=fullflexible
 \end{abstract}
 
 \begin{enumerate}
-    \item Consider the experiment of throwing a die, if a multiple of 3 comes up, 
-    throw the die again and if any other number comes, toss a coin. Find the 
-    conditional probability of the event `the coin shows a tail', given that `at 
-    least one die shows a 3'.
-
-    \solution 
+       \solution 
 \fi
 		Let $X$ denote the die roll for the first trial. The pmf of $X$ is
     \begin{align}
@@ -129,7 +124,7 @@ columns=fullflexible
             \frac{1}{6} & 1 \le i \le 6 \\
             0 & \textrm{otherwise}
         \end{cases}
-        \label{eq:pmf-X}
+        \label{eq:ncert/12/13/1/15/pmf-X}
     \end{align}
     Let $Y$ be the random variable denoting the outcome of the coin toss in the
     second trial. The pmf of $Y$ is
@@ -139,7 +134,7 @@ columns=fullflexible
             \frac{1}{2} & 0 \le i \le 1 \\
             0 & \textrm{otherwise}
         \end{cases}
-        \label{eq:pmf-Y}
+        \label{eq:ncert/12/13/1/15/pmf-Y}
     \end{align}
     We are required to find $\pr{Y=1|X=3}$. However, from the given data,
     \begin{align}
@@ -148,9 +143,9 @@ columns=fullflexible
             \frac{1}{12} & k \in \cbrak{1,2,4,5} \\
             0 & \textrm{otherwise}
         \end{cases}
-        \label{eq:pmf-XY}
+        \label{eq:ncert/12/13/1/15/pmf-XY}
     \end{align}
-    Therefore, from \eqref{eq:pmf-XY},
+    Therefore, from \eqref{eq:ncert/12/13/1/15/pmf-XY},
     \begin{align}
         \pr{Y=1|X=3} = \frac{\pr{X=3,\ Y=1}}{\pr{X=3}} = 0
     \end{align}
