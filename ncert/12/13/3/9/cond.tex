@@ -1,0 +1,76 @@
+\iffalse
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+%\documentclass{article}	% working
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large HARI VENKATESWARLU - FWC22058}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{0}
+\setcounter{enumii}{11}
+
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)} {Two groups are competing for the position
+on the Board of directors of a corporation.
+The probabilities that the first and the second
+groups will win are 0.6 and 0.4 respectively.
+Further, if the first group wins, the probability
+of introducing a new product is 0.7 and the
+corresponding probability is 0.3 if the second
+group wins. Find the probability that the new
+product introduced was by the second group}
+
+	\solution\\
+	\fi
+	The given information is listed in Tables 
+	\ref{tab:ncert/12/13/3/9/1}
+	and 
+	\ref{tab:ncert/12/13/3/9/2}
+	\begin{table}[h]\centering
+	\input{ncert/12/13/3/9/tables/table.tex}
+	\caption{Random variables(RV) X,Y}
+	\label{tab:ncert/12/13/3/9/1}
+\end{table}
+
+    \begin{table}[h]\centering
+	\input{ncert/12/13/3/9/tables/table1.tex}
+	\caption{Probabilities}
+	\label{tab:ncert/12/13/3/9/2}
+    \end{table}
+\begin{align}
+\pr{X=2 \mid Y=1} = \frac{\pr{2}\pr{1 \mid 2}}{\pr{1}\pr{1 \mid 1}+\pr{2}\pr{1 \mid 2}}
+=\frac{2}{9}
+\end{align}
