@@ -15,7 +15,7 @@
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{longtable}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -141,16 +141,30 @@ columns=fullflexible
 
 
 \begin{enumerate}
-\textbf{Solution:}
-Given the probablity of occurrence of events $A$, $B$ as,
-\begin{align}
-\pr{A} &= \frac{3}{5}\\
-\pr{B} &= \frac{1}{5}
-\end{align}
+\textbf{Solution:} 
 \fi
-Since the events $A$, $B$ are independent, we have
+		We use 
 \begin{align}
-\pr{AB} = \pr{A}\pr{B}
-= \frac{3}{25}
+\pr{B \mid A}=\frac{\pr{BA}}{\pr{A}} \label{eq:ncert/12/13/6/1/1}
 \end{align}
+\begin{enumerate}
+\item In this case,
+\begin{align}
+BA &= A \implies 
+\pr{BA} = \pr{A}
+\end{align}
+From \eqref{eq:ncert/12/13/6/1/1}, 
+\begin{align}
+\pr{B \mid A}= 1
+\end{align}
+\item $A \cap B = \phi$. This implies
+\begin{align}
+\pr{BA} = 0
+\end{align}
+From \eqref{eq:ncert/12/13/6/1/1},
+\begin{align}
+\pr{B \mid A}= 0
+\end{align}
+\end{enumerate}
+
 

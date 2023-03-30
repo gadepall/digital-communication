@@ -15,7 +15,7 @@
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{longtable}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -141,16 +141,14 @@ columns=fullflexible
 
 
 \begin{enumerate}
-\textbf{Solution:}
-Given the probablity of occurrence of events $A$, $B$ as,
-\begin{align}
-\pr{A} &= \frac{3}{5}\\
-\pr{B} &= \frac{1}{5}
-\end{align}
 \fi
-Since the events $A$, $B$ are independent, we have
+Since
 \begin{align}
-\pr{AB} = \pr{A}\pr{B}
-= \frac{3}{25}
+\pr{A \mid B}=\frac{\pr{AB}}{\pr{B}}, 
 \end{align}
+\begin{align}
+\pr{A \mid B} \text{is not defined}
+\end{align}
+
+
 

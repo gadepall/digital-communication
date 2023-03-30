@@ -1,4 +1,73 @@
 \begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+	\item 
+Given that E and F are events such that $P(E)=0.6, P(F)=0.3$ and $P(E F)=0.2$, find $P(E \mid F)$ and $P(F \mid E)$.
+\\
+\input{ncert/12/13/1/1/cond.tex}
+	\item Compute $\pr{A|B}$, if $\pr{B}=0.5$ and $\pr{AB}=0.32$. 
+		\\
+	\item Probability that A speaks truth is
+$\frac{4}{5}$ . A coin is tossed. A reports that a head
+appears. The probability that actually there was head is
+\begin{enumerate}
+    \item $\frac{4}{5}$ 
+\item $\frac{1}{2}$ 
+\item $\frac{1}{5}$ 
+\item $\frac{2}{5}$
+\end{enumerate}
+	\item Compute $\pr{A|B}$, if $\pr{B}=0.5$ and $\pr{AB}=0.32$. 
+		\\
+		\input{ncert/12/13/1/2/cond.tex}
+
+	\item If $\pr{A}$ = 0.8, $\pr{B} = 0.5$ and $\pr{B \vert A = 0.4}$, find  
+\begin{enumerate}
+\item
+$\pr{AB}$ 
+\item
+ $\pr{A \vert B}$
+\item
+ $\pr{A+B}$
+\end{enumerate}
+\solution
+\input{ncert/12/13/1/3/axioms.tex}
+	\item If $\pr{A}=\frac{6}{11}$, $\pr{B}=\frac{5}{11}$ and $\pr{A+B}=\frac{7}{11}$, find
+\begin{enumerate}
+	\item $\pr{AB}$   
+	\item $\pr{A \mid B}$
+	\item $\pr{B \mid A}$
+\end{enumerate}
+\solution
+		\input{ncert/12/13/1/5/axioms.tex}
+\item A fair die is rolled. Consider events $E=1,3,5 F=2,3$ and $G=2,3,4,5$. Find
+\begin{enumerate}
+\item $\pr{E \mid F} \text{ and } \pr{F \mid E}$
+\item $\pr{E \mid G} \text{ and } \pr{G \mid E}$
+\item $\pr{{E \cup F} \mid G} \text{ and } \pr{{E \cap F} \mid G}$
+\end{enumerate}
+%
+\solution
+\input{ncert/12/13/1/11/axioms.tex}
+\item If $ \pr{A}  = \frac{1}{2}$, $\pr{B} = 0$, then $\pr{A \mid B}$ is
+\begin{enumerate}
+\item 0
+\item $\frac{1}{2}$
+\item not defined
+\item 1
+\end{enumerate}
+	\input{ncert/12/13/1/16/cond.tex}
+ \item If $A$ and $B$ are events such that 
+    \begin{align}
+        \pr{A|B} = \pr{B|A}
+        \label{eq:ncert/12/13/1/17/cond}
+    \end{align} 
+    then 
+    \begin{enumerate}
+        \item $A \subset B$ but $A \neq B$
+        \item $A = B$ 
+        \item $A \cap B = \phi$ 
+        \item $\pr{A} = \pr{B}$
+    \end{enumerate}
+    \solution
+\input{ncert/12/13/1/17/axioms.tex}
  \item Consider the experiment of throwing a die, if a multiple of 3 comes up, 
     throw the die again and if any other number comes, toss a coin. Find the 
     conditional probability of the event `the coin shows a tail', given that `at 
@@ -6,7 +75,20 @@
 \\
 \solution
 \input{ncert/12/13/1/15/cond.tex}
-
+%
+\item Two cards are drawn at random and without replacement from a pack of 52 playing cards. Find the probability that both the cards are black.\\
+\solution
+\input{ncert/12/13/2/2/cond.tex}
+%
+\item Let $A$ and $B$ be independent events with $P(A)=0.3$ and $P(B)=0.4$. Find
+		\label{ncert/12/13/2/7}
+\begin{enumerate}
+\item $P(A \cap B)$
+\item $P(A \cup B)$
+\item $P(A|B)$
+\item $P(B|A)$
+\end{enumerate}
+%
 \item An urn contains 5 red and 5 black balls. A ball is drawn at random, its colour is
 noted and is returned to the urn. Moreover, 2 additional balls of the colour drawn
 are put in the urn and then a ball is drawn at random. What is the probability that
@@ -79,5 +161,33 @@ A defective item is produced, what is the probability that it was produced by A?
 \item A card from a pack of 52 cards is lost. From the remaining cards of the pack,
 two cards are drawn and are found to be both diamonds. Find the probability of
 the lost card being a diamond.
-
+%
+\item Probability that A speaks truth is
+$\frac{4}{5}$. A coin is tossed. A reports that a head
+appears. The probability that actually there was head is
+\begin{enumerate}
+\item $\frac{4}{5}$ 
+\item $\frac{1}{2}$ 
+\item $\frac{1}{5}$ 
+\item $\frac{2}{5}$
+\end{enumerate}
+\solution
+%\input{ncert/12/13/3/13/cond.tex}
+\item 
+		If $A$ and $B$ are two events such that $A \subset B$ and $\pr{B} \neq 0$, then which of the following is correct ?
+\begin{enumerate}
+\item $\pr{A \mid B} = \frac{\pr{B}}{\pr{A}}$ 
+\item $\pr{A \mid B} < \pr{A}$
+\item $\pr{A \mid B} \geq \pr{A}$  
+\item None of these
+\end{enumerate}
+\solution
+\input{ncert/12/13/3/14/axioms.tex}
+\item $A$ and $B$ are two events such that $\pr{A} \neq 0$. Find $\pr{B \mid A}$, if
+\begin{enumerate}
+\item $A$ is a subset of $B$
+\item $A \cap B = \phi$
+\end{enumerate}
+\solution 
+	\input{ncert/12/13/6/1/cond.tex}
 \end{enumerate}

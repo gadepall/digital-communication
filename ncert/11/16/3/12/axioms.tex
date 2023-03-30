@@ -15,7 +15,7 @@
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{longtable}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -141,16 +141,45 @@ columns=fullflexible
 
 
 \begin{enumerate}
-\textbf{Solution:}
-Given the probablity of occurrence of events $A$, $B$ as,
-\begin{align}
-\pr{A} &= \frac{3}{5}\\
-\pr{B} &= \frac{1}{5}
-\end{align}
+\textbf{Solution:} 
 \fi
-Since the events $A$, $B$ are independent, we have
+		To check whether the given probabilities are consistently defined, we check whether the following property holds correctly with the probability axioms
 \begin{align}
-\pr{AB} = \pr{A}\pr{B}
-= \frac{3}{25}
+\pr{A+B}= \pr{A}+ \pr{B} - \pr{AB} \label{eq:ncert/11/16/3/12/1}
 \end{align}
+\begin{enumerate}
+\item Given that 
+\begin{align}
+\pr{A} = 0.5,\,
+\pr{B} = 0.7,\,
+\pr{AB} = 0.6
+\end{align}
+From \eqref{eq:ncert/11/16/3/12/1}, 
+\begin{align}
+\pr{A+B} = 0.5+ 0.7 - 0.6 
+= 0.6 \label{eq:ncert/11/16/3/12/2}
+\end{align}
+From \eqref{eq:ncert/11/16/3/12/2} we have
+\begin{align}
+0 \leq \pr{A+B} \leq 1
+\end{align}
+Hence the given probabilities are consistently defined.
+\item Given that 
+\begin{align}
+\pr{A} = 0.5,\,
+\pr{B} = 0.7,\,
+\pr{A+B} = 0.8
+\end{align}
+From \eqref{eq:ncert/11/16/3/12/1} we get, 
+\begin{align}
+\pr{AB} = 0.5+ 0.7 - 0.8 \\
+= 0.4 \label{eq:ncert/11/16/3/12/3}
+\end{align}
+From \eqref{eq:ncert/11/16/3/12/3} we have
+\begin{align}
+0 \leq \pr{AB} \leq 1
+\end{align}
+Hence the given probabilities are consistently defined
+\end{enumerate}
+
 

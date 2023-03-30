@@ -1,0 +1,100 @@
+\iffalse
+\documentclass[a4paper,10pt,two column]{article}
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\newcommand*{\rom}[1]
+
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{watermark}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{listings}
+\usepackage{float}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\title{PROBABILITY ASSIGNMENT}
+\author{MOHAMMAD IMRAN}
+\thiswatermark{\centering \put(-50,-105){\includegraphics[scale=0.5]{iith.png}} }
+\begin{document}
+\maketitle
+%\tableofcontents
+\bigskip
+
+
+\section{\textbf{Problem }}
+Two dice are thrown simultaneously, if x denotes number os sixes, find the expectation of x
+
+
+\section{\textbf{Solution }}
+Consider each trial results in success (i.e getting sixes on dice) or failure (i.e not getting sixes on dice) represented by 1 and 0 respectively.
+\\
+
+Let $X_i \in \cbrak{1,2,3,4,5,6} , i = 1,2$ be the random variables representing the outcome for each die.Assuming the dice to be fair,the probability mass function(pmf) is expressed as
+\\
+\begin{align}
+ p_{X_i}(k) = \Pr(X_i=k) =
+\begin{cases}
+\frac{1}{6} & 1 \leq k \leq 6 \\
+0 & otherwise
+\end{cases} 
+\end{align}
+$p$ and $q = (1 - p)$ are the probability of success and failure respectively.
+\begin{align}
+& p = P_{X_i}(1) = \frac{1}{6}&               \label{eq:1}
+\\            
+& q = 1 - p = P_{X_i}(0) = \frac{5}{6}&       \label{eq:2}
+\end{align}
+
+
+
+The generating function (or z-transform) of $\pr{X_i =k}$  is defined as 
+\\
+\begin{align}
+M_{X_i}(z) = E\sbrak{z^{X_i}} &= \sum_{k=-\infty}^{\infty} P_{X_i}(k)z^{-k}&
+\\
+E\sbrak{z^{X_1+X_2+...+X_n}}&= E\sbrak{z^{X_1}z^{X_2}....z^{X_n}}& \nonumber
+\\
+&= E\sbrak{z^{X_1}}E\sbrak{z^{X_2}}....E\sbrak{z^{X_n}}&
+\end{align} 
+
+($\because X_1,X_2,...,X_n$are independent and identically distributed)
+\\
+$\therefore$For a simulatenous throw of two die,
+\begin{align}
+E\sbrak{z^{X_i}}& = \sum_{k=0}^{2} P_{X_i}(k) z^{-k}&
+\\
+&= (q+pz^{-1})^{2}&
+\end{align}
+$\Rightarrow M_{X_i}(z)$ for n number of dice is
+\begin{align}
+ M_{X_i}(z)&= (q + pz^{-1})^n&
+\end{align}
+
+Expectation of x or mean is defined as the 1st moment of $M_{X_i}(z^{-1})$ at z=1 i.e,
+\begin{align}
+\mu&= \frac{dM_{X_i}(z^{-1})}{dz}|_{z=1}&
+\\
+&= \frac{d(q + pz)^n}{dz}|_{z=1}&
+\\
+&=np(q + pz)^{n-1}|_{z=1}&
+\\
+&= np(q + p)^{n-1}&
+\\
+\therefore \text{Mean} &= np& {}\because(p+q=1)
+\\
+&= 2\times\frac{1}{6}= 0.333&
+\end{align}
+\\
+
+The Expectation of x  is $0.33$
+\\
+
+
+\end{document}

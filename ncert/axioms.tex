@@ -1,4 +1,11 @@
 \begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\item Check whether the following probabilities $\pr{A}$ and $\pr{B}$ are consistently defined
+\begin{enumerate}
+\item $\pr{A} = 0.5,\, \pr{B} = 0.7,\, \pr{A \cap B} = 0.6$
+\item $\pr{A} = 0.5,\, \pr{B} = 0.7,\, \pr{A \cup B} = 0.8$
+\end{enumerate}
+\solution
+\input{ncert/11/16/3/12/axioms.tex}
 	\item A and B are events such that $\pr A=0.42, \pr B=0.48$ and $\pr {\text{A and B}}=0.16$. \\
 Determine 
 \begin{enumerate}
@@ -31,52 +38,6 @@ Determine
 		\solution
 \input{ncert/11/16/4/3/axioms.tex}
 %
-	\item Compute $\pr{A|B}$, if $\pr{B}=0.5$ and $\pr{AB}=0.32$. 
-		\\
-		\input{ncert/12/13/1/2/cond.tex}
-
-	\item If $\pr{A}$ = 0.8, $\pr{B} = 0.5$ and $\pr{B \vert A = 0.4}$, find  
-\begin{enumerate}
-\item
-$\pr{AB}$ 
-\item
- $\pr{A \vert B}$
-\item
- $\pr{A+B}$
-\end{enumerate}
-\solution
-\input{ncert/12/13/1/3/axioms.tex}
-	\item If $\pr{A}=\frac{6}{11}$, $\pr{B}=\frac{5}{11}$ and $\pr{A+B}=\frac{7}{11}$, find
-\begin{enumerate}
-	\item $\pr{AB}$   
-	\item $\pr{A \mid B}$
-	\item $\pr{B \mid A}$
-\end{enumerate}
-\solution
-		\input{ncert/12/13/1/5/axioms.tex}
-\item A fair die is rolled. Consider events $E=1,3,5 F=2,3$ and $G=2,3,4,5$. Find
-\begin{enumerate}
-\item $\pr{E \mid F} \text{ and } \pr{F \mid E}$
-\item $\pr{E \mid G} \text{ and } \pr{G \mid E}$
-\item $\pr{{E \cup F} \mid G} \text{ and } \pr{{E \cap F} \mid G}$
-\end{enumerate}
-%
-\solution
-\input{ncert/12/13/1/11/axioms.tex}
- \item If $A$ and $B$ are events such that 
-    \begin{align}
-        \pr{A|B} = \pr{B|A}
-        \label{eq:ncert/12/13/1/17/cond}
-    \end{align} 
-    then 
-    \begin{enumerate}
-        \item $A \subset B$ but $A \neq B$
-        \item $A = B$ 
-        \item $A \cap B = \phi$ 
-        \item $\pr{A} = \pr{B}$
-    \end{enumerate}
-    \solution
-\input{ncert/12/13/1/17/axioms.tex}
 \item If $\pr{A} = \frac{3}{5}$ and $\pr{B} = \frac{1}{5}$ find $\pr{A \cap B}$ if A and B are independent events.
 	\\
 \solution
@@ -97,16 +58,6 @@ $\pr{AB}$
 	\\
 \solution
 \input{ncert/12/13/2/9/axioms.tex}
-\item 
-		If $A$ and $B$ are two events such that $A \subset B$ and $\pr{B} \neq 0$, then which of the following is correct ?
-\begin{enumerate}
-\item $\pr{A \mid B} = \frac{\pr{B}}{\pr{A}}$ 
-\item $\pr{A \mid B} < \pr{A}$
-\item $\pr{A \mid B} \geq \pr{A}$  
-\item None of these
-\end{enumerate}
-\solution
-\input{ncert/12/13/3/14/axioms.tex}
 \item  A fair coin and an unbiased die are tossed. Let $A$ be the event 'head appears on the coin' and $B$ be the event '3 on the die'. Check whether $A$ and $B$ are independent events or not.
 		\label{ncert/12/13/2/4}
 		\item  A die marked 1, 2, 3 in red and 4, 5, 6 in green is tossed. Let $A$ be the event, 'the number is even, ' and $B$ be the event, 'the number is red'. Are $A$ and $B$ independent?
@@ -117,14 +68,6 @@ $\pr{AB}$
 \begin{enumerate}
 \item mutually exclusive
 \item independent
-\end{enumerate}
-\item Let $A$ and $B$ be independent events with $P(A)=0.3$ and $P(B)=0.4$. Find
-		\label{ncert/12/13/2/7}
-\begin{enumerate}
-\item $P(A \cap B)$
-\item $P(A \cup B)$
-\item $P(A|B)$
-\item $P(B|A)$
 \end{enumerate}
 \item If A and B are two events such that $P(A)=\frac{1}{4}$, $P(B)=\frac{1}{2}$ and $P(A \cap B)=\frac{1}{8}$, find $P(\text{not }A \text{ and not }B)$
 		\label{ncert/12/13/2/8}
@@ -138,7 +81,7 @@ $\pr{AB}$
 \item $P(A \text{ or } B)$
 \item $P(\text{neither } A \text{ nor } B)$
 \end{enumerate}
-
+%
 \item Probability of solving specific problem independently by A and B are $\frac{1}{2}$ and $\frac{1}{3}$ respectively. If both try to solve the problem independently, find the probability that
 		\label{ncert/12/13/2/13}
 \begin{enumerate}
@@ -175,22 +118,8 @@ Choose the correct answer in the following exercises
 \end{enumerate}
 \solution
 \input{ncert/12/13/2/18/axioms.tex}
-
-	\item 
-Given that E and F are events such that $P(E)=0.6, P(F)=0.3$ and $P(E F)=0.2$, find $P(E \mid F)$ and $P(F \mid E)$.
-\\
-\input{ncert/12/13/1/1/cond.tex}
-	\item Compute $\pr{A|B}$, if $\pr{B}=0.5$ and $\pr{AB}=0.32$. 
-		\\
-	\item Probability that A speaks truth is
-$\frac{4}{5}$ . A coin is tossed. A reports that a head
-appears. The probability that actually there was head is
-\begin{enumerate}
-    \item $\frac{4}{5}$ 
-\item $\frac{1}{2}$ 
-\item $\frac{1}{5}$ 
-\item $\frac{2}{5}$
-\end{enumerate}
+%
 \item If $P(A)=\frac{3}{5} \text{ and } P(B)=\frac{1}{5}$, find $P(A\cap B)$ if $A$ and $B$ are independent events.
 	\input{ncert/12/13/1/2/cond.tex}
+	%
 \end{enumerate}

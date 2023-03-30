@@ -1,4 +1,3 @@
-\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{romannum}
 \usepackage{float}
@@ -15,7 +14,7 @@
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{longtable}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -141,16 +140,14 @@ columns=fullflexible
 
 
 \begin{enumerate}
-\textbf{Solution:}
-Given the probablity of occurrence of events $A$, $B$ as,
+\item Two cards are drawn at random and without replacement from a pack of 52 playing cards. Find the probability that both the cards are black.\\
+\textbf{Solution:} Let $E_1$ denote the event that the first card drawn is Black, $E_2$ denote the event that the second card drawn is Black. Given that the cards are drawn without replacement. Thus, the required probability is given by
 \begin{align}
-\pr{A} &= \frac{3}{5}\\
-\pr{B} &= \frac{1}{5}
+\pr{E_1 E_2} &= \pr{E_1} \pr{E_2 \mid E_1}\\
+&= \frac{26}{52} \times \frac{25}{51}\\
+&= \frac{25}{102}
 \end{align}
-\fi
-Since the events $A$, $B$ are independent, we have
-\begin{align}
-\pr{AB} = \pr{A}\pr{B}
-= \frac{3}{25}
-\end{align}
+\end{enumerate}
+\end{document}
+
 

@@ -1,74 +1,179 @@
 \iffalse
-\documentclass{article}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-
-\usepackage{enumitem}
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-\usepackage{hyperref,xcolor}
-\hypersetup{
-    colorlinks,
-    urlcolor={black}	%black!50!blue
-}
-\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
-\let\vec\mathbf
-
-\def\inputGnumericTable{}
-\usepackage{array}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{romannum}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
 \usepackage{longtable}
-\usepackage{calc}
 \usepackage{multirow}
-\usepackage{hhline}
-\usepackage{ifthen}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
 
-\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-\newcommand{\Problem}{\noindent \textbf{Problem: }}
-\newcommand{\solution}{\noindent \textbf{Solution: }}
-\setlist[enumerate]{font=\small\bfseries}
-\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
 
 \begin{document}
 
 
-\title{Assignment: Probability}
-\author{\Large T.Sai Raghavendra - FWC22087}
-\date{}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
 
 
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+
+\title{Assignment 1}
+\author{Jaswanth Chowdary Madala}
+
+
+
+
+
+% make the title area
 \maketitle
-\begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{table}{enumi}
-%%%16.4.3
-\setcounter{enumi}{3}
-\setcounter{enumii}{3}
 
+\newpage
 
-\solution
-\fi
-Table 
-	\ref{tables:16.4.3.2} summarises the given information.
-	\begin{table}[h]
-	\centering 
-	\input{ncert/11/16/4/3/tables/table.tex}
-	\caption{}
-	\label{tables:16.4.3.2}
-	\end{table}
+%\tableofcontents
 
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\item A die has two faces each with number ‘1’, three faces each with number ‘2’ and one face with number ‘3’. If die is rolled once, determine
 \begin{enumerate}
-\item \begin{align}
-\pr{X_2} = \frac{1}{2}  %from \ref{tables:table2} 
-\end{align}	
+\item $\pr{2}$
+\item $\pr{\text{1 or 3}}$
+\item $\pr{\text{not 3}}$ 
+\end{enumerate}
+\textbf{Solution:} 
+\fi
+The given information is summarized in the following table \ref{tab:11/16/4/3/1}
+\begin{table}[h]
+\centering
+\input{ncert/11/16/4/3/tables/table1.tex}
+\caption{Random variable X}
+\label{tab:11/16/4/3/1}
+\end{table}
+\begin{enumerate}
 \item 
 \begin{align}
-\pr{X_1 + X_3}	&= \pr{X_1} + \pr{X_3} - \pr{X_1X_3}\\
-				&= \frac{1}{3} + \frac{1}{6}   \quad (\because \pr{X_1X_3} = 0)\\
- 	&= \frac{1}{2}
+\pr{X = 2} = \frac{1}{2}
+\end{align}	
+\item Since
+\begin{align}
+X = 1 \text{ or } X = 3 &\equiv X \in \{1,3\}\\
+X = 1 \text{ and } X= 3 &\equiv  X = \phi
+\end{align}
+\begin{align}
+\pr{X \in \{1,3\}} &= \pr{X = 1} + \pr{X = 3} - \pr{X = \phi}\\
+&= \frac{1}{3} + \frac{1}{6} \\
+&= \frac{1}{2}
 \end{align}
 \item 
 \begin{align}
-\pr{X_3^{\prime}} &= 1 - \pr{X_3}\\
-			   &= 1 - \frac{1}{6}\\
-			   &= \frac{5}{6}
+\pr{X \neq 3} &= 1 - \pr{X = 3}\\
+&= 1 - \frac{1}{6}\\
+&= \frac{5}{6}
 \end{align}
 \end{enumerate}
+
+

@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large T SIVA PARVATHI - FWC22089}
+\date{}
+
+\maketitle
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+%\numberwithin{table}{enumi}
+\setcounter{enumi}{3}
+\setcounter{enumii}{5}
+
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
+Find the probability distribution of the number of successes in two tosses of a die, where a success is defined as
+\begin{enumerate}
+\item number greater than 4
+\item six appears on at least one die
+\end{enumerate}
+
+\solution
+Given that a die tossed two times,
+\begin{table}[h]\centering
+	\input{dtable.tex}
+	 \caption{Variable Description}
+	 \label{tab:13.4.5}
+\end{table}
+
+Refer \ref{tab:13.4.5} for numericals,
+\begin{enumerate}
+\item number greater than 4
+
+$X_1$ and $X_2$ are independent events, so the desired outcome is
+\begin{align}
+X&=X_1+X_2
+\end{align}
+In $n$ Bernoulli trials with $k$ success and $(n - k)$ failures, the probablity of $k$ success in $n$-Bernoulli trials can be given as,
+\begin{align}
+p_{X_i}(k)   &= 
+\begin{cases}
+\comb{n}{k}{p}^{k}{q}^{n-k} & 0 \le k \le n\\
+0 & \text{otherwise}                
+\end{cases}
+\end{align}
+Probability distribution of getting number greater than 4,
+\begin{align}
+p_X(k)   &= \comb{n}{k}{p_1}^{k}{q_1}^{n-k}, 0 \le k \le 2
+\end{align}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\columnwidth]{bfig1.pdf}
+\caption{Stem plot for the distribution $\pr{X>4}$}
+\label{fig:Plot}
+\end{figure}
+
+\item six appears on at least one die
+
+$X_1$ and $X_2$ are independent events, so the desired outcome is
+\begin{align}
+X&=X_1+X_2
+\end{align}
+Probability distribution of getting six on atleast one die is,
+\begin{align}
+p_X(k)   &= \comb{n}{k}{p_2}^{k}{q_2}^{n-k}, 0 \le k \le 2
+\end{align}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\columnwidth]{bfig2.pdf}
+\caption{Stem plot for the distribution $\pr{X=6}$}
+\label{fig:Plot}
+\end{figure}
+\end{enumerate}
+\end{enumerate}
+\end{document}

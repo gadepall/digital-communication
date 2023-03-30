@@ -15,7 +15,7 @@
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{longtable}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -139,18 +139,16 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 
-
-\begin{enumerate}
-\textbf{Solution:}
-Given the probablity of occurrence of events $A$, $B$ as,
-\begin{align}
-\pr{A} &= \frac{3}{5}\\
-\pr{B} &= \frac{1}{5}
-\end{align}
+\textbf{Solution:} 
 \fi
-Since the events $A$, $B$ are independent, we have
+Let $E_1$ denote the event that the first card drawn is Black, $E_2$ denote the event that the second card drawn is Black.
+Then 
 \begin{align}
-\pr{AB} = \pr{A}\pr{B}
-= \frac{3}{25}
+	\pr{E_1} &=  \frac{26}{52},\, 
+\pr{E_2 \mid E_1}
+ =  \frac{25}{51}
+ \\
+	\implies
+\pr{E_1 E_2} &= \pr{E_1} \pr{E_2 \mid E_1} = 
+ \frac{25}{102}
 \end{align}
-
