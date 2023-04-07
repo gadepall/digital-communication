@@ -1,0 +1,50 @@
+\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item 
+Let 
+\begin{align}
+	N = R+B+G, n = r+b+g
+\end{align}
+where $R,B,G$ and $r,b,g$ represent the number of red, blue and green marbles respectively within N and n.  Then
+\begin{align}
+	\pr{r,b,g} = 
+	\frac{\comb{R}{r}
+	\comb{B}{b}
+	\comb{G}{g}}
+{
+	\comb{R+B+G}{r+b+g}
+}
+\label{eq:ncert/11/16/4/1/1}
+\end{align}
+\solution 
+		The number of ways of choosing $n$ marbles from $N$ is 
+\begin{align}
+	\comb{N}{n}
+\end{align}
+The number of ways of choosing r,b,g marbles is
+\begin{align}
+	\comb{R}{r}
+	\comb{B}{b}
+	\comb{G}{g}
+\end{align}
+Using the definition of probability, we obtain
+\eqref{eq:ncert/11/16/4/1/1}.
+\item 
+\begin{align}
+	 \comb{R+B}{n} = \sum_{k = 0}^{R} \sum_{m = n-k}^{B} \comb{R}{k} \comb{B}{m}
+ \label{eq:ncert/11/16/4/1/5}
+\end{align}
+\solution Since
+\begin{align}
+	\brak{x+1}^R &= \sum_{k = 0}^{R} \comb{R}{k} \, x^k,
+ \label{eq:ncert/11/16/4/1/4}
+\\
+	\brak{x+1}^R \brak{x+1}^B &= \sum_{k = 0}^{R} \sum_{m = 0}^{B} \comb{R}{k} \comb{B}{m}\, x^{k+m}\\
+\implies	\brak{x+1}^{R+B} &= \sum_{k = 0}^{R} \sum_{m = n-k}^{B} \comb{R}{k} \comb{B}{m}\, x^{n} + \sum_{k = 0}^{R} \sum_{m \ne n-k}^{B} \comb{R}{k} \comb{B}{m}\, x^{k+m}\\
+\end{align} 
+yielding
+ \eqref{eq:ncert/11/16/4/1/5}
+upon comparing the coefficients of $x^n$ on both sides.
+\end{enumerate}

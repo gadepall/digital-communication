@@ -386,6 +386,24 @@ P_{X}(z) =  \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
 \label{eq:dice_xiz}
 \end{align}
 upon summing up the geometric progression.  
+\item From \eqref{eq:dice_xiz}, the CDF of $X$ is given by
+\begin{align}
+F_{X}\brak{n} = 	\pr{X \le n} 
+ = 
+\begin{cases}
+0 & n < 1 \\
+\frac{n}{6} & 1 \le n \leq 6 \\
+1 & \text{otherwise}
+\end{cases}
+\label{eq:dice_xiF}
+\end{align}
+and plotted in \figref{fig:ncert/11/16/3/3/1}.
+\begin{figure}[ht]
+\centering
+\includegraphics[width = \columnwidth]{ncert/11/16/3/3/figs/fig.png}
+\caption{CDF}
+\label{fig:ncert/11/16/3/3/1}
+\end{figure}
 \end{enumerate}
 \section{Triangular Distribution}
 

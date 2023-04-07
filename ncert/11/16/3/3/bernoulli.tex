@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{romannum}
 \usepackage{float}
@@ -14,7 +15,7 @@
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{longtable}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -140,21 +141,39 @@ columns=fullflexible
 
 
 \begin{enumerate}
-\item If $\pr{A} = \frac{3}{5}$ and $\pr{B} = \frac{1}{5}$ , find $\pr{A\cap B}$ if $A$ and $B$ are independent events\\
-\textbf{Solution:}
-Given the probablity of occurrence of events $A$, $B$ as,
-\begin{align}
-\pr{A} &= \frac{3}{5}\\
-\pr{B} &= \frac{1}{5}
+\textbf{Solution:} 
+\fi
+The CDF of the random variable $X$ representing the roll of a dice, is available in \eqref{eq:dice_xiF}.
+\begin{enumerate}
+\item The set of possible prime numbers in a die roll contains 2,3,5
+\begin{align} 
+\pr{X \in \{2,3,5\}} &= p_{X}\brak{2} + p_{X}\brak{3} + p_{X}\brak{5}\\
+&= \frac{1}{2}
 \end{align}
-Since the events $A$, $B$ are independent, we have
+\item The probability that a number greater than or equal to 3 will appear is given by
 \begin{align}
-\pr{AB} &= \pr{A}\pr{B}\\
-&= \frac{3}{5} \times \frac{1}{5}\\
-&= \frac{3}{25}
+\pr{X \geq 3} &= 1 - \pr{X \leq 2}\\
+&= 1 - F_{X}\brak{2}\\
+&= \frac{2}{3}
 \end{align}
-
+\item The probability that a number less than or equal to 1 will appear is given by
+\begin{align}
+\pr{X \leq 1} &= F_{X}\brak{1}\\
+&= \frac{1}{6}
+\end{align}
+\item The probability that a number greater than 6 will appear is given by
+\begin{align}
+\pr{X > 6} &= 1 - \pr{X \leq 6}\\
+&= 1 - F_{X}\brak{6}\\
+&= 0
+\end{align}
+\item The probability that a number less than 6 will appear is given by
+\begin{align}
+\pr{X < 6} &= \pr{X \leq 5}\\
+&= F_{X}\brak{5}\\
+&= \frac{5}{6}
+\end{align}
 \end{enumerate}
-\end{document}
+
 
 
