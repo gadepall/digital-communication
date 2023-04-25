@@ -1,4 +1,3 @@
-\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{romannum}
 \usepackage{float}
@@ -141,23 +140,26 @@ columns=fullflexible
 
 
 \begin{enumerate}
-\textbf{Solution:} 
-\fi
-		Consider the random variables $X, Y$, which denotes the first child, second child gender respectively as described in table \ref{tab:ncert/12/13/6/2/1}.
+\item A couple has two children,
+\begin{enumerate}
+\item Find the probability that both children are males, if it is known that at least one of the children is male.
+\item Find the probability that both children are females, if it is known that the elder child is a female.
+\end{enumerate}
+\textbf{Solution:} Consider the random variables $X, Y$, which denotes the first child, second child gender respectively as described in table \ref{tab:1}.
 \begin{table}[h]
 \centering
-\input{ncert/12/13/6/2/tables/table1.tex}
+\input{tables/table1.tex}
 \caption{Random variables $X$}
-\label{tab:ncert/12/13/6/2/1}
+\label{tab:1}
 \end{table}
 
-The probabilities for the random variables $X,Y$ is listed in table \ref{tab:ncert/12/13/6/2/2}.
+The probabilities for the random variables $X,Y$ is listed in table \ref{tab:2}.
 \begin{table}[h]
 \centering
-\input{ncert/12/13/6/2/tables/table2.tex}
+\input{tables/table2.tex}
 \caption{Probabilities}
-\label{tab:ncert/12/13/6/2/2}
-\end{table}
+\label{tab:2}
+\end{table}\\
 
 The probability $\pr{XY = 0}$ is given by 
 \begin{align}
@@ -193,5 +195,7 @@ The required probability is given by,
 &= \frac{1}{2}
 \end{align}
 \end{enumerate}
+\end{enumerate}
+\end{document}
 
 

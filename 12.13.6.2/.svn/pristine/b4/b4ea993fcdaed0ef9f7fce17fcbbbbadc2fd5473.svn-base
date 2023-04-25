@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%  This is a LaTeX2e table fragment exported from Gnumeric.        %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Event}& \textbf{Probability} \\ \hline
+$\pr{X = 0}$ &  $\frac{1}{2}$ \\ \hline
+$\pr{X = 1}$ &  $\frac{1}{2}$ \\ \hline
+$\pr{Y = 0}$ &  $\frac{1}{2}$ \\ \hline
+$\pr{Y = 1}$ &  $\frac{1}{2}$ \\ \hline
+$\pr{X + Y = 0}$ & 	$\frac{1}{4}$ \\ \hline
+$\pr{X + Y = 2}$ & 	$\frac{1}{4}$ \\ \hline
+$\pr{XY = 0}$ & 	$\frac{3}{4}$ \\ \hline
+\end{tabular}
+\end{center}
