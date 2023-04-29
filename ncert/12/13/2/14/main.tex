@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -317,42 +318,28 @@ Probability Assignment -I
        \end{enumerate}
  \end{enumerate}
  \textbf{Solution:}
- \begin{itemize}
-     \item Given that \pr{A} = $\frac{1}{2}$ and \pr{B} = $\frac{1}{3}$ 
-     \item A,B are independent so 
+ \fi
+     Given that \pr{A} = $\frac{1}{2}$ and \pr{B} = $\frac{1}{3}$ 
+     $A,B$ are independent so 
      \begin{align}
-          \pr{AB} = \pr{A}\pr{B}
+          \pr{AB} = \pr{A}\pr{B}=\frac{1}{6}
      \end{align}
-     \item The problem will be solved if either of them solves it or both solves it, i.e \pr{A+B} 
+ \begin{enumerate}
+ \item      The probability of the problem being solved is 
      \begin{align}
-          &= \pr{A}+\pr{B}-\pr{AB}\\
+ \pr{A+B}          &= \pr{A}+\pr{B}-\pr{AB}\\
           &= \pr{A}+\pr{B}-\pr{A}\pr{B}\\
-          &= \frac{1}{2} + \frac{1}{3} -\frac{1}{6} = \frac{2}{3}\\
-          &\therefore \pr{A+B} = \frac{2}{3}
+          &= \frac{1}{2} + \frac{1}{3} -\frac{1}{6} = \frac{2}{3}
           \end{align}
-     \item Probability of A not solving problem is \pr{A^{\prime}} 
-     \begin{align}
-          &= 1 - \pr{A}
-          = 1- \frac{1}{2}
-          = \frac{1}{2}
-          \end{align}
-          \item Probability of B not solving problem is \pr{B^{\prime}}
-          \begin{align}
-               &= 1 - \pr{B}
-               = 1- \frac{1}{3}
-               = \frac{2}{3}
-               \end{align}
                \item Probalbility that exactly one person solves problem is
                \begin{align}
-                    &= \pr{AB^{\prime}}+\pr{A^{\prime}B}\\
-                    &= \pr{A}\pr{B^{\prime}}+\pr{A^{\prime}}\pr{B}\\
-                    &= \frac{1}{2}  \frac{2}{3}+\frac{1}{3}  \frac{1}{2} = \frac{1}{2}\\
-                    &\therefore \pr{AB^{\prime}}+\pr{A^{\prime}B} = \frac{1}{2}
+                     \pr{AB^{\prime}}+\pr{A^{\prime}B}
+                    &= \pr{A}\pr{B^{\prime}}+\pr{A^{\prime}}\pr{B}
+		    \\
+                    &= \pr{A}+\pr{B}-2\pr{A}\pr{B} = 
+                     \frac{1}{2}
                \end{align}
-
-       
- \end{itemize}
+ \end{enumerate}
 
       
 
-\end{document}
