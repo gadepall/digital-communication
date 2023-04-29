@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -92,14 +93,6 @@ columns=fullflexible
 
 
 \textbf{10.15.1.4}:
- Which of the following cannot be the probability of an event ? 
-
-\begin{enumerate}[label=(\Alph*)]
-\item $\frac{2}{3}$ 
-\item $-1.5$ 
-\item $15\%$ 
-\item $0.7$ 
-\end{enumerate}
 
 
 %Answer
@@ -108,61 +101,43 @@ columns=fullflexible
 Probability of an event $E$ , written as \pr{E}\:
 
 \begin{align}
-\label{eq:def}
+\label{eq:ncert/10/15/1/4/def}
 \pr{E}=\frac{\text{Number of outcomes favourable to $E$}}{\text{Total Number of possible outcomes in sample space}}
 \end{align}
-
-
-From the definition of probability \pr{E}, number of favourable outcomes is always less than or equal to the number of all possible outcomes.
-
-
+\fi
+From the axioms of probability,
 \begin{align}
-   \label{eq:prob}
+   \label{eq:ncert/10/15/1/4/prob}
    0 \le \pr{E}\le 1 
 \end{align}
-\begin{enumerate}[label=(\Alph*)]
-    
-
+\begin{enumerate}
 \item \pr{E} = $\frac{2}{3}$
 \begin{align}
     \because 0 \le \frac{2}{3} \le 1
 \end{align}
-
-From \eqref{eq:prob} ,
-
- It can be probability of an event.
-
+from \eqref{eq:ncert/10/15/1/4/prob},
+ it can be probability of an event.
 \item \pr{E} = $-1.5$
 \begin{align}
 \because  -1.5 < 0 
 \end{align}
-
-From \eqref{eq:prob} ,
-
-It cannot be a probability of any event.
-
-\item \pr{E} = $15\%$
-
+from \eqref{eq:ncert/10/15/1/4/prob},
+it cannot be a probability of any event.
+\item 
 \begin{align}
-15\%=\frac{15}{100}
+	\pr{E} &= 
+\frac{15}{100}
+\\
+	\because 0 &\le \frac{15}{100} \le 1,
 \end{align}
-
-\begin{align}
-\because 0 \le \frac{15}{100} \le 1
-\end{align}
-
-From \eqref{eq:prob} ,
-
-It can be probability of an event.
-
+from \eqref{eq:ncert/10/15/1/4/prob},
+it can be probability of an event.
+%
 \item \pr{E} = $0.7$ 
 \begin{align}
 \because 0 \le 0.7 \le 1 
 \end{align}
-
-From \eqref{eq:prob} ,
-
-It can be a probability of an event.
+from \eqref{eq:ncert/10/15/1/4/prob},
+it can be a probability of an event.
 \end{enumerate}
 
-\end{document}
