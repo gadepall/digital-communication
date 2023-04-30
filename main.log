@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  29 APR 2023 18:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  30 APR 2023 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1047,23 +1047,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5])
+(./ncert/10/15/1/8/main.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
 (./ncert/11/16/3/12/axioms.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5133) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6])
-(./ncert/11/16/3/17/axioms.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7])
+(./ncert/11/16/3/17/axioms.tex
+Underfull \vbox (badness 3724) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8])
 (./ncert/11/16/3/18/axioms.tex (./ncert/11/16/3/18/tables/table.tex
 \gnumericTableWidth=\skip84
 \gnumericTableWidthComplete=\skip85
@@ -1075,20 +1085,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) detected at line 223
  []
 
-)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+))
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8])
+ [9]
 (./ncert/11/16/3/21/axioms.tex (./ncert/11/16/3/21/tables/11.16.03.21_1.tex)
 (./ncert/11/16/3/21/tables/11.16.03.21_2.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1096,52 +1099,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-(./ncert/11/16/3/21/tables/11.16.03.21_3.tex)
-Underfull \vbox (badness 6477) has occurred while \output is active []
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [10]
+(./ncert/11/16/3/21/tables/11.16.03.21_3.tex))
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10])
+ [11]
 (./ncert/11/16/4/3/axioms.tex (./ncert/11/16/4/3/tables/table1.tex)
-Underfull \vbox (badness 1728) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11])
-(./ncert/12/13/2/1/axioms.tex) (./ncert/12/13/2/7/axioms.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12])
-(./ncert/12/13/2/6/axioms.tex) (./ncert/12/13/2/9/axioms.tex
-Underfull \vbox (badness 2680) has occurred while \output is active []
-
-
+(./ncert/12/13/2/1/axioms.tex) (./ncert/12/13/2/7/axioms.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13])
+(./ncert/12/13/2/6/axioms.tex) (./ncert/12/13/2/9/axioms.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-(./ncert/12/13/2/14/main.tex
-Underfull \vbox (badness 1515) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1149,27 +1133,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15])
+ [14])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+(./ncert/12/13/2/14/main.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-(./ncert/12/13/2/18/axioms.tex (./ncert/12/13/2/18/tables/12.13.02.18_1.tex)
+(./ncert/12/13/2/18/axioms.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
-(./ncert/12/13/1/2/cond.tex) (./ncert/12/13/6/8/axioms.tex)
+ [17]
+(./ncert/12/13/2/18/tables/12.13.02.18_1.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18])
+(./ncert/12/13/1/2/cond.tex) (./ncert/12/13/6/8/axioms.tex))
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1789,7 +1781,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [75])
-<./figs/uni_cdf.pdf, id=1414, 462.52798pt x 346.89601pt>
+<./figs/uni_cdf.pdf, id=1423, 462.52798pt x 346.89601pt>
 File: ./figs/uni_cdf.pdf Graphic file (type pdf)
 <use ./figs/uni_cdf.pdf>
 Package pdftex.def Info: ./figs/uni_cdf.pdf  used on input line 549.
@@ -1810,7 +1802,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77 <./figs/uni_cdf.pdf>]
-<./figs/gauss_cdf.pdf, id=1473, 462.52798pt x 346.89601pt>
+<./figs/gauss_cdf.pdf, id=1482, 462.52798pt x 346.89601pt>
 File: ./figs/gauss_cdf.pdf Graphic file (type pdf)
 <use ./figs/gauss_cdf.pdf>
 Package pdftex.def Info: ./figs/gauss_cdf.pdf  used on input line 601.
@@ -1846,7 +1838,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81])
-<./figs/gauss_pdf.pdf, id=1574, 462.52798pt x 346.89601pt>
+<./figs/gauss_pdf.pdf, id=1583, 462.52798pt x 346.89601pt>
 File: ./figs/gauss_pdf.pdf Graphic file (type pdf)
 <use ./figs/gauss_pdf.pdf>
 Package pdftex.def Info: ./figs/gauss_pdf.pdf  used on input line 619.
@@ -1934,7 +1926,7 @@ pdf>
 ps-converted-to.pdf ./manual/figs/bpsk_const.eps>
 (epstopdf)             \includegraphics on input line 208.
 Package epstopdf Info: Output file is already uptodate.
-<./manual/figs/bpsk_const-eps-converted-to.pdf, id=1714, 562.1pt x 308.15125pt>
+<./manual/figs/bpsk_const-eps-converted-to.pdf, id=1723, 562.1pt x 308.15125pt>
 
 File: ./manual/figs/bpsk_const-eps-converted-to.pdf Graphic file (type pdf)
 <use ./manual/figs/bpsk_const-eps-converted-to.pdf>
@@ -1974,7 +1966,7 @@ f>
 -converted-to.pdf ./manual/figs/bpsk_ber.eps>
 (epstopdf)             \includegraphics on input line 282.
 Package epstopdf Info: Output file is already uptodate.
-<./manual/figs/bpsk_ber-eps-converted-to.pdf, id=1739, 462.72874pt x 346.29375p
+<./manual/figs/bpsk_ber-eps-converted-to.pdf, id=1748, 462.72874pt x 346.29375p
 t>
 File: ./manual/figs/bpsk_ber-eps-converted-to.pdf Graphic file (type pdf)
 <use ./manual/figs/bpsk_ber-eps-converted-to.pdf>
@@ -1996,7 +1988,7 @@ pdf>
 ps-converted-to.pdf ./manual/figs/bfsk_const.eps>
 (epstopdf)             \includegraphics on input line 301.
 Package epstopdf Info: Output file is already uptodate.
-<./manual/figs/bfsk_const-eps-converted-to.pdf, id=1741, 517.935pt x 303.1325pt
+<./manual/figs/bfsk_const-eps-converted-to.pdf, id=1750, 517.935pt x 303.1325pt
 >
 File: ./manual/figs/bfsk_const-eps-converted-to.pdf Graphic file (type pdf)
 <use ./manual/figs/bfsk_const-eps-converted-to.pdf>
@@ -2207,7 +2199,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [116]
-<ncert/11/16/3/3/figs/fig.png, id=2142, 462.528pt x 346.896pt>
+<ncert/11/16/3/3/figs/fig.png, id=2151, 462.528pt x 346.896pt>
 File: ncert/11/16/3/3/figs/fig.png Graphic file (type png)
 <use ncert/11/16/3/3/figs/fig.png>
 Package pdftex.def Info: ncert/11/16/3/3/figs/fig.png  used on input line 403.
@@ -2246,7 +2238,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [120]
-<./figs/sum/pmf.png, id=2204, 462.528pt x 346.896pt>
+<./figs/sum/pmf.png, id=2213, 462.528pt x 346.896pt>
 File: ./figs/sum/pmf.png Graphic file (type png)
 <use ./figs/sum/pmf.png>
 Package pdftex.def Info: ./figs/sum/pmf.png  used on input line 563.
@@ -2305,10 +2297,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7970099D2A6D1AA9E7778F6536BC5453;2122.
  ) 
 Here is how much of TeX's memory you used:
- 20806 strings out of 479304
- 335345 string characters out of 5869780
- 897217 words of memory out of 5000000
- 35843 multiletter control sequences out of 15000+600000
+ 20819 strings out of 479304
+ 335535 string characters out of 5869780
+ 897219 words of memory out of 5000000
+ 35844 multiletter control sequences out of 15000+600000
  425129 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,19n,102p,761b,1893s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2330,10 +2322,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (134 pages, 571605 bytes).
+Output written on main.pdf (134 pages, 572390 bytes).
 PDF statistics:
- 2646 PDF objects out of 2984 (max. 8388607)
- 2371 compressed objects within 24 object streams
- 1422 named destinations out of 1440 (max. 500000)
+ 2657 PDF objects out of 2984 (max. 8388607)
+ 2382 compressed objects within 24 object streams
+ 1431 named destinations out of 1440 (max. 500000)
  334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

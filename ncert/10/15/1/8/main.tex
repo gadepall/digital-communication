@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -90,8 +90,6 @@ Assignment 1
 
 \subsection*{\textbf{\underline{Problem 10.15.1.8}:-}}
 
-A bag contains 3 red balls and 5 black balls. A ball is drawn at random from the bag.
-What is the probability that the ball drawn is\begin{enumerate}[label=(\roman*)] \item red ? \item not red? \end{enumerate}
 
 \subsection*{\textbf{\underline{Solution}:-}}
 
@@ -104,7 +102,8 @@ Let R be the event that the selected ball is red and B be the event that the sel
 \begin{align}\text{Total number of balls in the bag} &= n(S)\\ &=n(R)+n(B) = 8
 \end{align}
 
-Let $X$ be a Bernoulli random variable, such that $X\sim Ber(p).$
+			\fi
+Let 
 \begin{align}
 X= \begin{cases} 
       1 & \text{if drawn ball is red} \\
@@ -114,15 +113,13 @@ X= \begin{cases}
 \begin{enumerate}[label=(\roman*)]
     \item Probability that the drawn ball is red
     \begin{align}
-    &=\pr{X=1}\\
-    & = \frac{n(R)}{n(S)}= \frac{3}{8}\\
-    &\implies p = \frac{3}{8}
+    \pr{X=1}
+    = \frac{3}{8}\\
     \end{align}
     \item Probability that the drawn ball is not red
     \begin{align}
-    &= \pr{X=0}\\ &= 1-p= 1-\frac{3}{8} = \frac{5}{8}
+     \pr{X=0}= 1-\frac{3}{8} = \frac{5}{8}
     \end{align}
 \end{enumerate}
-\end{document}
 
 
