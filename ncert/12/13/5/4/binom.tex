@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -148,53 +148,33 @@ columns=fullflexible
 
 \maketitle
 
-\textbf{Exercise 12.13.5.4} Five cards are drawn successively with replacement from a well-shuffled deck
-of 52 cards. What is the probability that
-\begin{enumerate}[label=(\roman*)]
-    \item all the five cards are spades?
-    \item only 3 cards are spades?
-    \item none is a spade?
-\end{enumerate}
-
-\textbf{Solution.}  A deck has 52 cards among which 13 are spades. Since we are replacing drawn cards ,the probability of getting spade on any draw, $p = \frac{13}{52} = \frac{1}{4}$. This is a binomial distribution where getting a card of spades is considered success.
-
-The probability of getting $r$ successes in a binomial distribution having $n$ independent Bernoulli trials
-and probability of success in each Bernoulli trial being $p$ is 
-\begin{align} \pr{X=r} &= \comb{n}{r} p^{r}(1-p)^{n-r} \end{align}
-
-Here, $p = \frac{1}{4}$ and $n = 5$.
-
-Formally, let X be the random variable denoting number of spades we get in 5 trials.
-\begin{align}\therefore X\in{\{0, 1, 2, 3, 4, 5\}} 
-\end{align}
+\textbf{Exercise 12.13.5.4} 
+\textbf{Solution.}  
+\fi
+A deck has 52 cards among which 13 are spades. Since we are replacing drawn cards, the probability of getting spade on any draw is
 \begin{align}
-    X &\sim Bin\brak{5 , \frac{1}{4}} \\
-    \pr{r} &= \comb{5}{r} \brak{\frac{1}{4}}^{r}
-    \brak{\frac{3}{4}}^{5-r} 
+p = \frac{13}{52} = \frac{1}{4}
 \end{align}
-
-% Part (i)
+This is a binomial distribution where getting a card of spades is considered success.
+The pmf is given by 
+\begin{align} \pr{X=r} &= \comb{n}{r} p^{r}(1-p)^{n-r}, \quad p = \frac{1}{4}, n = 5 \end{align}
+	The desired probabilities are then obtained as
 \begin{enumerate}[label=(\roman*)]
-    \item Probability  that  all 5 cards are spades is \pr{X=5}.
+    \item 
 \begin{align}
 \pr{X=5} &= \comb{5}{5}\brak{\frac{1}{4}}^{5} \brak{\frac{3}{4}}^{0}\\
      &= \frac{1}{1024} \approx 0.00098
 \end{align}
-
-% Part (ii)
-\item Probability that only 3 cards are spades is \pr{X=3}.
+\item 
 \begin{align}
 \pr{X=3} &= \comb{5}{5} \brak{\frac{1}{4}}^{3} \brak{\frac{3}{4}}^{2}\\
      &= \frac{45}{512} \approx 0.08789
 \end{align}
-
-% Part (iii)
-\item Probability that no card is spade is \pr{X=0}.
+\item 
 \begin{align}
 \pr{X=0} &= \comb{5}{0} \brak{\frac{1}{4}}^{0} \brak{\frac{3}{4}}^{5}\\
      &= \frac{243}{1024} \approx 0.23730
 \end{align}
 \end{enumerate}
-\end{document}
 
 
