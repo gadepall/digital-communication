@@ -1,0 +1,158 @@
+\documentclass[12pt, journal]{IEEEtran}
+
+\usepackage{tfrupee}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+
+\title{Assignment-1 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Arugonda Srikar \\ \normalsize CS22BTECH11008}
+
+\begin{document}
+	\newtheorem{theorem}{Theorem}[section]
+	\newtheorem{problem}{Problem}
+	\newtheorem{proposition}{Proposition}[section]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{example}{Example}[section]
+	\newtheorem{definition}[problem]{Definition}
+	%\newtheorem{thm}{Theorem}[section] 
+	%\newtheorem{defn}[thm]{Definition}
+	%\newtheorem{algorithm}{Algorithm}[section]
+	%\newtheorem{cor}{Corollary}
+	\newcommand{\BEQA}{\begin{eqnarray}}
+	\newcommand{\EEQA}{\end{eqnarray}}
+	\newcommand{\define}{\stackrel{\triangle}{=}}
+
+	\bibliographystyle{IEEEtran}
+	%\bibliographystyle{ieeetr}
+
+
+	\providecommand{\mbf}{\mathbf}
+	\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+	\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+	\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+	\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+	\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+	\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+	\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+	\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+	\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+	\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+	\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+	\theoremstyle{remark}
+	\newtheorem{rem}{Remark}
+	\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+	\providecommand{\abs}[1]{\left\vert#1\right\vert}
+	\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+	\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+	%\providecommand{\norm}[1]{\lVert#1\rVert}
+	\providecommand{\mtx}[1]{\mathbf{#1}}
+	\providecommand{\mean}[1]{E\left[ #1 \right]}
+	\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+	%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+	\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+	\newcommand{\solution}{\noindent \textbf{Solution: }}
+	\newcommand{\cosec}{\,\text{cosec}\,}
+	\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+	\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+	\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+	
+		\maketitle
+		\textbf{Question:12.13.2.15:}
+		One card is drawn at random from a well shuffled deck of 52 cards. In which of
+		the following cases are the events E and F independent ?
+	\begin{enumerate}[label=(\roman*)]
+		\item $E$ : ‘the card drawn is a spade’\\
+			$F$ : ‘the card drawn is an ace’
+		
+		\item $E$: ‘the card drawn is black’\\
+			$F$ : ‘the card drawn is a king’
+		
+		\item $E$ : ‘the card drawn is a king or queen’\\
+			$F$ : ‘the card drawn is a queen or jack’.
+	\end{enumerate}
+	
+	\textbf{Solution:}
+
+	\begin{enumerate}[label=(\roman*)]
+		\item 
+			$E$ denotes the event that the card drawn is spade
+			\begin{align}
+				\pr{E} = \frac{13}{52} = \frac{1}{4} 
+			\end{align}
+			$F$ denotes the event that card drawn is ace 
+			\begin{align}
+				\pr{F} = \frac{4}{52} = \frac{1}{13}\\
+				\pr{EF} = \frac{1}{52}\\
+				\pr{E}\pr{F} = \frac{1}{4} \times \frac{1}{13} = \frac{1}{52}\\
+				\therefore~\pr{EF} = \pr{E}\pr{F}
+			\end{align}
+			$\therefore$  $E$ and $F$ are independent events. \\
+		\item
+			$E$ denotes the event that the card drawn is black 
+			\begin{align}
+				\pr{E} = \frac{26}{52} = \frac{1}{2}
+			\end{align}
+			$F$ denotes the event that card drawn is a king 
+			\begin{align}
+				\pr{F} = \frac{4}{52} = \frac{1}{13} \\
+				\pr{EF} = \frac{2}{52} = \frac{1}{26} \\
+				\pr{E}\pr{F} = \frac{1}{2} \times \frac{1}{13} = \frac{1}{26}\\
+				\therefore~\pr{EF} = \pr{E}\pr{F}
+			\end{align}
+			
+			$\therefore$  $E$ and $F$ are independent events. \\
+		\item
+			$E$ denotes the event that the card drawn is king or queen
+			\begin{align}
+				\pr{E} = \frac{8}{52} = \frac{2}{13}
+			\end{align}
+			$F$ denotes the event that card drawn is a queen or jack 
+			\begin{align}
+				\pr{F} = \frac{8}{52} = \frac{2}{13}\\
+				\pr{EF} = \frac{4}{52} = \frac{1}{13}\\
+				\pr{E}\pr{F} = \frac{2}{13} \times \frac{2}{13} = \frac{4}{169}\\
+				\therefore~\pr{EF} \neq \pr{E}\pr{F}
+			\end{align}	
+			$\therefore$  $E$ and $F$ are not independent events. \\
+		
+	\end{enumerate}
+\end{document}
