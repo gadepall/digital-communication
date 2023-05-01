@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -295,7 +295,8 @@ Assignment-1
 %\IEEEpeerreviewmaketitle
 
 %%%Assignment Solution Starts Here%%% 
-\raggedright\textbf{Problem Statement:}\\ { A die marked 1, 2, 3 in red and 4, 5, 6 in green is tossed. Let A be the event,‘the number is even,’ and B be the event, ‘the number is red’. Are A and B independent?} \\
+\raggedright\textbf{Problem Statement:}\\ { 
+} \\
 
 \solution\\
 
@@ -309,29 +310,27 @@ Given,\\
       n\brak{S}&=6 \\
       n\brak{AB}&=1 
 \end{align} 
-Let X and Y be two random variables such that,
+\fi
+Let 
 \begin{align}
- & X =  \begin{cases}
+	X &=  \begin{cases}
      0, \text{ if number is odd}\\
      1, \text{ if number is even} 
  \end{cases}\\
- & Y =  \begin{cases}
+	Y &=  \begin{cases}
      0, \text{ if number is green}\\
      1, \text{ if number is red} 
  \end{cases}
 \end{align}
-Now,
+From the given information,
 \begin{align}
-\pr{X=1}&=\frac{n\brak{A}}{n\brak{S}}=\frac{3}{6}=\frac{1}{2}    \\ 
-\pr{Y=1}&=\frac{n\brak{B}}{n\brak{S}}=\frac{3}{6}=\frac{1}{2}     \\
-\pr{X=1,Y=1}&=\frac{n\brak{AB}}{n\brak{S}}=\frac{1}{6}   
+	\pr{X=1}&=\frac{3}{6}=\frac{1}{2},
+\pr{Y=1}=\frac{3}{6}=\frac{1}{2}     \\
+\pr{X=1,Y=1}&=\frac{1}{6}   
 \end{align}
-
-
 Now,
 \begin{align}
-&\pr{X=1} \times \pr{Y=1} = \frac{1}{2}\times\frac{1}{2} = \frac{1}{4} \\
-\implies &\pr{X=1,Y=1} \neq \pr{X=1} \times \pr{Y=1}
+	\pr{X=1} \times \pr{Y=1} &=  \frac{1}{4} \\
+	\implies \pr{X=1,Y=1} &\neq \pr{X=1} \times \pr{Y=1}
 \end{align}
 Hence, A and B are not independent.
-\end{document}
