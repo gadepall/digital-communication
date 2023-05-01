@@ -1,7 +1,7 @@
 \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -19,10 +19,6 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-\usepackage{amsmath}
-\newcommand*\textfrac[2]{
-  \frac{\text{#1}}{\text{#2}}
-}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -179,19 +175,18 @@ columns=fullflexible
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 
+\vspace{3cm}
+
 \title{
-Assignment 1 
-
-\Large{AI1110: Probability and Random Variables}
-
-Indian Institute of Technology Hyderabad
-
+%	\logo{
+Assignment 1 in \LaTeX
+%	}
 }
-\author{ 
-Ashwin Agrawal
-
-CS22BTECH11009
-% <-this % stops a space	
+\author{ Pranay Jain$^{*}$% <-this % stops a space
+	\thanks{*The student is with the Department
+		of Computer Science Engineering, Indian Institute of Technology, Hyderabad
+		502285 India e-mail: ai22btech11020@iith.ac.in.}
+	
 }	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
@@ -258,9 +253,8 @@ CS22BTECH11009
 
 
 % make the title area
-\maketitle
+\maketitle{\huge Assignment 1 }
 
-\newpage
 
 %\tableofcontents
 
@@ -286,21 +280,42 @@ CS22BTECH11009
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
-\textbf{10.15.1.11}
- \textbf{Question:}
- 
- \textbf{Solution:}
- \fi
- 
-Let 
-\begin{align}
-	 X =
-	\begin{cases}
-		1, & \text{if the chosen fish is male}\\ 
-		0, & \text{if the chosen fish is female}
-	\end{cases}
-\end{align}
-Then 
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
+
+\raggedright\textbf{Problem 12.13.1.4 :}
+
+\textbf{Solution 12.13.1.4 :}
+\fi
+From the given information, 
+\begin{align} 
+    \pr B=\frac{5}{13} , \pr A=\frac{5}{26} , \pr {A|B}=\frac{2}{5} \\
+  \end{align}
+ Since,
  \begin{align}
-               \pr{X=1} = \frac{5}{13}
+  \pr {A|B} =\frac{\pr {AB}}{\pr B}, 
+  \pr {AB} = \pr {A|B}\times \pr B
+ = \frac{2}{5}\times \frac{5}{13}=\frac{2}{13}
+ \end{align}
+ and
+ \begin{align}
+ \pr {A+B} = \pr A + \pr B - \pr {AB} 
+   = \frac{5}{26} + \frac{5}{13} - \frac{2}{13}  
+	  = \frac{11}{26}
  \end{align}
