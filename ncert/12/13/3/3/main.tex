@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[12pt,onecolumn,notitlepage]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsmath}
@@ -41,39 +42,33 @@
 
 \maketitle
 \subsection*{Question}
-Of the students in a college, it is known that 60\% reside in hostel and 40\% are
-day scholars (not residing in hostel). Previous year results report that 30\% of all
-students who reside in hostel attain A grade and 20\% of day scholars attain A
-grade in their annual examination. At the end of the year, one student is chosen
-at random from the college and he has an A grade, what is the probability that the
-student is a hostlier?
 
 
 \subsection*{Solution}
+\fi
 
-Let X and Y be two random variables such that,
+Let 
 \begin{align}
- & X =  \begin{cases}
+	X &=  \begin{cases}
      0, \text{ if student is resides in hostel}\\
      1, \text{ if student is a day scholar} 
  \end{cases}\\
- & Y =  \begin{cases}
+	Y &=  \begin{cases}
      0, \text{ if student does not attain A grade}\\
      1, \text{ if student attains A grade} 
  \end{cases}
 \end{align}
-From the question, data given:
+From the given data, 
 \begin{align}
 	\pr{X=0} &= \frac{3}{5}\\
 	\pr{X=1} &= \frac{2}{5}\\
 	\pr{Y=1 \mid X=0} &= \frac{3}{10}\\
 	\pr{Y=1 \mid X=1} &= \frac{1}{5}
 \end{align}
-Now, from Bayes' theorem, the probability that the chosen student with the A grade is a hosteler is:
+ The desired probability is
  \begin{align}
- 	\pr{X=0 \mid Y=1} &= \frac{\pr{Y=1 \mid X=0}\times\pr{X=0}}{\pr{Y=1 \mid X=0}\times\pr{X=0} + \pr{Y=1 \mid X=1}\times\pr{X=1}}\\
- 	&= \frac{\frac{3}{10}\times\frac{3}{5}}{\frac{3}{10}\times\frac{3}{5} + \frac{1}{5}\times\frac{2}{5}}\\
- 	&= \frac{9}{13}
+	 \pr{X=0 \mid Y=1} &= \frac{\pr{Y=1 \mid X=0}\times\pr{X=0}}{\sum_{k=0}^{1}\pr{Y=1 \mid X=k}\times\pr{X=k} }\\
+ 	&= \frac{\frac{3}{10}\times\frac{3}{5}}{\frac{3}{10}\times\frac{3}{5} + \frac{1}{5}\times\frac{2}{5}}
+ 	= \frac{9}{13}
  \end{align}
 
-\end{document}
