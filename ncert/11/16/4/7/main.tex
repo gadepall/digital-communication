@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -262,14 +263,6 @@ columns=fullflexible
 %\IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 \raggedright\textbf{Problem 11.16.4.7 :} \
-$A$ and $B$ are two events such that \pr A = 0.54, \pr B = 0.69 and \pr {AB} = 0.35.
-
-Find \begin{enumerate}
-\item \pr {A+B}
-\item \pr{A^\prime  B^\prime }
-\item \pr {A B^\prime}
-\item \pr {B A^\prime} .\\
-\end{enumerate} 
 
 \vspace{1cm}
 
@@ -281,33 +274,33 @@ Given,
 	& \pr B = 0.69 \\
 	& \pr {AB} = 0.35
 \end{align}
+\fi
 \begin{enumerate}
-\item  We know that,
+\item  
 \begin{align}
-	\pr {A+B} &=  \pr A + \pr B - \pr{AB} \\&= 0.54 + 0.69-0.35 \\&= 0.88
+	\pr {A+B} &=  \pr A + \pr B - \pr{AB} \\&= 0.54 + 0.69-0.35 = 0.88
 \end{align}
 \item By De Morgan's Law,
 \begin{align}
 	A^\prime B^\prime &= {(A+B)}^\prime\\
 	\implies \pr {A^\prime B^\prime} &= \pr{A+B}^\prime \\&= 1 - \pr {A +B}\\
-	&= 1 - 0.88 \\&= 0.12
+	&= 1 - 0.88 = 0.12
 \end{align}
 \item We know that,
 \begin{align}
-    B + B^\prime &=1 \\ B B^\prime &= 0\\
-	A &= A(B + B^\prime) = AB + A B^\prime \\
+    B + B^\prime &=1  B B^\prime = 0\\
+\implies	A &= A(B + B^\prime) = AB + A B^\prime \\
 	\implies\pr {A } &= \pr {AB} + \pr {A B^\prime} - \pr{ABB^\prime}\\
 	 &= \pr{AB}+\pr{AB^\prime} \\
-	 \implies \pr{AB^\prime} &= \pr A - \pr{AB} \label{eq:test}\\
+	 \implies \pr{AB^\prime} &= \pr A - \pr{AB} \label{eq:ncert/11/16/4/7/test}\\
 	 &= 0.54 - 0.35 
-	\\ &= 0.19
+= 0.19
 \end{align}
-\item From Equation $(~\ref{eq:test})$,
+\item From \eqref{eq:ncert/11/16/4/7/test},
 \begin{align}
-	\pr {B A^\prime} &= \pr {B} - \pr{AB} \\ 
-	&= 0.69 - 0.35 \\ &= 0.34.
+	\pr {B A^\prime} &= \pr {B} - \pr{AB} 
+= 0.69 - 0.35 = 0.34.
 \end{align}
 \end{enumerate}
 
 
-\end{document}
