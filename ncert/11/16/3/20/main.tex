@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -148,7 +148,6 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand{\comb}[2]{{}_{#1}\mathrm{C}_{#2}}
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -170,11 +169,17 @@ columns=fullflexible
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
+%	\logo{
+Assignment 1 
+%	}
 }
-\author{Kudupudi D.V.Sai Aditya\\AI22BTECH11013}
+\author{Tera Keshavardhan Reddy \\
+        AI22BTECH11029
+	\thanks{*The student is with the Department
+		of Artificial Intelligence,Indian Institute of Technology, Hyderabad
+		502285 India e-mail: ai22btech11029@iith.ac.in.}
 	
-	
+}	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
@@ -257,26 +262,23 @@ columns=fullflexible
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Question[12.13.5.11]:} Find the probability of getting 5 twice in 7 throws of a dice.\\
 
-\underline{\noindent\solution:}
-The repeated tossing of a die are Bernoulli trials.Let $X$ represent the number of times of getting 5 in 7 throws of a die.\\
-Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
-\begin{align}
-\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6}
-\end{align}
-Clearly,$\,X$ has the probability distribution with $n=7$ and $p=\frac{1}{6}$\\
-\begin{align}
-\therefore\,\pr{X=x}=\comb{n}{x}\times q^{n-x}\times p^{x}={\comb{7}{x}\times}\brak{\frac{5}{6}}^{(7-x)}\times\brak{\frac{1}{6}}^{x}
-\end{align}
-Probability of getting 5 twice in 7 throws of a dice is $\pr{X=2}$.\\
-\begin{align}
-\pr{X=2}&=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2\\
- &=\frac{7!}{{2!}\times(7-2)!}\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{6}}^2\\
- &=21\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{36}}\\
- &=\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
-\end{align}
 
-\end{document}
+\textbf{Question 11.16.3.20:}  
+  \textbf{Solution:} 
+\fi
+  Let $E$ be the event that student passes in English and  $H$ be the event that student passes in Hindi. Then,
+ \begin{align}
+ \pr{E} &=0.75,\, 
+ \pr{EH} =0.5,\, 
+ \pr{E+H}^\prime =0.1 \\
+\implies \pr{E+H} &=1-\pr{E+H}^\prime 
+          =0.9
+ \end{align}  
+Thus,  
+ \begin{align}
+  \pr{H}
+   = \pr{E+H} + \pr{EH} - \pr{E} 
+   = 0.65 
+ \end{align}
