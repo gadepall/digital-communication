@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -195,33 +196,29 @@ Indian Institute of Technology, Hyderabad}
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
-\textbf{12.13.6.19}:If $A$ and $B$ are any two events such that \pr{A}+\pr{B}-\pr{AB}=\pr{A},then choose the correct option
-\begin{enumerate}[label=(\alph*)]
-\item  \pr{B|A}=1
-\item \pr{A|B}=1
-\item \pr{B|A}=0
-\item \pr{A|B}=0
-\end{enumerate}
+\textbf{12.13.6.19}:
 
-\textbf{Solution:}Given
+\textbf{Solution:}
+\fi
+From the given information,
 \begin{align}
 \pr{A}+\pr{B}-\pr{AB}&=\pr{A}\\
-\implies \pr{B}-\pr{AB}&=0\\
 \implies \pr{B}&=\pr{AB}
 \end{align}
-
+Hence, 
 \begin{enumerate}
-\item \pr{B|A}
+\item 
 \begin{align}
-\pr{B|A}&=\frac{\pr{AB}}{\pr{A}}\\
-&=\frac{\pr{B}}{\pr{A}}
+\pr{B|A}=\frac{\pr{AB}}{\pr{A}}
+=\frac{\pr{B}}{\pr{A}}
 \end{align}
-\item \pr{A|B}
+\item 
 \begin{align}
-\pr{A|B}&=\frac{\pr{AB}}{\pr{B}}\\
-&=\frac{\pr{B}}{\pr{B}}\\
-&=1
+\pr{A|B}=\frac{\pr{AB}}{\pr{B}}
+=\frac{\pr{B}}{\pr{B}}
+=1
 \end{align}
 \end{enumerate}
-$\therefore$ \textbf{Option b is Correct}
-\end{document}
+Hence  option 
+	\ref{prob:12/13/6/19}
+is correct.
