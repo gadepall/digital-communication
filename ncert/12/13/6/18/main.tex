@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -260,31 +260,21 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
-\textbf{12.13.6.18: Question}. If \pr {A \mid B} $>$ \pr{A}, then which of the following is correct :\\
-\begin{enumerate}
- \item \pr{B\mid A} $<$ \pr{(B)} \\
- \item \pr{AB} $<$ \pr{A}  \pr{B}  \\
- \item \pr{B\mid A} $>$ \pr{B} \label{eq:c}\\ 
- \item \pr{B\mid A} $=$ \pr{B} \\
-\end{enumerate}
+\textbf{12.13.6.18: Question}. 
 \textbf{Answer: (3) \pr{B\mid A} $>$ \pr{B}}\\\\
 \solution
 Given:
+\fi
 \begin{align}
- \pr{A\mid B}&>\pr{A}\\
- \implies  \frac{\pr{AB}}{\pr{B}} &> \pr{A}\\
- \implies \pr{AB} &> \pr{A}\pr{B}\\
- \label{eq:4}
-    \implies \frac{\pr{AB}}{\pr{A}} &> \pr{B} 
+ \pr{A\mid B}&>\pr{A}
+ \implies  \frac{\pr{AB}}{\pr{B}} > \pr{A}\\
+ \implies \pr{AB} &> \pr{A}\pr{B}
+    \implies \frac{\pr{AB}}{\pr{A}} > \pr{B} 
      \end{align}
-We know:
+     Since
 \begin{align}
-& \pr{B\mid A} = \frac{\pr{AB}}{\pr{A}}
-\end{align}
-from \eqref{eq:4} ,
-\begin{align}
- \implies \pr{B\mid A} &> \pr{B}
+ \pr{B\mid A} = \frac{\pr{AB}}{\pr{A}}
+ \pr{B\mid A} &> \pr{B}
  \end{align}
-Hence, option \ref{eq:c}.
+Hence, option \ref{eq:ncert/12/13/6/18/c} is correct.
 
-\end{document} 
