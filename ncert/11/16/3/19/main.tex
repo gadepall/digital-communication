@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -261,11 +262,12 @@ AI1110 Assignment 1 in \LaTeX
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
-\raggedright\textbf{11.16.3.19: Question}. In an entrance test that is graded on the basis of two examinations, the probability of a randomly chosen student passing the first examination is 0.8 and the probability of passing the second examination is 0.7. The probability of passing atleast one of them is 0.95. What is the probability of passing both$?$
+\raggedright\textbf{11.16.3.19: Question}. 
 \\\textbf{Answer: 0.55}
 
 \textbf{Solution}:\\
-Let :
+\fi
+Let 
 
 $A$ : Probability of random student passing the first exam 
 
@@ -273,19 +275,11 @@ $B$ : Probability of random student passing the second exam
 
 Given
 \begin{align} 
-\pr{A} &= 0.8\\ 
-\pr{B} &= 0.7 \\
-\pr{A + B} &= 0.95 
+	\pr{A} &= 0.8,\,
+\pr{B} = 0.7,\, 
+\pr{A + B} = 0.95.
+\\
+\because\pr{A + B} &= \pr{A} + \pr{B} - \pr{AB}, \\
+\implies \pr{AB}& = \pr{A} + \pr{B} - \pr{A + B}\\
+ = 0.55
 \end{align}
-Now we have to find $\pr{AB}$, \\
-\begin{align}
-\because\pr{A + B} &= \pr{A} + \pr{B} - \pr{AB} \\
-\pr{AB}& = \pr{A} + \pr{B} - \pr{A + B}\\
-\pr{AB} &= 0.8 + 0.7 -0.95\\
-\pr{AB} &= 1.5 - 0.95\\
-\pr{AB} &= 0.55
-\end{align}
-\begin{center}
-$\therefore $ The probability of a randomly chosen student passing both is 0.55
-\end{center}
-\end{document}
