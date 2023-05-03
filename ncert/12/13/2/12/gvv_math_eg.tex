@@ -126,6 +126,13 @@ columns=fullflexible
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+% Added from https://raw.githubusercontent.com/gadepall/digital-communication/main/probability/trans.tex %%
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\providecommand{\gauss}[2]{\mathcal{N}
+\ensuremath{\left(#1,#2\right)}}
+%%
 \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
 \providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
 \providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
@@ -313,7 +320,7 @@ Probability of an observation being odd is;
 \end{align}
 Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
 \begin{align}
-    F_{X} \brak{i} &= \sum_{0}^{i} {^{n}C_{i} \times p^{i} \times (1-p)^ \brak {n-i}}\\
+    F_{X} \brak{i} &= \sum_{0}^{i} {\comb{n}{i} \times p^{i} \times (1-p)^ \brak {n-i}}\\
 \end{align}
 Required probability is equivalent to;
 \begin{align}
