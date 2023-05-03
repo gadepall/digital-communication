@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -158,30 +159,21 @@ columns=fullflexible
 \author{RUVVA SURAJ KUMAR (AI22BTECH11022)\\} 
 \maketitle
 \noindent\textbf{Q.11.16.3.15}\\
-If $E$ and $F$ are events such that $\pr{E}=\frac{1}{4}$, $\pr{F}= \frac{1}{2}$ and $\pr{EF} =\frac{1}{8}$, find
-\begin{enumerate}[label=(\roman*)]
-\item $\pr{E + F}$
-\item $\pr{E^\prime F^\prime}$
-\end{enumerate}
 \noindent\textbf{solution:}
-\begin{enumerate}[label=(\roman*)]
-    \item $\pr{E+F}$\\
-For given two events $E$ and $F$, we know that,
+\fi
+\begin{enumerate}
+    \item 
 \begin{align}
-     \pr{E+F}&= \pr{E} + \pr{F} - \pr{EF}\\
-    \Rightarrow \pr{E+F} &= \frac{1}{4} + \frac{1}{2} - \frac{1}{8}\\ 
-    &= \frac{5}{8}\\
-    \therefore \pr{E+F} &= \frac{5}{8}  
+     \pr{E+F}&= \pr{E} + \pr{F} - \pr{EF}
+= \frac{1}{4} + \frac{1}{2} - \frac{1}{8}
+    = \frac{5}{8}\\
 \end{align}
-\item $\pr{E^\prime F^\prime}$\\
-For given two events $E$ and $F$, we know that,
+\item 
 \begin{align}
-    (E^\prime F^\prime) &= (E+F)^\prime\\
-     \pr{E^\prime F^\prime} &= \pr{(E+F)^\prime}\\
-    \Rightarrow \pr{E^\prime F^\prime} &= 1 - \pr{E+F}\\
-    \Rightarrow \pr{E^\prime F^\prime} &= 1 - \frac{5}{8}\\ 
-    &= \frac{3}{8}\\
-   \therefore \pr{E^\prime F^\prime} &= \frac{3}{8}
+    (E^\prime F^\prime) = (E+F)^\prime
+\implies     \pr{E^\prime F^\prime} &= \pr{(E+F)^\prime}
+	= 1 - \pr{E+F} \\
+    \implies \pr{E^\prime F^\prime} &= 1 - \frac{5}{8}
+    = \frac{3}{8}
 \end{align}
 \end{enumerate}
-\end{document}
