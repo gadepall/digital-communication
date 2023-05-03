@@ -1,7 +1,7 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[a4,12pt,onecolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -56,32 +56,34 @@
 %\usepackage{verbatim}
 %\usepackage{tfrupee}
 %\usepackage{stmaryrd}
-   \usepackage{color}                                            %%
-   \usepackage{array}                                            %%
-   \usepackage{longtable}                                        %%
-   \usepackage{calc}                                             %%
-   \usepackage{multirow}                                         %%
-   \usepackage{hhline}                                           %%
-   \usepackage{ifthen}                                           %%
-   \usepackage{lscape}     
-% \usepackage{multicol}
-% \usepackage{chngcntr}
-% \usepackage{enumerate}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
 
-\usepackage{wasysym}
-\newcounter{MYtempeqncnt}
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
 \DeclareMathOperator*{\Res}{Res}
 %\renewcommand{\baselinestretch}{2}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
-
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
 
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
 % correct bad hyphenation here
-
+\hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 
 \lstset{
@@ -111,12 +113,11 @@ columns=fullflexible
 %\newtheorem{defn}[thm]{Definition}
 %\newtheorem{algorithm}{Algorithm}[section]
 %\newtheorem{cor}{Corollary}
-
-
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
-\newcommand{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
-\newcommand{\comb}[1][-1mu]{\permcomb[#1]{C}}
 
+\bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
 
 
@@ -134,21 +135,22 @@ columns=fullflexible
 \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
-
-
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+%\providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-
+%\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-
+%\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
-
+\newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -174,25 +176,12 @@ columns=fullflexible
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 
 
-
 \title{
-\LARGE Assignment-1
-
-(10.15.1.9)
-
-AI1110:Probability and Random Variables
-
-Indian Institute of Technology, Hyderabad
-%	}
+\Huge\textbf{Assignment 1}\\
+\Huge\textbf{AI1110} Probability and Random Variables\\
 }
-\author{ Parth Ajit Kansagra$^{*}$% <-this % stops a space
-
-CS22BTECH11045
-
-26 April, 2023
+\large\author{K.Rithika\\AI22BTECH11010}
 	
-}
-
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
@@ -259,102 +248,14 @@ CS22BTECH11045
 
 % make the title area
 \maketitle
-\textbf{Question:} A box contains 5 red marbles, 8 white marbles and 4 green marbles.One marble is taken
-out of the box at random. What is the probability that the marble taken out will be :
 
-\begin{enumerate}[label=(\roman*)]
-    \item red ? 
-    \item white ? 
-    \item  not green?
-\end{enumerate}
-
-
-\textbf{Solution :}
-
-
- Number of red marbles = 5
-
-
- Number of white marbles = 8
-
-
- Number of green marbles = 4
-
-
-  Total marbles = 5+8+4 = 17
-
-% \begin{table}[ht!]
-% \centering
-  
-% \input{table}
-
-% % \caption{}
-% % \label{table}
-
-% \end{table}
-
-Let
-\begin{align}
-\text {N} &= \text{R + W + G} \\
-\text {n} &= \text{r + w + g}
-\end{align}
-where R,B,G and r, b, g represent the number of red, white and green marbles respectively within N and n. Then :
-\begin{align}
-    \pr{r,w,g} &= \frac{\comb{R}{r}\comb{W}{w}\comb{G}{g}}{\comb{R+W+G}{r+w+g}}
-\end{align}
-
-    
-\begin{enumerate}[label=(\roman*)]
-\item Probability that the marble taken out is red
-
-
-    
-% = $\frac{\text{\large Number of red marbles}}{\text{\large Total number of marbles}}\quad$
-
-
-\begin{align}
-	\pr{1,0,0} &= \frac{\comb{5}{1}\comb{8}{0}\comb{4}{0}}{\comb{17}{1}} \\
-	 &= \frac{5}{17} \approx 0.2941
-	\end{align}
-
-% = $\frac{\text{\large 5}}{\text{\large 17}}\quad$
-
-
-\item Probability that the marble taken out is white
-
-
-% = $\frac{\text{\large Number of white marbles}}{\text{\large Total number of marbles}}\quad$
-
-
-
-
-\begin{align}
-	\pr{0,1,0} &= \frac{\comb{5}{0}\comb{8}{1}\comb{4}{0}}{\comb{17}{1}} \\
-	&= \frac{8}{17} \approx 0.4706
-	\end{align}
-
-% = $\frac{\text{\large 8}}{\text{\large 17}}\quad$
-
-
-\item Probability that the marble taken out is not green
-
-
-\begin{align}
-% &=1 - \pr{0,0,1}\\
-1 - \pr{0,0,1} &= 1- \frac{\comb{5}{0}\comb{8}{0}\comb{4}{1}}{\comb{17}{1}} \\
-	  &= 1 - \frac{4}{17} = \frac{13}{17} \approx 0.7647
-\end{align}
-
-% = $\frac{\text{\large Number of non green marbles}}{\text{\large Total number of marbles}}\quad$
-
-
-% = $\frac{\text{\large 13}}{\text{\large 17}}\quad$
-\end{enumerate}
-\newpage
 
 %\tableofcontents
 
+\bigskip
 
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
 
 %\begin{abstract}
@@ -385,26 +286,15 @@ where R,B,G and r, b, g represent the number of red, white and green marbles res
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-
-%\begin{abstract}
-%book provides an introduction to optimization  based on the NCERT textbooks from Class 6-12.  Links to sample Python codes are available in the text.  
-%\end{abstract}
-
-
-%\renewcommand{\theequation}{\theenumi}
-%\subsection{Problem}
-
-%\section{Chemistry}
-%\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-%\numberwithin{equation}{enumi}
-
-
-		
-
-\end{document}
-
-
-
-
-
+%\begin{flushleft}
+\textbf{Question 11.16.3.6:}
+\textbf{Solution:}
+Let $S$ be the sample space.\\
+$A$ be an event in which the selected council member is a woman.\\
+Now
+\fi
+The desired probability is 
+\begin{align}
+\pr{A} = \frac{6}{10}
+= \frac{3}{5}
+\end{align}
