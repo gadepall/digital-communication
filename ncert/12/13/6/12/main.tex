@@ -304,106 +304,47 @@
 
 %\IEEEpeerreviewmaketitle
 \textbf{12.13.6.12 Question:} 
-Suppose we have four boxes A,B,C and D containing coloured marbles as given in table below:
-\begin{table}[htbp]
-\centering
-\input{tables/question_table.tex}
-\caption{\label{table1}Question Table}
-\end{table}
 
-One of the boxes has been selected at random and a single marble is drawn from it.$\,$If the marble is red,$\,$what is the probability that it was drawn from \\1) Box A ?\\2) Box B ?\\3) Box C ?
 
 \textbf{Answer:} \( 1)\,\frac{1}{15} \, \) \( 2)\,\frac{2}{5}\,\) \( 3)\,\frac{8}{15}\,\) 
 
 \solution
 \fi
 See Table 
+\tabref{tab:12/13/6/12/table2}.
 \begin{table}[htb]
 \centering
-\input{tables/Events.tex}
-\caption{\label{table2}Events Table}
+\input{ncert/12/13/6/12/tables/Events.tex}
+\caption{Events Table}
+\label{tab:12/13/6/12/table2}
 \end{table}
-Probability of chosen box being A given that drawn marble is red is given by: \(\pr{E_1\vert E}\) 
-
-Probability of chosen box being B given that drawn marble is red is given by: \(\pr{E_2\vert E}\) 
-
-Probability of chosen box being C given that drawn marble is red is given by: \(\pr{E_3\vert E}\)
-
 Here,
 \begin{align}
-\pr{E\vert E_1}&=\frac{1}{10}\\
-\pr{E\vert E_2}&=\frac{6}{10}\\
-\pr{E\vert E_3}&=\frac{8}{10}\\
-\pr{E\vert E_4}&=\frac{0}{10}\\
+	\pr{E\vert E_1}&=\frac{1}{10},\,
+\pr{E\vert E_2}=\frac{6}{10},\,
+\pr{E\vert E_3}=\frac{8}{10},\,
+\pr{E\vert E_4}=\frac{0}{10}
+\\
 \pr{E_i}&=\frac{1}{4}\,\, \forall 1\le i \le 4
 \end{align}
-As,
-\begin{align}
-\pr{E_1+E_2+E_3+E_4}&=1\\
-\pr{E_iE_j}&=0\,\,\forall 1\le i < j \le 4
-\end{align}
-We can write,
-\begin{align}
-\pr{E}&= \sum_{i=1}^{i=4}{\pr{EE_i}}\label{eq:ncert/12/13/6/12/1}
-\end{align}
-Also,
-\begin{align}
-\pr{E|E_i}&=\frac{\pr{EE_i}}{\pr{E_i}}\label{eq:ncert/12/13/6/12/2}\\
-\implies\pr{EE_i}&=\pr{E|E_i}\pr{E_i}\label{eq:ncert/12/13/6/12/3}
-\end{align}
-Now,
-
-
-By \eqref{eq:ncert/12/13/6/12/2}
-\begin{align}
-\pr{E_1|E} &=\frac{\pr{EE_1}}{\pr{E}}
-\end{align}
-By \eqref{eq:ncert/12/13/6/12/3}
-\begin{align}
-\pr{E_1|E} &=\frac{\pr{E|E_1}\pr{E_1}}{\pr{E}}
-\end{align}
-By \eqref{eq:ncert/12/13/6/12/1} and \eqref{eq:ncert/12/13/6/12/3}
+\begin{enumerate}
+	\item 
 \begin{align}
 \pr{E_1|E} &=\frac{\pr{E|E_1}\pr{E_1}}{\sum_{i=1}^{i=4}(\pr{E|E_i}\pr{E_i})}\\
-        &= \frac{\frac{1}{10}\times\frac{1}{4}}{\frac{1}{10}\times\frac{1}{4}+\frac{6}{10}\times\frac{1}{4}+\frac{8}{10}\times\frac{1}{4}+\frac{0}{10}\times\frac{1}{4}}\\
-        &= \frac{\frac{1}{40}}{\frac{15}{40}}\\
-        &= \frac{1}{15}
+        &= \frac{\frac{1}{10}\times\frac{1}{4}}{\frac{1}{10}\times\frac{1}{4}+\frac{6}{10}\times\frac{1}{4}+\frac{8}{10}\times\frac{1}{4}+\frac{0}{10}\times\frac{1}{4}}
+        = \frac{1}{15}
 \end{align}
-
-
-
-By \eqref{eq:ncert/12/13/6/12/2}
-\begin{align}
-\pr{E_2|E} &=\frac{\pr{EE_2}}{\pr{E}}
-\end{align}
-By \eqref{eq:ncert/12/13/6/12/3}
-\begin{align}
-\pr{E_2|E} &=\frac{\pr{E|E_2}\pr{E_2}}{\pr{E}}
-\end{align}
-By \eqref{eq:ncert/12/13/6/12/1} and \eqref{eq:ncert/12/13/6/12/3}
+\item 
 \begin{align}
 \pr{E_2|E} &=\frac{\pr{E|E_2}\pr{E_2}}{\sum_{i=1}^{i=4}(\pr{E|E_i}\pr{E_i})}\\
-        &= \frac{\frac{6}{10}\times\frac{1}{4}}{\frac{1}{10}\times\frac{1}{4}+\frac{6}{10}\times\frac{1}{4}+\frac{8}{10}\times\frac{1}{4}+\frac{0}{10}\times\frac{1}{4}}\\
-        &= \frac{\frac{6}{40}}{\frac{15}{40}}\\
-        &=\frac{2}{5}
+        &= \frac{\frac{6}{10}\times\frac{1}{4}}{\frac{1}{10}\times\frac{1}{4}+\frac{6}{10}\times\frac{1}{4}+\frac{8}{10}\times\frac{1}{4}+\frac{0}{10}\times\frac{1}{4}}
+        =\frac{2}{5}
 \end{align}
-
-
-
-By \eqref{eq:ncert/12/13/6/12/2}
-\begin{align}
-\pr{E_3|E} &=\frac{\pr{EE_3}}{\pr{E}}
-\end{align}
-By \eqref{eq:ncert/12/13/6/12/3}
-\begin{align}
-\pr{E_3|E} &=\frac{\pr{E|E_3}\pr{E_3}}{\pr{E}}
-\end{align}
-By \eqref{eq:ncert/12/13/6/12/1} and \eqref{eq:ncert/12/13/6/12/3}
+\item 
 \begin{align}
 \pr{E_3|E} &=\frac{\pr{E|E_3}\pr{E_3}}{\sum_{i=1}^{i=4}(\pr{E|E_i}\pr{E_i})}\\
-        &= \frac{\frac{8}{10}\times\frac{1}{4}}{\frac{1}{10}\times\frac{1}{4}+\frac{6}{10}\times\frac{1}{4}+\frac{8}{10}\times\frac{1}{4}+\frac{0}{10}\times\frac{1}{4}}\\
-        &= \frac{\frac{8}{40}}{\frac{15}{40}}\\
-        &= \frac{8}{15}
+        &= \frac{\frac{8}{10}\times\frac{1}{4}}{\frac{1}{10}\times\frac{1}{4}+\frac{6}{10}\times\frac{1}{4}+\frac{8}{10}\times\frac{1}{4}+\frac{0}{10}\times\frac{1}{4}}
+        = \frac{8}{15}
 \end{align}
-
+\end{enumerate}
 
