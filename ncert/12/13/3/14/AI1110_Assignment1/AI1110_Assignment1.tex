@@ -1,7 +1,7 @@
-\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
+
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -116,6 +116,7 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
 \providecommand{\mbf}{\mathbf}
@@ -148,7 +149,6 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand{\comb}[2]{{}_{#1}\mathrm{C}_{#2}}
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -168,12 +168,11 @@ columns=fullflexible
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-\vspace{3cm}
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
+\textbf {Assignment 1}\\ 
+\large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
 }
-\author{Kudupudi D.V.Sai Aditya\\AI22BTECH11013}
-	
+\author{Arsh Srivastava\\AI22BTECH11003}
 	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
@@ -228,6 +227,7 @@ columns=fullflexible
 % column for its text to clear the IEEEpubid mark.
 % make the title area
 \maketitle
+%\newpage
 %\tableofcontents
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
@@ -257,26 +257,43 @@ columns=fullflexible
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
+\textbf{Question 12.13.3.14 : } \\
+If A and B are two events such that A $\subset$ B and $\pr{B}$ $\ne$ 0, then which of the following is correct?\\\\
 
-\textbf{Question[12.13.5.11]:} 
+ \textbf{Options:}\\
+ \begin{enumerate}
+ \item$\pr{A \mid B} = \frac{\pr{B}}{\pr{A}}$\\       
+ \item$\pr{A \mid B} < \pr{A}$ \\
+ \item$\pr{A \mid B} \geq \pr{A}$\\           
+ \item None of these\\\\
+\end{enumerate}
+\vspace{3mm}
+\textbf{Answer: (3)}\\
+\textbf{Solution}: \\
 
-\underline{\noindent\solution:}
-The repeated tossing of a die are Bernoulli trials.Let $X$ represent the number of times of getting 5 in 7 throws of a die.\\
-Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
-\fi
-The Binomial distribution parameters are
+As given in the question,
 \begin{align}
-\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6}, n = 7
+\label{eq:2}
+A \subset B &\implies AB = A
 \end{align}
 \begin{align}
-\therefore\,\pr{X=x}=\comb{n}{x}\times q^{n-x}\times p^{x}={\comb{7}{x}\times}\brak{\frac{5}{6}}^{(7-x)}\times\brak{\frac{1}{6}}^{x}
+\therefore   \pr{A \mid B} &= \frac{\pr{AB}}{\pr{B}}\\ \implies \pr{A|B} &= \frac{\pr{A}}{\pr{B}}
 \end{align}
-Probability of getting 5 twice in 7 throws of a dice is $\pr{X=2}$.\\
+\begin{equation}
+\label{eq:1}\pr{B} \ne 0 \\
+\end{equation}
+Equation (\ref{eq:1}) is given in the question 
 \begin{align}
-\pr{X=2}&=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2\\
- &=\frac{7!}{{2!}\times(7-2)!}\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{6}}^2\\
- &=21\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{36}}\\
- &=\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
+&\implies 0 < \pr{B}) \le 1 \\
+&\implies \frac{1}{\pr{B}} \ge 1 
 \end{align}
+$\therefore$ 	Using (\ref{eq:2}) , 
+\begin{align}
+\pr{A|B} &= \pr{A} \times \frac{1}{\pr{B}} \ge \pr{A}\\
+&\therefore \pr{A \mid B} \ge \pr{A}
+\end{align}
+Hence, the correct option is (3).
+
+\end{document}
+
 

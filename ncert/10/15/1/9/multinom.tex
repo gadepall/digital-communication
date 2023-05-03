@@ -1,7 +1,7 @@
 \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -56,34 +56,32 @@
 %\usepackage{verbatim}
 %\usepackage{tfrupee}
 %\usepackage{stmaryrd}
-%\usetkzobj{all}
-%    \usepackage{color}                                            %%
-%    \usepackage{array}                                            %%
-%    \usepackage{longtable}                                        %%
-%    \usepackage{calc}                                             %%
-%    \usepackage{multirow}                                         %%
-%    \usepackage{hhline}                                           %%
-%    \usepackage{ifthen}                                           %%
-  %optionally (for landscape tables embedded in another document): %%
-%    \usepackage{lscape}     
-%\usepackage{multicol}
-%\usepackage{chngcntr}
-%\usepackage{enumerate}
+   \usepackage{color}                                            %%
+   \usepackage{array}                                            %%
+   \usepackage{longtable}                                        %%
+   \usepackage{calc}                                             %%
+   \usepackage{multirow}                                         %%
+   \usepackage{hhline}                                           %%
+   \usepackage{ifthen}                                           %%
+   \usepackage{lscape}     
+% \usepackage{multicol}
+% \usepackage{chngcntr}
+% \usepackage{enumerate}
 
-%\usepackage{wasysym}
-%\newcounter{MYtempeqncnt}
+\usepackage{wasysym}
+\newcounter{MYtempeqncnt}
 \DeclareMathOperator*{\Res}{Res}
 %\renewcommand{\baselinestretch}{2}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
 
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
 
 % correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
+
 \def\inputGnumericTable{}                                 %%
 
 \lstset{
@@ -113,11 +111,15 @@ columns=fullflexible
 %\newtheorem{defn}[thm]{Definition}
 %\newtheorem{algorithm}{Algorithm}[section]
 %\newtheorem{cor}{Corollary}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
+
+
 \newcommand{\define}{\stackrel{\triangle}{=}}
-\bibliographystyle{IEEEtran}
+\newcommand{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand{\comb}[1][-1mu]{\permcomb[#1]{C}}
+
 %\bibliographystyle{ieeetr}
+
+
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -132,23 +134,21 @@ columns=fullflexible
 \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
-\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
+
+
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
+
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
-\newcommand{\cosec}{\,\text{cosec}\,}
+
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand{\comb}[2]{{}_{#1}\mathrm{C}_{#2}}
+
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -156,28 +156,48 @@ columns=fullflexible
 %\makeatletter
 %\@addtoreset{figure}{problem}
 %\makeatother
+
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
+
+
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
 %\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
 %     \def\rightbox#1{\makebox[0in][r]{#1}}
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-\vspace{3cm}
+
+
+
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
+\LARGE Assignment-1
+
+(10.15.1.9)
+
+AI1110:Probability and Random Variables
+
+Indian Institute of Technology, Hyderabad
+%	}
 }
-\author{Kudupudi D.V.Sai Aditya\\AI22BTECH11013}
+\author{ Parth Ajit Kansagra$^{*}$% <-this % stops a space
+
+CS22BTECH11045
+
+26 April, 2023
 	
-	
+}
+
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
+
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -191,6 +211,7 @@ columns=fullflexible
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
+
 %\author{<-this % stops a space
 %\thanks{}}
 %}
@@ -211,6 +232,9 @@ columns=fullflexible
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
+
+
+
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
@@ -221,62 +245,69 @@ columns=fullflexible
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
+
+
+
 % make the title area
 \maketitle
-%\tableofcontents
-\bigskip
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-%\renewcommand{\theequation}{\theenumi}
-%\begin{abstract}
-%%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
-%
-%\end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%Cooperative diversity, decode and forward, piecewise linear
-%\end{IEEEkeywords}
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-%\IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
+\textbf{Question:} 
 
-\textbf{Question[12.13.5.11]:} 
+\textbf{Solution :}
 
-\underline{\noindent\solution:}
-The repeated tossing of a die are Bernoulli trials.Let $X$ represent the number of times of getting 5 in 7 throws of a die.\\
-Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
+
+ Number of red marbles = 5
+
+
+ Number of white marbles = 8
+
+
+ Number of green marbles = 4
+
+
+  Total marbles = 5+8+4 = 17
+
+% \begin{table}[ht!]
+% \centering
+  
+% \input{table}
+
+% % \caption{}
+% % \label{table}
+
+% \end{table}
 \fi
-The Binomial distribution parameters are
+Let
 \begin{align}
-\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6}, n = 7
+\text {N} &= \text{R + W + G} \\
+\text {n} &= \text{r + w + g}
 \end{align}
+where R,B,G and r, b, g represent the number of red, white and green marbles respectively within N and n. Then 
 \begin{align}
-\therefore\,\pr{X=x}=\comb{n}{x}\times q^{n-x}\times p^{x}={\comb{7}{x}\times}\brak{\frac{5}{6}}^{(7-x)}\times\brak{\frac{1}{6}}^{x}
+    \pr{r,w,g} &= \frac{\comb{R}{r}\comb{W}{w}\comb{G}{g}}{\comb{R+W+G}{r+w+g}}
 \end{align}
-Probability of getting 5 twice in 7 throws of a dice is $\pr{X=2}$.\\
+\begin{enumerate}
+\item Probability that the marble taken out is red
 \begin{align}
-\pr{X=2}&=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2\\
- &=\frac{7!}{{2!}\times(7-2)!}\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{6}}^2\\
- &=21\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{36}}\\
- &=\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
+	\pr{1,0,0} &= \frac{\comb{5}{1}\comb{8}{0}\comb{4}{0}}{\comb{17}{1}} 
+	 = \frac{5}{17} \approx 0.2941
+	\end{align}
+\item Probability that the marble taken out is white
+\begin{align}
+	\pr{0,1,0} = \frac{\comb{5}{0}\comb{8}{1}\comb{4}{0}}{\comb{17}{1}} 
+	= \frac{8}{17} \approx 0.4706
+	\end{align}
+\item Probability that the marble taken out is not green
+\begin{align}
+1 - \pr{0,0,1} = 1- \frac{\comb{5}{0}\comb{8}{0}\comb{4}{1}}{\comb{17}{1}} 
+	  = 1 - \frac{4}{17} = \frac{13}{17} \approx 0.7647
 \end{align}
-
+\end{enumerate}
