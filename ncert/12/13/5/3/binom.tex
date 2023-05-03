@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -282,32 +282,22 @@ AI1110 - Assignment1
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 \textbf{12.13.5.3 distribution}
-There are 5\% defective items in a large bulk of items. What is the probability that a sample of 10 items will include not more than one defective item?
 
 \textbf{Solution:}
-Let there be $k$ number of defective items in a sample of of ten items drawn successively.
-Now, as we can see that the drawing of the items is done with replacement. Thus, the trials are Bernoulli trials.
-Probability of failure = $p$ 
+\fi
+The parameters of the corresponding Binomial distribution are
 \begin{align}
-p &= 0.05 \\
-q &= 1-p = 0.95
+p = 0.05 ,\,
+q = 1-p = 0.95, n = 10
 \end{align}
-In this binomial distribution, $n = 10$. and we know that \begin{align} \pr{K = k} = \binom{n}{k} q^{n-k} p^k \end{align}, where $k$ can be any number from $0$ to $n$.
-The CDF of $K$ is given by
+The CDF of  is given by
 \begin{align}
-	F_{K}\brak{n} &= \pr{K \le n}\\ &= 
+	F_{X}\brak{n} &= \pr{X \le n}\\ &= 
 \begin{cases}
 0 & n < 0 \\
 \sum_{k=0}^{n} \binom{10}{k} q^{10-k} p^k & 0 \le n \leq 10 \\ 
 1 & \text{otherwise}
 \end{cases}
 \end{align}
-
-
-\textbf{Code}
-\lstinputlisting[language=Python]{codes/cdf.py}
-
-Hence, \begin{align} F_{K}\brak{1} = 0.913 \end{align}
-\end{document}
-
+The desired probability is $F_X(1)$.
 
