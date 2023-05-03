@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,12pt,two column]{IEEEtran}
 %\usepackage{setspace}
 \usepackage{listings}
@@ -45,26 +46,15 @@
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \begin{document}
 \maketitle
-\question: 16 : Events $E$ and $F$ are such that \pr{E^\prime +F^\prime} = 0.25, State whether $E$ and $F$ are mutually exclusive.\\
+\question: 16 : 
 \solution :\\
 As given in the question ;
+\fi
  \begin{align} 
-	\pr{E^\prime+ F^\prime}&=0.25 \\
-	\pr{E^\prime+ F^\prime}&= \pr{EF}^\prime \\
- 	\implies 1-\pr{EF}&=0.25 \\
+	\pr{E^\prime+ F^\prime}&= \pr{EF}^\prime 
+ 	=1-\pr{EF}=0.25 \\
 	\implies \pr{EF}&=0.75 
- \end{align}
- \begin{align}
+	\\
  	\because \pr{EF}\ne 0 
  \end{align}	
-		As, the condition of mutually exclusive is 
-  \begin{align}
-  	\pr{EF}=\emptyset
-  \end{align}	 
-\begin{center}$\therefore$ $E$ and $F$ are not mutually exclusive events.\end{center}
-
-
-
-
-
-\end{document}
+ $E$ and $F$ are not mutually exclusive events.
