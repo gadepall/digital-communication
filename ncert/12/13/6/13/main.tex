@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt]{IEEEtran}
@@ -290,7 +291,7 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
-\textbf{12.13.6.13: Question}. Assume that the chances of a patient having a heart attack is $40\%$. It is also assumed that a meditation and yoga course reduce the risk of heart attack by $30\%$ and prescription of certain drug reduces its chances by $25\%$. At a time a patient can choose any one of the two options with equal probabilities. It is given that after going through one of the two options the patient selected at random suffers a heart attack. Find the probability that the patient followed a course of meditation and yoga?
+\textbf{12.13.6.13: Question}. 
 
 \textbf{Answer: $\frac{14}{29}$.}
 
@@ -298,53 +299,30 @@ columns=fullflexible
 According to the given question: the chances of heart attack is $40\%$.
 
 According to the question:
+\fi
+The given information is summarised in Table 
 \begin{table}[htbp]
-\label{table:1}
-\input{tables/table1.tex}
+\label{tab:ncert/12/13/6/13/1}
+\input{ncert/12/13/6/13/tables/table1.tex}
 \caption{Given Information}
 \end{table}
-
-Here, we are supposed to find the probability of a person getting a heart attack and is followed with meditation and yoga.
-i.e. $\pr{E_1|A}$
-
-\begin{align}
-	\label{eq:3}
-	\pr{E_1|A}=\frac{\pr{E_1}\pr{A|E_1}}{\sum_{i=1}^{2}\pr{E_i}\pr{A|E_i}}
-\end{align}
-
-Now we have to find $\pr{A|E_1}$ and $\pr{A|E_2}$.
-
-$\pr{A|E_1}$ = Probability that a person getting a heart attack after being treated with meditation and yoga.
-
-Meditation and yoga reduces the risk of a heart attack by $30\%$. There is still a $70\%$ chance of heart attack.
+%
+From the given information, 
 \begin{align}
 	\pr{A|E_1} = \pr{A}(1-(0.30))
+	 = 0.40 \times 0.70 = 0.28
+	\label{eq:ncert/12/13/6/13/4}
 \end{align}
-\begin{align}
-	\label{eq:4}
-	\pr{A|E_1} = 0.40 \times 0.70 = 0.28
-\end{align}
-
-$\pr{A|E_2}$ = Probability that a person getting a heart attack after being treated with drug.
-
-Drug reduces the risk of a heart attack by $25\%$. There is still a $75\%$ chance of heart attack.
+and 
 \begin{align}
 	\pr{A|E_2} = \pr{A}(1-(0.25))
-\end{align}
-\begin{align}
-	\label{eq:5}
-	\pr{A|E_2} = 0.40 \times 0.75 = 0.30
+	= 0.40 \times 0.75 = 0.30
+	\label{eq:ncert/12/13/6/13/5}
 \end{align}
 
-Using \eqref{eq:3},\eqref{eq:4} and \eqref{eq:5}
-
+From \eqref{eq:ncert/12/13/6/13/4} and \eqref{eq:ncert/12/13/6/13/5},
 \begin{align}
-	\pr{E_1|A} = \frac{\pr{E_1}\pr{A|E_1}}{\sum_{i=1}^{2}\pr{E_i}\pr{A|E_i}}
-\end{align}
-\begin{align}
+	\pr{E_1|A} &= \frac{\pr{E_1}\pr{A|E_1}}{\sum_{i=1}^{2}\pr{E_i}\pr{A|E_i}}
 	= \frac{\frac{1}{2}\times 0.28}{\frac{1}{2}\times 0.28 + \frac{1}{2}\times 0.30}
-	= \frac{0.28}{0.28 + 0.30}
-	= \frac{0.28}{0.58}
 	= \frac{14}{29}
 \end{align}
-\end{document}
