@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -259,24 +259,23 @@ columns=fullflexible
 %\IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Question[12.13.5.11]:} Find the probability of getting 5 twice in 7 throws of a dice.\\
+\textbf{Question[12.13.5.11]:} 
 
 \underline{\noindent\solution:}
 The repeated tossing of a die are Bernoulli trials.Let $X$ represent the number of times of getting 5 in 7 throws of a die.\\
 Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
+\fi
+The Binomial r.v. parameters are
 \begin{align}
-\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6}
+\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6},n = 7
 \end{align}
-Clearly,$\,X$ has the probability distribution with $n=7$ and $p=\frac{1}{6}$\\
+with pmf
 \begin{align}
 \therefore\,\pr{X=k}=\comb{n}{k}\times q^{n-k}\times p^{k}={\comb{7}{k}\times}\brak{\frac{5}{6}}^{(7-k)}\times\brak{\frac{1}{6}}^{k}
 \end{align}
-Probability of getting 5 twice in 7 throws of a dice is $\pr{X=2}$.\\
+The desired probability is
 \begin{align}
-\pr{X=2}&=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2\\
- &=\frac{7!}{{2!}\times(7-2)!}\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{6}}^2\\
- &=21\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{36}}\\
- &=\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
+\pr{X=2}=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2
+ =\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
 \end{align}
 
-\end{document}
