@@ -1,0 +1,237 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+\title{\textbf{Assignment 1}
+\\ \textbf{AI1110:} Probability and Random Variables}
+\author{Ch.Kushwanth
+\\ AI22BTECH11006}
+
+
+\begin{document}
+\maketitle
+\textbf{12.13.6.15 : Question.}
+An electronic assembley consists of two subsystems,say A and B.From previous testing procedures, the following probabilities are assumed to be known:
+\begin{align}
+\pr{\text{A fails}}&=0.20
+\\ \pr{\text{B alone fails}}&=0.15
+\\ \pr{\text{A  and B fails}}&=0.15
+\end{align}
+ Evaluate the following probabilities
+ \begin{enumerate}
+ \item $\pr{\text{A fails given B has failed}}$
+ \item $\pr{\text{A fails alone}}$
+\end{enumerate}
+ \textbf{ans:}
+ \begin{enumerate}
+ \item \begin{align}\pr{\text{A fails given B has failed}}&= 0.50
+\end{align}
+\item \begin{align}\pr{\text{A fails alone}}&=0.05 
+ \end{align}
+\end{enumerate}
+ \textbf{Solution:}
+ Given ,
+ \begin{align}
+ \pr{A^\prime} &= 0.20 \label{eq:tot}
+ \\\pr{AB^ \prime}&=0.15 \label{eq:bot}
+ \\\pr{A ^\prime B ^\prime}&=0.15 \label{eq:cot}
+ \end{align} 
+\begin{enumerate}
+
+\item to find,$\pr{A ^\prime|B ^\prime}$ we use
+\begin{align}
+ \pr{A ^\prime|B ^\prime}=\frac{\pr{ A ^\prime B ^\prime }}{\pr{B^\prime}} \label{eq:dot}
+\end{align}
+to obtain $\pr{B ^\prime}$ 
+\begin{align}
+B^ \prime(1)&=B^ \prime(A+A ^\prime)
+\\&=B^ \prime A +B^ \prime A ^\prime
+\ \text{since} ((B^ \prime A )(B^ \prime A ^\prime))=0
+\\\pr{B^ \prime}&=\pr{A B ^\prime} + \pr{A ^\prime B ^\prime}  \label{eq:1}
+\end{align}
+we use,
+\begin{align}
+ \pr{B^ \prime}&= \pr{A B ^\prime} + \pr{A ^\prime B ^\prime}  (\text{from }\eqref{eq:1})
+\\             &=0.15 +0.15 \ (\text{from } \eqref{eq:bot},\eqref{eq:cot})
+\\ \implies \pr{B ^\prime} &=0.30 \label{eq:alpha}
+\end{align}
+\item to find $\pr{A ^\prime|B ^\prime}$
+\begin{align}
+ \pr{A^\prime|B ^\prime}&= 0.15/0.30 \  (\text{from }\eqref{eq:alpha},\eqref{eq:cot},\eqref{eq:dot})
+\\ \implies \pr{A ^\prime|B ^\prime} &= 0.50
+\end{align}
+similiarly, to obtain $\pr{B A ^\prime}$ 
+\begin{align}
+B A ^\prime +B ^\prime A ^\prime &=B A ^\prime +B ^\prime A ^\prime
+\\ B A ^\prime +B ^\prime A^\prime&=A ^\prime(B ^\prime +B)
+\\ B A ^\prime +B ^\prime A ^\prime&=A^\prime
+\\ A^\prime &=  B A ^\prime +B ^\prime A ^\prime
+\ \text{since} ((A^ \prime B )(B^ \prime A ^\prime))=0
+\\ \pr{A^ \prime}&=\pr{B A ^\prime} + \pr{A ^\prime B ^\prime} 
+\\ \pr{B  A ^\prime}&=\pr{A^\prime}-\pr{A ^\prime B ^\prime} \label{eq:tat}
+\end{align}
+ we use
+\begin{align}
+ \pr{B  A ^\prime}&=\pr{A^\prime}-\pr{A ^\prime B ^\prime} \   \text{from }\eqref{eq:tat}
+\\ &= 0.20-0.15  \ \text{from eq:} \eqref{eq:tot}, \eqref{eq:cot}
+\\ \implies \pr{B  A^\prime} &= 0.05
+\end{align}
+\end{enumerate}
+\end{document}
+
