@@ -304,16 +304,17 @@ columns=fullflexible
     \textbf{\underline{Solution}}
 \end{enumerate}
 \fi
-The parameters of the corresponding binomial distribution are
+The parameters for the equivalent binomial distribution is 
 \begin{align}
-    p = \frac{1}{2},
+    p = \frac{1}{2},\,
     n = 3
 \end{align}
-with CDF
+The CDF is given by 
 \begin{align}
-    F_{X} \brak{i} &= \sum_{0}^{i} {^{n}C_{i} \times p^{i} \times (1-p)^ \brak {n-i}\\
+	F_{X}\brak{k} = \sum_{0}^{k}\comb{n}{k}p^{k}(1-p)^{\brak {n-k}}
 \end{align}
-The desired probability is then given by 
+and the 
+required probability is 
 \begin{align}
     \pr{1 \le X \le 3} = F_{X}\brak{3}-F_{X}\brak{0}
     = \frac{7}{8}
