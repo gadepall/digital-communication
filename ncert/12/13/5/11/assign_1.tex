@@ -148,7 +148,7 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand{\comb}[2]{{}_{#1}\mathrm{C}_{#2}}
+\newcommand*{\comb}[2]{{}^{#1}C_{#2}}%
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -269,7 +269,7 @@ Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
 \end{align}
 Clearly,$\,X$ has the probability distribution with $n=7$ and $p=\frac{1}{6}$\\
 \begin{align}
-\therefore\,\pr{X=x}=\comb{n}{x}\times q^{n-x}\times p^{x}={\comb{7}{x}\times}\brak{\frac{5}{6}}^{(7-x)}\times\brak{\frac{1}{6}}^{x}
+\therefore\,\pr{X=k}=\comb{n}{k}\times q^{n-k}\times p^{k}={\comb{7}{k}\times}\brak{\frac{5}{6}}^{(7-k)}\times\brak{\frac{1}{6}}^{k}
 \end{align}
 Probability of getting 5 twice in 7 throws of a dice is $\pr{X=2}$.\\
 \begin{align}
