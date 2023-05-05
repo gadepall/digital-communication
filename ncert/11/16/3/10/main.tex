@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -300,51 +300,19 @@ Assignment 2 in \LaTeX
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
 \raggedright\textbf{Problem 11.16.3.10 :}
-{A letter is chosen at random from the word ‘ASSASSINATION’. Find the probability that letter is
-\begin{enumerate}
-  \item  a vowel 
-   \item    a consonant 
-\end{enumerate}.}
 
 \textbf{Answer 11.16.3.10 :}
-
+\fi
+The number of vowels is 6 and consonants is 7.
  \begin{enumerate}
-  \item  a vowel 
-
- 
- Number of total letters in the given word is 13. Let S denote the sample space,
- \begin{align} 
- \therefore n(S)=13 
-  \end{align}
- Let X be the event containing vowels. So, 
+  \item  
  \begin{align}
-  X &= \{A,A,A,I,I,O\} \\
-  n(X)&=6
+ \pr X 
+    =\frac{6}{13}
  \end{align}
- Now, 
+ \item    
  \begin{align}
- \pr X &=\frac{n(X)}{n(S)} \\
-    &=\frac{6}{13}
+ \pr Y 
+    =\frac{7}{13}
  \end{align}
-$\therefore$ The probability that the chosen word is a vowel is $\frac{6}{13}$.
- \item    a consonant 
 \end{enumerate}
- 
- Let Y be the event containing vowels. So, 
- \begin{align}
-  Y &= \{S,S,S,S,N,T,N\} \\
-  n(Y)&=6
- \end{align}
- Now, 
- \begin{align}
- \pr Y &=\frac{n(Y)}{n(S)} \\
-    &=\frac{7}{13}
- \end{align}
-$\therefore$ The probability that the chosen word is a consonant is $\frac{7}{13}$.
-
-
-
-\end{document}
-
-
-
