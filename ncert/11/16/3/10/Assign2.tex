@@ -179,7 +179,7 @@ columns=fullflexible
 
 \title{
 %	\logo{
-Assignment 1 in \LaTeX
+Assignment 2 in \LaTeX
 %	}
 }
 \author{ Pranay Jain$^{*}$% <-this % stops a space
@@ -253,7 +253,7 @@ Assignment 1 in \LaTeX
 
 
 % make the title area
-\maketitle{\huge Assignment 1 }
+\maketitle{\huge Assignment 2 }
 
 
 %\tableofcontents
@@ -299,35 +299,52 @@ Assignment 1 in \LaTeX
 
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
-\raggedright\textbf{Problem 12.13.1.4 :}
-{Evaluate $\pr {A + B}$ if $2 \pr A=\pr B=\frac{5}{13}$ and $\pr {A|B}=\frac{2}{5}$}.
+\raggedright\textbf{Problem 11.16.3.10 :}
+{A letter is chosen at random from the word ‘ASSASSINATION’. Find the probability that letter is
+\begin{enumerate}
+  \item  a vowel 
+   \item    a consonant 
+\end{enumerate}.}
 
-\textbf{Solution 12.13.1.4 :}
-Given, \begin{align} 
-   & 2\pr A =\pr B=\frac{5}{13} , \pr {A|B}=\frac{2}{5} \\
-   \implies & \pr B=\frac{5}{13} , \pr A=\frac{5}{26} , \pr {A|B}=\frac{2}{5} \\
+\textbf{Answer 11.16.3.10 :}
+
+ \begin{enumerate}
+  \item  a vowel 
+
+ 
+ Number of total letters in the given word is 13. Let S denote the sample space,
+ \begin{align} 
+ \therefore n(S)=13 
   \end{align}
- We know by conditional Probability: \\
+ Let X be the event containing vowels. So, 
  \begin{align}
-  \pr {A|B} &=\frac{\pr {AB}}{\pr B} \\ 
-  \pr {AB} &= \pr {A|B}\times \pr B\\
- \pr {AB} &= \frac{2}{5}\times \frac{5}{13}=\frac{2}{13}\\
+  X &= \{A,A,A,I,I,O\} \\
+  n(X)&=6
  \end{align}
- Now, We know 
+ Now, 
  \begin{align}
- \pr {A+B} &= \pr A + \pr B - \pr {AB} \\
-   &= \frac{5}{26} + \frac{5}{13} - \frac{2}{13}  \\
-  &= \frac{5 + 10 - 4}{26} \\
-	  &= \frac{11}{26}
+ \pr X &=\frac{n(X)}{n(S)} \\
+    &=\frac{6}{13}
  \end{align}
-
+$\therefore$ The probability that the chosen word is a vowel is $\frac{6}{13}$.
+ \item    a consonant 
+\end{enumerate}
  
- 
-
-
+ Let Y be the event containing vowels. So, 
+ \begin{align}
+  Y &= \{S,S,S,S,N,T,N\} \\
+  n(Y)&=6
+ \end{align}
+ Now, 
+ \begin{align}
+ \pr Y &=\frac{n(Y)}{n(S)} \\
+    &=\frac{7}{13}
+ \end{align}
+$\therefore$ The probability that the chosen word is a consonant is $\frac{7}{13}$.
 
 
 
 \end{document}
+
 
 

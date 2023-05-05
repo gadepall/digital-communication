@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.24)  1 MAY 2023 11:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.24)  4 MAY 2023 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Assign1.tex
-(./Assign1.tex
+**Assign2.tex
+(./Assign2.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -1020,8 +1020,8 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
 01.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-) (./Assign1.aux)
-\openout1 = `Assign1.aux'.
+) (./Assign2.aux)
+\openout1 = `Assign2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 101.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
@@ -1163,9 +1163,9 @@ LaTeX Info: Redefining \ref on input line 101.
 LaTeX Info: Redefining \pageref on input line 101.
 LaTeX Info: Redefining \nameref on input line 101.
 
-(./Assign1.out) (./Assign1.out)
+(./Assign2.out) (./Assign2.out)
 \@outlinefile=\write4
-\openout4 = `Assign1.out'.
+\openout4 = `Assign2.out'.
 
 \c@theorem=\count339
 \c@problem=\count340
@@ -1205,28 +1205,29 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 2
 File: ts1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 256.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Assign1.aux)
-Package rerunfilecheck Info: File `Assign1.out' has not changed.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Assign2.aux)
+Package rerunfilecheck Info: File `Assign2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29102 strings out of 478287
- 574387 string characters out of 5849289
- 836828 words of memory out of 5000000
- 46683 multiletter control sequences out of 15000+600000
+ 29106 strings out of 478287
+ 574431 string characters out of 5849289
+ 832828 words of memory out of 5000000
+ 46685 multiletter control sequences out of 15000+600000
  544940 words of font info for 196 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,9n,96p,499b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,8n,96p,499b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Assign1.pdf (1 page, 43652 bytes).
+1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Assign2.pdf (1 page, 46455 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
