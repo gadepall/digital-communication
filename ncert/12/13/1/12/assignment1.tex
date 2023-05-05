@@ -1,7 +1,6 @@
-\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -116,8 +115,11 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
+
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
+
+
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -148,7 +150,6 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand*{\comb}[2]{{}^{#1}C_{#2}}%
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -156,28 +157,37 @@ columns=fullflexible
 %\makeatletter
 %\@addtoreset{figure}{problem}
 %\makeatother
+
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
+
+
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
 %\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
 %     \def\rightbox#1{\makebox[0in][r]{#1}}
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
 \vspace{3cm}
+
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
+\textbf{Assignment 1} 
 }
-\author{Kudupudi D.V.Sai Aditya\\AI22BTECH11013}
-	
-	
+\author{ 
+	Gunnam Sri Satya Koushik \\
+    CS22BTECH11026
+}	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
+
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -191,6 +201,7 @@ columns=fullflexible
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
+
 %\author{<-this % stops a space
 %\thanks{}}
 %}
@@ -211,6 +222,9 @@ columns=fullflexible
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
+
+
+
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
@@ -221,18 +235,31 @@ columns=fullflexible
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
+
+
+
 % make the title area
 \maketitle
+
+\newpage
+
 %\tableofcontents
+
 \bigskip
+
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
+
 %\begin{abstract}
 %%\boldmath
 %In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
@@ -244,10 +271,14 @@ columns=fullflexible
 % then you can use LaTeX's standard command \boldmath at the very start
 % of the abstract to achieve this. Many IEEE journals frown on math
 % in the abstract anyway.
+
 % Note that keywords are not normally used for peerreview papers.
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
+
+
+
 % For peer review papers, you can put extra information on the cover
 % page as needed:
 % \ifCLASSOPTIONpeerreview
@@ -257,25 +288,44 @@ columns=fullflexible
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Question[12.13.5.11]:} 
+\textbf{12.13.1.12 Question }: Assume that each born child is equally likely to be a boy or a girl. If a family has
+two children, what is the conditional probability that both are girls given that
+\begin{enumerate}
+	\item  The youngest is a girl
+	\item  At least one is a girl
+\end{enumerate}
 
-\underline{\noindent\solution:}
-The repeated tossing of a die are Bernoulli trials.Let $X$ represent the number of times of getting 5 in 7 throws of a die.\\
-Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
-\fi
-The Binomial r.v. parameters are
-\begin{align}
-\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6},n = 7
-\end{align}
-with pmf
-\begin{align}
-\therefore\,\pr{X=k}=\comb{n}{k}\times q^{n-k}\times p^{k}={\comb{7}{k}\times}\brak{\frac{5}{6}}^{(7-k)}\times\brak{\frac{1}{6}}^{k}
-\end{align}
-The desired probability is
-\begin{align}
-\pr{X=2}=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2
- =\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
-\end{align}
+\textbf{Answer : } (i)$\frac{1}{2}$ (ii)$\frac{1}{3}$\\
+\textbf{Solution : }Lets us random variables $X_i$ where $i \in \{1,2\}$ as follows
+% table goes here
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|l|l|}\hline
+$X_i = 1$	&ith born child is a boy	&$\pr{X_i = 1}$ = 0.50\\\hline
+$X_i = 0$	&ith born child is a girl	&$\pr{X_i = 0}$ = 0.50\\\hline
+\end{tabular}
+\end{table}
 
+
+\begin{enumerate}
+\item 
+%Part (i) :
+The required probability is the conditional probability that both the children are girls given that the youngest is a girl i.e,
+\begin{align}
+     \pr{(X_1=0,X_2=0)|X_2=0} &= \frac{\pr{X_1=0,X_2=0}}{\pr{X_2=0}}\notag\\
+           &= \frac{\pr{X_1=0}\pr{X_2=0}}{\pr{X_2=0}}\notag\\ 
+	  &= \pr{X_1=0}\notag\\
+          &= \frac{1}{2}\notag
+\end{align}
+\item
+%Part (ii) :
+The required probability is the conditional probability that both the children are girls given that at least one a girl i.e,
+\begin{align}
+	\pr{(X_1=0,X_2=0)|(X_1+X_2)<2} &= \frac{\pr{X_1=0,X_2=0}}{1-\pr{(X_1+X_2)=2}}\notag\\
+	&= \frac{\pr{X_1=0,X_2=0}}{1-\pr{X_1=1,X_2=1}}\notag\\
+	&= \frac{\pr{X_1=0}\pr{X_2=0}}{1-\pr{X_1=1}\pr{X_2=1}}\notag\\
+	&= \frac{\frac{1}{2}\times\frac{1}{2}}{1- (\frac{1}{2}\times\frac{1}{2})} = \frac{1}{3}\notag
+\end{align}
+\end{enumerate}
+\end{document}

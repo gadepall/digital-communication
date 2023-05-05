@@ -1,6 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -18,8 +18,6 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-
-
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -46,7 +44,7 @@
 %\usepackage{cases}
 %\usepackage{subfig}
 %\usepackage{xtab}
-%\usepackage{longtable} 
+%\usepackage{longtable}
 %\usepackage{multirow}
 %\usepackage{algorithm}
 %\usepackage{algpseudocode}
@@ -117,12 +115,8 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
-\newcommand\tab[1][1cm]{\hspace*{#1}}
-
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
-
-
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -138,12 +132,12 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-%\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-%\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-%\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
@@ -160,38 +154,33 @@ columns=fullflexible
 %\makeatletter
 %\@addtoreset{figure}{problem}
 %\makeatother
-
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
-
-
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
-
 %\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
 %     \def\rightbox#1{\makebox[0in][r]{#1}}
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-
 \vspace{3cm}
-
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
+%	\logo{
+AI1110 Assignment 1 in \LaTeX
+%	}
 }
-\author{Gunethra Bommineni$^{*}$% <-this % stops a space
+\author{ Kondaparthy Anuraga Chandan$^{*}$% <-this % stops a space
 	\thanks{*The student is with the Department
-		of Electrical Engineering, Indian Institute of Technology, Hyderabad
-		502285 India e-mail: ee22btech11205@iith.ac.in.}
-  }
+		of Artificial Intelligence, Indian Institute of Technology, Hyderabad
+		502285 India e-mail: ai22btech110011@iith.ac.in.}
+	
+}	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
-
-
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -205,7 +194,6 @@ columns=fullflexible
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
-
 %\author{<-this % stops a space
 %\thanks{}}
 %}
@@ -226,9 +214,6 @@ columns=fullflexible
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
-
-
-
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
@@ -239,31 +224,18 @@ columns=fullflexible
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
-
-
-
-
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
-
-
-
 % make the title area
 \maketitle
-
-\newpage
-
 %\tableofcontents
-
 \bigskip
-
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
-
 %\begin{abstract}
 %%\boldmath
 %In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
@@ -275,14 +247,10 @@ columns=fullflexible
 % then you can use LaTeX's standard command \boldmath at the very start
 % of the abstract to achieve this. Many IEEE journals frown on math
 % in the abstract anyway.
-
 % Note that keywords are not normally used for peerreview papers.
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
-
-
-
 % For peer review papers, you can put extra information on the cover
 % page as needed:
 % \ifCLASSOPTIONpeerreview
@@ -292,34 +260,37 @@ columns=fullflexible
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-
-
-\textbf{\large{Question 13.2.12:}}
-
-\begin{enumerate}
-    \textbf{\underline{Problem Statement}}
+%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
+\textbf{12.13.2.7} 
+\\Given that the events A and B are such that \pr{A} = $\frac{1}{2}$, \pr{A + B} = $\frac{3}{5}$ and \pr{B} = $p$. Find $p$ if they are \begin{enumerate}[label=(\roman*)]
+\item mutually exclusive \item independent.\\
 \end{enumerate}
 
-A die is tossed thrice. Find the probability of getting an odd number at least once.
-\begin{enumerate}
-    \textbf{\underline{Solution}}
+\textbf{Solution:}\\\\Given,\\
+\begin{align}
+ \pr{A} &= \frac{1}{2} 
+\\ \pr{A + B} &= \frac{3}{5}
+\\ \pr{B} &= p = ?
+\end{align}
+\begin{enumerate}[label=(\roman*)]
+ \item A and B are $mutually$ $exclusive$ events \\
+\begin{align}
+ \pr{A + B} &= \pr{A} + \pr{B}
+\\ \implies \pr{A + B} &= \pr{A} + p
+\\ \implies p &= \pr{A + B} - \pr{A}
+\\ \implies p &= \frac{3}{5} - \frac{1}{2} = \frac{6 - 5}{10}
+\\ \implies p &= \frac{1}{10}
+\end{align}
+ \item A and B are $independent$ events \\
+\begin{align}
+\pr{AB} &= \pr{A}\pr{B}
+\\\pr{A+B} &= \pr{A} + \pr{B} - \pr{AB}
+\\ \implies \pr{A+B} &= \pr{A} + \pr{B} - \pr{A}\pr{B}
+\\ \implies \pr{A+B} &= \pr{A} + p - \pr{A}p
+\\ \implies \pr{A+B} - \pr{A} &= p[1 - \pr{A}]
+\\ \implies p &= \frac{\pr{A+B} - \pr{A}}{1 - \pr{A}}
+\\ \implies p &= \frac{\frac{3}{5} - \frac{1}{2}}{1 - \frac{1}{2}} = \frac{\frac{6 - 5}{10}}{\frac{1}{2}} = \frac{\frac{1}{10}}{\frac{1}{2}} = \frac{2}{10}
+\\ \implies p &= \frac{1}{5}
+\end{align}
 \end{enumerate}
-
-Let X be a random variable defined as the number of odd number occurrences in three trials. 
-Probability of an observation being odd is;
-\begin{align}
-    p &= \frac{1}{2}\\
-    n &= 3
-\end{align}
-Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
-\begin{align}
-    F_{X} \brak{i} &= \sum_{0}^{i} {^{n}C_{i} \times p^{i} \times (1-p)^ \brak {n-i}}\\
-\end{align}
-Required probability is equivalent to;
-\begin{align}
-    \pr{1 \le X \le 3} &= F_{X}\brak{3}-F_{X}\brak{0}\\
-    &= \frac{7}{8}
-\end{align}
-Python code:\cite{code}
-\bibliography{bibliography}
 \end{document}

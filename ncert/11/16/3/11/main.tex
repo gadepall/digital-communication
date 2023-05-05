@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -19,6 +19,11 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsmath}
+
+\newcommand{\comb}[2]{\binom{#1}{#2}}
+
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -98,7 +103,7 @@ columns=fullflexible
 %breaklines=true
 %}
 
-\begin{document}
+%\begin{document}
 %
 
 
@@ -116,8 +121,11 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
+
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
+
+
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -148,7 +156,6 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand{\comb}[2]{{}_{#1}\mathrm{C}_{#2}}
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -156,28 +163,31 @@ columns=fullflexible
 %\makeatletter
 %\@addtoreset{figure}{problem}
 %\makeatother
+
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
+
+
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
 %\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
 %     \def\rightbox#1{\makebox[0in][r]{#1}}
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
 \vspace{3cm}
-\title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
-}
-\author{Kudupudi D.V.Sai Aditya\\AI22BTECH11013}
-	
-	
+
+
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
+
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -191,6 +201,7 @@ columns=fullflexible
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
+
 %\author{<-this % stops a space
 %\thanks{}}
 %}
@@ -211,28 +222,44 @@ columns=fullflexible
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
+
+
+
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
+% * Note that you probably will NOT want to include the author's *
+% * name in the headers of peer review papers.                   *
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
+
+
+
 % make the title area
-\maketitle
+%\maketitle
+
+%\newpage
+
 %\tableofcontents
+
 \bigskip
+
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
+
 %\begin{abstract}
 %%\boldmath
 %In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
@@ -244,10 +271,14 @@ columns=fullflexible
 % then you can use LaTeX's standard command \boldmath at the very start
 % of the abstract to achieve this. Many IEEE journals frown on math
 % in the abstract anyway.
+
 % Note that keywords are not normally used for peerreview papers.
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
+
+
+
 % For peer review papers, you can put extra information on the cover
 % page as needed:
 % \ifCLASSOPTIONpeerreview
@@ -257,26 +288,16 @@ columns=fullflexible
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Question[12.13.5.11]:} Find the probability of getting 5 twice in 7 throws of a dice.\\
-
-\underline{\noindent\solution:}
-The repeated tossing of a die are Bernoulli trials.Let $X$ represent the number of times of getting 5 in 7 throws of a die.\\
-Probability of getting 5 in a single throw of die,$\,p=\frac{1}{6}$.\\
-\begin{align}
-\therefore\,q=1-p=1-\frac{1}{6}=\frac{5}{6}
-\end{align}
-Clearly,$\,X$ has the probability distribution with $n=7$ and $p=\frac{1}{6}$\\
-\begin{align}
-\therefore\,\pr{X=x}=\comb{n}{x}\times q^{n-x}\times p^{x}={\comb{7}{x}\times}\brak{\frac{5}{6}}^{(7-x)}\times\brak{\frac{1}{6}}^{x}
-\end{align}
-Probability of getting 5 twice in 7 throws of a dice is $\pr{X=2}$.\\
-\begin{align}
-\pr{X=2}&=\comb{7}{2}\times\brak{\frac{5}{6}}^{(7-2)}\times\brak{\frac{1}{6}}^2\\
- &=\frac{7!}{{2!}\times(7-2)!}\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{6}}^2\\
- &=21\times\brak{\frac{5}{6}}^5\times\brak{\frac{1}{36}}\\
- &=\brak{\frac{7}{12}}\times\brak{\frac{5}{6}}^5
+\title{AI1110 Assignment 1}
+\author{ Suvedh }
+\begin{document}
+\maketitle
+\textbf{11.16.3.11}: \textbf{Solution}:
+\fi
+The desired probability is given by 
+\begin{align} 
+\frac{1}{\comb{20}{6}} = \frac{1}{38,760} = 0.0000258 
 \end{align}
 
-\end{document}
+
