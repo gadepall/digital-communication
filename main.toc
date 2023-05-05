@@ -27,7 +27,7 @@
 \contentsline {chapter}{\numberline {A} Axioms }{121}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Definitions}{121}{section.A.1}%
 \contentsline {section}{\numberline {A.2}Boolean Logic}{122}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Properties}{123}{section.A.3}%
+\contentsline {section}{\numberline {A.3}Properties}{124}{section.A.3}%
 \contentsline {chapter}{\numberline {B} Z-transform}{125}{appendix.B}%
 \contentsline {chapter}{\numberline {C}Distributions}{127}{appendix.C}%
 \contentsline {section}{\numberline {C.1}Bernoulli }{127}{section.C.1}%

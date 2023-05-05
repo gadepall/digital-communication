@@ -293,34 +293,11 @@ columns=fullflexible
 \author{ Suvedh }
 \begin{document}
 \maketitle
-\textbf{11.16.3.11}: In a lottery,a person choses six different natural numbers at random from 1 to 20,and if these six numbers match with the six numbers already fixed by the lottery committee,he wins  the prize.What is the probability of winning the prizes in the game?[Hint : order of the numbers is not important.]
-
-\textbf{Solution}:
+\textbf{11.16.3.11}: \textbf{Solution}:
 \fi
-To calculate the probability of winning the prize, we need to first determine the total number of possible combinations that can be formed by choosing six numbers out of 20.
-
-The formula for calculating the number of combinations is: 
-\begin{align} 
-\comb{n}{r} = \frac{n!}{r!(n-r)!}
-\end{align} 
-
-Where $n$ is the total number of items, $r$ is the number of items to choose. 
-In this case, $n = 20$ and $r = 6$, so we have: 
-\begin{align} 
-\comb{20}{6} = \frac{20!}{6!(20-6)!} = 38,760
-\end{align} 
-
-So there are 38,760 possible combinations of six numbers that can be chosen from 20. 
-
-Since order does not matter, the number of winning combinations is simply 1, since there is only one set of six numbers chosen by the lottery committee. 
-
-Therefore, the probability of winning the prize is:
-
+The desired probability is given by 
 \begin{align} 
 \frac{1}{\comb{20}{6}} = \frac{1}{38,760} = 0.0000258 
 \end{align}
- 
-
-So the probability of winning the prize is very low, it is approximately 0.00258\%.
 
 
