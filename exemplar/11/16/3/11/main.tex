@@ -10,7 +10,7 @@
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
-\usepackage{graphicx,wrapfig}
+\usepackage{float,graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{txfonts}
@@ -46,7 +46,7 @@
 %\usepackage{bm}
 %\usepackage{cite}
 %\usepackage{cases}
-%\usepackage{subfig}
+\usepackage{subfig}
 %\usepackage{xtab}
 %\usepackage{longtable}
 %\usepackage{multirow}
@@ -208,9 +208,13 @@ The accompanying Venn diagram shows three events, A, B, and C, and also the prob
 Probability of exactly one
 of the three occurs.
 \end{enumerate}
-\includegraphics[scale=1]{figs/new-figure0}
-
-
+\begin{enumerate}
+\begin{figure}[h!]
+\includegraphics{figs/new-figure0}
+\caption{Question Figure}
+\label{fig}
+\end{figure}
+\end{enumerate}
 \textbf{Solution.}
 \begin{enumerate}[label=(\alph*)]
 \item 
