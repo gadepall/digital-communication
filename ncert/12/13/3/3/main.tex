@@ -1,0 +1,74 @@
+\iffalse
+\documentclass[12pt,onecolumn,notitlepage]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{listings}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{amssymb}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+
+\newcommand*{\comb}[2]{{}^{#1}C_{#2}}
+
+\title{Probability Assignment 2 (12.13.3.3)}
+\author{Aditya Varun V (AI22BTECH11001)}
+\date{}
+
+\begin{document}
+
+\maketitle
+\subsection*{Question}
+
+
+\subsection*{Solution}
+\fi
+
+Let 
+\begin{align}
+	X &=  \begin{cases}
+     0, \text{ if student is resides in hostel}\\
+     1, \text{ if student is a day scholar} 
+ \end{cases}\\
+	Y &=  \begin{cases}
+     0, \text{ if student does not attain A grade}\\
+     1, \text{ if student attains A grade} 
+ \end{cases}
+\end{align}
+From the given data, 
+\begin{align}
+	\pr{X=0} &= \frac{3}{5}\\
+	\pr{X=1} &= \frac{2}{5}\\
+	\pr{Y=1 \mid X=0} &= \frac{3}{10}\\
+	\pr{Y=1 \mid X=1} &= \frac{1}{5}
+\end{align}
+ The desired probability is
+ \begin{align}
+	 \pr{X=0 \mid Y=1} &= \frac{\pr{Y=1 \mid X=0}\times\pr{X=0}}{\sum_{k=0}^{1}\pr{Y=1 \mid X=k}\times\pr{X=k} }\\
+ 	&= \frac{\frac{3}{10}\times\frac{3}{5}}{\frac{3}{10}\times\frac{3}{5} + \frac{1}{5}\times\frac{2}{5}}
+ 	= \frac{9}{13}
+ \end{align}
+

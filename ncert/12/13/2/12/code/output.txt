@@ -1,0 +1,15 @@
+Assignment 1: Question 12.13.2.12
+
+The total number of possible cases is counted by the variable 'count'.
+The number of required outcomes is counted by the variable 'c'.
+The probability is calculated by the variable 'p'.
+
+Total number of outcomes is 216.
+Number of possible outcomes is 27.
+
+The probability of atleast one odd number occuring is equal to (1 - Probability of all observations being even).
+
+Probability of all three observations being even = c/count
+Probability of atleast one observation being odd = 1 - (c/count)
+
+Therefore, the required probability is 0.875.
