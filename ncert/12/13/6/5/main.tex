@@ -335,18 +335,10 @@ Probability of an event $E$ is defined as
 
 $$\pr{E} = \frac{\text{Number of outcomes favourable to event }E}{\text{Total number of outcomes}}$$
 
-\begin{table}[htp]
-	\begin{tabular}{|l|l|l|}\hline
-		Variables	&Definition &values\\ \hline
-		$N$ &Balls in the urn & 25\\ \hline
-		$N_X$ &Balls marked with $X$ & 10\\ \hline
-		$N_Y$ &Balls marked with $Y$ & 15\\ \hline
-		$n$	&No. Of trials & 6\\ \hline
-		$k$	&No. Of balls marked $X$ in $n$ trials & \\ \hline
-		$p$	&Pr($X$) & 0.4\\ \hline
-		$q$	&Pr($Y$) = 1 - Pr($X$) & 0.6\\	\hline
-		
-	\end{tabular}
+\begin{table}[htbp]
+\label{tab:ncert/12/13/6/5/1}
+\input{tables/table.tex}
+\caption{Given Information}
 \end{table}
 
 
@@ -365,16 +357,16 @@ We will define a function for cummulative distribution of the above question
 	F_Z(i)&=\pr{Z\leq i}\\
 	\pr{Z=i}&= \comb{6}{i} \cdot p^i \cdot q^{6-i}\\
 	\therefore   
-	F_Z(i)&=\sum_{r=0}^i{\comb{6}{r}}\cdot p^r\cdot q^{6-r}
+	F_Z(i)&=\sum_{r=0}^i{\comb{6}{r}}\cdot p^r\cdot q^{6-r} \label{eq3}
 \end{align}
-Some Required Values, from (3)
+Some Required Values, from \eqref{eq3}
 \begin{align}	
 	F_Z(3)&=\comb{6}{0}\brak{0.4}^0\brak{0.6}^6
-	+\comb{6}{1}\brak{0.4}^1\brak{0.6}^5\nonumber
+	+\comb{6}{1}\brak{0.4}^1\brak{0.6}^5
 	\\&+\comb{6}{2}\brak{0.4}^2\brak{0.6}^4
-	+\comb{6}{3}\brak{0.4}^3\brak{0.6}^3 \nonumber\\&= 0.8208\\
-	F_Z(5) &= 1-Pr(6)\nonumber
-	\\&=0.995904
+	+\comb{6}{3}\brak{0.4}^3\brak{0.6}^3 \\&= 0.8208\label{eq6}\\
+	F_Z(5) &= 1-Pr(6)
+	\\&=0.995904\label{eq8}
 \end{align}
 	
 
@@ -388,28 +380,28 @@ Some Required Values, from (3)
 \begin{enumerate}
 	\item 
 	\begin{align}
-		\pr{Z = 6} &= \comb{6}{6}\brak{0.4}^6\brak{0.6}^0\nonumber
+		\pr{Z = 6} &= \comb{6}{6}\brak{0.4}^6\brak{0.6}^0
 		\\&= 0.004096 
 	\end{align}
 	
 	
 	\item 
 	\begin{align}
-		&\pr{Z\geq4} = 1-F_Z\brak{3}\nonumber
-		\\&\text{from (4)}\nonumber
+		&\pr{Z\geq4} = 1-F_Z\brak{3}
+		\\&\text{from} \eqref{eq6}
 		\\&= 0.1792
 	\end{align}
 	
 	\item 
 	\begin{align}
-		&\pr{Z < 6} = F_Z\brak{5}\nonumber
-		\\&\text{from (5)}\nonumber
+		&\pr{Z < 6} = F_Z\brak{5}
+		\\&\text{from} \eqref{eq8}
 		\\&= 0.995904  
 	\end{align}
 	
 	\item 
 	\begin{align}
-		\pr{Z = 3} &= \comb{6}{3}\brak{0.4}^3\brak{0.6}^3 \nonumber
+		\pr{Z = 3} &= \comb{6}{3}\brak{0.4}^3\brak{0.6}^3 
 		\\&= 0.13824
 	\end{align}
 \end{enumerate}
