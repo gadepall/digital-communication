@@ -143,63 +143,54 @@ columns=fullflexible
 \begin{enumerate}
 \textbf{Solution:} 
 \fi
-		Consider the random variables $X, Y$, which denotes the first child, second child gender respectively as described in \tabref{tab:ncert/12/13/6/2/1}.
+		Consider the random variables $X, Y$, which denotes the first child, second child gender respectively as described in table \ref{tab:ncert/12/13/6/2/1}.
 \begin{table}[h]
 \centering
 \input{ncert/12/13/6/2/tables/table1.tex}
 \caption{Random variables $X$}
 \label{tab:ncert/12/13/6/2/1}
 \end{table}
-The probabilities for the random variables $X,Y$ is listed in table \tabref{tab:ncert/12/13/6/2/2}.
+
+The probabilities for the random variables $X,Y$ is listed in table \ref{tab:ncert/12/13/6/2/2}.
 \begin{table}[h]
 \centering
 \input{ncert/12/13/6/2/tables/table2.tex}
 \caption{Probabilities}
 \label{tab:ncert/12/13/6/2/2}
 \end{table}
-%
-\iffalse
+
 The probability $\pr{XY = 0}$ is given by 
 \begin{align}
 &= \pr{X = 0} + \pr{Y = 0} - \pr{X+Y = 0}\\
 &= \frac{1}{2} +\frac{1}{2} - \frac{1}{4}\\
 &= \frac{3}{4}
-\end{align}
-\fi
-%
+\end{align}\\
+
 \begin{enumerate}
-\item  The event of both children being Male is when 
+\item  The event of both children being Male is when $X +Y = 0$. The event of atleast one of the children being Male is when $XY = 0$.
 \begin{align}
-X +Y = 0.
+\{X + Y = 0\} \cap \{XY = 0\} \equiv \{X + Y = 0\}
 \end{align}
-	 The event of atleast one of the children being Male is when 
-\begin{align}
-XY = 0
-\end{align}
-Since
-\begin{align}
-\{X + Y = 0\} \cap \{XY = 0\} \equiv \{X + Y = 0\},
-\end{align}
-%
-the required probability is given by,
+
+The required probability is given by,
 \begin{align}
 \pr{X + Y = 0 \mid XY = 0}
-= \frac{\pr{X + Y = 0}}{\pr{XY = 0}}
-= \frac{1}{3}
 \end{align}
-\item  The event of both children being Female is when 
 \begin{align}
-X + Y = 2.
+&= \frac{\pr{X + Y = 0}}{\pr{XY = 0}}\\
+&= \frac{1}{3}
 \end{align}
-	 The event of elder child being Female is when $X = 1$. Since 
+\item  The event of both children being Female is when $X + Y = 2$. The event of elder child being Female is when $X = 1$.
 \begin{align}
-\{X + Y = 2\} \cap \{X = 1\} \equiv \{X + Y = 2\},
+\{X + Y = 2\} \cap \{X = 1\} \equiv \{X + Y = 2\}
 \end{align}
-the required probability is given by,
+The required probability is given by,
 \begin{align}
 \pr{X + Y = 2 \mid X = 1}
-= \frac{\pr{X + Y = 2}}{\pr{X = 1}}
-= \frac{1}{2}
+\end{align}
+\begin{align}
+&= \frac{\pr{X + Y = 2}}{\pr{X = 1}}\\
+&= \frac{1}{2}
 \end{align}
 \end{enumerate}
 
