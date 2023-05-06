@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -259,61 +260,38 @@ columns=fullflexible
 %\IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%  
 \textbf{10.15.1.15}\\
-Five cards—the ten, jack, queen, king and ace of diamonds, are well-shuffled with their face downwards. One card is then picked up at random.
-\begin{enumerate}
-\item
-What is the probability that the card is the queen? 
-\item
-If the queen is drawn and put aside, what is the probability that the second card picked up is (a) an ace? (b) a queen?\\
-\end{enumerate}
 \solution\\
 \captionsetup[table]{labelformat=empty,labelsep=none}
+\fi
+See 
+  \tabref{tab:ncert/10/15/1/15/Table1}.
 \begin{table}[ht!]
   \centering
-  \input{tables/mytable1.tex} 
-  \caption{TABLE 1}
-  %\label{tab:Table1}
+  \input{ncert/10/15/1/15/tables/mytable1.tex} 
+  \caption{}
+  \label{tab:ncert/10/15/1/15/Table1}
 \end{table}
-
-\begin{align}
-\pr{E} = \frac{n(E)}{n(S)}   
-\end{align}
-
+%
 \begin{enumerate}
 \item
-\begin{raggedright}
-{Total number of cards }= 5 \\
-{Number of cards that are queen }= 1 
-\end{raggedright}
 \begin{align}
-%\pr{E} &=  \frac{n(E)}{n(S)}\\
-\pr{Q} &=  \frac{n(Q)}{n(S)}\\
-\therefore\pr{Q}&=\frac{1}{5}
+\pr{Q}&=\frac{1}{5}
 \end{align}
-
+%
 \item
-\begin{raggedright}
-{Total number of cards} = 4\\
-{Number of cards that are Ace} = 1
-\end{raggedright}
-
+\begin{enumerate}
+	\item 
 \begin{align}
-%\pr{E} &= \frac{n(E)}{n(S)}\\
-\pr{A} &= \frac{n(A)}{n(S)}\\
-\therefore\pr{A}&=\frac{1}{4}
+\pr{A}&=\frac{1}{4}
 \end{align}
-
+%
 \item
-{Total number of cards} =\ 4\\
-{Number of cards that are Queen} = 0
-
+%
 \begin{align}   
-\pr{Q} &=\frac{n(Q)}{n(S)}\\
-\pr{Q} &=\frac{0}{4}=0\\
-\therefore\pr{Q}&= 0
+\pr{Q}&= 0
 \end{align}
 \end{enumerate}
-\end{document}
+\end{enumerate}
 
 
 
