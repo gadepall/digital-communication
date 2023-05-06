@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined 
  \let\negthickspace\undefined 
  \documentclass[journal,12pt,onecolumn]{IEEEtran} 
@@ -195,43 +196,27 @@
  \renewcommand{\thefigure}{\theenumi} 
  \renewcommand{\thetable}{\theenumi} 
 \textbf{10.15.2.3}:
-A bag contains $5$ red balls and some blue balls.If the probability of drawing a blue ball is double that if a red ball,determine the number of blue balls in the bag.
 
 \vspace{\baselineskip}
 \textbf{Solution}:\\ 
 Let's assume that there are $x$ blue balls in the bag \\
 Since there are 5 red balls in the bag and a total of $5+x$ balls. \\
 Let $\Pr\brak{R}$ and $\Pr\brak{B}$ be the probabilities of drawing a red and blue ball.
-\begin{enumerate}[label=(\alph*)]
-\item The probability of drawing a red ball is
+\fi
+The probability of drawing a red ball is
 \begin{align}
 	\Pr\brak{R} &= \frac{5}{5+x}
 \end{align}
-
-
-\item given the probability of drawing a blue ball is double that of drawing a red ball.
-So,The probability of drawing a blue ball is:
+The probability of drawing a blue ball is
 \begin{align}
- \Pr\brak{B} &=  2\times\left(\frac{5}{5+x}\right)
+ \Pr\brak{B} &=  \frac{10}{5+x}
 \end{align}
-\item We know that the sum of the probabilities of drawing a red ball and drawing a blue ball is equal to 1
-
+Thus, 
 \begin{align}
 	\brak{\frac{5}{5+x}} + 2\brak{\frac{5}{5+x}} &= 1 
-\end{align}
-\begin{align}
-\frac{5}{5+x} + \frac{10}{5+x} &= 1 
-\end{align}
-\begin{align}
-\frac{15}{5+x} &= 1 
-\end{align}
-\begin{align}
-5+x &= 15 
-\end{align}
-\begin{align}
-x &= 10
+	\\
+\implies \frac{15}{5+x} &= 1 
+\\
+	\text{or, }x &= 10
 \end{align}
 
-Therefore, there are $10$ blue balls in the bag.
- \end{enumerate}
- \end{document}
