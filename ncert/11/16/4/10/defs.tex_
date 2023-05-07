@@ -1,0 +1,80 @@
+\iffalse
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large DIVYA SAI - FWC22094}
+\date{}
+
+\maketitle
+\begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+%\numberwithin{table}{enumi}
+\setcounter{enumi}{3}
+\setcounter{enumii}{10}
+
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
+\textbf {
+	The number lock of a suitcase has 4 wheels each labelled with ten digits i.e. from 0 to 9.The lock opens with a sequence of four digits with no repeats.What is the probability of a person getting the right sequence to open the suitcase?}\\[1ex]
+
+\solution\\
+\fi
+The given information is represented in Tables
+	 \ref{table:11/16/4/10/1/1}
+\ref{table:11/16/4/10/1/2}
+	 and
+\ref{table:11/16/4/10/1/3}.
+\begin{table}[h]
+	\input{ncert/11/16/4/10/tables/rvtable.tex}
+	 \caption{Random variables $X$ and $Y$}
+	 \label{table:11/16/4/10/1/1}
+\end{table}
+
+\begin{table}[h]
+	\input{ncert/11/16/4/10/tables/table11.tex}
+	 \caption{Suitcase wheel}
+\label{table:11/16/4/10/1/2}
+\end{table}
+
+\begin{table}[h]
+	\input{ncert/11/16/4/10/tables/table1.tex}
+ \caption{Combinations}\label{table:11/16/4/10/1/3}
+\end{table}
+
+The number of possible placement of the digits are
+\begin{align}
+10 \times 9 \times 8 \times 7 = 5040 
+\end{align}
+\iffalse
+Let $A$ be the event the correct sequence is selected So,n(A)=1.
+
+The lock opens with only one right sequence.
+\fi
+Thus, the probability of the correct sequence begin selected is 
+
+\begin{align}
+\pr{A}=\frac{1}{5040}
+\end{align}
+%\end{enumerate}
+%\end{document}
