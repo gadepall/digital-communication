@@ -210,32 +210,47 @@ of the three occurs.
 \end{enumerate}
 \begin{enumerate}
 \begin{figure}[h!]
-	\includegraphics[width = \columnwidth]{figs/new-figure0}
+\includegraphics[width=\columnwidth]{figs/new-figure0}
 \caption{Question Figure}
-\label{fig:Venn_Diagram}
+\label{fig}
 \end{figure}
 \end{enumerate}
 \textbf{Solution.}
+    \begin{align}
+        \label{eq:1}
+        \pr{AB}=0.07\\
+        \label{eq:2}
+        \pr{AB^\prime}=0.13\\
+        \label{eq:8}
+        \pr{A^\prime B} = 0.25\\
+        \label{eq:4}
+        \pr{BC} = 0.15\\
+        \pr{CB^\prime} = 0.28\\
+        \label{eq:6}
+        \pr{AB^\prime C^\prime} = 0.13\\
+        \label{eq:5}
+        \pr{A^\prime B C^\prime} =0.10\\
+        \label{eq:7}
+        \pr{A^\prime B^\prime C} =0.28
+    \end{align}
 \begin{enumerate}[label=(\alph*)]
 \item 
-Clearly,
-\begin{align}
-\pr{A} &= 0.13 + 0.07\\
-       &= 0.20
-\end{align}
-\item 
-Clearly,
-\begin{align}
-\label{eq:1}
-    \pr{B} &= 0.10 + 0.07 + 0.15\\
-       &= 0.32
-\end{align}
-Also,
+From \eqref{eq:1} and \eqref{eq:2}
 \begin{align}
 A &= A \brak{B+B^{\prime}} =  AB + AB^{\prime}\\
 [&\because B + B^\prime = 1]\\\label{eq:axiom_sum_A}
 \pr{A} &= \pr{AB} +\pr{AB^\prime}\\
-    [&\because BB^\prime = 0] \nonumber
+    [&\because BB^\prime = 0] \nonumber\\
+\pr{A} &= 0.13 + 0.07\\
+       &= 0.20
+\end{align}
+\item 
+From \eqref{eq:1} and \eqref{eq:8}
+\begin{align}
+    \pr{B} &= \pr{A^\prime B} + \pr{AB}\\
+    \label{eq:3}
+    \pr{B} &= 0.25 + 0.07\\
+       &= 0.32
 \end{align}
 Using \eqref{eq:axiom_sum_A}
 \begin{align}
@@ -259,7 +274,7 @@ Using \eqref{eq:axiom_sum_A}
     &= 0.13
 \end{align}
 \item 
-Clearly,
+From \eqref{eq:4}
 \begin{align}
     \pr{BC} = 0.15
 \end{align}
@@ -289,7 +304,7 @@ Therefore, by Axioms of Probability
 \begin{align}
     \pr{X}&=\pr{AB^\prime C^\prime}+\pr{A^\prime BC^\prime}+\pr{A^\prime B^\prime C}
 \end{align}
-Clearly, from the figure
+From \eqref{eq:6}, \eqref{eq:5} and \eqref{eq:7}
 \begin{align}
     \pr{X}&=0.13+0.10+0.28\\
     &=0.51
