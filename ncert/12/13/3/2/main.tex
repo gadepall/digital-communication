@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -69,19 +70,17 @@ Assignment 1\\AI1110 : Probability and Random Variables
 \maketitle
 %\newpage
 \bigskip
-\textbf{Question:12.13.3.2:} A bag contains 4 red and 4 black balls, another bag contains 2 red and 6 black balls. One of the two bags is selected at random and a ball is drawn from the bag which is found to be red. Find the probability that the ball is drawn from the first bag.
-\\
-\\
+\textbf{Question:12.13.3.2:} \\
 \textbf{Solution:}
+\fi
+See 
+\tabref{tab:ncert/12/13/3/2/1}
 \begin{table}[htbp]
 \centering
 \caption{Random Variable Declaration}
-\input{table/table1.tex}
-\label{table:1}
-
+\input{ncert/12/13/3/2/tables/table1.tex}
+\label{tab:ncert/12/13/3/2/1}
 \end{table}
-\bigskip
-\\
 Given,
 \begin{align}
 \pr{R=1|B=0}&=\frac{4}{8}=\frac{1}{2} \\ 
@@ -89,18 +88,11 @@ Given,
 \pr{B=0}&=\frac{1}{2} \\ 
 \pr{B=1}&=\frac{1}{2} 
 \end{align}
-\pr{B=0|R=1}= probability of choosing bag 1 given that the ball is red \\
-From Bayer's theorem,
-%\begin{equation}
 \begin{align}
 \pr{B=0|R=1} &= \frac{\pr{R=1|B=0} \pr{B=0}}{\pr{R=1|B=0}  \pr{B=0} + \pr{R=1|B=1}  \pr{B=1}} \\
 &= \frac{\frac{1}{2} \times \frac{1}{2}}{\frac{1}{2} \times \frac{1}{2} + \frac{1}{4} \times \frac{1}{2}}\\
-&= \frac{\frac{1}{4}}{\frac{1}{4} + \frac{1}{8}} \\
-&= \frac{2}{3} 
+&= \frac{\frac{1}{4}}{\frac{1}{4} + \frac{1}{8}} 
+= \frac{2}{3} 
 \end{align}
-%\end{equation}
-\\Hence, $$ \pr{B=1|R=1}=\frac{2}{3}$$ 
-The probability that the ball is drawn from the first bag is $\frac{2}{3}$ .
 
 
-\end{document}
