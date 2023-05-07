@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -291,22 +292,14 @@ columns=fullflexible
 %\section{Chemistry}
 %\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
-\textbf{Question : } Events A and B are such that 
+\textbf{Question : } \textbf{Solution : }
+\fi
 \begin{align}
-    \pr{A}= \frac{1}{2},\pr{B} = \frac{7}{12} \text{and} \pr{A^{\prime}+B^{\prime}} = \frac{1}{4}.
+\pr{AB}&=1-\pr{A^{\prime}+B^{\prime}}
+       =1-\frac{1}{4}
+       =\frac{3}{4}\\
+\pr{A}\times\pr{B}&=\frac{1}{2}\times\frac{7}{12}
+                  =\frac{7}{24}\\
+\implies              \pr{AB}&\neq\pr{A}\pr{B}
 \end{align}
-
-\begin {enumerate}
-\item State whether A and B are independent ?
-\end{enumerate}
-\textbf{Solution : }
-\begin{align}
-\pr{AB}&=1-\pr{A^{\prime}+B^{\prime}}\\   
-       &=1-\frac{1}{4}\\
-       &=\frac{3}{4}\\
-\pr{A}\times\pr{B}&=\frac{1}{2}\times\frac{7}{12}\\
-                  &=\frac{7}{24}\\
-             \pr{AB}&\neq\pr{A}\pr{B}\\
-\therefore \text{A and B are not independent.}
-\end{align}
-\end{document}
+$\therefore$ A and B are not independent.
