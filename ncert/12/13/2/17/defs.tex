@@ -1,6 +1,7 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -176,9 +177,15 @@ columns=fullflexible
 
 \vspace{3cm}
 
-\title{Probability Assignment 1 }
-\author{EE22BTECH11209 - GUMMAPU SATHWIK PREETHAM$^{*}$% <-this % stops a space 
-}
+\title{Assignment 1 
+
+         \Large {AI1110: Probability and Random Variables
+         
+                Indian Institute of Technology Hyderabad}} 
+                
+\author{Arjit Jain 
+
+          \normalsize {AI22BTECH11002} }
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
@@ -246,11 +253,7 @@ columns=fullflexible
 % make the title area
 \maketitle
 
-\newpage
-
 %\tableofcontents
-
-\bigskip
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
@@ -285,28 +288,28 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
-%\renewcommand{\theequation}{\theenumi}
-%\subsection{Problem}
+% The Question
+\textbf{Chapter 13 , Exercise 13.2 }\\
 
-%\section{Chemistry}
-%\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-\textbf{Question : } Events A and B are such that 
+\textbf{Question 17 :}\\
+
+
+\solution
+\fi
+Let X and Y be two random variables representing outcomes on both the die,
+See 
+		\tabref{tab:ncert/12/13/2/17/xxx}.
+\begin{table}[h]
+\begin{center}
+		\input{ncert/12/13/2/17/tables/table1.tex}
+		\caption{}
+		\label{tab:ncert/12/13/2/17/xxx}
+\end{center}	
+	\end{table}
+ Since both die rolls are independent, 
 \begin{align}
-    \pr{A}= \frac{1}{2},\pr{B} = \frac{7}{12} \text{and} \pr{A'+B'} = \frac{1}{4}.
+\pr{X=2,Y=2}= \pr{X=2} \pr{Y=2} = \frac{1}{6} \times \frac{1}{6}  
+= \frac{1}{36}
 \end{align}
 
-\begin {enumerate}
-\item State whether A and B are independent ?
-\end{enumerate}
-\textbf{Solution : }
-\begin{align}
-\pr{AB}&=1-\pr{A'+B'}\\   
-       &=1-\frac{1}{4}\\
-       &=\frac{3}{4}\\
-\pr{A}\times\pr{B}&=\frac{1}{2}\times\frac{7}{12}\\
-                  &=\frac{7}{24}\\
-             \pr{AB}&\neq\pr{A}\pr{B}\\
-\therefore \text{A and B are not independent.}
-\end{align}
-\end{document}
+

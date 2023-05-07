@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.4.27)  4 MAY 2023 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.4.27)  6 MAY 2023 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,21 +1070,20 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-No file gvv_math_eg.aux.
+(./gvv_math_eg.aux)
 \openout1 = `gvv_math_eg.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 100.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 100.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 100.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 100.
@@ -1196,6 +1195,8 @@ LaTeX Info: Redefining \ohm on input line 100.
 Package gensymb Info: Using \textohm for \ohm on input line 100.
 Package gensymb Info: Using \textmu for \micro on input line 100.
 Package hyperref Info: Link coloring OFF on input line 100.
+
+(./gvv_math_eg.out) (./gvv_math_eg.out)
 \@outlinefile=\write4
 \openout4 = `gvv_math_eg.out'.
 
@@ -1240,19 +1241,13 @@ File: ts1txr.fd 2000/12/15 v3.1
 
 
 ] (./gvv_math_eg.aux)
-
-Package rerunfilecheck Warning: File `gvv_math_eg.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `gvv_math_eg.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `gvv_math_eg.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29961 strings out of 478023
- 592017 string characters out of 5841208
- 859711 words of memory out of 5000000
+ 29967 strings out of 478023
+ 592113 string characters out of 5841208
+ 859899 words of memory out of 5000000
  47782 multiletter control sequences out of 15000+600000
  534888 words of font info for 170 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
