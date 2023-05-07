@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -320,36 +320,32 @@
 \section*{Solution -:}
 \subsection*{Given,}
 
-
 Let $X \in \cbrak{0,1}$ where 0 denotes a guess and 1 denotes that he knows the answer. Let $Y \in \cbrak{0,1}$ where 0 being the case when the answer is incorrect and 1 being the  case that the answer is correct.
 
 
 From the given information,
-
+\fi
+See  Tables
+\ref{tab:ncert/12/13/3/4/1}
+and 
+	\ref{tab:ncert/12/13/3/4/2}
+%
 \begin{table}[htbp]
 \label{tab:ncert/12/13/3/4/1}
-\input{tables/table1.tex}
+\input{ncert/12/13/3/4/tables/table1.tex}
 \caption{Random Variable and their description}
 \end{table}
 
 \begin{table}[htbp]
 	\label{tab:ncert/12/13/3/4/2}
-	\input{tables/table2.tex}
+	\input{ncert/12/13/3/4/tables/table2.tex}
 	\caption{Probability of events}
 \end{table}
-
-
+%
 The probability that the student knows the answer and he answered it correctly is 
-
+%
 \begin{align}
-	&\pr{X=1|Y=1} \\&=\frac{\pr{Y=1|X=1}\pr{X=1}}{\sum_{i=0}^{i=1}Pr(Y=1|X=i)Pr(X=i)}\\
+	\pr{X=1|Y=1} &=\frac{\pr{Y=1|X=1}\pr{X=1}}{\sum_{i=0}^{i=1}Pr(Y=1|X=i)Pr(X=i)}\\
 	&=\frac{0.75}{{0.25\times0.25}+{1\times0.75}}
-	\\
-	&=0.92308
+	=0.92308
 	\end{align}
-
-
-
-
-\end{document}
-
