@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -301,43 +301,31 @@ EE22BTECH11219% <-this % stops a space
 
 
 \section*{Problem 12.13.2.8}
-\begin{bf}8.\end{bf}  Let  and B be independent events with \pr{A} = 0.3 and \pr{B} = 0.4. Find 
-\begin{enumerate}
-\item \pr{AB} \item \pr{A+B}
+\begin{bf}8.\end{bf}  \section*{Solution:}
 
-\item \pr{A|B} \item \pr{B|A}
-\end{enumerate}
-\section*{Solution:}
 Given, \pr{A} = 0.3 , \pr{B} = 0.4 and A, B are independent events.
+\fi
 \begin{enumerate}
-\item \pr{AB}
+\item 
 \begin{align}
 \pr{AB} = \pr{A} \times \pr{B} = 0.3 \times 0.4 = 0.12
 \end{align}
-
-\item \pr{A+B}
-
-We know that,
+%
+\item 
+%
 \begin{align}
 \pr{A+B} = \pr{A} + \pr{B} - \pr{AB}
+ = 0.3 + 0.4 - 0.12 = 0.58
 \end{align}
-\begin{align}
-\pr{A+B} = 0.3 + 0.4 - 0.12 = 0.58
-\end{align}
-\item \pr{A|B}
-
+%
+\item 
 \begin{align}
 \pr{A|B} = \frac{\pr{AB}}{\pr{B}}
+  = \frac{\pr{A} \times \pr{B}}{\pr{B}} = \pr{A} = 0.3
 \end{align}
-\begin{align}
- \pr{A|B} = \frac{\pr{A} \times \pr{B}}{\pr{B}} = \pr{A} = 0.3
-\end{align}
-
-\item \pr{B|A}
+%
+\item 
 \begin{align}
 \pr{B|A} = \frac{\pr{AB}}{\pr{A}} = \frac{\pr{B} \times \pr{A}}{\pr{A}} = \pr{B} = 0.4
 \end{align}
 \end{enumerate}
-\end{document}
-
-
