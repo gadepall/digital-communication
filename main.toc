@@ -4,34 +4,34 @@
 \contentsline {chapter}{\numberline {2}Axioms}{3}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Random Variables}{33}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Conditional Probability}{41}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Distributions}{65}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Random Numbers}{91}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Uniform Random Numbers}{91}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Central Limit Theorem}{98}{section.6.2}%
-\contentsline {section}{\numberline {6.3}From Uniform to Other}{102}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Triangular Distribution}{104}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Maximum Likelihood Detection: BPSK}{105}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Maximum Likelihood}{105}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Transformation of Random Variables}{107}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Gaussian to Other}{107}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Conditional Probability}{108}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Bivariate Random Variables: FSK}{109}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Two Dimensions}{109}{section.9.1}%
-\contentsline {chapter}{\numberline {10}Exercises}{111}{chapter.10}%
-\contentsline {section}{\numberline {10.1}BPSK}{111}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Coherent BFSK}{114}{section.10.2}%
-\contentsline {section}{\numberline {10.3}QPSK}{116}{section.10.3}%
-\contentsline {section}{\numberline {10.4}$M$-PSK}{117}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Noncoherent BFSK}{118}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Craig's Formula and MGF}{122}{section.10.6}%
-\contentsline {chapter}{\numberline {A} Axioms }{125}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Definitions}{125}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Boolean Logic}{126}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Properties}{128}{section.A.3}%
-\contentsline {chapter}{\numberline {B} Z-transform}{129}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Distributions}{131}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Bernoulli }{131}{section.C.1}%
-\contentsline {section}{\numberline {C.2}Binomial Distribution}{133}{section.C.2}%
-\contentsline {section}{\numberline {C.3}Uniform Distribution}{136}{section.C.3}%
-\contentsline {section}{\numberline {C.4}Triangular Distribution}{138}{section.C.4}%
-\contentsline {chapter}{\numberline {D}Identities}{145}{appendix.D}%
+\contentsline {chapter}{\numberline {5}Distributions}{67}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Random Numbers}{93}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Uniform Random Numbers}{93}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Central Limit Theorem}{100}{section.6.2}%
+\contentsline {section}{\numberline {6.3}From Uniform to Other}{104}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Triangular Distribution}{106}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Maximum Likelihood Detection: BPSK}{107}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Maximum Likelihood}{107}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Transformation of Random Variables}{109}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Gaussian to Other}{109}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Conditional Probability}{110}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Bivariate Random Variables: FSK}{111}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Two Dimensions}{111}{section.9.1}%
+\contentsline {chapter}{\numberline {10}Exercises}{113}{chapter.10}%
+\contentsline {section}{\numberline {10.1}BPSK}{113}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Coherent BFSK}{116}{section.10.2}%
+\contentsline {section}{\numberline {10.3}QPSK}{118}{section.10.3}%
+\contentsline {section}{\numberline {10.4}$M$-PSK}{119}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Noncoherent BFSK}{120}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Craig's Formula and MGF}{124}{section.10.6}%
+\contentsline {chapter}{\numberline {A} Axioms }{127}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Definitions}{127}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Boolean Logic}{128}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Properties}{130}{section.A.3}%
+\contentsline {chapter}{\numberline {B} Z-transform}{131}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Distributions}{133}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Bernoulli }{133}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Binomial Distribution}{135}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Uniform Distribution}{138}{section.C.3}%
+\contentsline {section}{\numberline {C.4}Triangular Distribution}{140}{section.C.4}%
+\contentsline {chapter}{\numberline {D}Identities}{147}{appendix.D}%

@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -242,14 +243,13 @@ columns=fullflexible
 
 \begin{document}
 \maketitle
-\noindent\textbf{12.13.6.16 Question: \noindent Bag I contains 3 red and 4 black balls and Bag II contains 4 red and 5 black balls.
-One ball is transferred from Bag I to Bag II and then a ball is drawn from Bag II.
-The ball so drawn is found to be red in colour. Find the probability that the
-transferred ball is black. }
+\noindent\textbf{12.13.6.16 Question: \noindent }
 \bigskip
 \newline\noindent\textbf{Answer: }$(\frac{16}{31})$\\
 \noindent\textbf{Solution: }\\
 Let \pr{X,Y} be the Random variable for the events of drawing balls from bags.
+\fi
+Let
 \begin{align}
   X&=
   \begin{cases}
@@ -262,61 +262,31 @@ Let \pr{X,Y} be the Random variable for the events of drawing balls from bags.
     2, & \text{if ball drawn is Black}
 	\end{cases}
 \end{align}
+Then
 \begin{align}
-  \pr{X=1,Y=1}&=\frac{No.of  Red  balls}{Total  Balls}= \frac{3}{7}\\
-  \pr{X=1,Y=2}&=\frac{No.of Black  balls}{Total  Balls}=\frac{4}{7}
-\end{align}\\
-\begin{align}
-  \pr{X=2,Y=1}&=\pr{X=1,Y=1}\times\frac{5}{10}+\pr{X=1,Y=2}\times\frac{4}{10}
+  \pr{X=1,Y=1}&= \frac{3}{7}
+  \pr{X=1,Y=2}=\frac{4}{7}
+  \\
+\implies  \pr{X=2,Y=1}&=\pr{X=1,Y=1}\times\frac{5}{10}+\pr{X=1,Y=2}\times\frac{4}{10}
+  =\frac{15}{70}+\frac{16}{70}
+=\frac{31}{70}
 \end{align}
-\begin{align}
-  \pr{X=2,Y=1}&=\frac{15}{70}+\frac{16}{70}\\
-  \pr{X=2,Y=1}&=\frac{31}{70}
+Consequently,
+\begin{align}\pr{X=2,Y=2}&=1-\pr{X=2,Y=1}
+=\frac{39}{70}
 \end{align}
-By total probability law, we know,
-\begin{align}\pr{X=2,Y=2}&=1-\pr{X=2,Y=1}\\
-  \pr{X=2,Y=2}&=\frac{39}{70}
-\end{align}
+See 
 \begin{table}[htbp]
-  \label{table:1}
-  \input{tables/table1.tex}
+	\centering
+  \label{tab:ncert/12/13/6/16/1}
+  \input{ncert/12/13/6/16/tables/table1.tex}
   \caption{Final probabilities of the events.}
   \end{table}
-\\\textit{By Bayes Theorem,}\\
-\begin{align}\pr{E_i|A}=\frac{\pr{E_i}\pr{A|E_i}}{\sum_{k=1}^{k=n}\pr{E_k}\pr{A|E_k}}\end{align}\\
-\begin{align}\pr{X=1,Y=2|X=2,Y=2}=\frac{\pr{X=2,Y=1|X=1,Y=1}}{\sum_{i=1}^{i=2}\pr{X=2,Y=1|X=1,Y=i}\pr{X=1,Y=i}}\end{align}\\
-where \pr{X=1,Y=2|X=2,Y=1} is the conditional probability of transferred ball being Black, known that the final ball drawn is Red which is our desired final answer.\\
-\begin{align}
-\pr{X=1,Y=2|X=2,Y=1}&=\frac{\frac{4}{10}\times\frac{4}{7}}{\frac{4}{10}\times\frac{4}{7}+\frac{5}{10}\times\frac{3}{7}}\\
-\pr{X=1,Y=2|X=2,Y=1}&=\frac{16}{31}
-\end{align}
-\bigskip
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\end{document}
-%\renewcommand{\theequation}{\theenumi}
-
-
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
-
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%Cooperative diversity, decode and forward, piecewise linear
-%\end{IEEEkeywords}
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-%\IEEEpeerreviewmaketitle
+  Thus, the desired probability is 
+\begin{multline}\pr{X=1,Y=2|X=2,Y=2}
+	\\
+	=\frac{\pr{X=2,Y=1|X=1,Y=1}}{\sum_{i=1}^{i=2}\pr{X=2,Y=1|X=1,Y=i}\pr{X=1,Y=i}}
+	\\
+=\frac{\frac{4}{10}\times\frac{4}{7}}{\frac{4}{10}\times\frac{4}{7}+\frac{5}{10}\times\frac{3}{7}}
+=\frac{16}{31}
+\end{multline}
