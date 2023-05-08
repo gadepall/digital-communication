@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -210,90 +210,85 @@ of the three occurs.
 \end{enumerate}
 \begin{enumerate}
 \begin{figure}[h!]
-	\includegraphics[width = \columnwidth]{figs/new-figure0}
+\includegraphics[width=\columnwidth]{figs/new-figure0}
 \caption{Question Figure}
-\label{fig:Venn_Diagram}
+\label{fig}
 \end{figure}
 \end{enumerate}
 \textbf{Solution.}
-\begin{enumerate}[label=(\alph*)]
+\fi
+From 
+\figref{fig:exemplar/11/16/3/11/Venn_Diagram},
+    \begin{align}
+        \label{eq:exemplar/11/16/3/11/1}
+        \pr{AB}=0.07\\
+        \label{eq:exemplar/11/16/3/11/2}
+        \pr{AB^\prime}=0.13\\
+        \label{eq:exemplar/11/16/3/11/8}
+        \pr{A^\prime B} = 0.25\\
+        \label{eq:exemplar/11/16/3/11/4}
+        \pr{BC} = 0.15\\
+        \pr{CB^\prime} = 0.28\\
+        \label{eq:exemplar/11/16/3/11/6}
+        \pr{AB^\prime C^\prime} = 0.13\\
+        \label{eq:exemplar/11/16/3/11/5}
+        \pr{A^\prime B C^\prime} =0.10\\
+        \label{eq:exemplar/11/16/3/11/7}
+        \pr{A^\prime B^\prime C} =0.28
+    \end{align}
+\begin{enumerate}
 \item 
-Clearly,
 \begin{align}
-\pr{A} &= 0.13 + 0.07\\
-       &= 0.20
+A &= A \brak{B+B^{\prime}} =  AB + AB^{\prime}\quad
+	\brak{\because B + B^\prime = 1}\\\label{eq:exemplar/11/16/3/11/axiom_sum_A}
+\implies \pr{A} &= \pr{AB} +\pr{AB^\prime}
+	\quad \brak{\because BB^\prime = 0} \\
+ &= 0.13 + 0.07
+       = 0.20
+\end{align}
+from \eqref{eq:exemplar/11/16/3/11/1} and \eqref{eq:exemplar/11/16/3/11/2}.
+\item Similarly,
+\begin{align}
+    \pr{B} &= \pr{A^\prime B} + \pr{AB}\\
+    \label{eq:exemplar/11/16/3/11/3}
+ &= 0.25 + 0.07
+       = 0.32
+\end{align}
+from \eqref{eq:exemplar/11/16/3/11/1} and \eqref{eq:exemplar/11/16/3/11/8}.
+Using \eqref{eq:exemplar/11/16/3/11/axiom_sum_A},
+\begin{align}
+    \pr{BC^\prime} = \pr{B} - \pr{BC} 
+    = 0.32 - 0.15
+    = 0.17
 \end{align}
 \item 
-Clearly,
-\begin{align}
-\label{eq:1}
-    \pr{B} &= 0.10 + 0.07 + 0.15\\
-       &= 0.32
-\end{align}
-Also,
-\begin{align}
-A &= A \brak{B+B^{\prime}} =  AB + AB^{\prime}\\
-[&\because B + B^\prime = 1]\\\label{eq:axiom_sum_A}
-\pr{A} &= \pr{AB} +\pr{AB^\prime}\\
-    [&\because BB^\prime = 0] \nonumber
-\end{align}
-Using \eqref{eq:axiom_sum_A}
-\begin{align}
-    \pr{BC^\prime} &= \pr{B} - \pr{BC} \\
-    &= 0.32 - 0.15\\
-    &= 0.17
-\end{align}
-\item 
-From Axioms of Probability
 \begin{align}
 \label{Axioms}
     \pr{A + B} &= \pr{A} + \pr{B} - \pr{AB}\\
-    &= 0.20 + 0.32 - 0.07\\
-    &= 0.45
+    &= 0.20 + 0.32 - 0.07
+    = 0.45
 \end{align}
 \item 
-Using \eqref{eq:axiom_sum_A}
+Using \eqref{eq:exemplar/11/16/3/11/axiom_sum_A}
 \begin{align}
-    \pr{AB^\prime} &= \pr{A} - \pr{AB} \\
-    &= 0.20 - 0.07\\
-    &= 0.13
+    \pr{AB^\prime} &= \pr{A} - \pr{AB} 
+    = 0.20 - 0.07
+    = 0.13
 \end{align}
 \item 
-Clearly,
+From \eqref{eq:exemplar/11/16/3/11/4}
 \begin{align}
     \pr{BC} = 0.15
 \end{align}
 \item 
-Let X be the event that exactly one of A, B or C occur.
-
-Let Y be the event that at least one of A, B or C occur.
-
-Using Boolean logic,
-\begin{align}
-    Y=A+B+C
-\end{align}
-Let Z be the event that at least two of A, B or C occur.
-
-\begin{align}
-    Z=AB+BC+CA
-\end{align}
-From (A.2.5)
 \begin{align}
     X&=AB^\prime C^\prime+A^\prime B^\prime C^\prime+A^\prime B^\prime C
-\end{align}
-Now, X has been represented as a union of 3 mutually exclusive events.
-
-As any 2 of them has 0 intersection due of presence of complements.
-
-Therefore, by Axioms of Probability
-\begin{align}
+	\\
+    \implies 
     \pr{X}&=\pr{AB^\prime C^\prime}+\pr{A^\prime BC^\prime}+\pr{A^\prime B^\prime C}
+    \\
+&=0.13+0.10+0.28
+    =0.51
 \end{align}
-Clearly, from the figure
-\begin{align}
-    \pr{X}&=0.13+0.10+0.28\\
-    &=0.51
-\end{align}
-
+from \eqref{eq:exemplar/11/16/3/11/6}, \eqref{eq:exemplar/11/16/3/11/5} and \eqref{eq:exemplar/11/16/3/11/7}.
 \end{enumerate}
-\end{document}
