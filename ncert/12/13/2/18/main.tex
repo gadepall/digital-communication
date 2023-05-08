@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -291,36 +292,29 @@ Assignment-1
 %\IEEEpeerreviewmaketitle
 
 %%%Assignment Solution Starts Here%%% 
-\raggedright\textbf{Problem Statement:}\\{Two events A and B will be independent, if}\\
-\begin{enumerate}
-\item  A and B are mutually exclusive\\
-\item  $\pr{A^\prime B^\prime}=[1-\pr{A}] [1-\pr{B}]$\\
-\item  $\pr{A} = \pr{B}$\\
-\item  $\pr{A} + \pr{B} = 1$\\ 
-\end{enumerate}
-\textbf{Answer:} Option 2)\\ 
+\raggedright\textbf{Problem Statement:}\\{
+\textbf{Answer:} Option 2) 
 \solution\\
+\fi
 \begin{enumerate}
 
- \item  When tossing a coin, the event of getting a head and tail are mutually exclusive and let them be denoted by A and B respectively.\\
+ \item  When tossing a coin, the event of getting a head and tail are mutually exclusive and let them be denoted by A and B respectively.
  \begin{align}
- \pr{A} = \pr{B} &= \frac{1}{2}\\
- \implies \pr{A}\times\pr{B} &= \frac{1}{4}\\
- \pr{AB} &= 0 \neq \pr{A}\times\pr{B}
+ \pr{A} = \pr{B} &= \frac{1}{2}
+ \implies \pr{A}\times\pr{B} = \frac{1}{4}\\
+	 \text{or, }  \pr{AB} &= 0 \neq \pr{A}\times\pr{B}
  \end{align}
-  Hence A and B are not independent.\\
-  \item  $\pr{A^\prime B^\prime}=[1-\pr{A}] [1-\pr{B}]$\\
+  Hence A and B are not independent.
+  \item  
 \begin{align}
- \pr{A^\prime B^\prime}&=[1-\pr{A}] [1-\pr{B}]\\ 
-  \implies \pr{A^\prime B^\prime}&= 1 - \pr{A} - \pr{B} + \pr{A}\pr{B} \\
+ \pr{A^\prime B^\prime}&=[1-\pr{A}] [1-\pr{B}]
+ \\
+	&= 1 - \pr{A} - \pr{B} + \pr{A}\pr{B} \\
   \implies 1 - \pr{A + B}&= 1 - \pr{A} - \pr{B} + \pr{A}\pr{B}\\
-  \implies - [\pr{A} + \pr{B} - \pr{AB}] &= - \pr{A} - \pr{B} + \pr{A}\pr{B}\\
-  \implies - \pr{A} - \pr{B} + \pr{AB} &= - \pr{A} - \pr{B} + \pr{A}\pr{B}\\
-  \implies \pr{AB} &=  \pr{A}.\pr{B}\\
+  \implies \pr{AB} &=  \pr{A}\pr{B}
  \end{align}
- Hence it shows A and B are Independent events \\
-  \item For the same counter example given for option A, \pr{A} = \pr{B}, But A and B are not independent events.\\
-  \item  For the same counter example given for option A, \pr{A} + \pr{B} = 1, But A and B are not independent events.
+which implies that A and B are independent. 
+  \item For the same counter example given for option 	\ref{it:ncert/12/13/2/18/}, \pr{A} = \pr{B}, but A and B are not independent events.
+  \item  For the same counter example given for option \ref{it:ncert/12/13/2/18/}, \pr{A} + \pr{B} = 1, but A and B are not independent events.
   \end{enumerate}
- \end{document}
 
