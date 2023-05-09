@@ -206,7 +206,7 @@
 		 \item Let us define a random variable $Z$,Let X and Y are independent random variables then 
 			 \begin{align}
 				 M_Z(z) &= E\sbrak{z^{-(X + Y)}} 
-					 = E\sbrak{e^{-X}e^{-Y}} = E\sbrak{z^{-X}}E\sbrak{z^{-Y}} \\
+					 = E\sbrak{z^{-X}z^{-Y}} = E\sbrak{z^{-X}}E\sbrak{z^{-Y}} \\
 					 = M_X(z)M_Y(z) 
 			 \end{align}
 			 \item  We have 
@@ -215,11 +215,11 @@
                         \end{align}
                          \begin{align}
                                  M_Y(z) &= \frac{z^{-1} + z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6}}{6} 
+                                 =\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}
                          \end{align}
                         \begin{align}
-                        M_Z(z) &= \sbrak{\frac{z^{-1} + z^{-6}}{2}}\sbrak{\frac{z^{-1} + z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6}}{6}} \\
-                                &= \frac{1}{12}\sbrak{z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6} + z^{-8} + z^{-9} + z^{-10} + z^{-11} + z^{-12}} + \frac{1}{6}\sbrak{z^{-7}}
-                        \end{align}
+                        M_Z(z) &= \sbrak{\frac{z^{-1} + z^{-6}}{2}}\sbrak{\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}} \\
+                                \end{align}
 
 		 \item pmf of $X$,$Y$ and $Z$
 			 \begin{align}
