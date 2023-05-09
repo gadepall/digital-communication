@@ -1,4 +1,4 @@
-
+\iffalse
 
 \let\negmedspace\undefined
 \let\negthickspace\undefined
@@ -298,24 +298,19 @@ columns=fullflexible
 %\renewcommand{\theequation}{\theenumi}
 %\subsection{Problem}
 
-\textbf{Question : }In an examination, 20 questions of true-false type are asked. Suppose a student tosses a fair coin to determine his answer to each question. If the coin falls heads, he answer true; if it falls tails, he answer false. Find the probability that he answers at least 12 questions correctly.\\
-\textbf{Solution : }Let X denote the number of correct answers out of 20 questions. Clearly, X has the binomial distribution with n = 20 and p being the probability of answering question correctly. Since, answering correctly dependens on coin toss. Therefore,
+\textbf{Question : }\textbf{Solution : } Clearly, X has the binomial distribution with n = 20 and p being the probability of answering question correctly. Since, answering correctly dependens on coin toss. Therefore,
+\fi
+Let $X$ denote the number of correct answers out of 20 questions.
+Then $X$ is binomial with
 \begin{align}
-	p &= \frac{1}{2}\\
-	q &= 1 - p = \frac{1}{2}
+	n = 20,\,
+	p = \frac{1}{2},\,
+	q = 1 - p = \frac{1}{2}
 \end{align}
-Since X has binomial distribution,
+The desired probability is then given by 
 \begin{align}
-	\implies P_{X}(r) &= \comb{n}{r}\brak{p}^r\brak{q}^{n-r}\\
-	\implies F_{X}(r) &= \sum_{r = 0}^{n}\comb{20}{r}\brak{p}^{r}\brak{q}^{n - r}
+	\pr{X>=12} = 1 - F_{X}(11)
+	= 0.2517
 \end{align}
-Therefore,
-\begin{align}
-	\pr{X>=12} &= 1 - F_{X}(11)\\
-	&= 1 - \sum_{r = 0}^{11}\comb{20}{r}\brak{\frac{1}{2}}^r\brak{\frac{1}{2}}^{20 - r}\\
-	&= 1 - \brak{\frac{1}{2}}^{20}\sum_{r = 0}^{11}\comb{20}{r}\\
-	&= 0.2517
-\end{align}
-\end{document}
 
 
