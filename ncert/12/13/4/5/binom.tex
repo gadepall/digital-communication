@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -300,53 +301,30 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 
 %\IEEEpeerreviewmaketitle
-\textbf{12.13.4.5 Question:} Find the probability distribution of the number of successes in two tosses of a die,
-where a success is defined as\\
-\begin{enumerate}
-\item number greater than 4
-\item six appears on at least one die
-\end{enumerate}
+\textbf{12.13.4.5 Question:} 
 \solution\\
-Let $X$ be a random variable denoting the outcome of a die toss so,\\
-\begin{align}
-X=\cbrak{1,2,3,4,5,6}
-\end{align}
+\fi
+Let $X$ be a random variable denoting the outcome of a die toss. 
 \begin{enumerate}
 \item
-Let the Cumulative Distribution function be:
 \begin{align}
-F_X\brak{i}&=\pr{X\le i}\\
-      &= \sum_{n=1}^{n=i}{\pr{X=n}}
+\pr{X > 4}&= 1 - F_X\brak{3}
+          =\frac{1}{3}
 \end{align}
-Now,\\
+Let $Y$ be the random variable denoting number of successes.  Then, 
 \begin{align}
-\pr{X=i}&=\frac{1}{6}\,\,\forall 1\le i \le 6 \label{eq:9}\\ 
-\therefore
-F_X\brak{i}&=\sum_{n=1}^{n=i}{\frac{1}{6}}\\
-\implies F_X\brak{i}&=i/6\label{eq:1}
+	Y \sim \text{Bin}\brak{n,p}
 \end{align}
-Now,
+where 
 \begin{align}
-\pr{X > 4}&=F_X\brak{6}-F_X\brak{4}\\
-          \text{by \eqref{eq:1}}\\
-          &=\frac{6}{6} - \frac{4}{6}\\
-          &=\frac{1}{3}
+		n=2,  p = \frac{1}{3}.
 \end{align}
-$$\therefore\frac{1}{3} \text{ is the probability of success in this case for a die.} $$ \\
-Now,\\
-Let $Y$ be the random variable denoting number of successes.\\
+Thus, 
 \begin{align}
-\therefore
-Y \sim Bin\brak{n,p}
+\therefore \pr{Y=i}=\comb{2}{i} \brak{1-p}^{2-i} p^i \label{eq:ncert/12/13/4/5/2}
 \end{align}
-$$\text{where } n=2 \text{ and } p = \frac{1}{3}$$
-
+and the desired distribution is 
 \begin{align}
-\therefore \pr{Y=i}=\comb{2}{i} \brak{1-p}^{2-i} p^i \label{eq:2}
-\end{align}
-
-By \eqref{eq:2},\\
-$$
 p_Y\brak{k}=
 \begin{cases}
 \frac{4}{9},&k=0\\
@@ -354,58 +332,22 @@ p_Y\brak{k}=
 \frac{1}{9},&k=2\\
 0           ,&\text{otherwise}
 \end{cases}
-$$\\
-
+\end{align}
+%
 \item 
-Let $p'$ be the probability of getting 6 in a die toss.\\
+	In this case, the binomial distribution has parameters
 \begin{align}
-\therefore
-p'&=\pr{X=6}\\
-\text{by \eqref{eq:9}}\\
-  &=\frac{1}{6}
+n=2, p=\frac{1}{6}
 \end{align}
-Let $Y$ be a random variable denoting the number 6's in die tosses,\\
+yielding
 \begin{align}
-\therefore
-Y \sim Bin\brak{n,p'}\\
-\text{where $n=2$ and $p'=\frac{1}{6}$}
-\end{align}
-\begin{align}
-\therefore
-\pr{Y=i}&=\comb{2}{i} p'^i \brak{1-p'}^{\brak{2-i}}\\
-\implies \pr{Y=i}&=\comb{2}{i} \brak{\frac{1}{6}}^i \brak{\frac{5}{6}}^{\brak{2-i}} \label{eq:10}
-\end{align}
-Let the Cumulative Distribution function be:
-\begin{align}
-F_Y\brak{i}&=\pr{Y\le i}\\
-\implies F_Y\brak{i}&= \sum_{n=0}^{n=i}{\pr{Y=n}} \label{eq:11}
-\end{align}
-
-Let $p$ denote the probability of success in this case.\\
-\begin{align}
-\therefore 
-p&=F_Y\brak{2}-F_Y\brak{0}\\
-\text{by \eqref{eq:10},\eqref{eq:11}}\\
-&=\sum_{n=0}^{n=2}{\pr{Y=n}} - \sum_{n=0}^{n=0}{\pr{Y=n}}\\
-&=\comb{2}{2} \brak{\frac{1}{6}}^2 \brak{\frac{5}{6}}^0 + \comb{2}{1} \brak{\frac{1}{6}}^1 \brak{\frac{5}{6}}^1\\
-\implies p&=\frac{11}{36} \label{eq:8}
-\end{align}
-Let $Z$ be a random variable denoting number of successes.\\
-\begin{align}
-&\therefore
-Z \sim Ber\brak{p}\\
-&\text{where } p=\frac{11}{36} \text{ by \eqref{eq:8}}\\
-&\therefore
-\end{align}
-$$
 p_Z\brak{k}=
 \begin{cases}
 \frac{25}{36}, &k=0\\
 \frac{11}{36}, &k=1\\
 0, &\text{otherwise}
 \end{cases}
-$$
+\end{align}
 \end{enumerate}
-\end{document}
 
 
