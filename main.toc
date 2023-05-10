@@ -14,6 +14,7 @@
 \contentsline {section}{\numberline {5.5}Triangular}{97}{section.5.5}%
 \contentsline {section}{\numberline {5.6}Miscellaneous}{98}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Gaussian}{101}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Exercises}{102}{section.5.8}%
 \contentsline {chapter}{\numberline {6}Moments}{103}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Random Algebra}{105}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Random Numbers}{107}{chapter.8}%

@@ -1,3 +1,4 @@
+\iffalse
 \def\inputGnumericTable{}
 \let\negmedspace\undefined
 \let\negthickspace\undefined
@@ -103,69 +104,45 @@ Assignment 2
 
 \subsection*{\textbf{\underline{Problem 11.16.3.8(exemplar)}:-}}
 
-A die is loaded in such a way that each odd number is twice as likely to occur as
-each even number. Find P(G), where G is the event that a number greater than
-3 occurs on a single roll of the die.
 
 \subsection*{\textbf{\underline{Solution}:-}}
-
+\fi
 Let $X$ be a random variable denoting the number 
-obtained on the die.\\
-
-Let $m$ be any natural number such that $m\in\{1,2,3\}$.\\ 
-% Let \pr{X=2m} be $p$,\\
-% $\implies\pr{X=2m-1}=2p,\ where\ 1\leq m \leq3$
+obtained on the die.
+%
 \begin{align}
 \pr{X=k}= \begin{cases} 
-      2p, & if\ k=2m-1 \\
-      p, & if\ k=2m 
+      2p, &  k=2m-1 \\
+      p, &  k=2m 
+   \end{cases} \quad 1\le m \le 3
+\end{align}
+The CDF
+\begin{align}
+    F_X (k) = \pr{X\leq k} =
+\begin{cases} 
+\sum_{i=1}^{m}{2p} + \sum_{i=1}^{m-1}{p}
+ &  k=2m-1 \\
+   \sum_{i=1}^{m}{2p} + \sum_{i=1}^{m}{p}  &  k=2m 
    \end{cases}
 \end{align}
-Let $F_X (k)$ be the cumulative distribution function such that,\\
+yielding
 \begin{align}
-    F_X (k) = \pr{X\leq k}
-\end{align}
-If $k = 2m-1$,
-\begin{align}
-    F_X (k) = &\sum_{i=1}^{2m-1}{\pr{X=i}}
-\\
-    &= \sum_{i=1}^{m}{\pr{2i-1}} + \sum_{i=1}^{m-1}{\pr{2i}}\\
-    &= \sum_{i=1}^{m}{2p} + \sum_{i=1}^{m-1}{p}\\
-    &= (m)(2p) + (m-1)(p)\\
-    &= p(3m-1)\\
-    &= \frac{p(3k+1)}{2}
-\end{align}
-If $k = 2m$,
-\begin{align}
-    F_X (k) = &\sum_{i=1}^{2m-1}{\pr{X=i}}
-\\
-    &= \sum_{i=1}^{m}{\pr{2i-1}} + \sum_{i=1}^{m}{\pr{2i}}\\
-    &=\sum_{i=1}^{m}{2p} + \sum_{i=1}^{m}{p}\\
-    &= (m)(2p) + (m)(p)\\
-    &= p(3m)\\
-    &= \frac{3pk}{2}
-\end{align}
-So,
-\begin{align}
-&F_X (k)= \begin{cases} 
-      \frac{p(3k+1)}{2}, & if\ k=2m-1 \\
-      \frac{3pk}{2}, & if\ k=2m 
+F_X (k)= \begin{cases} 
+      \frac{p(3k+1)}{2}, &  k=2m-1 \\
+      \frac{3pk}{2}, &  k=2m 
    \end{cases}
-\end{align}\\
-Since $1\leq X \leq6$,
-\begin{align}
-&F_X (6) = 1\\
-&\implies \frac{3p(6)}{2} = 1\\
-&\implies p = \frac{1}{9}
 \end{align}
+Since 
 \begin{align}
-  \pr{G} &= \pr{X>3}\\
-  &=F_X (6) - F_X (3)\\
-  &=\frac{3p(6)}{2} - \frac{p\{3(3)+1\}}{2}\\
-  &= 9p - 5p = 4p\\
-  &= \frac{4}{9}
+F_X (6) = 1,
+ p = \frac{1}{9}
+\end{align}
+and
+\begin{align}
+  \pr{G} = \pr{X>3}
+  =F_X (6) - F_X (3)
+  = \frac{4}{9}
   \end{align}
-\end{document}
 
 
 
