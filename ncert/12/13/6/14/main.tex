@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined 
  \let\negthickspace\undefined 
  \documentclass[journal,12pt,onecolumn]{IEEEtran} 
@@ -194,53 +195,48 @@
  \renewcommand{\thefigure}{\theenumi} 
  \renewcommand{\thetable}{\theenumi} 
  \textbf{12.13.6.14}: 
- If each element of a $2*2$ determinant is either zero or one. What is the probability that the value of the determinant is positive ? \\
- (Assume that the individual entries of the determinant are chosen independently each value being assumed with probability $\frac{1}{2}$) \\
  \textbf{Solution}: 
-         Let us assume the $2*2$ determinant as $\begin{vmatrix} a & b \\ c & d \end{vmatrix}$ 
- \begin{enumerate}[label=(\alph*)] 
-	 \item   Given determinant of the taken matrix is positive,Hence
+         Let us assume the $2*2$ determinant as 
+ \fi
+		 Let the matrix be 
+		 \begin{align}
+			 \myvec{ a & b \\ c & d }
+		 \end{align}
+ \begin{enumerate} 
+	 \item   The desired probability can be expressed as
                          \begin{align} 
-				 ad-bc > 0 \\
-				 a > \frac{bc}{d} 
+				 \pr{ad-bc > 0} &=
+				 \pr{a > \frac{bc}{d} }
+= 1 - \pr{a \le \frac{bc}{d}} 
+\\
+				 &= 1- F_A\brak{\frac{bc}{d}} 
                          \end{align} 
-		 \item Probability of the determinant to be positive is 
-			 \begin{align}
-				 \pr{a > \frac{bc}{d}} &= 1 - \pr{a \le \frac{bc}{d}} 
-			 \end{align}
-			  we have to find $\pr{a \le \frac{bc}{d}}$ 
-                        \begin{align}
-                                 F_A\brak{\frac{bc}{d}} &= \pr{a \le \frac{bc}{d}} 
-                        \end{align}
-			where $F_A\brak{x}$ represents cdf of a. Now finding cdf of a,
+		 \item Since
                          \begin{align}
-                                F_A\brak{x} = \begin{cases} 0 & \text{if $x = 0,$} \\ \frac{1}{2} & \text{if } 0 \leqslant\: x < 1 , \\ 1 & \text{if } 1 \leqslant\: x < \infty \end{cases}
-                         \end{align}
-		 \item Taking expectation of $F_A\brak{\frac{bc}{d}}$ with respect to d we get,
-                        \begin{align}
-				E_d\brak{F_A\brak{\frac{bc}{d}}} &= \frac{1}{2}F_A\brak{bc} + \frac{1}{2}F_A\brak{\infty} \\
-				&= \frac{1}{2}F_A\brak{bc} + \frac{1}{2}
-                                \end{align}
-			 Expectation of the above with respect to b we get,
-			 \begin{align}
-				 E_b\brak{\frac{1}{2}F_A\brak{bc} + \frac{1}{2}} &= \frac{1}{2}E_b\brak{F_A\brak{bc}} + \frac{1}{2} \\
-				 &= \frac{1}{2}\brak{\frac{1}{2}F_A\brak{0} + \frac{1}{2}F_A\brak{c}} \\
-				 &= \frac{1}{2} + \frac{1}{8} + \frac{1}{4}F_A\brak{c} \\
-				 &= \frac{5}{8} + \frac{1}{4}F_A\brak{c}
+				 F_A\brak{x} &= \begin{cases} 0 &  x = 0, \\ \frac{1}{2} &  0 \leqslant\: x < 1 , \\ 1 &  1 \leqslant\: x < \infty \end{cases},
+					\\
+				E_d\brak{F_A\brak{\frac{bc}{d}}} &= \frac{1}{2}F_A\brak{bc} + \frac{1}{2}F_A\brak{\infty} 
+				= \frac{1}{2}F_A\brak{bc} + \frac{1}{2} 
 			 \end{align}
-                        Expectation of this with respect to c will be,
+		 \item			 and 
+			 \begin{align}
+E_b\brak{\frac{1}{2}F_A\brak{bc} + \frac{1}{2}} &= \frac{1}{2}E_b\brak{F_A\brak{bc}} + \frac{1}{2} 
+				 = \frac{1}{2}\brak{\frac{1}{2}F_A\brak{0} + \frac{1}{2}F_A\brak{c}} \\
+				 &= \frac{1}{2} + \frac{1}{8} + \frac{1}{4}F_A\brak{c} 
+				 = \frac{5}{8} + \frac{1}{4}F_A\brak{c}
+			 \end{align}
+		 \item
+			 yielding
 			 \begin{align}
 				 E_c\brak{\frac{5}{8} + \frac{1}{4}F_A\brak{c}} &= \frac{5}{8} + \frac{1}{4}E_c\brak{F_A\brak{c}} \\
 				 &= \frac{5}{8} + \frac{1}{4}\brak{\frac{1}{2}F_A\brak{0} + \frac{1}{2}F_A\brak{1}} \\
-				 &= \frac{5}{8} + \frac{1}{4}\brak{\frac{1}{4} + \frac{1}{2}} \\
-				 &= \frac{5}{8} + \frac{3}{16} \\
-				 &= \frac{13}{16}
+				 &= \frac{5}{8} + \frac{1}{4}\brak{\frac{1}{4} + \frac{1}{2}} 
+				 = \frac{13}{16}
 			 \end{align}
-		 \item Now required probability is
+		 \item Thus, the required probability is
 			 \begin{align}
-				\pr{a > \frac{bc}{d}} &= 1 - E_b,c,d\brak{F_A\brak{\frac{bc}{d}}} \\
-                                                     &= 1 - \frac{13}{16} \\
-						     &= \frac{3}{16}
+				\pr{a > \frac{bc}{d}} = 1 - E_b,c,d\brak{F_A\brak{\frac{bc}{d}}} 
+                                                     = 1 - \frac{13}{16} 
+						     = \frac{3}{16}
 			 \end{align}
  \end{enumerate} 
- \end{document}
