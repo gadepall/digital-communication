@@ -202,51 +202,10 @@ a number less than 9?
 \end{enumerate}
 
 \begin{figure} [p h]
-    \setcounter{figure}{0}
-    \begin{tikzpicture}
-    
-	%outline%
-	\filldraw[color=black!60, fill=white, very thick](2,0) circle (2.02);
-	\draw[black!60, thick] (2,-2) -- (2,2);
-	\draw[white!60, thin] (4,0) -- (-2,0);
-	\draw[black!60, thick] (4,0) -- (-0.04,0);
-	\draw[black!60, thick] (0.58578643762,-1.41421356237) -- (3.41421356237,1.41421356237);
-	\draw[black!60, thick] (3.41421356237,-1.41421356237) -- (0.58578643762,1.41421356237);
-	%%
-	
-	%Numbers%
-	\node at (2.6,1.4) [] {1};
-	\node at (3.4,0.6) [] {2};
-	\node at (3.4,-0.6) [] {3};
-	\node at (2.6,-1.4) [] {4};
-	\node at (1.4,-1.4) [] {5};
-	\node at (0.6,-0.6) [] {6};
-	\node at (0.6,0.6) [] {7};
-	\node at (1.4,1.4) [] {8};
-	%%
-	
-	%Pointer%
-	\draw[black!60, very thick] (2,0) -- (2.3867594105005, 0.9337198142057);
-	\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.4141344385572, 0.6810718956735);
-	\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.1887532860797, 0.774427825733);
-	%%
-
-	%outcome%
-	\draw[black!60, very thick] (2.7059955543533, 1.7044240422949) -- (2.824738175107, 1.9910940877502); %1 
-	\draw[black!60, very thick] (3.9910940877502, 0.824738175107) -- (3.7044240422949, 0.7059955543533); %2
-	\draw[black!60, very thick] (3.9910940877502, -0.824738175107) -- (3.7044240422949, -0.7059955543533); %3
-	\draw[black!60, very thick] (2.7059955543533, -1.7044240422949) -- (2.824738175107, -1.9910940877502); %4
-	\draw[black!60, very thick] (1.17526182489, -1.9910940877502) -- (1.29400444565, -1.7044240422949); %5
-	\draw[black!60, very thick] (0.00890591224, -0.824738175107) -- (0.2955759577, -0.7059955543533); %6
-	\draw[black!60, very thick] (0.2955759577, 0.7059955543533) -- (0.00890591224, 0.824738175107); %7
-	\draw[black!60, very thick] (1.29400444565, 1.7044240422949) -- (1.17526182489, 1.9910940877502); %8
-	%%
-
-
-    \end{tikzpicture}
-\caption{Spinner}
+    \input{figs/tikz}
+    \caption{Spinner}
+    \label{fig:my_label}
 \end{figure}
-
 
 \textbf{Solution:}
 Let X be a random variable defined as the value given by the pointer. The distribution is unform since all the outcomes are equally likely.
@@ -265,13 +224,15 @@ Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
 \end{align}
 
 \begin{figure}
-    \includegraphics[scale=0.65]{figs/pmf.png}
+    \includegraphics[width=\columnwidth]{figs/pmf.png}
 \caption{Plot of Probability Mass Function}
+\label{fig:pmf}
 \end{figure}
 
 \begin{figure}
-    \includegraphics[scale=0.65]{figs/cdf.png}
+    \includegraphics[width=\columnwidth]{figs/cdf.png}
 \caption{Plot of Cumulative Distribution Function}
+\label{fig:cdf}
 \end{figure}
 
 See python code for PMF and CDF plots:\cite{plot}
