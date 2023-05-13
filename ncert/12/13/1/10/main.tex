@@ -140,7 +140,7 @@ columns=fullflexible
 \author{
   CS22BTECH11017\\[4pt]
   Dikshant Khandelwal\\
-  11th May, 2023
+  12th May, 2023
   % <-this % stops a space
 }
 \begin{document}
@@ -189,7 +189,7 @@ $X$ and $Y$ are independent random variables.
 \end{align}
 
 \begin{figure}[h!]
-  \centering \includegraphics[width= 7.15cm]{figs/figure}
+  \centering \includegraphics[width= \columnwidth]{figs/figure}
   \caption{$X+Y = 8 | Y < 4$}
   \label{fig:1}
 \end{figure}
@@ -202,18 +202,17 @@ Probability of an event $E$, written as $\pr{E}$
 \end{align}
 
 \begin{align}
-    \pr{Y < 4} &= \frac{\text{Number of $(X,Y)$ in blue region}}{\text{Number of $(X,Y)$ in gray region }}\\
-    &= \frac{\brak{3}\cdot\brak{6}}{\brak{6}\cdot\brak{6}}\\
-    &= \frac{1}{2}
+    \pr{Y < 4} &= \frac{\text{Number of $(X,Y)$ in blue region}}{36}\\
+    &= \frac{\brak{3}\cdot\brak{6}}{36}\\
+    &= \frac{18}{36}
 \end{align}
 
 \begin{align}
-    \pr{X+Y = 8, Y<4} &= \frac{\text{Number of red dots $(X,Y)$ }}{\text{Number of $(X,Y)$ in gray region }}\\
-    &= \frac{2}{\brak{6}\cdot\brak{6}}\\
-         &=\frac{1}{18} 
+    \pr{X+Y = 8, Y<4} &= \frac{\text{Number of red dots $(X,Y)$ }}{36}\\
+         &=\frac{2}{36} 
     \end{align}
     \begin{align}
-    \therefore \pr{X+Y = 8 | Y < 4} &= \frac{\brak{\frac{1}{18}}}{\brak{\frac{1}{2}}}\\
+    \therefore \pr{X+Y = 8 | Y < 4} &= \frac{\brak{\frac{2}{36}}}{\brak{\frac{18}{36}}}\\
     &=\frac{1}{9} \approx 0.11
 \end{align}
 
