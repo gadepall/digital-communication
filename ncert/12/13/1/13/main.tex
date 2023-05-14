@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -299,104 +299,64 @@ Indian Institute of Technology Hyderabad
 \textbf{12.13.1.13}
 %\renewcommand{\theequation}{\theenumi}
 %\subsection{Problem}
-\textbf{Question: } An instructor has a question bank consisting of 300 easy True / False questions,
-200 difficult True / False questions, 500 easy multiple choice questions and 400
-difficult multiple choice questions. If a question is selected at random from the
-question bank, what is the probability that it will be an easy question given that it
-is a multiple choice question?
-
+\textbf{Question: } 
 \textbf{Solution: }
-Let $X$ and $Y$ be two random variables in which $X$ describes the difficulty level of question and $Y$ describes the type of question according to the table \ref{tab:table1} :
-
+Let $X$ and $Y$ be two random variables in which $X$ describes the difficulty level of question and $Y$ describes the type of question according to the table \ref{tab:ncert/12/13/1/13/table1} :
+\fi
 \begin{table}[h!]
-	\input{tables/table1.tex}
+	\centering
+	\input{ncert/12/13/1/13/tables/table1.tex}
 	\caption{}
-	\label{tab:table1}
+	\label{tab:ncert/12/13/1/13/table1}
 \end{table}
 From the law of total probability,
 \begin{align}
-\label{eq:eq7}
+\label{eq:12/13/1/13/eq7}
 	p_X(0)+p_X(1)&=1\\
 	p_Y(0)+p_Y(1)&=1
-	\label{eq:eq2}
+	\label{eq:12/13/1/13/eq2}
 \end{align}
+From 
+	\tabref{tab:ncert/12/13/1/13/table1},
 \begin{align}
-	\label{eq:eq5}
+	\label{eq:12/13/1/13/eq5}
 	p_X(0)&=p_{X,Y}(0,0)+p_{X,Y}(0,1)\\
-	\label{eq:eq6}
+	&=\frac{300+500}{300+200+500+400}
+		=\frac{4}{7}\\
+	\label{eq:12/13/1/13/eq6}
 	p_Y(0)&=p_{X,Y}(0,0)+p_{X,Y}(1,0)\\
-	p_X(0)&=\frac{300+500}{300+200+500+400}\\
-	\label{eq:eq3}
-		&=\frac{4}{7}\\
-	p_Y(0)&=\frac{300+200}{300+200+500+400}\\
-	\label{eq:eq4}
-		&=\frac{5}{14}
+&=\frac{300+200}{300+200+500+400}
+		=\frac{5}{14}
+	\label{eq:12/13/1/13/eq4}
 \end{align}
-From \eqref{eq:eq7}, \eqref{eq:eq2}, \eqref{eq:eq3} and \eqref{eq:eq4},
+From \eqref{eq:12/13/1/13/eq7}, \eqref{eq:12/13/1/13/eq2}  and \eqref{eq:12/13/1/13/eq4},
 \begin{align}
-	p_X(1)&=1-p_X(0)\\
-		&=\frac{3}{7}\\
-	p_Y(1)&=1-p_Y(0)\\
-		\label{eq:eq9}
-		&=\frac{9}{14}\\
-	p_{X,Y}(0,0)&=\frac{300}{1400}\\
-				\label{eq:eq8}
-				&=\frac{3}{14}\\
-	p_{X,Y}(1,1)&=\frac{400}{1400}\\
-				&=\frac{2}{7}
+	p_X(1)&=1-p_X(0)
+		=\frac{3}{7}\\
+	p_Y(1)&=1-p_Y(0)
+		=\frac{9}{14}\\
+		\label{eq:12/13/1/13/eq9}
+	p_{X,Y}(0,0)&=\frac{300}{1400}
+				=\frac{3}{14}\\
+				\label{eq:12/13/1/13/eq8}
+	p_{X,Y}(1,1)&=\frac{400}{1400}
+				=\frac{2}{7}
 \end{align}
-From \eqref{eq:eq5}, \eqref{eq:eq6}, \eqref{eq:eq3}, \eqref{eq:eq4} and \eqref{eq:eq8},
+From \eqref{eq:12/13/1/13/eq5}, \eqref{eq:12/13/1/13/eq6}, \eqref{eq:12/13/1/13/eq4} and \eqref{eq:12/13/1/13/eq8},
 \begin{align}
-	p_{X,Y}(0,1)&=p_X(0)-p_{X,Y}(0,0)\\
-				\label{eq:eq10}
-				&=\frac{5}{14}\\
-	p_{X,Y}(1,0)&=p_Y(0)-p_{X,Y}(0,0)\\
-				&=\frac{1}{7}
+	p_{X,Y}(0,1)&=p_X(0)-p_{X,Y}(0,0)
+				=\frac{5}{14}\\
+				\label{eq:12/13/1/13/eq10}
+	p_{X,Y}(1,0)&=p_Y(0)-p_{X,Y}(0,0)
+				=\frac{1}{7}
 \end{align}
-The required probability is $p_{X|Y}(0|1)$
-
-From the definition of conditional probability, We know that,
+By definition,
 \begin{align}
-	p_{X|Y}(x|y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}\label{eq:eq1}
+	p_{X|Y}(x|y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}\label{eq:12/13/1/13/eq1}
 \end{align}
-From \eqref{eq:eq9} and \eqref{eq:eq10},
+From \eqref{eq:12/13/1/13/eq9} and \eqref{eq:12/13/1/13/eq10},
 \begin{align}
 	p_{X|Y}(0|1)&=\frac{p_{X,Y}(0,1)}{p_Y(1)}\\
-				&=\frac{\frac{5}{14}}{\frac{9}{14}}\\
-				&=\frac{5}{9}\\
-	\therefore~ p_{X|Y}(0|1)&=\frac{5}{9}
+				&=\frac{\frac{5}{14}}{\frac{9}{14}}
+				=\frac{5}{9}
 \end{align}
-%\section{Chemistry}
-%\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
-%\numberwithin{equation}{enumi}
-%\item Fig. \ref{fig:tri_sss_py} is generated using 
-%\begin{lstlisting}
-%math/codes/tri_sss.py
-%\end{lstlisting}
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{./figs/tri_sss.pdf}
-%\caption{Triangle generated using python}
-%\label{fig:tri_sss_py}
-%\end{figure}
-%
-%\item Fig. \ref{fig:tri_sss_tikz} is generated using 
-%\begin{lstlisting}w
-%math/figs/tri_sss_alone.tex
-%\end{lstlisting}
-%\begin{figure}[!ht]
-%	\begin{center}
-%		
-%		\resizebox{\columnwidth}{!}{\input{./figs/tri_sss.tex}}
-%	\end{center}
-%	\caption{Triangle generated using \LaTeX Tikz.}
-%	\label{fig:tri_sss_tikz}	
-%\end{figure}
-
-%\end{enumerate}
-\end{document}
-
-
