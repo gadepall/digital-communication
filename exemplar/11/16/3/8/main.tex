@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -321,101 +322,50 @@
 \large
 \subsection*{\huge \textbf{Question}}
 
-A team of medical students doing their internship have to assist during surgeries
-at a city hospital. The probabilities of surgeries rated as very-complex, complex,
-routine, simple or very-simple are respectively, 0.15, 0.20, 0.31, 0.26, .08. Find
-the probabilities that a particular surgery will be rated
-\begin{enumerate}
-\item complex or very-complex
-\item neither very-complex nor very simple
-\item routine or complex
-\item routine or simple
-\end{enumerate}
 
 \subsection*{\huge \textbf{Solution}}
 
 Let $E_1$ ,$E_2$ ,$E_3$ ,$E_4$ ,$E_5$ be the events that the surgeries are rated as very-complex, complex,
 routine, simple and very-simple respectively.\\
-
-
-The given information is summarised in Table
-\ref{tab:table1}
+\fi
+The given information is summarised in 
+\tabref{tab:exemplar/11/16/3/8/table2}
 \begin{table}[h]\centering
-	\input{tables/table.tex}
+	\input{exemplar/11/16/3/8/tables/table.tex}
 	\caption{}
-	\label{tab:table1}
+	\label{tab:exemplar/11/16/3/8/table2}
 \end{table}	
-
-\noindent Here if you notice one thing, the events are \textbf{Disjoint} because we are talking about surgeries, it can be very-complex or complex but it cannot be very-complex and complex at the same time.\\
-
-\noindent $\implies$ These events are \textbf{Disjoint} to each other and intersection of these events is $0$\\
-
-
-\noindent We know that,\\
-\noindent If $A$ and $B$ are two events then, One of the \textbf{Axioms} in Probability states that,\\
-If (\textbf{Intersection}) $AB=0$ then,
-\begin{align} 
-	\implies\pr{A + B}=\pr{A} + \pr{B}	
-\end{align}
-
-
-\begin{enumerate}[font=\Large\bfseries]
-
-\item To find the probabilities that a particular surgery will be rated complex or very-complex:
+%
+\begin{enumerate}
+\item 
 \begin{align} 
 	\pr{E_1 + E_2} &= \pr{E_1} + \pr{E_2}   \qquad \because E_1E_2=0\\
-	&= 0.15 + 0.20 \\
-	&= 0.35\\
-	\therefore \pr{E_1 + E_2}=0.35
+	&= 0.15 + 0.20 
+	= 0.35
 \end{align}
-
-
-
-
-\item To find the probabilities that a particular surgery will be rated neither very complex nor-very simple:
+%
+\item 
 \begin{align} 
 	\pr{E_1^{\prime} E_5^{\prime}} &=  \pr{\brak{E_1 + E_5}^{\prime}}  \\
 	&= 1- \pr{E_1 + E_5}\\
-	&= 1- \left[\pr{E_1} + \pr{E_5} \right]  \qquad \because E_1E_5=0\\
-	&= 1- \left[ 0.15 + 0.08 \right]\\
-	&= 1- 23\\
-	&= 0.77\\
-	\therefore \pr{E_1^{\prime} E_5^{\prime}}=0.77
+	&= 1- \sbrak{\pr{E_1} + \pr{E_5} }  \qquad \because E_1E_5=0\\
+	&= 1- \sbrak{0.15 + 0.08 }
+	= 0.77\\
 \end{align}
-
-
-
-
-
-\item To find the probabilities that a particular surgery will be rated routine or complex:
+%
+\item 
 \begin{align} 
 	\pr{E_3 + E_2} &= \pr{E_3} + \pr{E_2}   \qquad \because E_3E_2=0\\
-	&= 0.31 + 0.20 \\
-	&= 0.51\\
-	\therefore \pr{E_3 + E_2}=0.51
+	&= 0.31 + 0.20 
+	= 0.51
 \end{align}
-
-
-
-
 \item To find the probabilities that a particular surgery will be rated routine or simple:
 \begin{align} 
 	\pr{E_3 + E_4} &= \pr{E_3} + \pr{E_4}   \qquad \because E_3E_4=0\\
-	&= 0.31 + 0.26 \\
-	&= 0.57\\
-	\therefore \pr{E_3 + E_4}=0.57\\
+	&= 0.31 + 0.26 
+	= 0.57\\
 \end{align}
-
-
-
-
-
-
-
-
-
 \end{enumerate}
 
-\end{document}
 
 
