@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -185,36 +186,14 @@ columns=fullflexible
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \textbf{10.15.1.12}
-A game of chance consists of spinning an arrow
-which comes to rest pointing at one of the numbers
-1, 2, 3, 4, 5, 6, 7, 8 (see Fig. 4), and these are equally
-likely outcomes. What is the probability that it will
-point at:
-\begin{enumerate}[label=(\roman*)]
-\item 
-8?
-\item 
-an odd number?
-\item 
-a number greater than 2?
-\item 
-a number less than 9?
-\end{enumerate}
-
-\begin{figure} [p h]
-    \input{figs/tikz}
-    \caption{Spinner}
-    \label{fig:my_label}
-\end{figure}
 
 \textbf{Solution:}
-Let X be a random variable defined as the value given by the pointer. The distribution is unform since all the outcomes are equally likely.
+\fi
+Let X be a random variable defined as the value given by the pointer.  Then,
+%The distribution is unform since all the outcomes are equally likely.
 \begin{align}
-    \therefore \pr{X=i}=\frac{1}{8}
-\end{align}
-Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
-\begin{align}
-    F_{X} \brak{i} &= P(X \leq i)\\
+	\pr{X=i}&=\frac{1}{8}\quad 1 \le i \le 8\\
+	F_{X} \brak{i} &= \pr{X \leq i}\\
     &=
     \begin{cases}
         0, & i \le 0\\
@@ -222,51 +201,45 @@ Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
         1, & i \ge 9
     \end{cases}
 \end{align}
-
+which are plotted in
+\figref{fig:ncert/10/15/1/12/pmf}
+and
+\figref{fig:ncert/10/15/1/12/cdf}
+respectively.
 \begin{figure}
-    \includegraphics[width=\columnwidth]{figs/pmf.png}
+    \includegraphics[width=\columnwidth]{ncert/10/15/1/12/figs/pmf.png}
 \caption{Plot of Probability Mass Function}
-\label{fig:pmf}
+\label{fig:ncert/10/15/1/12/pmf}
 \end{figure}
 
 \begin{figure}
-    \includegraphics[width=\columnwidth]{figs/cdf.png}
+    \includegraphics[width=\columnwidth]{ncert/10/15/1/12/figs/cdf.png}
 \caption{Plot of Cumulative Distribution Function}
-\label{fig:cdf}
+\label{fig:ncert/10/15/1/12/cdf}
 \end{figure}
-
-See python code for PMF and CDF plots:\cite{plot}
-
-\begin{enumerate}[label=(\roman*)]
+%
+\begin{enumerate}
 \item 
-For i = 8, required probability is equivalent to;
 \begin{align}
-    \pr{X=8} &= \frac{1}{8}\\
-    &= 0.125
+    \pr{X=8} = \frac{1}{8}
+    = 0.125
 \end{align}
 \item 
-For i being odd, required probability is equivalent to;
+For $i$ being odd, 
 \begin{align}
-    \pr{X=\cbrak{1,3,5,7}} &= \frac{4}{8}\\
-    &= 0.5
+    \pr{X=\cbrak{1,3,5,7}} = \frac{4}{8}
+    = 0.5
 \end{align}
-
 \item 
-For i greater than 2, required probability is equivalent to;
 \begin{align}
     \pr{X > 2} &= 1 - \pr{X \le 2}\\
     &= 1 - \brak{F_{X}\brak{2}-F_{X}\brak{0}}\\
-    &= \frac{6}{8}= 0.75
+    &= \frac{6}{8}
 \end{align}
-
+%
 \item 
-For i less than 9, required probability is equivalent to;
 \begin{align}
-    \pr{1 \le X < 9} &= F_{X}\brak{8}-F_{X}\brak{0}\\
-    &= \frac{8}{8}= 1
+    \pr{1 \le X < 9} &= F_{X}\brak{8}-F_{X}\brak{0}
+= 1
 \end{align}
-
 \end{enumerate}
-See simulation using python:\cite{simulation}
-\bibliography{bibliography}
-\end{document}
