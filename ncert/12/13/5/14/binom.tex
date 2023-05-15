@@ -5,6 +5,15 @@
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}      
+\usepackage{lscape}  
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -19,20 +28,12 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-\usepackage{amsmath}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
 %\doublespacing
 %\singlespacing
-\usepackage[latin1]{inputenc}                                 %%
-   \usepackage{color}                                            %%
-    \usepackage{array}                                            %%
-    \usepackage{longtable}                                        %%
-    \usepackage{calc}                                             %%
-    \usepackage{multirow}                                         %%
-    \usepackage{hhline}                                           %%
-    \usepackage{ifthen}  
+
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -41,7 +42,7 @@
 %\interdisplaylinepenalty=2500
 %\savesymbol{iint}
 %\usepackage{txfonts}
-%\restoresymbol{TXF}{iint}2
+%\restoresymbol{TXF}{iint}
 %\usepackage{wasysym}
 %\usepackage{amsthm}
 %\usepackage{iithtlc}
@@ -94,8 +95,6 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 
-
-
 \lstset{
 %language=C,
 frame=single, 
@@ -130,7 +129,7 @@ columns=fullflexible
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
 
-\newcommand*{\comb}[2]{{}^{#1}C_{#2}}
+
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -161,6 +160,7 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\comb}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -187,25 +187,8 @@ columns=fullflexible
 
 \vspace{3cm}
 
-\title{
-%	\logo{
-{Assignment 3
-
-
-\Large{AI1110: Probability and Random Variables}
-
-
-Indian Institute of Technology Hyderabad
-
-
-%	}
-}
-
-\author{ Bonthu Mani Hemanth Reddy
-
- CS22BTECH11013% <-this % stops a space
-	}
-	
+\title{AI1110 Assignment-1}
+\author{Rutwik Chandra Bendi (CS22BTECH11011)}	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
@@ -226,7 +209,7 @@ Indian Institute of Technology Hyderabad
 %
 
 %\author{<-this % stops a space
-\thanks{}}
+%\thanks{}}
 %}
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -258,11 +241,16 @@ Indian Institute of Technology Hyderabad
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
+
 
 
 % make the title area
@@ -271,10 +259,13 @@ Indian Institute of Technology Hyderabad
 \newpage
 
 %\tableofcontents
+
 \bigskip
-%\renewcommand{\thefigure}{\theenumi}
-%\renewcommand{\thetable}{\theenumi}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
+
 %\begin{abstract}
 %%\boldmath
 %In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
@@ -284,9 +275,16 @@ Indian Institute of Technology Hyderabad
 % This preserves the distinction between vectors and scalars. However,
 % if the journal you are submitting to favors bold math in the abstract,
 % then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
+
+
+
 % For peer review papers, you can put extra information on the cover
 % page as needed:
 % \ifCLASSOPTIONpeerreview
@@ -296,50 +294,41 @@ Indian Institute of Technology Hyderabad
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-\textbf{12.13.6.3}
-%\renewcommand{\theequation}{\theenumi}
-%\subsection{Problem}
-\textbf{Question: } \textbf{Solution: }
+
+\begin{abstract}
+This document provides the solution to question 14 in Chapter 13 of the 12th grade NCERT textbook, Exercise 13.5.
+\end{abstract}
+
+\textbf{Question :}
+
+
+\textbf{Solution :}
 \fi
-See \tabref{tab:ncert/12/13/6/3/table1}. 
-\begin{table}[h!]
-	\input{ncert/12/13/6/3/tables/table1.tex}
-	\caption{}
-	\label{tab:ncert/12/13/6/3/table1}
+See 
+\tabref{tab:ncert/12/13/5/14/Table 1}.
+\begin{table}[h]
+	\centering
+\input{ncert/12/13/5/14/tables/table.tex}
+\caption{Given Information}
+\label{tab:ncert/12/13/5/14/Table 1}
 \end{table}
-It is given that,
-\begin{align}
-	\label{eq:ncert/12/13/6/3/eq1}
-	p_X(0)&=p_X(1)=\frac{1}{2}\\
-	p_{Y|X}(1|0)&=\frac{5}{100}
-				=\frac{1}{20}\\
-	p_{Y|X}(1|1)&=\frac{0.25}{100}
-				=\frac{1}{400}
-\end{align}
-From the law of total probability,
-\begin{align}
-	p_Y(1)&=p_{Y|X}(1|0) \times p_X(0)+p_{Y|X}(1|1) \times p_X(1)\\
-			&=\frac{1}{20} \times \frac{1}{2}+\frac{1}{400} \times \frac{1}{2}
-			=\frac{21}{800}\\
-	\label{eq:ncert/12/13/6/3/eq3}
-	\therefore~ p_Y(1)&=\frac{21}{800}
-\end{align}
-Thus, 
-\begin{align}
-	\label{eq:ncert/12/13/6/3/eq4}
-	p_{X|Y}(x|y)=\frac{p_{X,Y}(x,y)}{p_Y(y)},\,
-	p_{X,Y}(x,y)=p_{Y|X}(y|x) p_X(x)
-\end{align}
-yielding
-\begin{align}
-	p_{X,Y}(0,1)&=p_{Y|X}(1|0) \times p_X(0)\\
-				&=\frac{1}{20} \times \frac{1}{2}
-				=\frac{1}{40}\\
-	\label{eq:ncert/12/13/6/3/eq6}
-\end{align}
-resulting in 
-\begin{align}
-	p_{X|Y}(0|1)&=\frac{p_{X,Y}(0,1)}{p_Y(1)}
-				=\frac{\frac{1}{40}}{\frac{21}{800}}
-				=\frac{20}{21}
-\end{align}
+ This experiment of picking bulbs follows the binomial distribution.
+ So,
+ \begin{equation}
+      \pr{X=k} = \comb{n}{k}p^k (1-p)^{n-k}
+ \end{equation}
+\iffalse 
+ \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=\columnwidth]{figs/pmf_plot.pdf}
+        \caption{PMF Plot}
+        \label{fig: PMF Plot}
+    \end{figure}
+    \fi
+The desired probability is  
+ \begin{align}
+     \pr{X=0} &= {\comb{5}{0}}\brak{\frac{1}{10}}^0\brak{1-\frac{1}{10}}^{5-0} \\
+         &=\brak{\frac{9}{10}}^5 
+ \end{align}
+ 
+ 
