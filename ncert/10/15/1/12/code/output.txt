@@ -1,0 +1,5 @@
+Assignment 2: Question 10.15.1.12
+Probability of the arrow pointing at 8 is 0.12502347
+Probability of the arrow pointing at an odd number is 0.49997375
+Probability of the arrow pointing at a number greater than 2 is 0.75002066
+Probability of the arrow pointing at a number less than 9 is 1.0

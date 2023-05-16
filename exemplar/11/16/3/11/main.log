@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.4.25)  1 MAY 2023 20:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.4.25)  6 MAY 2023 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,13 +700,13 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \ALC@tlm=\skip57
 \algorithmicindent=\skip58
 )
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen295
-\WF@size=\dimen296
-\c@WF@wrappedlines=\count312
-\WF@box=\box68
-\WF@everypar=\toks48
-Package: wrapfig 2003/01/31  v 3.6
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count312
+\float@exts=\toks48
+\float@box=\box68
+\@float@everytoks=\toks49
+\@floatcapt=\box69
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
@@ -801,23 +801,23 @@ LaTeX Info: Redefining \openbox on input line 1064.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count313
-\lst@gtempboxa=\box69
-\lst@token=\toks49
+\lst@gtempboxa=\box70
+\lst@token=\toks50
 \lst@length=\count314
-\lst@currlwidth=\dimen297
+\lst@currlwidth=\dimen295
 \lst@column=\count315
 \lst@pos=\count316
-\lst@lostspace=\dimen298
-\lst@width=\dimen299
+\lst@lostspace=\dimen296
+\lst@width=\dimen297
 \lst@newlines=\count317
 \lst@lineno=\count318
-\lst@maxwidth=\dimen300
+\lst@maxwidth=\dimen298
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count319
 \lst@skipnumbers=\count320
-\lst@framebox=\box70
+\lst@framebox=\box71
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -827,9 +827,9 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip59
-\enit@outerparindent=\dimen301
-\enit@toks=\toks50
-\enit@inbox=\box71
+\enit@outerparindent=\dimen299
+\enit@toks=\toks51
+\enit@inbox=\box72
 \enit@count@id=\count321
 \enitdp@description=\count322
 )
@@ -840,8 +840,8 @@ Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count323
 \calc@Bcount=\count324
-\calc@Adimen=\dimen302
-\calc@Bdimen=\dimen303
+\calc@Adimen=\dimen300
+\calc@Bdimen=\dimen301
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
@@ -853,16 +853,16 @@ LaTeX Info: Redefining \addtolength on input line 81.
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count326
-\l_MT_multwidth_dim=\dimen304
+\l_MT_multwidth_dim=\dimen302
 \origjot=\skip63
-\l_MT_shortvdotswithinadjustabove_dim=\dimen305
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen306
-\l_MT_above_intertext_sep=\dimen307
-\l_MT_below_intertext_sep=\dimen308
-\l_MT_above_shortintertext_sep=\dimen309
-\l_MT_below_shortintertext_sep=\dimen310
-\xmathstrut@box=\box72
-\xmathstrut@dim=\dimen311
+\l_MT_shortvdotswithinadjustabove_dim=\dimen303
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen304
+\l_MT_above_intertext_sep=\dimen305
+\l_MT_below_intertext_sep=\dimen306
+\l_MT_above_shortintertext_sep=\dimen307
+\l_MT_below_shortintertext_sep=\dimen308
+\xmathstrut@box=\box73
+\xmathstrut@dim=\dimen309
 )
 (/usr/share/texlive/texmf-dist/tex/latex/gensymb/gensymb.sty
 Package: gensymb 2022/10/17 v1.0.2 (KJH)
@@ -899,7 +899,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count327
 )
-\@linkdim=\dimen312
+\@linkdim=\dimen310
 \Hy@linkcounter=\count328
 \Hy@pagecounter=\count329
 
@@ -936,7 +936,7 @@ Package hyperref Info: Bookmarks ON on input line 4410.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen313
+\XeTeXLinkMargin=\dimen311
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -946,8 +946,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count332
-\Field@Width=\dimen314
-\Fld@charsize=\dimen315
+\Field@Width=\dimen312
+\Fld@charsize=\dimen313
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -1003,21 +1003,21 @@ File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen316
+\arrowsize=\dimen314
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
 code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen317
-\pgfarrowlength=\dimen318
-\pgfarrowwidth=\dimen319
-\pgfarrowlinewidth=\dimen320
+\pgfarrowinset=\dimen315
+\pgfarrowlength=\dimen316
+\pgfarrowwidth=\dimen317
+\pgfarrowlinewidth=\dimen318
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@layerbox@background=\box73
-\pgf@layerboxsaved@background=\box74
+\pgf@layerbox@background=\box74
+\pgf@layerboxsaved@background=\box75
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarycalc.code.tex
@@ -1035,9 +1035,9 @@ decorations.shapes.code.tex))
 zlibrarydecorations.text.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.text.code.tex
-\pgf@lib@dec@text@box=\box75
+\pgf@lib@dec@text@box=\box76
 )
-\tikz@lib@dec@te@box=\box76
+\tikz@lib@dec@te@box=\box77
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryintersections.code.tex
@@ -1050,8 +1050,8 @@ zlibrarymath.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryfpu.code.tex)
 \tikz@math@for@depth=\count339
-\tikz@math@dimen=\dimen321
-\tikz@math@toks=\toks51
+\tikz@math@dimen=\dimen319
+\tikz@math@toks=\toks52
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarypositioning.code.tex
@@ -1080,7 +1080,7 @@ Package: expl3 2023-01-16 L3 programming layer (loader)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count340
-\l__pdf_internal_box=\box77
+\l__pdf_internal_box=\box78
 ))
 Package: xfp 2023-01-16 L3 Floating point unit
 )
@@ -1094,17 +1094,17 @@ Package: xparse 2023-01-16 L3 Experimental document command parser
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count341
 ))
-\tkzRadius=\dimen322
-\tkzLength=\dimen323
-\tkz@radi=\dimen324
-\tkz@ax=\dimen325
-\tkz@ay=\dimen326
-\tkz@bx=\dimen327
-\tkz@by=\dimen328
-\tkz@cx=\dimen329
-\tkz@cy=\dimen330
-\tkz@dx=\dimen331
-\tkz@dy=\dimen332
+\tkzRadius=\dimen320
+\tkzLength=\dimen321
+\tkz@radi=\dimen322
+\tkz@ax=\dimen323
+\tkz@ay=\dimen324
+\tkz@bx=\dimen325
+\tkz@by=\dimen326
+\tkz@cx=\dimen327
+\tkz@cy=\dimen328
+\tkz@dx=\dimen329
+\tkz@dy=\dimen330
 \tkz@cntmk=\count342
 
 Local configuration file tkz-euclide.cfg found and used
@@ -1187,7 +1187,61 @@ ex
 2022/09/23 4.25c tkz-obj-eu-show.tex
 ) (/usr/share/texlive/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-triangles.tex
 2022/09/23 4.25c tkz-obj-eu-triangles.tex
-))
+)) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen331
+\captionmargin=\dimen332
+\caption@leftmargin=\dimen333
+\caption@rightmargin=\dimen334
+\caption@width=\dimen335
+\caption@indent=\dimen336
+\caption@parindent=\dimen337
+\caption@hangindent=\dimen338
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count343
+\c@continuedfloat=\count344
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count345
+\sf@farskip=\skip65
+\sf@captopadj=\dimen339
+\sf@capskip=\skip66
+\sf@nearskip=\skip67
+\c@subfigure=\count346
+\c@subfigure@save=\count347
+\c@lofdepth=\count348
+\c@subtable=\count349
+\c@subtable@save=\count350
+\c@lotdepth=\count351
+\sf@top=\skip68
+\sf@bottom=\skip69
+)
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
 04.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
@@ -1286,17 +1340,17 @@ LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <24> not available
 -- Lines per column: 50 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
-\scratchdimen=\dimen333
-\scratchbox=\box78
-\nofMPsegments=\count344
-\nofMParguments=\count345
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count346
-\MPscratchDim=\dimen334
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count352
+\scratchdimen=\dimen340
+\scratchbox=\box79
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen341
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1312,7 +1366,7 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into
 your preamble.
  on input line 104.
 
-\c@lstlisting=\count349
+\c@lstlisting=\count358
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
 (Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 104.
@@ -1329,12 +1383,15 @@ Package hyperref Info: Link coloring OFF on input line 104.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@theorem=\count350
-\c@problem=\count351
-\c@proposition=\count352
-\c@lemma=\count353
-\c@example=\count354
-\c@rem=\count355
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@theorem=\count359
+\c@problem=\count360
+\c@proposition=\count361
+\c@lemma=\count362
+\c@example=\count363
+\c@rem=\count364
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
 95.
 
@@ -1373,29 +1430,42 @@ Package epstopdf Info: Source file: <figs/new-figure0.eps>
 (epstopdf)                    size: 5134 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/new-figure0-eps-conve
 rted-to.pdf figs/new-figure0.eps>
-(epstopdf)             \includegraphics on input line 211.
+(epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 <figs/new-figure0-eps-converted-to.pdf, id=7, 228.855pt x 114.4275pt>
 File: figs/new-figure0-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/new-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: figs/new-figure0-eps-converted-to.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 228.85443pt x 114.42722pt.
+ine 213.
+(pdftex.def)             Requested size: 252.0pt x 126.00507pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.217 \end{enumerate}
+                     
+? 
+
+Underfull \vbox (badness 2229) has occurred while \output is active []
+
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/new-figure0-eps-converted-to.pdf>]
-[2
+ <./figs/new-figure0-eps-converted-to.pdf>] [2
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39949 strings out of 476091
- 922708 string characters out of 5794081
- 1887330 words of memory out of 5000000
- 59513 multiletter control sequences out of 15000+600000
+ 41394 strings out of 476091
+ 950608 string characters out of 5794081
+ 1893330 words of memory out of 5000000
+ 60938 multiletter control sequences out of 15000+600000
  570054 words of font info for 146 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  94i,9n,92p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1408,10 +1478,10 @@ sy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 63700 bytes).
+Output written on main.pdf (2 pages, 64568 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 38 named destinations out of 1000 (max. 500000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
