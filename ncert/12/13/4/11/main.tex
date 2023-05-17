@@ -1,6 +1,7 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -63,7 +64,7 @@
 %    \usepackage{multirow}                                         %%
 %    \usepackage{hhline}                                           %%
 %    \usepackage{ifthen}                                           %%
-%optionally (for landscape tables embedded in another document): %%
+  %optionally (for landscape tables embedded in another document): %%
 %    \usepackage{lscape}     
 %\usepackage{multicol}
 %\usepackage{chngcntr}
@@ -81,52 +82,23 @@
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
-%\usepackage{enumitem}
-%\usepackage{hyperref,xcolor}
-%\hypersetup{
-	%	colorlinks,
-	%	urlcolor={black}	%black!50!blue
-	%}
-
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
-\def\inputGnumericTable{} 
-
-\usepackage[latin1]{inputenc}
-\usepackage{fullpage}
-\usepackage{color}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{calc}
-\usepackage{multirow}
-\usepackage{hhline}
-\usepackage{ifthen}
-\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-\newcommand{\solution}{\noindent \textbf{Solution: }}
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
-\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
-%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
-\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
-\setlist[enumerate]{font=\small\bfseries}
-\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
-%%
+\def\inputGnumericTable{}                                 %%
 
 \lstset{
-	%language=C,
-	frame=single, 
-	breaklines=true,
-	columns=fullflexible
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
 }
 %\lstset{
-	%language=tex,
-	%frame=single, 
-	%breaklines=true
-	%}
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
 
-
-
+\begin{document}
 %
 
 
@@ -142,7 +114,7 @@
 %\newtheorem{algorithm}{Algorithm}[section]
 %\newtheorem{cor}{Corollary}
 \newcommand{\BEQA}{\begin{eqnarray}}
-	\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
 
 \bibliographystyle{IEEEtran}
@@ -173,8 +145,8 @@
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-%	\newcommand{\solution}{\noindent \textbf{Solution: }}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
@@ -192,41 +164,52 @@
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
-	%\counterwithin{equation}{enumi}
+%\counterwithin{equation}{enumi}
+
+
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
+%\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+%     \def\rightbox#1{\makebox[0in][r]{#1}}
+%     \def\centbox#1{\makebox[0in]{#1}}
+%     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+%     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+	Probability Assignment 1(12.13.4.11)
+%	}
+}
+\author{ Saketh Ram Kumar Dondapati(AI22BTECH11023)*% <-this % stops a space
+	\thanks{*The author is with the Department
+		of Artificial Intelligence, Indian Institute of Technology, Hyderabad
+		502285 India e-mail:  ai22btech11023@iith.ac.in.}
 	
-	
-	%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
-	
-	%\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
-	%     \def\rightbox#1{\makebox[0in][r]{#1}}
-	%     \def\centbox#1{\makebox[0in]{#1}}
-	%     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
-	%     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-	
-	
-	
-	%\title{
-		%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
-		%}
-	
-	
-	% paper title
-	% can use linebreaks \\ within to get better formatting as desired
-	%\title{Matrix Analysis through Octave}
-	%
-	%
-	% author names and IEEE memberships
-	% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-	% a structure at a ~ so this keeps an author's name from being broken across
-	% two lines.
-	% use \thanks{} to gain access to the first footnote area
-	% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-	% was not built to handle multiple paragraphs
-	%
-	
-	%\author{<-this % stops a space
-		%\thanks{}}
-	%}
+}	
+%\title{
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{<-this % stops a space
+%\thanks{}}
+%}
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
@@ -253,8 +236,8 @@
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
-% * Note that you probably will NOT want to include the author's *
-% * name in the headers of peer review papers.                   *
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
 
@@ -270,12 +253,13 @@
 
 
 % make the title area
+\maketitle
 
-%\newpage
+\newpage
 
 %\tableofcontents
 
-%\bigskip
+\bigskip
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
@@ -310,36 +294,57 @@
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
+%\renewcommand{\theequation}{\theenumi}
+\subsection*{Question}
+\subsection*{Solution}
+Clearly X follows a binomial distribution\\
+\begin{align} 
+	X \sim Bin(2,1/6) 
+\end{align}
+%Assuming the dice are fair,\\
+%Since $\frac{5}{6}$ is the probability of not getting a six on a dice\\ 
+%since $\frac{1}{6}$ is the probability of getting a 6 in each dice roll.\\ 
+%since the number of sixes can only be 0,1 or 2, the total probability will be 1\\ \\
 
-
-\title{Probability $\& $ Random Variable\\ Assignment-1}
-\author{Chandrajeet Singh\\ BT22BTECH11005}
-\begin{document}
-\maketitle
-\noindent\text{Question:} \\ It is known that 10 $\%$ of certain articles manufactured are defective.What is the probability that in a random sample space of 12 such articles,9 are defective? \\\\
-\text{Solution:}\\
-The repeated selections of articles in a random sample space are bernauli trails.Let X denote the number of times of selective defective article in random sample space of 12 articles.\\
-
-\noindent Here,
-\ref{tab:table1}
-\begin{table}[h]\centering
-	\input{tables/table4.tex}
-	\caption{}
-	\label{tab:table1}
-\end{table}
-
-
-The Binomial distribution of X is given by,
 \begin{align}
-	P(X=r)&=\comb{n}{r}p^rq^{n-r}
+	E(X)&=np
+\end{align}
+\begin{align}
+	&=2.\frac{1}{6}
+\end{align}
+\begin{align}
+	&=0.33
+\end{align}
+(2) can be shown using z transform:
+\begin{align}
+	M_{X_i}(z) &= E\sbrak{z^{-X_i}} = \sum_{k=-\infty}^{\infty} P_{X_i}(k)z^{-k}
+\end{align}
+\begin{align}
+E(z^{-X_1-X_2+...-X_n}) &= E(z^{-X_1})E(z^{-X_2})...E(z^{-X_n}) 
+\end{align}
+\begin{align}
+M_{X}(z)=M_{X_1}(z)M_{X_2}(z)...M_{X_n}(z)
+\end{align}
+($\because X_1,X_2,...,X_n$are independent and identically distributed)
+\begin{align}
+\frac{dM_{X_i}(z^{-1})}{dz} &= E(X_i z^{X_i-1})
+\end{align}
+Put z=1 to get
+\begin{align}
+	E\brak{X_i} &= \frac{dM_{X_i}(z^{-1})}{dz}|_{z=1}
+\end{align}
+For Bernoulli distribution,
+\begin{align}
+M_{X_i}(z) &= 1-p + pz^{-1} 
+\end{align}
+\fi
+For binomial distribution,
+\begin{align}
+	M_{X}&=(1-p +pz^{-1})^{n}
+	\\
+\implies E(X) &= \frac{dM_{X}(z^{-1})}{dz}|_{z=1}\\ 
+	&=\frac{d(1-p +pz)^{n}}{dz}|_{z=1}\\
+	&=(np)(1-p + p(1))^{(n-1)}\\
+	=np
 \end{align}
 
-To calculate the probability of getting exactly 9 defective articles in a sample of 12 is:
-\begin{align}
-	P(X=9)&= \comb {12}{9}\left(\frac{1}{10}\right)^9\left(\frac{9}{10}\right)^3\\
-	&=\frac{12!}{9!3!}\left(\frac{1}{10}\right)^9\left(\frac{9}{10}\right)^3\\
-	&=\frac{12\times11\times10\times9!}{9!\times3\times2\times1}\left(\frac{1}{10}\right)^9\left(\frac{9}{10}\right)^3\\
-	&=22\frac{9^3}{10^{11}}\\
-\end{align}
-Hence, Probability of getting 9 defective articles is  22 $\left(\frac{9^3}{10^{11}}\right)$
-\end{document}
