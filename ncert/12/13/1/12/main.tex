@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -289,20 +290,16 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
-\textbf{12.13.1.12 Question }: Assume that each born child is equally likely to be a boy or a girl. If a family has
-two children, what is the conditional probability that both are girls given that
-\begin{enumerate}
-	\item  The youngest is a girl
-	\item  At least one is a girl
-\end{enumerate}
+\textbf{12.13.1.12 Question }: 
 
 \textbf{Answer : } (i)$\frac{1}{2}$ (ii)$\frac{1}{3}$\\
 \textbf{Solution : }Lets us random variables $X_i$ where $i \in \{1,2\}$ as follows
+\fi
 % table goes here
 \begin{table}[htbp]
   \centering
-  \label{table:1}
-  \input{tables/table1.tex}
+  \label{tab:ncert/12/13/1/12/1}
+  \input{ncert/12/13/1/12/tables/table1.tex}
   \caption{Random variable definitions.}
 \end{table}
 
@@ -310,16 +307,14 @@ two children, what is the conditional probability that both are girls given that
 \begin{enumerate}
 \item 
 %Part (i) :
-The required probability is the conditional probability that both the children are girls given that the youngest is a girl i.e,
 \begin{align}
      \pr{(X_1+X_2)^\prime|X_2^\prime} &= \frac{\pr{(X_1^\prime X_2^\prime)X_2^\prime}}{\pr{X_2^\prime}}\\
            &= \frac{\pr{X_1^\prime}\pr{X_2^\prime}}{\pr{X_2^\prime}}\\ 
-	  &= \pr{X_1^\prime}\\
-          &= \frac{1}{2}
+	  &= \pr{X_1^\prime}
+          = \frac{1}{2}
 \end{align}
 \item
 %Part (ii) :
-The required probability is the conditional probability that both the children are girls given that at least one a girl i.e,
 \begin{align}
 	\pr{(X_1+X_2)^\prime|(X_1X_2)^\prime } &= \frac{\pr{(X_1^\prime X_2^\prime)(X_1^\prime + X_2^\prime)}}{1-\pr{X_1X_2}}\\
 	&= \frac{\pr{X_1^\prime X_2^\prime}}{1-\pr{X_1X_2}}\\
@@ -327,4 +322,3 @@ The required probability is the conditional probability that both the children a
 	&= \frac{\frac{1}{2}\times\frac{1}{2}}{1- (\frac{1}{2}\times\frac{1}{2})} = \frac{1}{3}
 \end{align}
 \end{enumerate}
-\end{document}
