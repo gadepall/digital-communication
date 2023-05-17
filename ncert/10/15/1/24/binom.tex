@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -321,76 +322,43 @@
 \large
 \subsection*{\huge \textbf{Question}}
 
-A die is thrown twice. What is the probability that
-
-\begin{enumerate}[font=\large\bfseries]
-	\item 5 will not come up either time? 
-	\item 5 will come up at least once?
-\end{enumerate}
 
 \subsection*{\huge \textbf{Solution}}
 
 Let X be the random variable representing the number of 5's that come up in two die throws. Then X follows a binomial distribution as followes :
-\ref{tab:table1}
+\fi
+\ref{tab:ncert/10/15/1/24/table1}
 \begin{table}[h]\centering
-	\input{tables/table.tex}
+	\input{ncert/10/15/1/24/tables/table.tex}
 	\caption{}
-	\label{tab:table1}
+	\label{tab:ncert/10/15/1/24/table1}
 \end{table}	
-
-
-The PMF of X is given by:
+From 
+	\tabref{tab:ncert/10/15/1/24/table1},
+the PMF of $X$ is 
 \begin{align}
-	\pr{X = k} &= \comb{n}{k} \cdot p^{k} \cdot q^{n-k}\\
+	\pr{X = k} &= \comb{n}{k}  p^{k}  q^{n-k}\\
 	&= \comb{2}{k}  \left(\frac{1}{6}\right)^{k}  \left(\frac{5}{6}\right)^{2-k} \qquad \forall k={0,1,2} 
 \end{align}
-
-\noindent The Cumulative Distribution Function (CDF) of X is given by the probability that X is less than or equal to a given value k, for k = 0, 1, 2.\\
-
-The CDF of X can be expressed as:\\
+and the 
+CDF is
 \begin{align}
 	F_{X}(k) &= \pr{X \leq k}
+	= \sum_{i=0}^k\comb{n}{i}p^iq^{n-i}
 \end{align}
-
-\begin{align}
-	\therefore  F_{X}(k) &= \sum_{i=0}^k\comb{n}{i}p^iq^{n-i}
-\end{align}
-
-
-
-\begin{enumerate}[font=\Large\bfseries]
-	
-	\item To find the probability that 5 will not come up either time, we need to find $\pr{X = 0}$. 
+\begin{enumerate}
+	\item 
 	\begin{align} 
-		\pr{X = 0} &= \comb{2}{0} \cdot \left(\frac{1}{6}\right)^{0} \cdot \left(\frac{5}{6}\right)^{2}\\
-		&=\frac{25}{36}
+		\pr{X = 0} = \comb{2}{0}  \left(\frac{1}{6}\right)^{0}  \left(\frac{5}{6}\right)^{2}
+		=\frac{25}{36}
 	\end{align}
-	
-	\noindent $\therefore$ The Probability that 5 will not come up either time is $\left(\frac{25}{36}\right)$\\
-	
-	
-	
-	
-	\item To find the probability that 5 will come up at least once, we need to find $\pr{X \geq 1}$ . 
+	\item 
 	\begin{align} 
-		\pr{X \geq 1} &= 1 - \pr{X \leq 0}\\
-		&=  1 - F_{X}(0)\\
-		&=  1 - \comb{2}{0}  \left(\frac{1}{6}\right)^{0}  \left(\frac{5}{6}\right)^{2}\\
-		&= 1 - \frac{25}{36}\\
-		&= \frac{11}{36}
+		\pr{X \geq 1} &= 1 - \pr{X \leq 0}
+		=  1 - F_{X}(0)\\
+		&= 1 - \frac{25}{36}
+		= \frac{11}{36}
 	\end{align}
-	
-	\noindent $\therefore$ The Probability of rolling a 5 at least once is $\left(\frac{11}{36}\right)$\\
-	
-	
-	
-	
-	
-	
-	
-	
-	
 \end{enumerate}
 
-\end{document}
 
