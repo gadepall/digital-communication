@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined 
  \let\negthickspace\undefined 
  \documentclass[journal,12pt,onecolumn]{IEEEtran} 
@@ -195,12 +196,6 @@
  \renewcommand{\thefigure}{\theenumi} 
  \renewcommand{\thetable}{\theenumi} 
  \textbf{11.16.3.4}: 
- A card is selected from a pack of 52 cards.
- \begin{enumerate}[label=(\alph*)] 
-                 \item How many points are there in the sample space?
-                 \item Calculate the probability that the card is an ace of spades.
-                 \item Calculate the probability that the card is (i) an ace and (ii) black card.
- \end{enumerate}
   \textbf{Solution}:\\
  S is a sample space of given cards , \\
  Let the random variables  $X$,$Y$ and $Z$ denote colour,type and value of the card choosen, where $X$,$Y$ and $Z$ are uniformly distributed r.v's.\\
@@ -211,35 +206,33 @@
 %%  This is a LaTeX2e table fragment exported from Gnumeric.        %%
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \fi
+ See 
+\tabref{tab:ncert/11/16/3/4/r.v_probability}
 \begin{table}[htpb]
 \centering 
 \caption{Random Variable and probability Table}
-\label{tab:r.v_probability}
-\input{tables/table.tex}
+\label{tab:ncert/11/16/3/4/r.v_probability}
+\input{ncert/11/16/3/4/tables/table.tex}
 \end{table}
  \begin{enumerate}[label=(\alph*)] 
-                 \item Since no.of cards in the pack is 52 ,
-                         \begin{align}
-				 n\brak{S} = 52 .
-                         \end{align} 
-                 \item The probability when the card choosen is an ace\brak{Z=1} of spades\brak{Y=1} ,
+                 \item 
                          \begin{align} 
-				 \pr{\brak{Y=1}\brak{Z=1}} &= {\pr{Y=1}}{\pr{Z=1}} \\
-				         &= \brak{\frac{1}{4}}\brak{\frac{1}{13}} \\
-					 &= \frac{1}{52} . 
+				 \pr{Y=1,Z=1} &= \pr{Y=1}\pr{Z=1} 
+				         = \brak{\frac{1}{4}}\brak{\frac{1}{13}} 
+					 = \frac{1}{52}  
                          \end{align} 
                  \item The probability when the card choosen is , 
- \begin{enumerate}[label=(\alph*)]
-		 \item an ace\brak{Z=1}
+ \begin{enumerate}
+		 \item an ace \brak{Z=1}
 			 \begin{align}
 			         \pr{Z = 1} &= \frac{1}{13}.
 	                 \end{align}			 
-		 \item black card\brak{X=1}
+		 \item black card \brak{X=1}
 			 \begin{align}
 			         \pr{X = 1} &= \frac{1}{2}.
 	                 \end{align}			 
 				 
  \end{enumerate}
  \end{enumerate} 
- \end{document}
 
