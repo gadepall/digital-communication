@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -197,196 +197,23 @@ columns=fullflexible
 Suppose that 90 \% of people are right handed. What is the probability that
 at most 6 of a random sample of 10 people are right-
 handed.
-
-\textbf{Solution.}
-\begin{enumerate}
-    \item 
-    \textbf{Gaussian}
-    
-Let $X$ be a Binomial random Variable.
+\fi
+Let 
 \begin{align}
-    X&=Bin(n,p)\\
-    &=Bin(10,0.9)
+	X=\text{Bin}(n,p),\,
+n = 10, \, p = 0.9.
 \end{align}
-The mean $\mu$ of $X$,
+Then, 
 \begin{align}
-    \mu &= n\times p\\
-    &= 9
+	p_{X}\brak{k} &= \comb{n}{k}p^k q^{n-k}
+	\\
+	F_{X}\brak{k} &= \pr{X \le k} = \sum_{t=0}^{k} \comb{n}{t}p^t q^{n-t}
 \end{align}
-The Variance $\sigma^2$ of $X$,
+Hence, the desired probability is 
 \begin{align}
-    \sigma^2 &= n\times p\times (1-p)\\
-    &= 0.9
-\end{align}
-Let,
-\begin{align}
-    Z&=\frac{X-\mu}{\sigma}
-\end{align}
-Now, $Z$ is a random variable with $\mu=0$ and $\sigma^2=1$.
-
-We can calculate the distribution of $Z$ by assuming it be a set of discrete points on the Normal-Distribution.
-
-Note:-The CDF of Z will converge to the normal distribution for large values of $n$.
-
-[Proof on next page]
-
-The Normal-Distribution,
-\begin{align}
-    f(x) = \frac{1}{\sqrt{2\pi}}\times e^{-\frac{x^2}{2}}
-\end{align}
-The Q-function from the Normal-Distribution
-\begin{align}
-    Q(x) &=\pr{Z>x}\\
-    \pr{Z>x}&=\int_{x}^{\infty} \frac{1}{\sqrt{2\pi}}\times e^{-\frac{t^2}{2}} \,dt\\\
-    \label{eq:Q}
-    Q(x)&=\int_{x}^{\infty} \frac{1}{\sqrt{2\pi}}\times e^{-\frac{t^2}{2}} \,dt\
+    \label{eq:ncert/12/13/6/4/Bin}
+    \pr{X \le 6} =F_{X}\brak{6} 
+    = 0.012
 \end{align}
 
-\begin{align}
-    X &< 6.5\\
-    \therefore Z &< \frac{6.5-\mu}{\sigma}\\
-    Z&<-2.63
-\end{align}
-Note:- The additional 0.5 correction term is present.
 
-From \eqref{eq:Q}
-\begin{align}
-\pr{Z<-2.63} &= 1-\pr{Z>-2.63}\\
-    &= 1- Q(-2.63)
-\end{align}
-On Computation,
-\begin{align}
-\pr{Z<-2.63} &= 0.0043
-\end{align}
-\item 
-\textbf{Binomial}
-
-\begin{align}
-    \pr{X=k} &= \comb{n}{k}p^k q^{n-k}\\
-    \pr{X = k} &= \frac{n!}{k!(n-k)!}p^kq^{n-k}\\
-    \pr{X \le k} &= \sum_{t=0}^{k} \comb{n}{t}p^t q^{n-t}
-\end{align}
-For, $k=6$
-\begin{align}
-    \label{eq:Bin}
-    \pr{X \le 6} &= \sum_{t=0}^{6} \comb{n}{t}p^t q^{n-t}
-\end{align}
-From \eqref{eq:Bin}
-\begin{align}
-    \pr{X\le 6} &= 0.012
-\end{align}
-\item 
-\textbf{Conclusion}
-
-As we can see, our approximation has an absolute error of $0.008$ but a relative error of $67.14\%$
-
-The approximation is not very effective when n is small and p is far off from 0.5
-\item 
-\textbf{Proof}
-
-Given that, X is a Binomial Random Variable where n is number of trials, p is probability of success and q is probability of failure.
-
-Let $\mu$ be the mean and $\sigma^2$ be the variance.
-We know that,
-\begin{align}
-    \pr{X=k} &= \comb{n}{k}p^kq^{n-k}\\
-    \mu &= np\\
-    \sigma^2 &= npq
-\end{align}
-Also for large values of n, by Stirling's Approximation.
-\begin{align}
-    n! &\approx n^n e^{-n} \sqrt{2\pi n}
-\end{align}
-Now,
-\begin{align}
-    &\pr{X = k} = \frac{n!}{k!(n-k)!}p^kq^{n-k}\\
-    &\approx \frac{n^n e^{-n} \sqrt{2\pi n}}{k^k e^{-k} \sqrt{2\pi k} (n-k)^{n-k} e^{-(n-k)} \sqrt{2\pi (n-k)}} p^k q^{n-k}\\
-    &= \brak{\frac{np}{k}}^k \brak{\frac{nq}{n-k}}^{n-k} \sqrt{\frac{n}{2\pi k(n-k)}}
-\end{align}
-Let,
-\begin{align}
-    \delta &= k - np\\  
-    k &= np + \delta\\
-    n-k &= nq -\delta
-\end{align}
-Now,
-\begin{align}
-    \ln{\brak{\frac{np}{k}}}&= \ln{\brak{\frac{np}{np+\delta}}}\\
-    &= -\ln{\brak{\frac{np+\delta}{np}}}\\
-    &= -\ln{\brak{1+\frac{\delta}{np}}}
-\end{align}
-Similarly,
-\begin{align}
-    \ln{\brak{\frac{nq}{n-k}}}&= \ln{\brak{\frac{nq}{nq-\delta}}}\\
-    &= -\ln{\brak{\frac{nq-\delta}{nq}}}\\
-    &= -\ln{\brak{1-\frac{\delta}{nq}}}
-\end{align}
-Using,
-\begin{align}
-    \ln{\brak{1+x}} \approx x-\frac{x^2}{2}
-\end{align}
-Now,
-\begin{align}
-    \ln{\brak{\brak{\frac{np}{k}}^k \brak{\frac{nq}{n-k}}^{(n-k)}}}&=-k\ln{\brak{1+\frac{\delta}{np}}}\nonumber\\
-    &-(n-k)\ln{\brak{1-\frac{\delta}{nq}}}\\
-    &=-(\delta + np)\brak{\frac{\delta}{np}-\frac{\delta^2}{2n^2 p^2}}\nonumber\\
-    &-(nq-\delta)\brak{-\frac{\delta}{nq}-\frac{\delta^2}{2n^2q^2}}\\
-    &\approx -\delta \sbrak{1+\frac{\delta}{2np}-1+\frac{\delta}{2nq}}\\
-    &= - \frac{\delta^2}{2npq}\\
-    \therefore \brak{\frac{np}{k}}^k \brak{\frac{nq}{n-k}}^{(n-k)}&=e^{-\frac{\delta^2}{2npq}}
-\end{align}
-Moreover,
-\begin{align}
-    \sqrt{\frac{n}{2\pi k(n-k)}} &= \sqrt{\frac{n}{2\pi (np+\delta)(nq-\delta)}}\\
-    &\approx \sqrt{\frac{1}{2\pi npq}}
-\end{align}
-This holds only when k differs from the mean by a few standard deviations.
-
-Now,
-\begin{align}
-    \pr{X=k} &\approx \sqrt{\frac{1}{2\pi npq}} e^{-\frac{(k-np)^2}{2npq}}
-\end{align}
-
-\begin{align}
-    \pr{X=k} &\approx \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(k-\mu)^2}{2\sigma^2}}
-\end{align}
-Now,
-\begin{align}
-    \pr{a \le X \le b}&= \sum_{t=a}^b \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(k-\mu)^2}{2\sigma^2}}
-\end{align}
-
-Modeling the terms of the summation as area of rectangles of height 1, in the region $(t-0.5,t+0.5)$
-
-We can further approximate the Sum to be the integral,
-\begin{align}
-    \pr{a \le X \le b}&= \int_{a-0.5}^{b+0.5} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(k-\mu)^2}{2\sigma^2}}\,dk\ \\
-    \pr{a^\prime \le Z \le b^\prime}&= \int_{a^\prime-0.5}^{b^\prime+0.5} \frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}\,dz\
-\end{align}
-
-Where,
-\begin{align}
-    Z &= \frac{X-\mu}{\sigma}
-\end{align}
-And $a^\prime$ and $b^\prime$ are corresponding a and b
-\item 
-\textbf{Graphs}
-\end{enumerate}
-\begin{enumerate}
-\begin{figure}[h]
-\begin{subfigure}{0.4\textwidth}
-  \includegraphics[width=\columnwidth]{figs/10.eps}
-  \caption{10 trials}
-  \label{fig:1}
-\end{subfigure}
-\begin{subfigure}{0.4\textwidth}
-  \includegraphics[width=\columnwidth]{figs/1000.eps}
-  \caption{1000 trails}
-  \label{fig:2}
-\end{subfigure}
-\centering
-\caption{A comparison of Binomial and Gaussian}
-\label{fig:set}
-\end{figure}
-\end{enumerate}
-
-\end{document}
