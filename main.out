@@ -18,35 +18,36 @@
 \BOOKMARK [0][-]{chapter.7}{Random Algebra}{}% 18
 \BOOKMARK [1][-]{section.7.1}{Examples}{chapter.7}% 19
 \BOOKMARK [1][-]{section.7.2}{Exercises}{chapter.7}% 20
-\BOOKMARK [0][-]{chapter.8}{Continuous Distributions}{}% 21
-\BOOKMARK [1][-]{section.8.1}{Uniform Random Numbers}{chapter.8}% 22
-\BOOKMARK [1][-]{section.8.2}{Central Limit Theorem}{chapter.8}% 23
-\BOOKMARK [1][-]{section.8.3}{From Uniform to Other}{chapter.8}% 24
-\BOOKMARK [1][-]{section.8.4}{Triangular Distribution}{chapter.8}% 25
-\BOOKMARK [0][-]{chapter.9}{Maximum Likelihood Detection: BPSK}{}% 26
-\BOOKMARK [1][-]{section.9.1}{Maximum Likelihood}{chapter.9}% 27
-\BOOKMARK [0][-]{chapter.10}{Transformation of Random Variables}{}% 28
-\BOOKMARK [1][-]{section.10.1}{Gaussian to Other}{chapter.10}% 29
-\BOOKMARK [1][-]{section.10.2}{Conditional Probability}{chapter.10}% 30
-\BOOKMARK [0][-]{chapter.11}{Bivariate Random Variables: FSK}{}% 31
-\BOOKMARK [1][-]{section.11.1}{Two Dimensions}{chapter.11}% 32
-\BOOKMARK [0][-]{chapter.12}{Exercises}{}% 33
-\BOOKMARK [1][-]{section.12.1}{BPSK}{chapter.12}% 34
-\BOOKMARK [1][-]{section.12.2}{Coherent BFSK}{chapter.12}% 35
-\BOOKMARK [1][-]{section.12.3}{QPSK}{chapter.12}% 36
-\BOOKMARK [1][-]{section.12.4}{M-PSK}{chapter.12}% 37
-\BOOKMARK [1][-]{section.12.5}{Noncoherent BFSK}{chapter.12}% 38
-\BOOKMARK [1][-]{section.12.6}{Craig's Formula and MGF}{chapter.12}% 39
-\BOOKMARK [0][-]{appendix.A}{ Axioms }{}% 40
-\BOOKMARK [1][-]{section.A.1}{Definitions}{appendix.A}% 41
-\BOOKMARK [1][-]{section.A.2}{Boolean Logic}{appendix.A}% 42
-\BOOKMARK [1][-]{section.A.3}{Properties}{appendix.A}% 43
-\BOOKMARK [0][-]{appendix.B}{ Z-transform}{}% 44
-\BOOKMARK [0][-]{appendix.C}{Distributions}{}% 45
-\BOOKMARK [1][-]{section.C.1}{Bernoulli }{appendix.C}% 46
-\BOOKMARK [1][-]{section.C.2}{Binomial Distribution}{appendix.C}% 47
-\BOOKMARK [1][-]{section.C.3}{Uniform Distribution}{appendix.C}% 48
-\BOOKMARK [1][-]{section.C.4}{Triangular Distribution}{appendix.C}% 49
-\BOOKMARK [0][-]{appendix.D}{Central Limit Theorem}{}% 50
-\BOOKMARK [1][-]{section.D.1}{Binomial}{appendix.D}% 51
-\BOOKMARK [0][-]{appendix.E}{Identities}{}% 52
+\BOOKMARK [0][-]{chapter.8}{Markov Chain}{}% 21
+\BOOKMARK [0][-]{chapter.9}{Continuous Distributions}{}% 22
+\BOOKMARK [1][-]{section.9.1}{Uniform Random Numbers}{chapter.9}% 23
+\BOOKMARK [1][-]{section.9.2}{Central Limit Theorem}{chapter.9}% 24
+\BOOKMARK [1][-]{section.9.3}{From Uniform to Other}{chapter.9}% 25
+\BOOKMARK [1][-]{section.9.4}{Triangular Distribution}{chapter.9}% 26
+\BOOKMARK [0][-]{chapter.10}{Maximum Likelihood Detection: BPSK}{}% 27
+\BOOKMARK [1][-]{section.10.1}{Maximum Likelihood}{chapter.10}% 28
+\BOOKMARK [0][-]{chapter.11}{Transformation of Random Variables}{}% 29
+\BOOKMARK [1][-]{section.11.1}{Gaussian to Other}{chapter.11}% 30
+\BOOKMARK [1][-]{section.11.2}{Conditional Probability}{chapter.11}% 31
+\BOOKMARK [0][-]{chapter.12}{Bivariate Random Variables: FSK}{}% 32
+\BOOKMARK [1][-]{section.12.1}{Two Dimensions}{chapter.12}% 33
+\BOOKMARK [0][-]{chapter.13}{Exercises}{}% 34
+\BOOKMARK [1][-]{section.13.1}{BPSK}{chapter.13}% 35
+\BOOKMARK [1][-]{section.13.2}{Coherent BFSK}{chapter.13}% 36
+\BOOKMARK [1][-]{section.13.3}{QPSK}{chapter.13}% 37
+\BOOKMARK [1][-]{section.13.4}{M-PSK}{chapter.13}% 38
+\BOOKMARK [1][-]{section.13.5}{Noncoherent BFSK}{chapter.13}% 39
+\BOOKMARK [1][-]{section.13.6}{Craig's Formula and MGF}{chapter.13}% 40
+\BOOKMARK [0][-]{appendix.A}{ Axioms }{}% 41
+\BOOKMARK [1][-]{section.A.1}{Definitions}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.2}{Boolean Logic}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.3}{Properties}{appendix.A}% 44
+\BOOKMARK [0][-]{appendix.B}{ Z-transform}{}% 45
+\BOOKMARK [0][-]{appendix.C}{Distributions}{}% 46
+\BOOKMARK [1][-]{section.C.1}{Bernoulli }{appendix.C}% 47
+\BOOKMARK [1][-]{section.C.2}{Binomial Distribution}{appendix.C}% 48
+\BOOKMARK [1][-]{section.C.3}{Uniform Distribution}{appendix.C}% 49
+\BOOKMARK [1][-]{section.C.4}{Triangular Distribution}{appendix.C}% 50
+\BOOKMARK [0][-]{appendix.D}{Central Limit Theorem}{}% 51
+\BOOKMARK [1][-]{section.D.1}{Binomial}{appendix.D}% 52
+\BOOKMARK [0][-]{appendix.E}{Identities}{}% 53

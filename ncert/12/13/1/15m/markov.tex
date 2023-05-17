@@ -1,0 +1,236 @@
+\iffalse
+\documentclass[journal,12pt,two column]{IEEEtran}
+%\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage[export]{adjustbox}
+\usepackage{bm}
+\def\inputGnumericTable{} 
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array} 
+\usepackage{longtable} 
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}  
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}                                            %%
+\usepackage{array}                                            %%
+\usepackage{caption} 
+\usepackage{graphicx}
+
+\title{A1110 Assignment 3 \\ 12.13.1.15}
+\author{K.SaiTeja \\ AI22BTECH11014}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+
+\renewcommand{\thetable}{\arabic{table}} 
+\newcommand{\question}{\noindent \textbf{Question: }}	
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\prt}[2]{\ensuremath{P_{#1}^{\left(#2\right)} }}        % own macro for this question
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}      % []
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}         % ()
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}      % {}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\ensuremath{\left\vert#1\right\vert}}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\ensuremath{\left\lVert#1\right\rVert}}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{\ensuremath{E\left[ #1 \right]}}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%
+%not used because document is short:
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+%\numberwithin{table}{section}
+%\numberwithin{equation}{section}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+    %\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+
+%\renewcommand{\thefigure}{\theenumi}
+%\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+\begin{document}
+\maketitle
+\question
+\solution\tableofcontents
+\fi
+\begin{enumerate}
+	\item  See 
+        \tabref{tab:ncert/12/13/1/15m/States}	
+	and 
+        \figref{fig:ncert/12/13/1/15m/ markov_chain}.
+    \begin{table}[ht!]
+        \centering
+    	\input{ncert/12/13/1/15m/tables/table1.tex}
+        \caption{States in Markov Chain}
+        \label{tab:ncert/12/13/1/15m/States}	
+    \end{table}
+\begin{figure}[!ht]
+        \centering
+        \input{ncert/12/13/1/15m/figs/graph1.tex}  
+        \caption{Graph of Markov Chain}
+        \label{fig:ncert/12/13/1/15m/ markov_chain}
+\end{figure}
+\item 
+    The state vector is,   
+    \begin{align}
+        \vec{Q}_n &= \myvec{\prt{0}{n}\\ 
+        			        \prt{1}{n} \\
+        			        \prt{2}{n} \\
+        			        \prt{3}{n} 
+        			        }        
+    \end{align}    
+    The probabilities after one step in time are
+    \begin{align}
+       \prt{0}{n+1} &= \frac{2}{6} \times \prt{0}{n}  \\
+       \prt{1}{n+1} &= \frac{4}{6} \times \prt{0}{n}  \\
+       \prt{2}{n+1} &= \frac{1}{2} \times \prt{1}{n} + 1 \times \prt{2}{n}
+\\
+       \prt{3}{n+1} &= \frac{1}{2} \times \prt{1}{n} + 1 \times \prt{3}{n} 
+    \end{align}
+   \item  
+    The previous equations can be summarized as
+    \begin{align}
+        \vec{Q}_{n+1} &= \vec{P}\vec{Q}_n 
+        \label{eq:ncert/12/13/1/15m/transtition}        
+    \end{align}
+		Where $\vec{P}$ is the transition probability matrix. Its elements are values of $p_{i|j}$
+    \begin{align}
+        \vec{P}= \myvec{\input{ncert/12/13/1/15m/tables/table2.txt}} 
+    \end{align}
+\item 
+     The given condition is that \lq3 occurs at least once\rq. Let the first occurrence of 3 be the initial state $ \vec{Q}_0$.
+    \begin{align}
+        \vec{Q}_0 &= \myvec{ 1 \\ 0 \\ 0 \\ 0 } 
+    \end{align}
+    Using \eqref{eq:ncert/12/13/1/15m/transtition}, further states can be generated.
+    \begin{align}
+        \vec{Q}_1 &= \vec{P} \vec{Q}_0
+            = \myvec{\frac{2}{6} \\[4pt] \frac{4}{6}  \\[4pt] 0 \\ 0}\\
+        \vec{Q}_2 &= \vec{P} \vec{Q}_1 = \vec{P}^{2} \vec{Q}_0 
+            = \myvec{\frac{4}{9}  \\[4pt] \frac{8}{9}  \\[4pt] \frac{5}{24}\\[4pt] \frac{5}{12}} \\   
+        \vdots \\
+        \vec{Q}_n &= \vec{P}^{n} \vec{Q}_0
+    \end{align}
+    \item 
+ Now to find the eigen values, 
+ \begin{align}
+\mydet{\vec{P}-\lambda \vec{I}} &= 0  
+\\
+ \implies \myvec{\input{ncert/12/13/1/15m/tables/table4.txt}} &= 0
+ \\
+	 \implies \lambda\brak{\frac{2}{6} - \lambda}\brak{1 - \lambda^2} &= 0
+	 \\
+	 \text{or, }\lambda &= \frac{2}{6}, 0 , 1 , 1 
+ \end{align}
+ The corresponding eigenvectors are
+\begin{enumerate}
+\item $\lambda = \frac{2}{6}$
+\begin{align}
+\vec{X} &= \myvec{\frac{-2}{3}\\[4pt] \frac{-4}{3}\\[4pt] 1\\[4pt] 1}
+\end{align}
+\item $\lambda = 0$
+\begin{align}
+\vec{X} &= \myvec{0 \\[2pt] -2\\[2pt] 1\\ 1}
+\end{align}
+\item $\lambda = 1$
+\begin{align}
+\vec{X} &= \myvec{0 \\ 0 \\ 1 \\ 0},\, 
+\myvec{0 \\ 0 \\ 0 \\ 1}\\
+\end{align}
+\end{enumerate}
+resulting in the 
+eigenvector matrix
+\begin{align}
+\vec{S} &= \myvec{\input{ncert/12/13/1/15m/tables/table5.txt}}
+\end{align}
+Thus, 
+\begin{align}
+	\vec{P} &= \vec{S}\vec{D}\vec{S}^{-1}
+\end{align}
+Where $\vec{D}$ is eigenvalue matrix
+\begin{align}
+\vec{D} &= \myvec{\input{ncert/12/13/1/15m/tables/table6.txt}}
+\end{align}
+\item
+\begin{align}
+\vec{P}^{n} &= (\vec{S}\vec{D}\vec{S}^{-1})(\vec{S}\vec{D}\vec{S}^{-1}) \dots (\vec{S}\vec{D}\vec{S}^{-1})\\
+\implies  &= \vec{S}\vec{D}^{n}\vec{S}^{-1}\\
+\implies \lim_{n \to \infty}\vec{P}^{n} &= \lim_{n \to \infty}\vec{S}\vec{D}^{n}\vec{S}^{-1}
+\end{align}
+	From 
+        \eqref{eq:ncert/12/13/1/15m/transtition},
+\begin{align}
+\vec{Q}_{n} &= \vec{P}^{n}\vec{Q}_{0}
+\end{align}
+and
+Now,
+\begin{align}
+\vec{\lim_{n \to \infty}\vec{D}^{n}} &= \myvec{\input{ncert/12/13/1/15m/tables/table7.txt}}\\ 
+\implies \vec{\lim_{n \to \infty}\vec{S}\vec{D}^{n}\vec{S}^{-1}} &= \myvec{\input{ncert/12/13/1/15m/tables/table7.txt}} = \vec{\vec{P}^{n}}\\
+\implies \vec{Q}_n &= \myvec{\input{ncert/12/13/1/15m/tables/table7.txt}}\vec{Q}_0\\
+\implies \vec{Q}_n &= \myvec{0 \\ 0 \\ 0 \\ 0} 
+\end{align}
+\item 
+    Probability of the coin showing tails, given that at least one die shows a 3,
+    \begin{align}
+       \lim_{n \to \infty} \prt{3}{n} = 0
+    \end{align}
+   \end{enumerate} 

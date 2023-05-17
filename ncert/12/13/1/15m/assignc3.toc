@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {I}Markov Chain States}{1}{}%
+\contentsline {section}{\numberline {II}States}{1}{}%
+\contentsline {section}{\numberline {III}Markov graph}{1}{}%
+\contentsline {section}{\numberline {IV}Description of Graphs and States}{1}{}%
+\contentsline {section}{\numberline {V}Transition Probability}{1}{}%
+\contentsline {section}{\numberline {VI}Transition Probability Matrix}{2}{}%
+\contentsline {section}{\numberline {VII}Initial Condition and Limiting State}{2}{}%
+\contentsline {section}{\numberline {VIII}Eigen Decomposition}{2}{}%
