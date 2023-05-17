@@ -1,4 +1,3 @@
-\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -255,23 +254,32 @@ CS22BTECH11060
 
 % make the title area
 \maketitle
-\textcolor{cyan}{\textbf{5.)Question:}}
+\textcolor{cyan}{\textbf{5.)Question:}}The probability that a bulb produced by a factory will fuse after 150 days of use
+is $0.05$. Find the probability that out of 5 such bulbs,
+\begin{enumerate}
+\item  none
+\item not more than one
+\item more than one
+\item at least one
+\end{enumerate}
+will fuse after 150 days of use.
 
 \textcolor{cyan}{\textbf{Solution:}}
 Let the \textbf{Probability} of $i$ bulb to fuse after 150 days of use be $\pr{i}$.\\
 Probability of a bulb to fuse after 150 days is =$0.05$
 Probability of one bulb getting fused is independent of another\\
-The parameters of the binomial distribution are
-\fi
 Let\begin{align}
-    p=0.05,\,
-    q=1-p=0.95,\,n = 5.
+    p&=0.05\\
+    q&=1-p=0.95
 \end{align}
-The CDF is
+Let X be a random variable\\
+Let Cumulative Distributive Function be:
+\begin{align} F_X(i)&=\pr{X\leq i}\\
+\pr{X=i}&=\comb{5}{i}p^iq^{5-i}
+\end{align}
 \begin{align}
-F_X(i)=\sum_{r=0}^i\comb{5}{r}p^rq^{5-r}
+ \therefore   F_X(i)=\sum_{r=0}^i\comb{5}{r}p^rq^{5-r}
 \end{align}
-\iffalse
 \begin{align}
    F_X(0)=0.95^5=0.7737809375
 \end{align}
@@ -286,25 +294,87 @@ F_X(2)&= (0.95)^5+ {\comb{5}{1}}\times(0.5)\times(0.95)^4\\
 \begin{align}
     F_X(5)=1
 \end{align}
-\fi
-The desired probabilities are
 \begin{enumerate}
-\item   \begin{align}\label{eq:ncert/12/13/5/5/10}
-    \pr{X=0}=F_X(0) &=0.95^5\\
-\end{align}
-\item 
+\item  Probability that none of the 5 bulbs fuses is: \begin{align}\label{eq:10}
+    \pr{X=0}=F_X(0) \end{align}
+from \eqref{eq:10}
+\begin{align}
+&=0.95^5\\
+&=0.7737809375\end{align}
+\item Probability that not more than one bulb fuses is same as exactly 0 bulb fuses or exactly one bulb fuses:\\
 \begin{align}
     \pr{X\leq1}=F_X(1)=0.9774075
 \end{align}
 
-\item 
+\item Probability that more than one bulb will fuse will be:\\
 
-\begin{align}\label{eq:ncert/12/13/5/5/14}&\pr{1< X\leq 5}=F_X(5)-F_X(1)
-=0.0225925\end{align}
-\item 
- \begin{align}\label{eq:ncert/12/13/5/5/16}&\pr{1\leq X\leq 5}
-    =F_X(5)-F_X(0)
-    = 1-(0.95)^5
+\begin{align}\label{eq:14}&\pr{1< X\leq 5}\\&=F_X(5)-F_X(1)\end{align}
+from \eqref{eq:14}
+
+\begin{align}=0.0225925\end{align}
+\item Probability that at least one bulb is fused is
+ \begin{align}\label{eq:16}&\pr{1\leq X\leq 5}\\
+    &=F_X(5)-F_X(0)
 \end{align}
-%
+from \eqref{eq:16}
+\begin{align}
+    = 1-(0.95)^5
+= 0.2262190625
+\end{align}
+
+
 \end{enumerate}
+\newpage
+
+%\tableofcontents
+
+
+%\renewcommand{\theequation}{\theenumi}
+
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+
+%\begin{abstract}
+%book provides an introduction to optimization  based on the NCERT textbooks from Class 6-12.  Links to sample Python codes are available in the text.  
+%\end{abstract}
+
+
+%\renewcommand{\theequation}{\theenumi}
+%\subsection{Problem}
+
+%\section{Chemistry}
+%\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
+%\numberwithin{equation}{enumi}
+%\numberwithin{equation}{enumi}
+
+
+		
+
+\end{document}
+
