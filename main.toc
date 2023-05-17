@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {2.2}Exercises}{33}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Random Variables}{39}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Conditional Probability}{49}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Distributions}{77}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Discrete Distributions}{77}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Bernoulli}{77}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Multinomial}{78}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Uniform}{85}{section.5.3}%
@@ -19,7 +19,7 @@
 \contentsline {chapter}{\numberline {7}Random Algebra}{113}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Examples}{113}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Exercises}{119}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Random Numbers}{125}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Continuous Distributions}{125}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Uniform Random Numbers}{125}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Central Limit Theorem}{132}{section.8.2}%
 \contentsline {section}{\numberline {8.3}From Uniform to Other}{136}{section.8.3}%
