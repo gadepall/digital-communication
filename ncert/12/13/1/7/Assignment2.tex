@@ -290,17 +290,25 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
-\textbf{12.13.1.7\underline{Question:}}Two coins are tossed once,where\\
-(a)E : tail appears on one coin.        F : one coin shows head\\
-(b)E : no tail appears.                 F : no head appears\\
+\textbf{12.13.1.7\underline{Question:}}
+\begin{enumerate}
+ \item Two coins are tossed once,where\\
+     (a) E : tail appears on one coin.        F : one coin shows head\\
+     (b) E : no tail appears.  F : no head appears        
+\end{enumerate}      
 \textbf{{\underline{Answer:}}}\\(a) 1\\(b) 0\\
 \textbf{{\underline{Solution:}}}
 Here two coins are tossed once. So the possible outcomes are \{HH,HT,TH,TT\}\\
 \begin{table}[htbp]
-\label{tab:1}
+\centering
 \input{tables/table1}
+\label{tab:table1}
+\caption{Random Variables}
 \end{table}
-(a) For event E : Tail appears on one coin.\\
+\begin{enumerate}
+    \item 
+
+(a)  For event E : Tail appears on one coin.\\
 Possibilities for E: One coin shows a tail and the other shows a head
 Using random variables, we can express event E as:
 E: ($X_1$= 1 and $X_2$ = 1) \\
@@ -309,8 +317,10 @@ Possibilities for F:  One coin shows a head and the other shows a tail\\
 Using random variables, we can express event F as:
 F:  ($X_1$= 1 and $X_2$ = 1) \\
 \begin{table}[htbp]
-\label{tab:2}
+\centering
 \input{tables/table2}
+\label{tab:table2}
+\caption{Case(a)}
 \end{table}
 To calculate $\Pr(E|F)$, we need to find $\Pr(E \cap F)$ and $\Pr(F)$.
 $\Pr(E \cap F)$ is the probability that both E and F occur, which corresponds to the case where one coin shows a tail and the other shows a head:
@@ -320,13 +330,13 @@ $\Pr(E \cap F)$ is the probability that both E and F occur, which corresponds to
               &=\frac{2}{4}\\
               &=\frac{1}{2} \\
 \Pr(F) &=\Pr(X_2 = 1  and X_1 = 1) \\
-      &=\frac{2}{4}  \\
+      &=\frac{2}{4} \\
        &=\frac{1}{2}\\
 \Pr(E|F)&=\frac{\Pr(E \cap F)}{\Pr(F)}\\
         &=\frac{\frac{1}{2}}{\frac{1}{2}}\\
 \Pr(E|F)&=1
 \end{align}
-(a) For event E : No tail appears.\\
+(b)  For event E : No tail appears.\\
 Possibilities for E: Both coins shows head\\
 Using random variables, we can express event E as:
 E: ($X_2$ = 2) \\
@@ -335,8 +345,10 @@ Possibilities for F:Both coins shows tail \\
 Using random variables, we can express event F as:
 F:  ($X_1$= 2) \\
 \begin{table}[htbp]
-\label{tab:3}
+\centering
 \input{tables/table3}
+\label{tab:table3}
+\caption{Case(b)}
 \end{table}
 To calculate $\Pr(E|F)$, we need to find $\Pr(E \cap F)$ and $\Pr(F)$.
 $\Pr(E \cap F)$ is the probability that both E and F occur, which here doesn't corresponds to any case as both the coins either shows head or tail:\\
@@ -349,7 +361,7 @@ $\Pr(E \cap F)$ is the probability that both E and F occur, which here doesn't c
  \Pr(E|F)&=0
 \end{align}
 
-
+\end{enumerate}
 
 \end{document}
 
