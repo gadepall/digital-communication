@@ -1,0 +1,176 @@
+\def\inputGnumericTable{}
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+       \usepackage{multirow}
+\usepackage{adjustbox}
+
+
+
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}                                
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+
+\newcommand{\solution}{ \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\let\vec\mathbf
+
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+Assignment 2
+%	}
+}
+\author{ Gitanshu Arora % <-this % stops a space
+}
+% make the title area
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\subsection*{\textbf{\underline{Problem 11.16.3.5(exemplar)}:-}}
+
+A die is loaded in such a way that each odd number is twice as likely to occur as
+each even number. Find P(G), where G is the event that a number greater than
+3 occurs on a single roll of the die.
+
+\subsection*{\textbf{\underline{Solution}:-}}
+
+\begin{table}[h]
+\input{tables/table1.tex}
+\label{tab:parameters}
+\caption{Parameters and their Description}
+\end{table}
+
+Let $m$ be any natural number such that $m\in\{1,2,3\}$.\\ 
+% Let \pr{X=2m} be $p$,\\
+% $\implies\pr{X=2m-1}=2p,\ where\ 1\leq m \leq3$
+\begin{align}
+\pr{X=k}= \begin{cases} 
+      2p, & if\ k=2m-1 \\
+      p, & if\ k=2m 
+   \end{cases}
+\end{align}
+Since $1\leq X \leq6$,
+\begin{align}
+&\sum_{i=1}^{6}{\pr{X=i}} = 1\\
+\implies &\sum_{i=1}^{3}{\pr{X=2i-1}} + \sum_{i=1}^{3}{\pr{X=2i}} = 1\\
+\implies &\sum_{i=1}^{3}{2p} + \sum_{i=1}^{3}{p} = 1\\
+\implies &6p+3p = 1\\
+\implies &9p = 1\\
+\implies &p = \frac{1}{9}
+\end{align}
+Let $F_X (k)$ be the cumulative distribution function such that,\\
+\begin{align}
+    F_X (k) = \pr{X\leq k}
+\end{align}
+If $k = 2m-1$,
+\begin{align}
+    F_X (k) = &\sum_{i=1}^{2m-1}{\pr{X=i}}
+\\
+    &= \sum_{i=1}^{m}{\pr{X=2i-1}} + \sum_{i=1}^{m-1}{\pr{X=2i}}\\
+    &= \sum_{i=1}^{m}{2\left(\frac{1}{9}\right)} + \sum_{i=1}^{m-1}{\left(\frac{1}{9}\right)}\\
+    &= \frac{2m}{9} + \frac{m-1}{9}\\
+    &= \frac{3m-1}{9}\\
+    &= \frac{3k+1}{18}
+\end{align}
+If $k = 2m$,
+\begin{align}
+    F_X (k) = &\sum_{i=1}^{2m-1}{\pr{X=i}}
+\\
+    &= \sum_{i=1}^{m}{\pr{X=2i-1}} + \sum_{i=1}^{m}{\pr{X=2i}}\\
+    &=\sum_{i=1}^{m}{2\left(\frac{1}{9}\right)} + \sum_{i=1}^{m}{\left(\frac{1}{9}\right)}\\
+    &= \frac{2m}{9} + \frac{m}{9}\\
+    &= \frac{m}{3}\\
+    &= \frac{k}{6}
+\end{align}
+So,
+\begin{align}
+&F_X (k)= \begin{cases} 
+      \frac{3k+1}{18}, & if\ k=2m-1 \\
+      \frac{k}{6}, & if\ k=2m 
+   \end{cases}
+\end{align}\\
+\begin{align}
+  \pr{G} &= \pr{X>3}\\
+  &=F_X (6) - F_X (3)\\
+  &=1 - \frac{3(3)+1}{18}\\
+  &= 1 - \frac{5}{9}\\
+  &= \frac{4}{9}
+  \end{align}
+\end{document}
+
+
