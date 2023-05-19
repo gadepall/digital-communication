@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt]{IEEEtran}
@@ -291,69 +292,68 @@ columns=fullflexible
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
-\textbf{11.16.3.7: Question}. A fair coin is tossed four times, and a person win Re 1 for each head and lose Rs 1.50 for each tail that turns up.\\
-From the sample space calculate how many different amounts of money you can have after four tosses and the probability of having each of these amounts.\\
-
-\textbf{Solution}:According to the question: 
+\textbf{11.16.3.7: Question}. 
+\textbf{Solution}:
+According to the question: 
+\fi
+The input parameters are listed in 
+\tabref{tab:ncert/11/16/3/7/1}.
 \begin{table}[htbp]
-\label{table:1}
-\input{tables/table1.tex}
+\input{ncert/11/16/3/7/tables/table1.tex}
 \caption{Given Information}
+\label{tab:ncert/11/16/3/7/1}
 \end{table}
-
-The amount of money the person will have after n tosses is:
+The amount of money the person will have after $n$ tosses is
 \begin{align}
-	A = (X\times 1) - ((n-X)\times 1.50)
+	Y = (X\times 1) - ((n-X)\times 1.50)
+	 = 2.5X - 1.5n
+	\label{eq:ncert/11/16/3/7/1}
 \end{align}
+The pmf and CDF of $X$ are 
 \begin{align}
-	\label{eq:1}
-	A = (2.5X) - (1.5n)
+	\label{eq:ncert/11/16/3/7/2}
+	p_X(k) &= \comb{n}{k} (0.5)^{k} (0.5)^{n-k} 
+	= \comb{n}{k} (0.5)^{n} 
+	\\
+	\label{eq:ncert/11/16/3/7/3}
+	F_X\brak{k} &= \pr{X\le k} = \sum_{i=0}^{i=k}{\comb{n}{i}\brak{\frac{1}{2}}^n}
 \end{align}
-The probability of getting a profit/loss obtained in \eqref{eq:1} is:
+The CDF of $Y$ is 
 \begin{align}
-	\label{eq:2}
-	\pr{X=k} &= P_X(k) = \comb{n}{k} (0.5)^{k} (0.5)^{n-k} 
-	&= \comb{n}{k} (0.5)^{n} 
-\end{align}
-Let $F_X\brak{k}$ denote the cumulative distribution function of $X$:\\
-\begin{align}
-	\label{eq:3}
-	F_X\brak{k} = \pr{X\le k} &= \sum_{i=0}^{i=k}{\comb{n}{i}\brak{\frac{1}{2}}^n}
-\end{align}
-Let $F_A\brak{k}$ denote the cumulative distribution function of $A$:\\
-\begin{align}
-	F_A(k) &= \pr{A\le k}\\
+	F_Y(k) &= \pr{A\le k}\\
         &=\pr{2.5X-1.5n \le k}\\
         &=\pr{X \le \frac{k+1.5n}{2.5}} \\
 	&=F_X\brak{\frac{k+1.5n}{2.5}}
+        = \sum_{i=0}^{i=\lfloor \frac{k+1.5n}{2.5} \rfloor}{\comb{n}{i}\brak{\frac{1}{2}}^n}
 \end{align}
-By \eqref{eq:3}
+from \eqref{eq:ncert/11/16/3/7/3}.
+Consequently,
 \begin{align}
-        &= \sum_{i=0}^{i=\lfloor \frac{k+1.5n}{2.5} \rfloor}{\comb{n}{i}\brak{\frac{1}{2}}^n}
-\end{align}
-$$
-p_A\brak{k}=
+p_Y\brak{k}=
 \begin{cases}
 \comb{n}{\frac{k+1.5n}{2.5}}\brak{\frac{1}{2}}^n,&\frac{k+1.5n}{2.5}\in I \text{ and }0\le \frac{k+1.5n}{2.5} \le n\\
 0,&\text{otherwise}
 \end{cases}
-$$\\
-Now, for 4 tosses as given in the question the different amount of money and its probability = \{4,$\frac{1}{16}$\}, \{1.5,$\frac{1}{4}$\}, \{-1,$\frac{3}{8}$\}, \{-3.5,$\frac{1}{4}$\}, \{-6,$\frac{1}{16}$\}.\\
+\end{align}
+See Figs. 
+		\ref{fig:ncert/11/16/3/7/fig3},
+		\ref{fig:ncert/11/16/3/7/fig1}
+		and
+		\ref{fig:ncert/11/16/3/7/fig2}.
+		for the distribution of $Y$.
 \begin{figure}[h]
-		\includegraphics[width=\linewidth]{figs/fig3.png}
+		\includegraphics[width=\columnwidth]{ncert/11/16/3/7/figs/fig3.png}
 		\caption{Plot of amount gained/lost}
-		\label{fig:fig3}
-\end{figure}\\
+		\label{fig:ncert/11/16/3/7/fig3}
+\end{figure}
 \begin{figure}[h]
-		\includegraphics[width=\linewidth]{figs/fig1.png}
+		\includegraphics[width=\columnwidth]{ncert/11/16/3/7/figs/fig1.png}
 		\caption{CDF of A}
-		\label{fig:fig1}
-\end{figure}\\
+		\label{fig:ncert/11/16/3/7/fig1}
+\end{figure}
 \begin{figure}[h]
-		\includegraphics[width=\linewidth]{figs/fig2.png}
+		\includegraphics[width=\columnwidth]{ncert/11/16/3/7/figs/fig2.png}
 		\caption{PMF of A}
-		\label{fig:fig2}
-\end{figure}\\
+		\label{fig:ncert/11/16/3/7/fig2}
+\end{figure}
 
-
-\end{document}
