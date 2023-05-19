@@ -1,3 +1,4 @@
+\iffalse
 \def\inputGnumericTable{}
 \let\negmedspace\undefined
 \let\negthickspace\undefined
@@ -103,74 +104,45 @@ Assignment 2
 
 \subsection*{\textbf{\underline{Problem 11.16.3.5(exemplar)}:-}}
 
-A die is loaded in such a way that each odd number is twice as likely to occur as
-each even number. Find P(G), where G is the event that a number greater than
-3 occurs on a single roll of the die.
 
 \subsection*{\textbf{\underline{Solution}:-}}
-
+\fi
 \begin{table}[h]
-\input{tables/table1.tex}
-\label{tab:parameters}
+\input{exemplar/11/16/3/5/tables/table1.tex}
 \caption{Parameters and their Description}
+\label{tab:exemplar/11/16/3/5/parameters}
 \end{table}
-
-Let $m$ be any natural number such that $m\in\{1,2,3\}$.\\ 
+See
+\tabref{tab:exemplar/11/16/3/5/parameters}
+for the input parameters.
 % Let \pr{X=2m} be $p$,\\
 % $\implies\pr{X=2m-1}=2p,\ where\ 1\leq m \leq3$
+Then,
 \begin{align}
-\pr{X=k}= \begin{cases} 
+	p_{X}(k)= \begin{cases} 
       2p, & if\ k=2m-1 \\
       p, & if\ k=2m 
    \end{cases}
 \end{align}
 Since $1\leq X \leq6$,
 \begin{align}
-&\sum_{i=1}^{6}{\pr{X=i}} = 1\\
-\implies &\sum_{i=1}^{3}{\pr{X=2i-1}} + \sum_{i=1}^{3}{\pr{X=2i}} = 1\\
-\implies &\sum_{i=1}^{3}{2p} + \sum_{i=1}^{3}{p} = 1\\
-\implies &6p+3p = 1\\
-\implies &9p = 1\\
-\implies &p = \frac{1}{9}
+	\sum_{i=1}^{6}{\pr{X=i}} &= 1\\
+\implies 6p+3p &= 1\\
+\implies p &= \frac{1}{9}
 \end{align}
-Let $F_X (k)$ be the cumulative distribution function such that,\\
+The CDF
 \begin{align}
-    F_X (k) = \pr{X\leq k}
-\end{align}
-If $k = 2m-1$,
-\begin{align}
-    F_X (k) = &\sum_{i=1}^{2m-1}{\pr{X=i}}
-\\
-    &= \sum_{i=1}^{m}{\pr{X=2i-1}} + \sum_{i=1}^{m-1}{\pr{X=2i}}\\
-    &= \sum_{i=1}^{m}{2\left(\frac{1}{9}\right)} + \sum_{i=1}^{m-1}{\left(\frac{1}{9}\right)}\\
-    &= \frac{2m}{9} + \frac{m-1}{9}\\
-    &= \frac{3m-1}{9}\\
-    &= \frac{3k+1}{18}
-\end{align}
-If $k = 2m$,
-\begin{align}
-    F_X (k) = &\sum_{i=1}^{2m-1}{\pr{X=i}}
-\\
-    &= \sum_{i=1}^{m}{\pr{X=2i-1}} + \sum_{i=1}^{m}{\pr{X=2i}}\\
-    &=\sum_{i=1}^{m}{2\left(\frac{1}{9}\right)} + \sum_{i=1}^{m}{\left(\frac{1}{9}\right)}\\
-    &= \frac{2m}{9} + \frac{m}{9}\\
-    &= \frac{m}{3}\\
-    &= \frac{k}{6}
-\end{align}
-So,
-\begin{align}
-&F_X (k)= \begin{cases} 
+F_X (k)= \begin{cases} 
       \frac{3k+1}{18}, & if\ k=2m-1 \\
       \frac{k}{6}, & if\ k=2m 
    \end{cases}
-\end{align}\\
+\end{align}
+Thus, 
 \begin{align}
-  \pr{G} &= \pr{X>3}\\
-  &=F_X (6) - F_X (3)\\
-  &=1 - \frac{3(3)+1}{18}\\
-  &= 1 - \frac{5}{9}\\
-  &= \frac{4}{9}
+  \pr{G} &= \pr{X>3}
+  =F_X (6) - F_X (3)\\
+  &=1 - \frac{3(3)+1}{18}
+  = \frac{4}{9}
   \end{align}
-\end{document}
 
 
