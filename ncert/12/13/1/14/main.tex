@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -150,56 +150,49 @@ columns=fullflexible
 \maketitle
 
 \textbf{Exercise 12.13.1.14}
-Given that 2 numbers appearing on throwing two dice are different. Find the probability of the event ‘ the sum of numbers on the dice is 4’ .
 
 \textbf{Solution.} Let $X$ and $Y$ be two random variables.
-
+\fi
+See Tables
+    \ref{tab:ncert/12/13/1/14/0}
+    and
+    \ref{tab:ncert/12/13/1/14/1}.
 \begin{table}[h]
-    \label{tab:0}
-    \input{tables/table1.tex}
+    \input{ncert/12/13/1/14/tables/table1.tex}
     \caption{Random Variables for Die Rolls}
+    \label{tab:ncert/12/13/1/14/0}
    \end{table}
-
+\begin{table}[h]
+  \input{ncert/12/13/1/14/tables/table2.tex}
+  \caption{Events A and B}
+  \label{tab:ncert/12/13/1/14/1}
+ \end{table}
+%
 \begin{align}
     \pr{\cond{X+Y = 4}{X \neq Y}} &= \frac{\pr{X+Y = 4,X \neq Y}}{\pr{X\neq Y}}
+  \label{eq:ncert/12/13/1/14/-1}
 \end{align}
-
-Probability of an event $E$, written as $\pr{E}$
-\begin{align}
-\pr{E}=\frac{\text{Number of outcomes favourable to $E$}}{\text{Total Number of possible outcomes }}
-\end{align}
-
+%
 \begin{align}
     \pr{X\neq Y} &= 1 - \pr{X = Y}\\
-    &= 1 - \frac{6}{36}\\
-    &= \frac{5}{6}
+    &= 1 - \frac{6}{36}
+    = \frac{5}{6}
+  \label{eq:ncert/12/13/1/14/0}
 \end{align}
-
-Let $A$ and $B$ be two events.
-\begin{table}[h]
-  \label{tab:1}
-  \input{tables/table2.tex}
-  \caption{Events A and B}
- \end{table}
+%
 \begin{align}
-    A &= A(B + B^{\prime})\\
-       &= AB + AB^{\prime}\\
-       \therefore \pr{A} &= \pr{AB} + \pr{AB^{\prime}}\\
        \pr{AB}  &= \pr{A}-\pr{AB^{\prime}}
+  \label{eq:ncert/12/13/1/14/1}
 \end{align}
-
-
-
- 
+If
 \begin{align}
- X &= Y\\
- X+Y &= 4\\
- X &= Y =2\\
+	X &= Y,\,
+ X+Y = 4\\
+\implies X &= Y =2\\
   \therefore  \pr{AB^{\prime}} &= \pr{X+Y = 4,X = Y} = \frac{1}{36}
+  \label{eq:ncert/12/13/1/14/2}
 \end{align}
-
-
-
+Since,
 \begin{align}
 \pr{X+Y = n} &= 
 \begin{cases}
@@ -210,23 +203,24 @@ Let $A$ and $B$ be two events.
 \frac{13-n}{36} & 7 < n \le 12
 \\
 0 & n > 12
-\end{cases}
+\end{cases},
+\\
+	\pr{A} &= \pr{X+Y = 4} = \frac{4-1}{36} = \frac{1}{12}
 \end{align}
-
-\begin{align}
-    \therefore \pr{A} = \pr{X+Y = 4} = \frac{4-1}{36} = \frac{1}{12}
-\end{align}
-
-
+and from 
+  \eqref{eq:ncert/12/13/1/14/2}
 \begin{align}
     \pr{AB} = \pr{X + Y = 4 , X \ne Y} &= \frac{1}{12} - \frac{1}{36}\\
                         &= \frac{1}{18}
 \end{align}
-
+Consequently, 
+from 
+  \eqref{eq:ncert/12/13/1/14/-1}
+  and 
+  \eqref{eq:ncert/12/13/1/14/0}
 \begin{align}
   \pr{\cond{X+Y = 4}{X \neq Y}} &= \frac{\brak{\frac{1}{18}}}{\brak{\frac{5}{6}}}\\
-    \therefore \pr{\cond{X+Y = 4}{X \neq Y}} &= \frac{1}{15}
+\implies \pr{\cond{X+Y = 4}{X \neq Y}} &= \frac{1}{15}
 \end{align}
-\end{document}
 
 
