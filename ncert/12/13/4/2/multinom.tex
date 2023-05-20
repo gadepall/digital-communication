@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -18,16 +19,6 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-\def\inputGnumericTable{}
-\usepackage[latin1]{inputenc}
-\usepackage{fullpage}
-\usepackage{color}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{calc}
-\usepackage{multirow}
-\usepackage{hhline}
-\usepackage{ifthen}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -81,6 +72,8 @@
 
 %\usepackage{wasysym}
 %\newcounter{MYtempeqncnt}
+\newcommand{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand{\comb}[1][-1mu]{\permcomb[#1]{C}}
 \DeclareMathOperator*{\Res}{Res}
 %\renewcommand{\baselinestretch}{2}
 \renewcommand\thesection{\arabic{section}}
@@ -186,19 +179,14 @@ columns=fullflexible
 
 \vspace{3cm}
 
-\title{
-%	\logo{
-Assignment-1
-
-\Large{AI1110: Probability and Random Variables}
-
-Indian Institute of Technology, Hyderabad
-%	}
+\title{ 
+	\textbf{Assignment 1} \\
+	\large \textbf{AI1110}: Probability and Random Variables\\
+	Indian Institute of Technology Hyderabad
 }
-\author{ P. Satvik
-
-EE22BTECH11212
-}	
+\author{CS22BTECH11061\\
+	Waghmare Aditya Abhaykumar
+	}	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
@@ -268,107 +256,39 @@ EE22BTECH11212
 
 \newpage
 
-%\tableofcontents
+
 
 \bigskip
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-%\renewcommand{\theequation}{\theenumi}
 
-%\begin{abstract}
-%%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
-%
-%\end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
-
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%Cooperative diversity, decode and forward, piecewise linear
-%\end{IEEEkeywords}
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-%\IEEEpeerreviewmaketitle
-
-Question:
-
-One card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting
-\begin{enumerate}
-\item A king of red colour 
-\item A face card 
-\item A red face card
-\item The jack of hearts
-\item A spade
-\item The queen of diamonds
-
-\end{enumerate}
-
-Solution:
-
-Consider 3 random variables $X$, $Y$ and $Z$, which represent the Colour, Class and Value of each card respectively.
-
-The pmfs of each random variable are:
+\textbf{12.13.4.2 }
+\textbf{Solution: }Possible values of X are as follows -
 \begin{align}
-p_X(i) = \frac{1}{2} \; \forall \;  i \in [0,1]
-\\ p_Y(i) = \frac{1}{4} \; \forall \; i \in [1,4]
-\\ p_Z(i) = \frac{1}{13} \; \forall \; i \in [1,13]
+	X = \{ 0, 1, 2 \}
 \end{align}
-The cdf of Z is defined by,
-\begin{align}
-F_Z(z)&=\pr{Z \le z}=\sum_{i=1}^{z} \pr{Z=i}\nonumber
-\\ &= z \times \pr{Z=1} = \frac{z}{13}  \label{eq:cdf}
-\end{align}
-Also, the random variable pairs X,Z and Y,Z are independent.
-\begin{table}[h]
-	\input{tables/Table}
-	\caption{Values of X,Y,Z for each event}
-	\label{tab:Table 1}
+
+
+A random variable is an assignment of real values to each outcome of the experiment. Therefore, X is an random variable.
+
+
+\fi
+See
+	\tabref{tab:ncert/12/13/4/2/Parameters}.
+\begin{table}[htbp]
+	\centering
+	\input{ncert/12/13/4/2/tables/table.tex}
+	\caption{Parameters Used}
+	\label{tab:ncert/12/13/4/2/Parameters}
 \end{table}
-
-\begin{enumerate}
-\item Probability of drawing a King of Red colour:
+Let $N = R + B$ and $n = r + b$.
+Then
 \begin{align}
-\pr{X=1,Z=3} &= \pr{X=1} \times \pr{Z=3}\nonumber
-\\&= \frac{1}{2} \times \frac{1}{13} = \frac{1}{26}
-\end{align}
-\item Probability of drawing a Face Card:
-\begin{align}
-\pr{1 \le Z \le 3} = F_Z(3) = \frac{3}{13} (From \eqref{eq:cdf})
-\end{align}
-\item Probability of drawing a Red Face Card:
-\begin{align}
-\pr{X=1, 1 \le Z \le 3} &= \pr{X=1} \times F_Z(3)\nonumber
-\\&= \frac{1}{2} \times \frac{3}{13} = \frac{3}{26} (From \eqref{eq:cdf})
-\end{align}
-\item Probability of drawing the Jack of Hearts:
-\begin{align}
-\pr{Y=3, Z=1} &= \pr{Y=3} \times \pr{Z=1}\nonumber 
-\\&= \frac{1}{4} \times \frac{1}{13} = \frac{1}{52}
-\end{align}
-\item Probability of drawing a Spade:
-\begin{align}
-\pr{Y=4} = \frac{1}{4}
+	\pr{r, b} &= \frac{ \comb{R}{r} \comb{B}{b} }{\comb{R + B}{r + b}}
+	\\
+	\implies p_{X}(b) &= \frac{ \comb{5}{2-b} \comb{2}{b} }{\comb{7}{2}}
+\\
+	&= \frac{ \comb{5}{2-b} \comb{2}{b}}{21}
 \end{align}
 
-\item Probability of drawing the Queen of Diamonds:
-\begin{align}
-\pr{Y=1, Z=2} &= \pr{Y=1} \times \pr{Z=2}\nonumber 
-\\&= \frac{1}{4} \times \frac{1}{13} = \frac{1}{52}
-\end{align}
-\end{enumerate}
-\end{document}
