@@ -149,6 +149,7 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\cond}[2]{#1\middle|#2}
 %\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
@@ -269,9 +270,9 @@ ROLLNO: cs22btech11041% <-this % stops a space
 		\textbf{12.13.1.11 Question: }A fair die is rolled. Consider events E = \{1,3,5\}, F = \{2,3\} and G = \{2,3,4,5\} Find
 		
 	\begin{enumerate}	
-	 \item $\Pr(E|F)$ and $\Pr(F|E)$
-	 \item $\Pr(E|G)$ and $\Pr(G|E)$
-	 \item $\Pr((E+F)|G)$ and $\Pr((EF)|G)$\\
+	 \item $\pr{\cond{E}{F}}$ and $\pr{\cond{F}{E}}$
+	 \item $\pr{\cond{E}{G}}$ and $\pr{\cond{G}{E}}$
+	 \item $\pr{\cond{E+F}{G}}$ and $\pr{\cond{EF}{G}}$\\
 	 \end{enumerate}
 	 	 	 	 
 		\textbf{\underline{Solution}:} Sample space when a die is rolled = \{1,2,3,4,5,6\}.
@@ -292,70 +293,70 @@ ROLLNO: cs22btech11041% <-this % stops a space
 		\begin{enumerate}
 		\item
 		\begin{align}
-		\Pr(E|F) &= \frac{\Pr(EF)}{\Pr(F)}
+		\pr{\cond{E}{F}} &= \frac{\pr{EF}}{\pr{F}}
 		\end{align}
 		table \ref{tab:table1},
 		\begin{align}
-		\Pr(E|F) &= \frac{1/6}{1/3}\\
-		\pr{E|F} &= 1/2
+		\pr{\cond{E}{F}} &= \frac{\frac{1}{6}}{\frac{1}{3}}\\
+		\pr{\cond{E}{F}} &= \frac{1}{2}
 		\end{align}
 		\item
 		\begin{align}
-		\Pr(F|E) &= \frac{\Pr(EF)}{\Pr(E)}
+		\pr{\cond{F}{E}} &= \frac{\pr{EF}}{\pr{E}}
 		\end{align}
         table \ref{tab:table1},
         \begin{align}
-        \Pr(F|E) &= \frac{1/6}{1/2}\\
-        \Pr(F|E) &= 1/3
+        \pr{\cond{F}{E}} &= \frac{\frac{1}{6}}{\frac{1}{2}}\\
+        \pr{\cond{F}{E}} &= \frac{1}{3}
         \end{align}
 		\item
 		\begin{align}
-		\Pr(E|G) &= \frac{\Pr(EG)}{\Pr(G)}
+		\pr{\cond{E}{G}} &= \frac{\pr{EG}}{\pr{G}}
 		\end{align}
         table \ref{tab:table1},
         \begin{align}
-        \Pr(E|G) &= \frac{1/3}{2/3}\\
-        \Pr(E|G) &= 1/2
+        \pr{\cond{E}{G}} &= \frac{\frac{1}{3}}{\frac{2}{3}}\\
+        \pr{\cond{E}{G}} &= \frac{1}{2}
         \end{align}
         \item
         \begin{align}
-        \Pr(G|E) &= \frac{\Pr(EG)}{\Pr(E)}
+        \pr{\cond{G}{E}} &= \frac{\pr{EG}}{\pr{E}}
         \end{align}
         table \ref{tab:table1},
         \begin{align}
-        \Pr(G|E) &= \frac{1/3}{1/2}\\
-        \Pr(G|E) &= 2/3
+        \pr{\cond{G}{E}} &= \frac{\frac{1}{3}}{\frac{1}{2}}\\
+        \pr{\cond{G}{E}} &= \frac{2}{3}
         \end{align}
         \item
         \begin{align}
-		\Pr((E+F)|G) &= \frac{\Pr((E+F)G)}{\Pr(G)}\\
-		\Pr((E+F)G) &= \Pr((EG)+(FG))\\
-		\Pr((E+F)G) &= \Pr(EG)+\Pr(FG)-\Pr((EF)G)
+		\pr{\cond{E+F}{G}} &= \frac{\pr{(E+F)G}}{\pr{G}}\\
+		\pr{(E+F)G} &= \pr{(EG)+(FG)}\\
+		\pr{(E+F)G} &= \pr{EG}+\pr{FG}-\pr{(EF)G}
 		\end{align}
 		table \ref{tab:table1},
 		\begin{align}
-		\Pr((E+F)G) &= 1/3 + 1/3 - 1/6\\
-		\Pr((E+F)G) &= 1/2\\
-		\Pr((E+F)|G) &= \frac{1/2}{2/3}\\
-		\Pr((E+F)|G) &= 3/4
+		\pr{(E+F)G} &= \frac{1}{3} + \frac{1}{3} - \frac{1}{6}\\
+		\pr{(E+F)G} &= \frac{1}{2}\\
+		\pr{\cond{E+F}{G}} &= \frac{\frac{1}{2}}{\frac{2}{3}}\\
+		\pr{\cond{E+F}{G}} &= \frac{3}{4}
 		\end{align}
 		\item
 		\begin{align}
-		\Pr((EF)|G) &= \frac{\Pr(EFG)}{\Pr(G)}
+		\pr{\cond{EF}{G}} &= \frac{\pr{EFG}}{\pr{G}}
 		\end{align}
         table \ref{tab:table1},
         \begin{align}
-        \Pr((EF)|G) &= \frac{1/6}{2/3}\\
-        \Pr((EF)|G) &= 1/4
+        \pr{\cond{EF}{G}} &= \frac{\frac{1}{6}}{\frac{2}{3}}\\
+        \pr{\cond{EF}{G}} &= \frac{1}{4}
 		\end{align}
 		\textbf{\underline{Answer}:}		
 		\begin{align}
-		\Pr(E|F) = 1/2,\\
-		\Pr(F|E) = 1/3,\\
-		\Pr(E|G) = 1/2,\\
-		\Pr(G|E) = 2/3,\\
-		\Pr((E+F)|G) = 3/4,\\
-		\Pr((EF)|G) = 1/4
+		\pr{\cond{E}{F}} &= \frac{1}{2},\\
+		\pr{\cond{F}{E}} &= \frac{1}{3},\\
+		\pr{\cond{E}{G}} &= \frac{1}{2},\\
+		\pr{\cond{G}{E}} &= \frac{2}{3},\\
+		\pr{\cond{E+F}{G}} &= \frac{3}{4},\\
+		\pr{\cond{EF}{G}} &= \frac{1}{4}
 		\end{align}
 %	sno	&name\\
 %	1	&snoopy\\
