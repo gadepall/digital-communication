@@ -19,7 +19,10 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-\usepackage{caption}
+\usepackage{amsmath}
+\newcommand*\textfrac[2]{
+  \frac{\text{#1}}{\text{#2}}
+}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -73,6 +76,8 @@
 
 %\usepackage{wasysym}
 %\newcounter{MYtempeqncnt}
+\newcommand{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand{\comb}[1][-1mu]{\permcomb[#1]{C}}
 \DeclareMathOperator*{\Res}{Res}
 %\renewcommand{\baselinestretch}{2}
 \renewcommand\thesection{\arabic{section}}
@@ -99,7 +104,7 @@ columns=fullflexible
 %breaklines=true
 %}
 
-
+\begin{document}
 %
 
 
@@ -117,9 +122,11 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
-\newcommand\tab[1][1cm]{\hspace*{#1}}
+
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
+
+
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -157,30 +164,42 @@ columns=fullflexible
 %\makeatletter
 %\@addtoreset{figure}{problem}
 %\makeatother
+
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
+
+
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
 %\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
 %     \def\rightbox#1{\makebox[0in][r]{#1}}
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-\vspace{3cm}
+
 \title{
-%	\logo{
-AI-1110 Assignment-1
-%	}
+Assignment 3 
+
+\Large{AI1110: Probability and Random Variables}
+
+Indian Institute of Technology Hyderabad
+
 }
-\author{ NAME: M Bhavesh Chowdary\\
-ROLLNO: cs22btech11041% <-this % stops a space	
-}
+\author{ 
+Ashwin Agrawal
+
+CS22BTECH11009
+% <-this % stops a space	
+}	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
+
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -194,6 +213,7 @@ ROLLNO: cs22btech11041% <-this % stops a space
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
+
 %\author{<-this % stops a space
 %\thanks{}}
 %}
@@ -214,6 +234,9 @@ ROLLNO: cs22btech11041% <-this % stops a space
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
+
+
+
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
@@ -224,20 +247,31 @@ ROLLNO: cs22btech11041% <-this % stops a space
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
-\begin{document}
+
+
+
 % make the title area
 \maketitle
+
 \newpage
+
 %\tableofcontents
+
 \bigskip
+
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
+
 %\begin{abstract}
 %%\boldmath
 %In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
@@ -249,84 +283,50 @@ ROLLNO: cs22btech11041% <-this % stops a space
 % then you can use LaTeX's standard command \boldmath at the very start
 % of the abstract to achieve this. Many IEEE journals frown on math
 % in the abstract anyway.
+
 % Note that keywords are not normally used for peerreview papers.
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-%\IEEEpeerreviewmaketitle
-%\renewcommand{\theequation}{\theenumi}
-%\subsection{Problem}
-%\section{Chemistry}
-%\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-		\textbf{12.13.1.11 Question: }
-	 	 	 	 
-		\textbf{\underline{Solution}:} Sample space when a die is rolled = \{1,2,3,4,5,6\}.
-		%We have E = \{1,3,5\}, F = \{2,3\} and G = \{2,3,4,5\}. So, P(E) = $3/6$, P(F) = $2/6$ and P(G) = $4/6.$
-		%\begin{align}
-		%\implies P(E) = 1/2\\
-		%\implies P(F) = 1/3\\
-		%\implies P(G) = 2/3
-		%\end{align}	
-	\fi	
-		\begin{table}[htbp]
-		\centering
-		\input{ncert/12/13/1/11/tables/Table1.tex}
-		\caption{From given data}
-		\label{tab:ncert/12/13/1/11/table1}
-		\end{table}
-	See 	
-		\tabref{tab:ncert/12/13/1/11/table1}.
-		\begin{enumerate}
-		\item
-		\begin{align}
-			\pr{\cond{E}{F}} = \frac{\Pr(EF)}{\Pr(F)}
-		 = \frac{1/6}{1/3}
-		 = 1/2
-		\end{align}
-		\item
-		\begin{align}
-		\Pr(F|E) = \frac{\Pr(EF)}{\Pr(E)}
-         = \frac{1/6}{1/2}
-         = 1/3
-        \end{align}
-		\item
-		\begin{align}
-		\Pr(E|G) = \frac{\Pr(EG)}{\Pr(G)}
-        = \frac{1/3}{2/3}
-        = 1/2
-        \end{align}
-        \item
-        \begin{align}
-        \Pr(G|E) = \frac{\Pr(EG)}{\Pr(E)}
-        = \frac{1/3}{1/2}
-        = 2/3
-        \end{align}
-        \item
-		Since 
-        \begin{align}
-		\pr{(E+F)G} &= \pr{(EG)+(FG)}= \Pr(EG)+\Pr(FG)-\Pr(EFG),
-		\\
-		 &= \frac{1}{3} + \frac{1}{3} - \frac{1}{6}
-		 = \frac{1}{2}
-		 \\
-\implies 		\Pr((E+F)|G) &= \frac{\Pr((E+F)G)}{\Pr(G)}
-		 = \frac{1/2}{2/3}
-		 = 3/4
-		\end{align}
-		\item
-		\begin{align}
-		\Pr((EF)|G) &= \frac{\Pr(EFG)}{\Pr(G)}
-         = \frac{1/6}{2/3}
-			= \frac{1}{4}
-		\end{align}
-
-\end{enumerate}
+\textbf{10.15.1.25}
+ \textbf{Question:}
+  \textbf{Solution:}
+  Let us define the random variables X and Y: 
+\fi 
+See 
+    \tabref{tab:ncert/10/15/1/25/0}.
+   \begin{table}[h]
+    \input{ncert/10/15/1/25/tables/table.tex}
+	   \caption{}
+    \label{tab:ncert/10/15/1/25/0}
+   \end{table}
+Since
+\begin{align} 
+  X &\sim Bin(n,p),
+	p_{X}(i) = \comb{n}{i} \times p^i \times (1-p)^{n-i} = \comb{2}{i} \times \frac{1}{2^2}
+\end{align}	
+$Y$ is uniform with pmf
+\begin{align}
+	p_Y(i) = \frac{1}{6},i=1,2,3,4,5,6
+\end{align}
+  % 
+    \begin{enumerate}
+      \item 
+	      \begin{align}
+        \label{eq:ncert/10/15/1/25/ 6}
+		      \pr{X=2} &= \comb{2}{2} \times \frac{1}{2^2} = \frac{1}{4}
+	\\
+        \label{eq:ncert/10/15/1/25/ 7}
+		      \pr{X=0} &= \comb{2}{0} \times \frac{1}{2^2} = \frac{1}{4}
+		      \\
+        \label{eq:ncert/10/15/1/25/ 8}
+		      \pr{X=1} &= \comb{2}{1} \times \frac{1}{2^2} = \frac{1}{2}
+      \end{align}
+Thus, the probabilities are not equal to $\frac{1}{3}$.
+      Hence, the statement is false.
+      \item 
+      \begin{align}
+	      \pr{Y\in \cbrak{1,3,5}} =  \frac{1}{2}
+      \end{align}
+    Hence, the statement is true.
+\end{enumerate} 
