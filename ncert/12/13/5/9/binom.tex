@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -259,44 +260,30 @@ columns=fullflexible
 %\IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Question[12.13.5.9]:}On a multiple choice examination with three possible answers for each of the five questions, what is the probability that a candidate would get four or more correct answers just by guessing$?$
-
-\underline{\noindent\solution}
+\textbf{Question[12.13.5.9]:}\underline{\noindent\solution}
 Let $X$ be the number of correct answers that the candidate gets just by guessing.
 \begin{align}
 X=bin(n,p)
 \end{align}
 Where,\\
+\fi
+See 
  \begin{table}[H]
   \centering
-  \fontsize{12pt}{20pt}\selectfont
-  \input{/home/aditya/Desktop/Latex/assign 3/table.tex}
+%  \fontsize{12pt}{20pt}\selectfont
+  \input{ncert/12/13/5/9/tables/table.tex}
   \caption{The binomial random variable,it's parameters and their values}
-  \label{tab:Table 1}
+  \label{tab:ncert/12/13/5/9/Table 1}
  \end{table}
-The probability mass function for candidate getting k correct answers just by guessing:
+ The pmf and CDF are
 \begin{align}
-p_X(k)&=\pr{X=k}\\
-&=\comb{n}{k}\times p^k\times (1-p)^{(n-k)}\\
-&=\comb{5}{k}\times \brak{\frac{1}{3}}^k\times \brak{1-\frac{1}{3}}^{(5-k)}\\
-&=\comb{5}{k}\times \brak{\frac{1}{3}}^k\times \brak{\frac{2}{3}}^{(5-k)}\\
-&=\comb{5}{k}\times\brak{\frac{2}{3}}^5\times\frac{1}{2^k}
+p_X(k)&=\comb{5}{k}\times\brak{\frac{2}{3}}^5\times\frac{1}{2^k}
+\\
+F_X(k)&=\brak{\frac{2}{3}}^5\times\brak{\sum_{i=0}^{k} \comb{5}{i}\times\frac{1}{2^i}}           
 \end{align}
-The Cdf for the following pmf:
+The desired probability is
 \begin{align}
-F_X(k)&=p_X(0)+p_X(1)+\ldots+p_X(k)\\
-&=\comb{5}{0}\times\brak{\frac{2}{3}}^5\times\frac{1}{2^0}+\comb{5}{1}\times\brak{\frac{2}{3}}^5\times\frac{1}{2^1}+\ldots+\comb{5}{k}\times\brak{\frac{2}{3}}^5\times\frac{1}{2^k}\\
-&=\brak{\frac{2}{3}}^5\times\brak{\sum_{i=0}^{k} \comb{5}{i}\times\frac{1}{2^i}}           
+\pr{X\ge4}&
+=1-F_X(3)
+=\frac{11}{243}
 \end{align}
-Then, the probability that the candidate gets four or more correct answers just by guessing is:
-\begin{align}
-\pr{X\ge4}&=1-\pr{X\le3}\\
-&=1-F_X(3)\\
-&=1-\brak{\frac{2}{3}}^5\times\brak{\sum_{i=0}^{3} \comb{5}{i}\times\frac{1}{2^i}}\\
-&=1-\brak{\frac{2}{3}}^5\times\brak{\comb{5}{0}\times\frac{1}{2^0}+\comb{5}{1}\times\frac{1}{2^1}+\comb{5}{2}\times\frac{1}{2^2}+\comb{5}{3}\times\frac{1}{2^3}}\\
-&=1-\brak{\frac{2}{3}}^5\times\brak{1+\frac{5}{2}+\frac{5}{2}+\frac{5}{4}}\\
-&=1-\frac{32}{243}\times\frac{29}{4}\\
-&=\frac{11}{243}
-\end{align}
-$\therefore$ The probability that a candidate would get four or more correct answers just by guessing is $\frac{11}{243}$ . 
-\end{document}
