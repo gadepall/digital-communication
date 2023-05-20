@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -301,35 +302,21 @@ columns=fullflexible
 \begin{document}
 \maketitle
 \textbf{12.13.5.15 Question :}
-The probability that a student is not a swimmer is $\frac{1}{5}$ .Then the probability that out of five students, four are swimmers 
-
-\begin{enumerate}
-    \item $\comb{5}{4}\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:1} \\
-    \item $\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:2}\\
-    \item \label{3}$\comb{5}{1}\frac{1}{5}\brak{\frac{4}{5}}^{4}$\\
-    \item None of these
-\end{enumerate}
 \textbf{Solution:}
-Given,
+\fi
+See 
+	\tabref{tab:ncert/12/13/5/15/Table1}.
 \begin{table}[h]
-	\input{tables/table.tex}
+	\input{ncert/12/13/5/15/tables/table.tex}
 	\caption{Given Information}
-	\label{tab:Table1}
+	\label{tab:ncert/12/13/5/15/Table1}
 \end{table}
-
-  \  X : be number of swimmers 
- 
-As picking a student is Bernoulli trial
-
-So, X has binomial distribution
+The pmf of $X$ is
 \begin{equation}
 p_{X}{(k)} = \comb{n}{k}p^{k}q^{n-k}
 \end{equation}
-Probability that out of five students, four are swimmers is $p_{X}{(4)}$
+and the desired probability is
 \begin{align}
-p_{X}{(4)} &= \comb{5}{4}\brak{\frac{4}{5}}^{4}\brak{\frac{1}{5}}^{5-4}\\
-        &=\comb{5}{4}\brak{\frac{4}{5}}^{4}\frac{1}{5}\\
-        &=\comb{5}{1}\frac{1}{5}\brak{\frac{4}{5}}^{4}\  \brak{\comb{5}{4}=\comb{5}{1}}
+p_{X}{(4)} = \comb{5}{4}\brak{\frac{4}{5}}^{4}\brak{\frac{1}{5}}^{5-4}
 \end{align}
-Hence, option \ref{item:1} and \ref{item:2}both are correct
-\end{document}
+Hence, option \ref{item:12/13/5/15/1} is correct.
