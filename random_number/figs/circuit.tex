@@ -1,0 +1,26 @@
+        \begin{tikzpicture}
+         
+         \draw             
+             (2,4) node[arduino] (arduino1) {}
+             (15,4) node[Vaman] (test){}
+             (arduino1.Rx) to (5,7) to [R] (7,7) to [R](9.5,7)
+             (9.5,7) node[ground]{}  
+             (7,7) to (7,8) to (12,8) to (12,7) to (test.Rx)
+             (arduino1.Tx) to (5,6) to [R] (7,6) to [R](9.5,6)
+             (9.5,6) node[ground]{}  
+             (7,6) to (7,5) to (12,5) to (12,6) to (test.Tx)
+             %(arduno1.D13) to(6,7) to [R](6,3) to [leDo](6,-0.9)             
+             (arduino1.GND) to(test.GND)
+             (arduino1.3V) to (test.3V)
+             (arduino1.RST) node[ground]{}
+             (12.6,3) to (12.6,2.5) node[ground]{}
+         ;
+         
+         \node[align=left] at (6,7.5) {1K $\Omega$};
+         \node[align=left] at (6,6.5) {1K $\Omega$};
+         \node[align=left] at (8.5,6.5) {2K $\Omega$};
+         \node[align=left] at (8.5,7.5) {2K $\Omega$};
+         %\node[align=left] at (7.2,1) {LED};
+             
+    \end{tikzpicture}
+

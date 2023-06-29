@@ -1,0 +1,38 @@
+
+
+\begin{circuitikz}
+    % XOR gate
+    \draw (-1,6) node[xor port, scale=-1] (xor) {\scalebox{-1}[-1]{XOR}};
+
+    % Flip-flops
+    \draw (0,4) node[flipflop, flipflop def={t1=D, t6=Q,  c2=1}] (ff1) {FF1};
+    \draw (3,4) node[flipflop, flipflop def={t1=D, t6=Q,  c2=1}] (ff2) {FF2};
+    \draw (6,4) node[flipflop, flipflop def={t1=D, t6=Q,  c2=1}] (ff3) {FF3};
+    \draw (9,4) node[flipflop, flipflop def={t1=D, t6=Q,  c2=1}] (ff4) {FF4};
+
+% Clock input
+\draw (-2,2) node[circ] (clock) {};
+\draw (clock) -- ++(10,0) coordinate (clock_top);
+
+% Synchronous clock lines
+\draw (ff1.pin 2) -- ++(0,-2) coordinate (clock_ff1);
+\draw (ff2.pin 2) -- ++(0,-2) coordinate (clock_ff2);
+\draw (ff3.pin 2) -- ++(0,-2) coordinate (clock_ff3);
+\draw (ff4.pin 2) -- ++(0,-2) coordinate (clock_ff4);
+
+
+
+\node[left] at (clock) {Clock};
+
+
+
+    % Connections
+    \draw (ff1.pin 6) -- (ff2.pin 1) node[midway, above] {};
+    \draw (ff2.pin 6) -- (ff3.pin 1) node[midway, above] {};
+    \draw (ff3.pin 6) -- (ff4.pin 1) node[midway, above] {};
+    \draw (ff1.pin 6) |- ($(xor.in 1) - (0,0)$) -- (xor.in 1) node[midway, above] {};
+
+    \draw (ff4.pin 6) |- (xor.in 2) node[midway, above] {};
+    \draw (xor.out) -- (ff1.pin 1) node[midway, above] {};
+\end{circuitikz}
+

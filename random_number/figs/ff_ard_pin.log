@@ -1,0 +1,236 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.20)  16 MAY 2023 01:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ff_ard_pin.tex
+(./ff_ard_pin.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen139
+\ar@mcellbox=\box50
+\extrarowheight=\dimen140
+\NC@list=\toks18
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip52
+\LTright=\skip53
+\LTpre=\skip54
+\LTpost=\skip55
+\LTchunksize=\count194
+\LTcapwidth=\dimen141
+\LT@head=\box52
+\LT@firsthead=\box53
+\LT@foot=\box54
+\LT@lastfoot=\box55
+\LT@gbox=\box56
+\LT@cols=\count195
+\LT@rows=\count196
+\c@LT@tables=\count197
+\c@LT@chunks=\count198
+\LT@p@ftn=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count199
+\calc@Bcount=\count266
+\calc@Adimen=\dimen142
+\calc@Bdimen=\dimen143
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count267
+\calc@Cskip=\skip58
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip59
+\multirow@cntb=\count268
+\multirow@dima=\skip60
+\bigstrutjot=\dimen144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count269
+\l__pdf_internal_box=\box57
+)
+(./ff_ard_pin.aux)
+\openout1 = `ff_ard_pin.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count270
+\scratchdimen=\dimen145
+\scratchbox=\box58
+\nofMPsegments=\count271
+\nofMParguments=\count272
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count273
+\MPscratchDim=\dimen146
+\MPnumerator=\count274
+\makeMPintoPDFobject=\count275
+\everyMPtoPDFconversion=\toks21
+)
+\gnumericTableWidth=\skip61
+\gnumericTableWidthComplete=\skip62
+\gnumericMultiRowLength=\skip63
+\gnumericColA=\skip64
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 160.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 160.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 160.
+\gnumericColB=\skip65
+\gnumericColC=\skip66
+\gnumericColD=\skip67
+\gnumericColE=\skip68
+\gnumericColF=\skip69
+\gnumericColG=\skip70
+\gnumericColH=\skip71
+\gnumericColI=\skip72
+\gnumericColJ=\skip73
+\gnumericColK=\skip74
+\gnumericColL=\skip75
+\gnumericColM=\skip76
+\gnumericColN=\skip77
+\gnumericColO=\skip78
+
+Overfull \hbox (6.58707pt too wide) in paragraph at lines 274--274
+ \OT1/cmr/m/n/12 CLOCK 
+ []
+
+
+Overfull \hbox (2.29427pt too wide) in paragraph at lines 317--317
+ \OT1/cmr/m/n/12 Ar- 
+ []
+
+
+Overfull \hbox (13.72192pt too wide) in paragraph at lines 317--317
+ \OT1/cmr/m/n/12 duino| 
+ []
+
+
+Overfull \hbox (8.49976pt too wide) in paragraph at lines 346--346
+ \OT1/cmr/m/n/12 7474| 
+ []
+
+
+Overfull \hbox (15.83719pt too wide) in paragraph at lines 364--364
+ \OT1/cmr/m/n/12 CLK1| 
+ []
+
+
+Overfull \hbox (15.83719pt too wide) in paragraph at lines 366--366
+ \OT1/cmr/m/n/12 CLK2| 
+ []
+
+
+Overfull \hbox (8.49976pt too wide) in paragraph at lines 378--378
+ \OT1/cmr/m/n/12 7474| 
+ []
+
+
+Overfull \hbox (15.83719pt too wide) in paragraph at lines 396--396
+ \OT1/cmr/m/n/12 CLK1| 
+ []
+
+
+Overfull \hbox (15.83719pt too wide) in paragraph at lines 398--398
+ \OT1/cmr/m/n/12 CLK2| 
+ []
+
+
+Overfull \hbox (8.49976pt too wide) in paragraph at lines 410--410
+ \OT1/cmr/m/n/12 7447| 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./ff_ard_pin.aux) ) 
+Here is how much of TeX's memory you used:
+ 1517 strings out of 478287
+ 24687 string characters out of 5849288
+ 333748 words of memory out of 5000000
+ 19741 multiletter control sequences out of 15000+600000
+ 472302 words of font info for 38 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,10n,47p,207b,190s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on ff_ard_pin.pdf (1 page, 25087 bytes).
+PDF statistics:
+ 18 PDF objects out of 1000 (max. 8388607)
+ 10 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
