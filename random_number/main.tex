@@ -1,0 +1,98 @@
+\iffalse
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage[english]{babel}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{import}
+\usepackage{booktabs}
+\usepackage{circuit}%%Importing Packing circiut.sty created for circuit
+\def\inputGnumericTable{}
+\usepackage{color}                                            
+    \usepackage{array}                                            
+    \usepackage{longtable}                                        
+    \usepackage{calc}                                             
+    \usepackage{multirow}                                         
+    \usepackage{hhline}                                           
+    \usepackage{ifthen}
+\usepackage{array}
+\usepackage{amsmath}  
+\usepackage{circuitikz}
+\usepackage{parallel,enumitem}
+\usepackage{listings}
+\lstset{
+language=tex,
+frame=single,
+breaklines=true
+}
+ 
+\begin{document}
+\fi
+%\subsection{Random Number Genration using Shift Registers}
+\subsection{Components}
+%\begin{table}[!h]
+%\centering
+\input{random_number/figs/components.tex}
+
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item Generate the CLOCK signal using the 555 timer circuit as shown in the figure \ref{fig:1}
+\begin{figure}[!ht]
+\includegraphics[width=7cm, height=6cm]{random_number/figs/555.png}
+\label{fig:1}
+\end{figure}	
+	
+\item Connect the CLOCK output of 555 timer circuit to CLOCK signal of D-Flip flops, change the resistor value to 1M$\Omega$		
+\item Now make the cicuit for shift registers uisng 4 D-Flip flops (by using two 7474 IC's) and one X-OR gate (7486 IC) as shown in figure \ref{fig:2}. Pin out for 7474 IC is shown in figure \ref{fig:7447}
+\begin{figure}
+\centering
+\subimport{random_number/figs/}
+{circuit1.tex}
+\caption{Circuit Connections}
+\label{fig:2}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+
+\includegraphics[width=11cm, height=6cm]{random_number/figs/IC7474.png}
+\label{fig:7474}
+
+\end{center}
+\end{figure}
+\item Connect the output of each D-flip flop to Decoder IC (7447 IC), The pin out of 7447 IC is shown in figure \ref{fig:7447}
+\begin{figure}[!ht]
+\begin{center}
+\resizebox {\columnwidth} {!} {
+\input{random_number/figs/7447.tex}
+}
+\end{center}
+\caption{}
+\label{fig:7447}
+\end{figure}
+\item As per the pinout of IC 7474 [2,12] pins of both IC's need to connected to the [7,1,2,6] of decoder IC respectively
+\item Make connections between the seven segment display in Fig\ref{fig:sevenseg} and the 7447 IC in Fig.\ref{table:7447_disp} as shown in Table 2.1
+\begin{table}[!ht]
+\centering
+\input{random_number/figs/7447_disp.tex}
+\caption{}
+\label{table:7447_disp}
+\end{table}
+\begin{figure}[!ht]
+\begin{center}
+\resizebox {0.3\columnwidth} {!} {
+\input{random_number/figs/sevenseg.tex}
+}
+\end{center}
+\caption{}
+\label{fig:sevenseg}
+\end{figure}
+\item Additionally make conections like Vcc and GNG to every IC as per the respective IC pinout for IC's 7474,7447,7486.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,143 @@
+\NeedsTeXFormat{LaTeX2e}[2014/08/24]
+\ProvidesPackage{circuit}
+  [2023/04/11 v0.01 LaTeX package for my own purpose]
+
+\usepackage[utf8]{inputenc}
+\usepackage[american, siunitx]{circuitikz}
+
+\pgfdeclareshape{arduino}{
+    \anchor{center}{\pgfpointorigin} % within the node, (0,0) is the center
+    \anchor{text} % this is used to center the text in the node
+    {\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+    
+    % Pin Assignments
+    
+    \savedanchor\ardunos{\pgfpoint{2.4cm}{2cm}} % Pin D12
+    \anchor{Tx}{\ardunos}
+    \savedanchor\ardunot{\pgfpoint{2.4cm}{3cm}} % Pin D13
+    \anchor{Rx}{\ardunot}
+    \savedanchor\ardunok{\pgfpoint{2.4cm}{-1.5cm}} % Pin D4
+    \anchor{RST}{\ardunok}
+    \savedanchor\ardunog{\pgfpoint{2.4cm}{-3.5cm}} % Pin D0
+    \anchor{GND}{\ardunog}
+    \savedanchor\ardunoh{\pgfpoint{2.4cm}{-3cm}} % Pin D1
+    \anchor{3V}{\ardunoh}
+    
+    \foregroundpath{ % Border and Pin Names are drawn here
+    
+        % Container
+        \pgfsetlinewidth{0.5pt}
+        \pgfpathrectanglecorners{\pgfpoint{2cm}{4cm}}{\pgfpoint{-2cm}{-4cm}}
+        \pgfusepath{draw}
+        
+        
+        % Tx and Rx Pins
+        \pgfpathmoveto{\pgfpoint{2cm}{2cm}}
+        \pgfpathlineto{\pgfpoint{2.4cm}{2cm}}
+        \pgfpathmoveto{\pgfpoint{2cm}{3cm}}
+        \pgfpathlineto{\pgfpoint{2.4cm}{3cm}}
+        \pgfusepath{draw}
+        
+        % RST Pins
+        \pgfpathmoveto{\pgfpoint{2cm}{-1.5cm}}
+        \pgfpathlineto{\pgfpoint{2.4cm}{-1.5cm}}
+        \pgfusepath{draw}
+        
+        % GND Pin
+        \pgfpathmoveto{\pgfpoint{2cm}{-3.5cm}}
+        \pgfpathlineto{\pgfpoint{2.4cm}{-3.5cm}}
+        \pgfpathmoveto{\pgfpoint{2cm}{-3cm}}
+        \pgfpathlineto{\pgfpoint{2.4cm}{-3cm}}
+        \pgfusepath{draw}
+
+        % Board Name
+        \pgftext[bottom,at={\pgfpoint{0cm}{1.6cm}}]{\normalsize Arduino}
+        \pgftext[bottom,at={\pgfpoint{-0.25cm}{1.15cm}}]{\normalsize UNO}
+        
+
+        % Tx and Rx Pin Names
+        \pgftext[center,at={\pgfpoint{1.6cm}{2cm}}]{\footnotesize Tx}
+        \pgftext[center,at={\pgfpoint{1.6cm}{3cm}}]{\footnotesize Rx}
+        
+        % RST Pin Names
+        \pgftext[center,at={\pgfpoint{1.6cm}{-1.5cm}}]{\footnotesize RST}
+        
+        % GND Pin Name
+        \pgftext[center,at={\pgfpoint{1.6cm}{-3.5cm}}]{\footnotesize GND}
+        \pgftext[center,at={\pgfpoint{1.6cm}{-3cm}}]{\footnotesize 3.3V}
+        
+    }
+}
+\pgfdeclareshape{Vaman}{
+    \anchor{center}{\pgfpointorigin} % within the node, (0,0) is the center
+    \anchor{text} % this is used to center the text in the node
+    {\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+    
+    % Pin Assignments
+    \savedanchor\ardunou{\pgfpoint{-2.4cm}{2cm}} % Pin AREF
+    \anchor{Tx}{\ardunou}
+    \savedanchor\ardunov{\pgfpoint{-2.4cm}{3cm}} % Pin RST
+    \anchor{Rx}{\ardunov}
+
+    \savedanchor\ardunoe{\pgfpoint{-2.4cm}{-1.5cm}} % Pin A1
+    \anchor{EN}{\ardunoe}
+    \savedanchor\ardunof{\pgfpoint{-2.4cm}{-1cm}} % Pin A0
+    \anchor{0}{\ardunof}
+    
+    \savedanchor\ardunoa{\pgfpoint{-2.4cm}{-3.5cm}} % Pin A5
+    \anchor{GND}{\ardunoa}
+    \savedanchor\ardunob{\pgfpoint{-2.4cm}{-3cm}} % Pin A4
+    \anchor{3V}{\ardunob}
+       
+    \foregroundpath{ % Border and Pin Names are drawn here
+    
+        % Container
+        \pgfsetlinewidth{0.5pt}
+        \pgfpathrectanglecorners{\pgfpoint{2cm}{4cm}}{\pgfpoint{-2cm}{-4cm}}
+        \pgfusepath{draw}
+        
+        % Tx, Rx Pins
+        \pgfpathmoveto{\pgfpoint{-2cm}{2cm}}
+        \pgfpathlineto{\pgfpoint{-2.4cm}{2cm}}
+        \pgfpathmoveto{\pgfpoint{-2cm}{3cm}}
+        \pgfpathlineto{\pgfpoint{-2.4cm}{3cm}}
+        \pgfusepath{draw}
+
+        % EN and 0 Pins
+        \pgfpathmoveto{\pgfpoint{-2cm}{-1.5cm}}
+        \pgfpathlineto{\pgfpoint{-2.4cm}{-1.5cm}}
+        \pgfpathmoveto{\pgfpoint{-2cm}{-1cm}}
+        \pgfpathlineto{\pgfpoint{-2.4cm}{-1cm}}
+        \pgfusepath{draw}
+        
+        % GND Pin
+        \pgfpathmoveto{\pgfpoint{-2cm}{-3.5cm}}
+        \pgfpathlineto{\pgfpoint{-2.4cm}{-3.5cm}}
+        \pgfpathmoveto{\pgfpoint{-2cm}{-3cm}}
+        \pgfpathlineto{\pgfpoint{-2.4cm}{-3cm}}
+        \pgfusepath{draw}
+
+        % Board Name
+        \pgftext[bottom,at={\pgfpoint{0cm}{1.6cm}}]{\normalsize VAMAN}
+        \pgftext[bottom,at={\pgfpoint{-0.25cm}{1.10cm}}]{\normalsize LC}
+        
+        
+        % Tx and Rx Pin Names
+        \pgftext[center,at={\pgfpoint{-1.5cm}{2cm}}]{\footnotesize Tx}
+        \pgftext[center,at={\pgfpoint{-1.6cm}{3cm}}]{\footnotesize Rx}
+
+        % EN and 0 Pin Names
+        \pgftext[center,at={\pgfpoint{-1.6cm}{-1.5cm}}]{\footnotesize EN}
+        \pgftext[center,at={\pgfpoint{-1.6cm}{-1cm}}]{\footnotesize 0}
+        
+        % GND Pin Name
+        \pgftext[center,at={\pgfpoint{-1.6cm}{-3.5cm}}]{\footnotesize GND}
+        \pgftext[center,at={\pgfpoint{-1.6cm}{-3cm}}]{\footnotesize 3.3V}
+        
+        
+    }
+}
+
+\endinput
+%%
+%% End of file `mypackage.sty'.
