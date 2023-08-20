@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {2.2}Exercises}{37}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Random Variables}{43}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Examples}{43}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Exercises}{54}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Exercises}{55}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Conditional Probability}{57}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Discrete Distributions}{83}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Bernoulli}{83}{section.5.1}%
