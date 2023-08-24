@@ -1,0 +1,178 @@
+\iffalse
+\documentclass[journal,11pt,twocolumn]{IEEEtran}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\renewcommand\thetable{\arabic{table}}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\begin{document}
+\parindent 0px
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\let\vec\mathbf
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+\title{Probability Assignment}
+\author{EE22BTECH11022-Garikapati Sai Harshith}
+\maketitle
+\bigskip
+
+Question: Find $P(E|F)$ for
+\begin{enumerate}
+\item$E$: tail appears on one coin.\\
+   $F$: head appears on one coin.
+\item$E$: no tail appears.\\
+    $F$: no head appears.
+\end{enumerate}
+\fi
+\solution 
+The random variables $X_1$ and $X_2$ are shown in Table \ref{tab:rvdef}.
+\begin{table}[!ht]
+\centering
+\input{ncert/12/13/1/7a/tables/table.tex}
+\caption{Definition of $X_1$ and $X_2$.}
+\label{tab:rvdef}
+\end{table}\\
+    Since the coins are fair.
+\begin{align}
+P_{X_1X_2}(k,m)=\frac{1}{4}
+\label{eq:12.13.1.7,1}
+\end{align}
+In \eqref{eq:12.13.1.7,1}, $k,m \in \cbrak{0,1}$. So, total four different k,m combinations.
+    \begin{enumerate}
+        \item $E$: Here one coin is tail and other is head. We are required to find $\pr{X_1+X_2=1}$. Thus, from \eqref{eq:12.13.1.7,1}.
+        \begin{align}
+        \pr{E}&=\pr{X_1+X_2=1}\\
+        &=\pr{X_1=0,\ X_2=1}+\pr{X_1=1,\ X_2=0}\\
+        &=\frac{1}{2}
+        \end{align}
+        $F$: Here one coin is head and other is tail. We are required to find $\pr{X_1+X_2=1}$. Thus, from \eqref{eq:12.13.1.7,1}.
+        \begin{align}
+        \pr{F}&=\pr{X_1+X_2=1}\\
+        &=\pr{X_1=0,\ X_2=1}+\pr{X_1=1,\ X_2=0}\\
+        &=\frac{1}{2}
+        \end{align}
+  	$EF$: Here one coin is head and other is tail. We are required to find $\pr{X_1+X_2=1}$. Thus, from \eqref{eq:12.13.1.7,1}.
+\begin{align}
+        \pr{EF}&=\pr{X_1+X_2=1}\\
+        &=\pr{X_1=0,\ X_2=1}+\pr{X_1=1,\ X_2=0}\\
+        &=\frac{1}{2}\\
+        \pr{E|F}&=\frac{\pr{EF}}{\pr{F}}\\
+        &=\frac{\frac{1}{2}}{\frac{1}{2}}\\
+        &=1
+\end{align}
+\item $E$: no tail appears.We are required to find $\pr{X_1\neq0,X_2\neq0}$. Thus, from \eqref{eq:12.13.1.7,1}.
+\begin{align}
+\pr{E}&=\pr{X_1\neq0,X_2\neq0}\\
+&=\pr{X_1=1,\ X_2=1}\\
+&=\frac{1}{4}
+        \end{align}
+        $F$: no head appears.We are required to find $\pr{X_1\neq1,X_2\neq1}$. Thus, from \eqref{eq:12.13.1.7,1}.
+        \begin{align}
+        \pr{F}&=\pr{X_1\neq1,X_2\neq1}\\
+        &=\pr{X_1=0,\ X_2=0}\\
+        &=\frac{1}{4}
+\end{align}
+$EF$: coins should show neither head nor tail. From Table \ref{tab:rvdef}, we have coins showing head or tail. So, this is an impossible event
+\begin{align}
+\pr{EF}&=0\\
+\pr{E|F}&=\frac{\pr{EF}}{\pr{F}}\\
+&=\frac{0}{\frac{1}{4}}\\
+&=0
+\end{align}
+        
+        
+     
+    \end{enumerate}
