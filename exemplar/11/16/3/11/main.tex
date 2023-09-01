@@ -1,82 +1,38 @@
 \iffalse
-\let\negmedspace\undefined
-\let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
-%\documentclass[conference]{IEEEtran}
-%\IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-\usepackage{svg}
-\usepackage{tikz, pgfplots}
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{algorithmic}
-\usepackage{float,graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
+\documentclass[journal,11pt,onecolumn]{IEEEtran}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
 \usepackage{txfonts}
-\usepackage{listings}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
-\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-\usetikzlibrary{positioning}
-%
-%\usepackage{setspace}
-%\usepackage{gensymb}
-%\doublespacing
-%\singlespacing
-
-%\usepackage{graphicx}
-%\usepackage{amssymb}
-%\usepackage{relsize}
-%\usepackage[cmex10]{amsmath}
-%\usepackage{amsthm}
-%\interdisplaylinepenalty=2500
-%\savesymbol{iint}
-%\usepackage{txfonts}
-%\restoresymbol{TXF}{iint}
-%\usepackage{wasysym}
-%\usepackage{amsthm}
-%\usepackage{iithtlc}
-%\usepackage{mathrsfs}
-%\usepackage{txfonts}
-%\usepackage{stfloats}
-%\usepackage{bm}
-%\usepackage{cite}
-%\usepackage{cases}
-\usepackage{subfig}
-%\usepackage{xtab}
-%\usepackage{longtable}
-%\usepackage{multirow}
-%\usepackage{algorithm}
-%\usepackage{algpseudocode}
-%\usepackage{enumitem}
-%\usepackage{mathtools}
-%\usepackage{tikz}
-%\usepackage{circuitikz}
-%\usepackage{verbatim}
-%\usepackage{tfrupee}
-%\usepackage{stmaryrd}
-%\usetkzobj{all}
-%    \usepackage{color}                                            %%
-%    \usepackage{array}                                            %%
-%    \usepackage{longtable}                                        %%
-%    \usepackage{calc}                                             %%
-%    \usepackage{multirow}                                         %%
-%    \usepackage{hhline}                                           %%
-%    \usepackage{ifthen}                                           %%
-  %optionally (for landscape tables embedded in another document): %%
-%    \usepackage{lscape}     
-%\usepackage{multicol}
-%\usepackage{chngcntr}
-%\usepackage{enumerate}
-
-%\usepackage{wasysym}
-%\newcounter{MYtempeqncnt}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{float}
 \DeclareMathOperator*{\Res}{Res}
-%\renewcommand{\baselinestretch}{2}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
@@ -84,7 +40,7 @@
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
-
+\renewcommand\thetable{\arabic{table}}
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
@@ -101,10 +57,9 @@ columns=fullflexible
 %breaklines=true
 %}
 
+\title{Assignment}
+\author{Barath surya M | EE22BTECH11014}
 \begin{document}
-%
-
-
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -112,18 +67,10 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
-%\newtheorem{defn}[thm]{Definition}
-%\newtheorem{algorithm}{Algorithm}[section]
-%\newtheorem{cor}{Corollary}
 \newcommand{\BEQA}{\begin{eqnarray}}
-		\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
-
 \bibliographystyle{IEEEtran}
-%\bibliographystyle{ieeetr}
-
-
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -139,156 +86,79 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\(left\)vert#1\(right\)vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}}
-\providecommand{\norm}[1]{\(left\)lVert#1\(right\)rVert}
-%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\(left\)[ #1 \(right\)]}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-
 \let\vec\mathbf
-
-
-\vspace{3cm}
-
-\title{
-	%	\logo{
-	Assignment:- 2
- 
-	\Large AI1110: Probability and Random Variables
- 
-	\Large Indian Institute of Technology, Hyderabad
-	%	}
-}
-\author{
-	CS22BTECH11001
-	
-	Aayush Adlakha
- 
-	29 April, 2023
-	% <-this % stops a space
-}
-
-
-
-
-
-
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \maketitle
-
-\newpage
-
-
-\bigskip
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\textbf{Exemplar 11.16.3.11}
-The accompanying Venn diagram shows three events, A, B, and C, and also the probabilities of the various intersections (for instance, \pr{AB} = .07). Determine
-\begin{enumerate}[label=(\alph*)]
-\item 
-\pr{A}
-\item 
-\pr{BC^\prime}
-\item 
-\pr{A + B}
-\item 
-\pr{AB^\prime}
-\item 
-\pr{BC}
-\item 
-Probability of exactly one
-of the three occurs.
-\end{enumerate}
+\vspace{3cm}
+Question 11.16.3.11\\
+The accompanying venn diagram shows three events, A, B and C, and also the probabilities of the various intersections (for instance, $\pr{AB}=0.7$. Determine 
 \begin{enumerate}
+	\item \pr{A}
+	\item \pr{BC'}
+	\item \pr{A+B}
+	\item \pr{AB'}
+	\item \pr{BC}
+	\item \text{Probability of exactly one of the three occurs}
+\end{enumerate}
 \begin{figure}[h!]
-\includegraphics[width=\columnwidth]{figs/new-figure0}
-\caption{Question Figure}
-\label{fig}
+	\centering
+	\input{/exemplar/11/16/3/11/figs/fig.tex}
+	\caption {generated by Latextikz}
+	\label{fig:exemplar/11/16/3/11}
 \end{figure}
-\end{enumerate}
-\textbf{Solution.}
+\solution
 \fi
-From 
-\figref{fig:exemplar/11/16/3/11/Venn_Diagram},
-    \begin{align}
-        \label{eq:exemplar/11/16/3/11/1}
-        \pr{AB}=0.07\\
-        \label{eq:exemplar/11/16/3/11/2}
-        \pr{AB^\prime}=0.13\\
-        \label{eq:exemplar/11/16/3/11/8}
-        \pr{A^\prime B} = 0.25\\
-        \label{eq:exemplar/11/16/3/11/4}
-        \pr{BC} = 0.15\\
-        \pr{CB^\prime} = 0.28\\
-        \label{eq:exemplar/11/16/3/11/6}
-        \pr{AB^\prime C^\prime} = 0.13\\
-        \label{eq:exemplar/11/16/3/11/5}
-        \pr{A^\prime B C^\prime} =0.10\\
-        \label{eq:exemplar/11/16/3/11/7}
-        \pr{A^\prime B^\prime C} =0.28
-    \end{align}
+Given:\\
+From \figref{exemplar/11/16/3/11}
+\begin{align}
+\pr{AB}=0.07\\
+\pr{AB'}=0.13\\
+\pr{BC}=0.15\\
+\pr{BA'C'}=0.10\\
+\pr{CB'}=0.28
+\end{align}
 \begin{enumerate}
-\item 
-\begin{align}
-A &= A \brak{B+B^{\prime}} =  AB + AB^{\prime}\quad
-	\brak{\because B + B^\prime = 1}\\\label{eq:exemplar/11/16/3/11/axiom_sum_A}
-\implies \pr{A} &= \pr{AB} +\pr{AB^\prime}
-	\quad \brak{\because BB^\prime = 0} \\
- &= 0.13 + 0.07
-       = 0.20
+\item \begin{align}
+	\pr{A}&= 0.13+0.07\\
+	&=0.2
+	\end{align}
+\item \begin{align}
+	\pr{BC'} &=0.07+0.10+0.15-0.15\\
+	&=0.17
 \end{align}
-from \eqref{eq:exemplar/11/16/3/11/1} and \eqref{eq:exemplar/11/16/3/11/2}.
-\item Similarly,
-\begin{align}
-    \pr{B} &= \pr{A^\prime B} + \pr{AB}\\
-    \label{eq:exemplar/11/16/3/11/3}
- &= 0.25 + 0.07
-       = 0.32
+\item \begin{align}
+	\pr{A+B}&= \pr{A}+\pr{B} -\pr{AB}\\
+	&=0.20+\brak{0.07+0.10+0.15}-0.07\\
+	&=0.45
+\end{align} 
+\item \begin{align}
+	\pr{AB'}&=0.20-0.07\\
+	&=0.13
 \end{align}
-from \eqref{eq:exemplar/11/16/3/11/1} and \eqref{eq:exemplar/11/16/3/11/8}.
-Using \eqref{eq:exemplar/11/16/3/11/axiom_sum_A},
-\begin{align}
-    \pr{BC^\prime} = \pr{B} - \pr{BC} 
-    = 0.32 - 0.15
-    = 0.17
-\end{align}
-\item 
-\begin{align}
-\label{Axioms}
-    \pr{A + B} &= \pr{A} + \pr{B} - \pr{AB}\\
-    &= 0.20 + 0.32 - 0.07
-    = 0.45
-\end{align}
-\item 
-Using \eqref{eq:exemplar/11/16/3/11/axiom_sum_A}
-\begin{align}
-    \pr{AB^\prime} &= \pr{A} - \pr{AB} 
-    = 0.20 - 0.07
-    = 0.13
-\end{align}
-\item 
-From \eqref{eq:exemplar/11/16/3/11/4}
-\begin{align}
-    \pr{BC} = 0.15
-\end{align}
-\item 
-\begin{align}
-    X&=AB^\prime C^\prime+A^\prime B^\prime C^\prime+A^\prime B^\prime C
-	\\
-    \implies 
-    \pr{X}&=\pr{AB^\prime C^\prime}+\pr{A^\prime BC^\prime}+\pr{A^\prime B^\prime C}
-    \\
-&=0.13+0.10+0.28
-    =0.51
-\end{align}
-from \eqref{eq:exemplar/11/16/3/11/6}, \eqref{eq:exemplar/11/16/3/11/5} and \eqref{eq:exemplar/11/16/3/11/7}.
+\item \begin{align}
+	\pr{BC}&=0.15
+\end{align} 
+\item \begin{align}
+	\pr{\text{AB'}} +\pr{CB'}+\pr{BA'C'} &= 0.13+0.10+0.28\\
+	&=0.51
+\end{align} 
 \end{enumerate}
+
+
+ 
