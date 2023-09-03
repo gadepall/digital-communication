@@ -1,0 +1,147 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 10.13.2.7}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Apoorv throws two dice once and computes the product of the numbers appearing
+on the dice. Peehu throws one die and squares the number that appears on it. Who
+has the better chance of getting the number 36? Why?\\\solution
+\fi
+Let the random variables be defined as:
+\begin{table}[!ht]
+	\input{exemplar/10/13/2/7/tables/randomvar.tex}
+\end{table}
+\begin{enumerate}
+\item \textbf{Product:} Assuming all dice rolls and equally likely,:
+    \begin{align}
+        p_X(k) &= 
+        \begin{cases}
+            \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
+            0 & \text{otherwise}
+        \end{cases}\\
+        p_Y(k) &=
+        \begin{cases}
+            \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
+            0 & \text{otherwise}
+        \end{cases}
+    \end{align}
+    The probability mass function for Apoorv is:
+    \begin{align}
+        p_{XY}(k) &= \pr{XY = k}\\
+        &= \pr{X = \frac{k}{Y}}\\
+        &= E\brak{p_X\brak{\frac{k}{Y}}}\\
+        &= \sum_{i = 1}^{6} p_X\brak{\frac{k}{i}} p_Y(i)\\
+        &= \frac{1}{6} \sum_{i = 1}^{6} p_X\brak{\frac{k}{i}}\\
+        &= \frac{1}{6} \sum_{i = 1}^{6} \frac{\sbrak{k \text{ mod } i = 0}}{6}\sbrak{\frac{k}{i} \leq 6}\\
+        &= \frac{1}{36} \sum_{i = 1}^{6} \sbrak{k \text{ mod } i = 0}\sbrak{\frac{k}{i} \leq 6}
+    \end{align}
+    \begin{figure}[h!]
+        \centering
+	\includegraphics[width=0.7\columnwidth]{exemplar/10/13/2/7/plots/Apoorv_PMF.png}
+        \caption{Sketch of Probability Mass Function for Product obtained by taking a sample of random variables}
+    \end{figure}
+    Thus, the probability of Apoorv rolling a 36 is:
+    \begin{align}
+        p_{XY}(36) &= \frac{1}{36} \sum_{i = 1}^{6} \sbrak{36 \text{ mod } i = 0}\sbrak{\frac{36}{i} \leq 6}\\
+        &= \frac{1}{36}\brak{0 + 0 + 0 + 0 + 0 + 1}\\
+        &= \frac{1}{36} \label{eq:1013273}
+    \end{align}
+    The cumulative distribution function for Apoorv is:
+    \begin{align}
+        F_{XY}(k) &= \pr{XY \leq k}\\
+        &= \frac{1}{6} \sum_{j = 1}^{k} \sum_{i = 1}^{6} p_X\brak{\frac{j}{i}}\\
+        &= \frac{1}{36} \sum_{j = 1}^{k} \sum_{i = 1}^{6}\sbrak{j \text{ mod } i = 0}\sbrak{\frac{j}{i} \leq 6}
+    \end{align}
+    \begin{figure}[h!]
+    	\centering
+        \includegraphics[width=0.7\columnwidth]{exemplar/10/13/2/7/plots/Apoorv_CDF.png}
+        \caption{Sketch of Cumulative Distribution Function for product obtained by taking a sample of random variables}
+    \end{figure}
+\item \textbf{Square:}
+    The probability mass function for Peehu is:
+    \begin{align}
+        p_{Z^2}(k) = 
+        \begin{cases}
+            \frac{1}{6} & \text{if }k \in \{1, 4, 9, 16, 25, 36\}\\
+            0 & \text{otherwise}
+        \end{cases}
+    \end{align}
+    Thus, the probability of Peehu rolling a 36 is
+    \begin{align}
+        p_{Z^2}(36) = \frac{1}{6} \label{eq:1013272}
+    \end{align}
+    \begin{figure}[h!]
+    	\centering
+        \includegraphics[width=0.7\columnwidth]{exemplar/10/13/2/7/plots/Peehu_PMF.png}
+        \caption{Sketch of Probability Mass Function for square obtained by taking a sample of random variables}
+    \end{figure}
+    The cumulative distribution function for Peehu is:
+    \begin{align}
+        F_{Z^2}(k) &= \pr{Z^2 \leq k}\\
+        &= 
+        \begin{cases}
+            0 & \text{if }k \leq 0\\
+            \frac{\lfloor\sqrt{k}\rfloor}{6} & \text{if }k \in \{1, 2, ..., 35\}\\
+            1 & \text{if }k \geq 36
+        \end{cases}
+    \end{align}
+    \begin{figure}[h!]
+    	\centering
+        \includegraphics[width=0.7\columnwidth]{exemplar/10/13/2/7/plots/Peehu_CDF.png}
+        \caption{Sketch of Cumulative Distribution Function for square obtained by taking a sample of random variables}
+    \end{figure}
+\end{enumerate}
+From \eqref{eq:1013273} and \eqref{eq:1013272}, $p_{Z^2}(36) > p_{XY}(36)$. Therefore, Peehu has a better chance of getting the number 36 than Apoorv.
