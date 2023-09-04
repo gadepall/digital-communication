@@ -18,6 +18,62 @@
 \usepackage{listings}
 \usepackage{float}
 
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -25,6 +81,10 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -111,7 +171,7 @@
 Q-10.13.3.10
 %	}
 }
-\author{Yash Patil - EE22BTECH1108}
+\author{Yash Patil - EE22BTECH11058}
 
 \maketitle
 Question: All the jacks, queens and kings are removed from a deck of 52 playing cards. The remaining cards are well shuffled and then one card is drawn at random. Giving ace a value 1 similar value for other cards, find the probability that the card has a value 
@@ -132,31 +192,48 @@ Number of cards left after removing all jacks, queens and kings(=N)
 \begin{tabular}{|c|c|c|}
 \hline
 	\textbf{Parameter} &\textbf{Value} &\textbf{Description}\\ \hline
-	$X_1$ &4 &the card has value 7 and is of any suit \\ \hline
-	$X_2$ &12 &the card has value greater than 7 and is of any suit \\ \hline
-	$X_3$ &24 &the card has value less than 7 and is of any suit \\ \hline
+	$X$ &1-10 &Represents the value of the card picked \\ \hline
 \end{tabular}
 \end{table}
+Finding pmf:
+\begin{align}
+	p_X(k) &= \Pr(X=k)\ \forall\ 1 \leq k \leq 10\\
+	&= \frac{4\times 1}{40}\\
+	&= \frac{1}{10}\\
+	\therefore p_X(k) &= 
+	\begin{cases}
+		\frac{1}{10} & 1 \leq k \leq 10\\
+		0 & \text{otherwise}
+	\end{cases}
+\end{align}
+CDF for the following pmf is:
+\begin{align}
+	F_{X}(k) &= \sum_{m=0}^{k}p_{X}(m)\ \forall\ 1 \leq k \leq 10\\
+	&= k\times \frac{1}{10}\\
+	&= \frac{k}{10}\\
+	\therefore F_{X}(k) &= 
+	\begin{cases}
+		0 & k \leq 0\\
+		\frac{k}{10} & 1\leq k \leq 10\\
+		1 & k > 10 
+	\end{cases}
+\end{align}
 \begin{enumerate}
-	\item Probability that card has value equal to 7
+	\item Probability that card has value equal to 7:\\
 		\begin{align}
-			&=	p_{X_1}(k); k = 7\\
-			&= Pr(X_1=7)\\
-			&= \frac{4}{40}\\
-			&= \frac{1}{10}
+			&= p_{X}(7)\\
+			&= 1 \times \frac{1}{10}
+			= \frac{1}{10}
 		\end{align}
-	\item Probability that card has value greater than 7
+	\item Probability that card has value greater than 7\\
 		\begin{align}
-			&= \sum_{k=8}^{10}p_{X_2}(k)\\
-			&= \sum_{k=8}^{10}Pr(X_2 = k)\\
-			&= \frac{12}{40}\\
-			&= \frac{3}{10}
+			&= F_{X}(10) - F_X(7)\\
+			&= 1 - \frac{7}{10}
+			= \frac{3}{10}
 		\end{align}
-	\item Probability that card has value less than 7
+	\item Probability that card has value less than 7\\
 		\begin{align}
-			&=	\sum_{k=1}^{6}p_{X_3}(k)\\
-			&= \sum_{k=1}^{6}Pr(X_3 = k)\\
-			&= \frac{24}{40}\\
-			&= \frac{6}{10} 
+			&= F_{X}(6)\\
+			&=\frac{6}{10}
 		\end{align}
 \end{enumerate}
