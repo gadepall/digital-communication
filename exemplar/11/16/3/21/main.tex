@@ -1,0 +1,77 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 11.16.3.21}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\vspace{3cm}
+\textbf{Question:} Seven persons are to be seated in a row. What is the probability that two particular persons sit next to each other?\\
+
+\solution
+\fi
+Let $X$ be a random variable as defined in the following table. 
+\begin{table}[!ht]
+    \centering
+    \input{exemplar/11/16/3/21/tables/randomvar.tex}
+    \caption{Random Variables}
+\end{table}
+The number of ways to arrange 7 people is $7!$ and the number of ways to arrange 7 people in which the two particular people are adjacent to each other is $6! \times 2$ considering both of them as one unit and considering the arrangements within the unit. Thus,
+\begin{align}
+    p_X(1) &= \frac{6! \times 2}{7!}\\
+    &= \frac{2}{7}\\
+    p_X(0) &= 1- p_X(1)\\
+    &= \frac{5}{7}
+\end{align}
