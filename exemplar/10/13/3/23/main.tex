@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -223,7 +223,7 @@ Question 10.13.3.23
 \textbf{Question:} Two dice are numbered 1,2,3,4,5,6 and 1,1,2,2,3,3 respectively. They are thrown and the sum of then numbers on them 
 is noted. Find the probability of getting each sum from 2 to 9 seperately.\\
 \textbf{Solution:}
-
+\fi
 The $Z$-transform of a die is defined as
 \begin{align}
 M_X(z) = {z^{-X}} = \sum_{k=-\infty}^{\infty}p_X(k)z^{-k}
@@ -314,8 +314,6 @@ The experiment of rolling the dice was simulated using Python for 10000 samples.
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/pmf.png}
+\includegraphics[width=\columnwidth]{exemplar/10/13/3/23/figs/pmf.png}
 \caption{Plot of $p_X(n)$.Simulations are close to the analysis. }
 \end{figure}
-
-\end{document}
