@@ -1,0 +1,342 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+       \def\inputGnumericTable{}                                 %%
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{gvv}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+ %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{Solution to 10.15.2.1}
+\author{Devansh Jain - EE22BTECH11018}
+%\title{
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{<-this % stops a space
+%\thanks{}}
+%}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% make the title area
+\maketitle
+
+
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+Question:
+Two customers Shyam and Ekta are visiting a particular shop in the same week(Tuesday to Saturday). Each is equally likely to visit the shop on any day as on another day. What is the probability that both will visit the shop on (i) the same day? (ii) consecutive days? (iii) different days?
+\\
+\fi
+\solution
+Let $X$ and $Y$ be the random variables that denote the day on which Shyam and Ekta visit the shop respectively.
+\begin{align}
+X,Y &= 
+	\begin{cases}
+		0, & \text{Tuesday}\\
+		1, & \text{Wednesday}\\
+		2, & \text{Thursday}\\
+		3, & \text{Friday}\\
+		4, & \text{Saturday}
+	\end{cases}
+\end{align}
+The pmf of $X$	 is:
+\begin{align}
+	p_X\brak{k} &=
+	\begin{cases}
+		0, & k < 0\\
+		\frac{1}{5}, & 0 \leq k \leq 4\\
+		0 & k > 4
+	\end{cases}
+\end{align}
+Let $Z$ be a random variable such that,
+\begin{align}
+	Z &= X - Y\\
+	p_Z\brak{k} &= P\brak{k = Z} \\
+	&= P\brak{X-Y = k}\\
+	&= P\brak{X = k + Y}\\
+	&= E\sbrak{p_X\brak{k + Y}}\\
+	&= \sum_{m = 0}^{4} p_X\brak{k + m} p_Y\brak{m}\\
+	&= \myvec{\frac{1}{5} & 0 & 0 & 0 & 0 \vspace{2pt} \\
+		  \frac{1}{5} & \frac{1}{5} & 0 & 0 & 0 \vspace{2pt}\\
+		  \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & 0 & 0 \vspace{2pt}\\
+		  \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & 0 \vspace{2pt}\\
+		  \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & \frac{1}{5} \vspace{2pt}\\
+		  0 & \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & \frac{1}{5} \vspace{2pt}\\
+		  0 & 0 & \frac{1}{5} & \frac{1}{5} & \frac{1}{5}\vspace{2pt}\\
+		  0 & 0 & 0 & \frac{1}{5} & \frac{1}{5} \vspace{2pt}\\
+		  0 & 0 & 0 & 0 & \frac{1}{5}}
+	  \myvec{\frac{1}{5} \vspace{2pt} \\ \frac{1}{5} \vspace{2pt} \\ \frac{1}{5} \vspace{2pt} \\ \frac{1}{5} \vspace{2pt} \\ \frac{1}{5}}
+\end{align}
+\begin{align}
+	&= \myvec{\frac{1}{25} \vspace{2pt}\\ \frac{2}{25} \vspace{2pt} \\ \frac{3}{25} \vspace{2pt} \\ \frac{4}{25} \vspace{2pt} \\ \frac{1}{5} \vspace{2pt}\\	  \frac{4}{25} \vspace{2pt} \\ \frac{3}{25} \vspace{2pt} \\ \frac{2}{25} \vspace{2pt} \\ \frac{1}{25}}
+\end{align}
+The pmf of $Z$	 is:
+\begin{align}
+	p_Z\brak{k} &=
+	\begin{cases}
+		\frac{1}{25}, & k \in \cbrak{-4,4}\\
+		\frac{2}{25}, & k \in \cbrak{-3,3}\\
+		\frac{3}{25}, & k \in \cbrak{-2,2}\\
+		\frac{4}{25}, & k \in \cbrak{-1,1}\\
+		\frac{1}{5}, & k = 0
+	\end{cases}
+\end{align}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{ncert/10/15/2/1/figs/figure1.png}
+\caption{PMF of $Z$}
+\end{figure}
+\\
+The cumulative distributive function for $\abs{Z}$ is:
+\begin{align}
+	F_{\abs{Z}}(k) &= \pr{\abs{Z} \leq k}\\
+	&= \sum_{i = -k}^{k} p_Z\brak{i}\\
+	&= \begin{cases}
+		0, & k < 0\\
+		\frac{1}{5}, & k = 0\\
+		\frac{13}{25}, & k = 1\\
+		\frac{19}{25}, & k = 2\\
+		\frac{23}{25}, & k = 3\\
+		1, & k = 4
+	\end{cases} 
+\end{align}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{ncert/10/15/2/1/figs/figure3.png}
+\caption{CDF of $\abs{Z}$}
+\end{figure}
+\\
+
+The pmf of $\abs{Z}$ is:
+\begin{align}
+	p_{\abs{Z}}\brak{k} &= F_{\abs{Z}}\brak{k} - F_{\abs{Z}}\brak{k-1}\\
+	&= \begin{cases}
+		\frac{1}{5}, & k = 0\\
+		\frac{8}{25}, & k = 1\\
+		\frac{6}{25}, & k = 2\\
+		\frac{4}{25}, & k = 3\\
+		\frac{2}{25}, & k = 4
+	\end{cases}
+\end{align}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{ncert/10/15/2/1/figs/figure2.png}
+\caption{PMF of $\abs{Z}$}
+\end{figure}
+\\
+\begin{enumerate}[label=(\roman*)]
+	\item the same day
+	\begin{align}
+	\implies X &= Y\\
+	\abs{Z} &= 0\\
+	p_{\abs{Z}}\brak{0} &= \frac{1}{5}
+	\end{align}
+	\item consecutive days
+	\begin{align}
+	\implies \abs{X - Y} &= 1\\
+	\abs{Z} &= 1\\
+	p_{\abs{Z}}\brak{1} &= \frac{8}{25}
+	\end{align}
+	\item different days
+	\begin{align}
+	\implies X &\neq Y\\
+	\abs{X - Y} &\neq 0\\
+	\abs{Z} &\neq 0 \\
+	p_{\abs{Z}}\brak{k \neq 0} &= 1 - p_{\abs{Z}}\brak{0}\\
+	&= 1 - \frac{1}{5}\\
+	&= \frac{4}{5}
+	\end{align}
+\end{enumerate}
+
+\begin{table}[!ht]                             
+\input{ncert/10/15/2/1/tables/table1.tex}  
+\caption{Random Variables}
+\end{table}
+
+
+
+
