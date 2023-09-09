@@ -23,3 +23,4 @@ def calculate_probability():
 
 probability = calculate_probability()
 print(f"The probability of forming a four-digit number with the numbers 0, 2, 3, and 5, without repetition, and the number being divisible by 5 is: {probability}")
+
