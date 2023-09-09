@@ -1,4 +1,4 @@
-% \iffalse
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -60,11 +60,10 @@
 \vspace{3cm}
 \textbf{Question:} In a dice game, a player pays a stake of Re 1 for each throw of a die. She receives Rs 5 if the die shows a 3, Rs 2 if the die shows a 1 or 6, and nothing otherwise. What is the player’s expected profit per throw over a long series of throws?.\\
 \solution
-%\fi
+\fi
 Let the random variable $X$ denote the net profit on the roll of a die.
 \begin{table}[h!]
-    % Change address in github
-    \input{tables/randomvar.tex}
+    \input{exemplar/12/13/3/13/tables/randomvar.tex}
     \caption{Net gain}
     \label{tab:12_13_3_13}
 \end{table}\\
@@ -83,4 +82,3 @@ The expected profit per roll over a long series of throws, in Rupees, is
     &= \frac{3}{6}\brak{-1} + \frac{2}{6}\brak{1} + \frac{1}{6}\brak{4}\\
     &= 0.5
 \end{align}
-\end{document}
