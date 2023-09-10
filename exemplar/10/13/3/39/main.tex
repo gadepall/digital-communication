@@ -1,0 +1,151 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 10.13.3.39}
+\author{EE22BTECH11043 - Rambha Satvik$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+A die has its face marked 0,1,1,1,6,6. Two such dice are thrown together and their score is recorded.
+\begin{enumerate}
+	\item How many different scores are possible ?
+	\item What is the probability of getting a total 7 ?  
+\end{enumerate}
+\\
+\fi
+\solution
+Let the random variables be defined as:
+\begin{table}[!ht]
+	\input{exemplar/10/13/3/39/tables/table.tex}
+\end{table}
+\begin{enumerate}
+\item \textbf{Possible outcomes:} The following data can be interpreted from the data given in the question,
+	\begin{align}
+	p_X(k) &= 
+		\begin{cases}
+			\frac{1}{6} & \text{if } k = 0 \\
+			\frac{1}{2} & \text{if } k = 1 \\
+			\frac{1}{3} & \text{if } k = 6 \\
+			0 & \text{Otherwise}
+		\end{cases}
+		\\p_Y(k) &= 
+		\begin{cases}
+			\frac{1}{6} & \text{if } k = 0 \\
+			\frac{1}{2} & \text{if } k = 1 \\
+			\frac{1}{3} & \text{if } k = 6 \\
+			0 & \text{Otherwise}
+		\end{cases}\\
+	\end{align}
+	The $Z$-transform of a die is defined as
+	\begin{align}
+	M_X(z) = {z^{-X}} = \sum_{k=-\infty}^{\infty}p_X(k)z^{-k}
+	\end{align}
+	The $Z$-transform of the first die $X_1$ is given by 
+	\begin{align}
+	M_{X_1}(z) &=  \frac{1}{6}z^{0}+\frac{1}{2}z^{-1}+\frac{1}{3}z^{-6}\\
+		&= \frac{z^{0}+3z^{-1}+2z^{-6}}{6}\\
+%		&= \frac{\brak{z^{0}+3z^{-1}+2z^{-6}}\brak{1-z^{-1}}^{2}}{6\brak{1-z^{-1}}^{2}}	
+	\end{align}
+	The $Z$-transform of the second die $X_2$ is given by 
+	\begin{align}
+	M_{X_2}(z) &=  \frac{1}{6}z^{0}+\frac{1}{2}z^{-1}+\frac{1}{3}z^{-6}\\
+		&= \frac{z^{0}+3z^{-1}+2z^{-6}}{6}\\
+	\end{align}
+	\begin{align}
+  	M_{X_{1}+X_{2}}(z) &= \frac{z^{0}+3z^{-1}+2z^{-6}}{6} \times \frac{z^{0}+3z^{-1}+2z^{-6}}{6}
+	\\
+	  M_{X_{1}+X_{2}}(z) &= \frac{\brak{1+3z^{-1}+2z^{-6}}^{2}\brak{1-z^{-1}}^{2}}{36\brak{1-z^{-1}}^{2}}
+	\end{align}
+
+	We also know that,
+	%\cite{proakis_dsp}
+	\begin{align}
+	p_{X_1+X_2}(n-k) \xleftrightarrow{Z} M_{X_1+X_2}(z)z^{-k}; \\
+	nu(n) \xleftrightarrow{Z} \frac{z^{-1}}{({1-z^{-1}})^2}
+	\end{align}
+
+	Hence, after some algebra, it can be shown that,
+	\begin{multline}
+	\frac{1}{36}[{(n+1)u(n+1)+4{n}u(n)-2{n-1}u(n-1)}\\
+	{-12(n-2)u(n-2)+9(n-3)u(n-3)+4(n-5)u(n-5)}\\
+	{-20(n-7)u(n-7)+12(n-8)u(n-8)}\\
+	{+4(n-11)u(n-11)-8(n-12)u(n-12)}\\
+	{+4(n-13)u(n-13)}]
+	\xleftrightarrow{Z}\\
+	\frac{\brak{1+3z^{-1}+2z^{-6}}^{2}\brak{1-z^{-1}}^{2}}{36\brak{1-z^{-1}}^{2}}\label{eq:10_13_3_39_2_1}
+	\end{multline}
+	The probability function for the sum of the numbers appearing on both the dice,
+	\begin{align}
+  p_X(n) &= 
+  \begin{cases}
+  \frac{1}{36} & n = 0
+  \\
+  \frac{1}{6} &  n = 1
+  \\
+  \frac{1}{4} &   n = 2
+  \\
+  \frac{1}{9} &   n = 6,12
+  \\
+  \frac{1}{3} &   n = 7
+  \\
+  0 &   else
+  \end{cases} \label{eq:10_13_3_39_1_1}
+  	\end{align}
+	The possible outcomes: 0,1,2,6,7\&12
+\begin{figure}[ht!]
+        \includegraphics[width=\columnwidth]{exemplar/10/13/3/39/figs/plot.png}
+        \caption{Sketch of Probability Mass Function for Sum generated using $\eqref{eq:10_13_3_39_2_1}$} 
+\end{figure}
+\item \textbf{Probability of getting a 7 :} 
+	From $\eqref{eq:10_13_3_39_1_1}$, the probability of getting the sum of 2 numbers appearing on the dice to be 7, would be $\frac{1}{3}$.
+\end{enumerate}
