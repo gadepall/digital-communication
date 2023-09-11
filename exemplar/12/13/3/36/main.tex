@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[article]{IEEEtran}
@@ -167,6 +167,7 @@ Assignment
 \vspace{3cm}Question:-
 The random variable $X$ can take only the values $0,1,2$. Given that $\pr{X=0}=\pr{X=1}=p$ and that $E\brak{X^2} = E\brak{X}$, find the value of $p$.\\
 \solution
+\fi
 Given that $X$ is a random variable such that
 \begin{align}
 X &= \cbrak{0,1,2}\\
@@ -183,23 +184,23 @@ Expectation is defined as:
 \begin{align}
 E\brak{X} &= \sum_{k=0}^2 kp_X(k)\\
 &= 0p_X(0) + 1p_X(1) +2p_X(2)\\
-&= 2-3p \label{eq:1}
+&= 2-3p \label{eq:exemplar/12/13/3/36/1}
 \end{align}
 And
 \begin{align}
 E\brak{X^2} &= \sum_{k=0}^2 k^2p_X(k)\\
 &= 0p_X(0) + 1p_X(1) +4p_X(2)\\
-&= 4-7p \label{eq:2}
+&= 4-7p \label{eq:exemplar/12/13/3/36/2}
 \end{align}
 Given,
 \begin{align}
 E\brak{X} = E\brak{X^2}
 \end{align}
-using \eqref{eq:1} and \eqref{eq:2}
+using \eqref{eq:exemplar/12/13/3/36/1} and \eqref{eq:exemplar/12/13/3/36/2}
 \begin{align}
 \implies 2-3p &= 4-7p\\
 \implies p &= \frac{1}{2}
 \end{align}
-\end{document}
+
 
 
