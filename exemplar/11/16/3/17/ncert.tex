@@ -1,0 +1,148 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Probability Assignment}
+\author{EE22BTECH11022-G.SAI HARSHITH$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Determine the probability $p$,for each of following events.
+\begin{enumerate}
+\item An odd number appears in a single roll of dice.
+\item Atleast one head appears in two tosses of fair coin.
+\item A king,9 of hearts or 3 of spades appears in drawing a single card from a well shuffled deck of 52 cards.
+\item The sum of 6 appears in single toss of a pair of fair dice.
+\end{enumerate}
+\fi
+\solution
+\begin{enumerate}
+\item Let the random variable $X$ be defined as:
+\begin{table}[!ht]
+	\input{exemplar/11/16/3/17/tables/randomvar1.tex}
+\end{table}
+   \begin{align}
+        p_X(k) &= 
+        \begin{cases}
+            \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
+            0 & \text{otherwise}
+        \end{cases}\label{eq:11.16.3.17,1}
+    \end{align}
+ Let E be event occuring odd number on single roll. Since, the dice rolls are mutually exclusive. From \eqref{eq:11.16.3.17,1}.
+ \begin{align}
+ \pr{E}&=p_X(1)+p_X(3)+p_X(5)\\
+ &=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}\\
+ &=\frac{1}{2} 
+ \end{align}
+ \item Let 1 be Head and 0 be Tail. Consider random variable $X_i$ where $i \in \{1,2\}$ as
+ \begin{table}[!ht]
+	\input{exemplar/11/16/3/17/tables/randomvar2.tex}
+\end{table}\\
+Let $Y=X_1+X_2$ be a binomial distribution with parameters
+\begin{align}
+n=2 \qquad p=\frac{1}{2}
+\end{align}
+Probabilty of getting k Head in $n=2$ coins is
+\begin{align}
+p_Y(k)&=\comb{2}{k}p^k(1-p)^{2-k}
+\end{align}
+Now, Let F be event of getting alteast one head.
+\begin{align}
+\pr{F}&=p_Y(1)+p_Y(2)\\
+&=\comb{2}{1}\left(\frac{1}{2}\right)^1\left(1-\frac{1}{2}\right)^{2-1}+\comb{2}{2}\left(\frac{1}{2}\right)^2\left(1-\frac{1}{2}\right)^{2-2}\\
+&=\frac{3}{4}
+\end{align}
+\item Let the random variables X and Y be defined as:
+\begin{table}[!ht]
+	\input{exemplar/11/16/3/17/tables/randomvar3.tex}
+\end{table}\\
+Let For $X \in \cbrak{1,2,3,4}$ represents Diamonds, Clubs, Hearts, Spades respectively.
+\begin{align}
+p_{X}(k) &= 
+        \begin{cases}
+            \frac{1}{4} & \text{if }1 \leq k \leq 4\\
+            0 & \text{otherwise}
+        \end{cases}\label{eq:11.16.3.17,11}\\
+        p_{Y}(k) &= 
+        \begin{cases}
+            \frac{1}{13} & \text{if }1 \leq k \leq 13 \\
+            0 & \text{otherwise}
+        \end{cases}\label{eq:11.16.3.17,12}\\
+p_{XY}(k,m) &= 
+        \begin{cases}
+            \frac{1}{52} & \text{if }1 \leq k \leq 4 \text{ and }1 \leq m \leq 13 \\
+            0 & \text{otherwise}
+        \end{cases}\label{eq:11.16.3.17,13}
+    \end{align}
+Let $Y=13$ represent king Card. So, Let G be event to get 4 kings, 9 of hearts,3 of spades. From \eqref{eq:11.16.3.17,12} and \eqref{eq:11.16.3.17,13}.
+\begin{align}
+\pr{G}&=p_{Y}(13)+p_{XY}(3,9)+p_{XY}(4,3)\\
+&=\frac{1}{13}+\frac{1}{52}+\frac{1}{52}\\
+&=\frac{3}{26}
+\end{align}
+\item  Let random variables $X_i$ where $i \in \{1,2\}$ be defined as
+\begin{table}[!ht]
+	\input{exemplar/11/16/3/17/tables/randomvar4.tex}
+\end{table}\\
+Let $Y=X_1+X_2$. Then 
+\begin{align}
+  p_Y(k)&=\begin{cases}
+            \frac{k-1}{36} & \text{if }1 \leq k \leq 7\\
+            \frac{13-k}{36} & \text{if }8 \leq k \leq 13\\
+            0 & \text{otherwise}
+        \end{cases}     
+    \end{align}
+Consider an H for which sum of both dice is six. Since the dice are independent.
+\begin{align}
+\pr{H}&=p_Y(6)\\
+&=\frac{5}{36}
+\end{align} 
+    \end{enumerate}
