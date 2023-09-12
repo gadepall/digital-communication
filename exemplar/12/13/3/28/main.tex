@@ -1,4 +1,4 @@
-% \iffalse
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -60,11 +60,10 @@
 \vspace{3cm}
 \textbf{Question:} A die is thrown three times. Let X be 'the number of twos seen'. Find the expectation of X.\\
 \solution
-%\fi
+\fi
 Let the random variables be:
 \begin{table}[h!]
-    % Change address in github
-    \input{tables/randomvar.tex}
+    \input{exemplar/12/13/3/28/tables/randomvar.tex}
     \caption{Random Variables}
     \label{tab:12_13_3_28}
 \end{table}\\
@@ -89,4 +88,3 @@ But, as all three dice rolls are independent, and expectation is linear:
     &= E\brak{X_1} + E\brak{X_2} + E\brak{X_3} \\
     &= \frac{1}{2}
 \end{align}
-\end{document}
