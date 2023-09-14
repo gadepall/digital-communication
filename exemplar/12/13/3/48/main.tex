@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -115,6 +116,7 @@
 %\renewcommand{\theequation}{\theenumi}
 Q: An item is manufactured by three machines A, B and C. Out of the total number of items manufactured during a specified period, $50\%$ are manufactured on A, $30\%$ on B and $20\%$ on C, $2\%$ of the items produced on A and $2\%$ of items produced on B are defective, and $3\%$ of these products produced on C are defective. All the items are stored at one godown. One item is drawn at random and is found to be defective. What is the probability that is was manufactured on machine A?
 \\ \solution
+\fi
 \begin{table}[h!]
  \begin{center}
     \begin{tabular}{|l|c|r|}
@@ -156,4 +158,4 @@ We need to find $\Pr(Y=1|X=1)$,
              &= \frac{ 0.5 \times 0.02}{0.5 \times 0.02 + 0.3 \times 0.02 + 0.2 \times 0.03}\\
              &= \frac{5}{11}\\
 \end{align}
-\end{document}
+
