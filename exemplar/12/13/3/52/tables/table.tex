@@ -64,7 +64,8 @@
        \usepackage{multirow}
        \usepackage{hhline}
        \usepackage{ifthen}
-
+%       \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+%       \usepackage{gvv}
 	\begin{document}
 
 
@@ -78,7 +79,7 @@
 
 %%  If we want landscape mode in an embedded document, comment out  %%
 %%  the line above and uncomment the two below. The table will      %%
-%%  begin on a new page and run in landscape mode.                  %%
+%%  begin on a new page and run in landscape mode.             %%
 %       \def\gnumericTableEnd{\end{landscape}}
 %       \begin{landscape}
 
@@ -123,9 +124,9 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	53pt+%
-	53pt+%
-	107pt+%
+	75pt+%
+	75pt+%
+	75pt+%
 0pt}
 \def\gumericNumCols{3}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -145,10 +146,11 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{107pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{125pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{75pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{120pt*\gnumericScale}@{}}x\end{tabular}}
 
+%\begin{longtable}[c]{%
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
@@ -187,54 +189,55 @@
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|-|-|-}
+\hhline{|-|-|-|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{RV}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{parameter}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Values}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{value}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Description}}
-\\
+	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{description}}}
+\\ 
 \hhline{|---|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
+	\multicolumn{1}{|p{\gnumericColA}|}%
 	{\setlength{\gnumericMultiRowLength}{0pt}%
 	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
 	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
-	 \gnumericPB{\centering}\gnumbox{X}}}}
+	 \gnumericPB{\centering}\gnumbox{Random Variable $X$}}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{0}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{0}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Getting unfair coin}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Fair coin is selected}}
 \\
 \hhline{~|--|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
+	\multicolumn{1}{|p{\gnumericColA}|}%
 	{}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{1}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Getting fair coin}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Unfair coin is selected}}
 \\
 \hhline{|---|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
+	\multicolumn{1}{|p{\gnumericColA}|}%
 	{\setlength{\gnumericMultiRowLength}{0pt}%
 	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
 	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
-	 \gnumericPB{\centering}\gnumbox{Y}}}}
+	 \gnumericPB{\centering}\gnumbox{Random Variable $Y$}}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{0}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{0}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Getting Head}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Head comes in the toss}}
 \\
 \hhline{~|--|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
+	\multicolumn{1}{|p{\gnumericColA}|}%
 	{}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{1}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Getting Tail}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Tail comes in the toss}}
 \\
 \hhline{|-|-|-|}
+%\end{longtable}
 \end{tabular}
-
+ 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
 \gnumericTableEnd
