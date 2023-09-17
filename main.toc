@@ -4,58 +4,58 @@
 \contentsline {chapter}{\numberline {2}Axioms}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Examples}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Exercises}{45}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Random Variables}{69}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Examples}{69}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Exercises}{92}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conditional Probability}{103}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Examples}{103}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Exercises}{136}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Discrete Distributions}{147}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Bernoulli}{147}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Multinomial}{159}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Uniform}{166}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Binomial}{173}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Triangular}{225}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Miscellaneous}{225}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Gaussian}{252}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Exercises}{254}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Moments}{255}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Random Algebra}{265}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Examples}{265}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Exercises}{292}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Markov Chain}{309}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Continuous Distributions}{317}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Uniform Random Numbers}{317}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Central Limit Theorem}{324}{section.9.2}%
-\contentsline {section}{\numberline {9.3}From Uniform to Other}{328}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Triangular Distribution}{330}{section.9.4}%
-\contentsline {chapter}{\numberline {10}Maximum Likelihood Detection: BPSK}{331}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Maximum Likelihood}{331}{section.10.1}%
-\contentsline {chapter}{\numberline {11}Transformation of Random Variables}{333}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Gaussian to Other}{333}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Conditional Probability}{334}{section.11.2}%
-\contentsline {chapter}{\numberline {12}Bivariate Random Variables: FSK}{335}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Two Dimensions}{335}{section.12.1}%
-\contentsline {chapter}{\numberline {13}Exercises}{337}{chapter.13}%
-\contentsline {section}{\numberline {13.1}BPSK}{337}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Coherent BFSK}{340}{section.13.2}%
-\contentsline {section}{\numberline {13.3}QPSK}{342}{section.13.3}%
-\contentsline {section}{\numberline {13.4}$M$-PSK}{343}{section.13.4}%
-\contentsline {section}{\numberline {13.5}Noncoherent BFSK}{344}{section.13.5}%
-\contentsline {section}{\numberline {13.6}Craig's Formula and MGF}{348}{section.13.6}%
-\contentsline {chapter}{\numberline {A} Axioms }{351}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Definitions}{351}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Boolean Logic}{352}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Properties}{354}{section.A.3}%
-\contentsline {chapter}{\numberline {B} Z-transform}{355}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Distributions}{357}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Bernoulli }{357}{section.C.1}%
-\contentsline {section}{\numberline {C.2}Binomial Distribution}{359}{section.C.2}%
-\contentsline {section}{\numberline {C.3}Uniform Distribution}{362}{section.C.3}%
-\contentsline {section}{\numberline {C.4}Triangular Distribution}{364}{section.C.4}%
-\contentsline {chapter}{\numberline {D}Central Limit Theorem}{371}{appendix.D}%
-\contentsline {section}{\numberline {D.1}Binomial}{371}{section.D.1}%
-\contentsline {chapter}{\numberline {E}Identities}{377}{appendix.E}%
-\contentsline {chapter}{\numberline {F}Random Number Genration Using Shift Registers}{379}{appendix.F}%
-\contentsline {subsection}{\numberline {F.0.1}Components}{379}{subsection.F.0.1}%
-\contentsline {chapter}{\numberline {G}NCERT}{383}{appendix.G}%
+\contentsline {chapter}{\numberline {3}Random Variables}{71}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Examples}{71}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Exercises}{94}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conditional Probability}{105}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Examples}{105}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Exercises}{139}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Discrete Distributions}{153}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Bernoulli}{153}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Multinomial}{165}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Uniform}{172}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Binomial}{179}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Triangular}{232}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Miscellaneous}{233}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Gaussian}{260}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Exercises}{262}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Moments}{263}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Random Algebra}{279}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Examples}{279}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Exercises}{306}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Markov Chain}{323}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Continuous Distributions}{331}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Uniform Random Numbers}{331}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Central Limit Theorem}{338}{section.9.2}%
+\contentsline {section}{\numberline {9.3}From Uniform to Other}{342}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Triangular Distribution}{344}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Maximum Likelihood Detection: BPSK}{345}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Maximum Likelihood}{345}{section.10.1}%
+\contentsline {chapter}{\numberline {11}Transformation of Random Variables}{347}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Gaussian to Other}{347}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Conditional Probability}{348}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Bivariate Random Variables: FSK}{349}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Two Dimensions}{349}{section.12.1}%
+\contentsline {chapter}{\numberline {13}Exercises}{351}{chapter.13}%
+\contentsline {section}{\numberline {13.1}BPSK}{351}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Coherent BFSK}{354}{section.13.2}%
+\contentsline {section}{\numberline {13.3}QPSK}{356}{section.13.3}%
+\contentsline {section}{\numberline {13.4}$M$-PSK}{357}{section.13.4}%
+\contentsline {section}{\numberline {13.5}Noncoherent BFSK}{358}{section.13.5}%
+\contentsline {section}{\numberline {13.6}Craig's Formula and MGF}{362}{section.13.6}%
+\contentsline {chapter}{\numberline {A} Axioms }{365}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Definitions}{365}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Boolean Logic}{366}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Properties}{368}{section.A.3}%
+\contentsline {chapter}{\numberline {B} Z-transform}{369}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Distributions}{371}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Bernoulli }{371}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Binomial Distribution}{373}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Uniform Distribution}{376}{section.C.3}%
+\contentsline {section}{\numberline {C.4}Triangular Distribution}{378}{section.C.4}%
+\contentsline {chapter}{\numberline {D}Central Limit Theorem}{385}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Binomial}{385}{section.D.1}%
+\contentsline {chapter}{\numberline {E}Identities}{391}{appendix.E}%
+\contentsline {chapter}{\numberline {F}Random Number Genration Using Shift Registers}{393}{appendix.F}%
+\contentsline {subsection}{\numberline {F.0.1}Components}{393}{subsection.F.0.1}%
+\contentsline {chapter}{\numberline {G}NCERT}{397}{appendix.G}%
