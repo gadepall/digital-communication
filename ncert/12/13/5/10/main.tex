@@ -1,0 +1,167 @@
+\iffalse
+\let\negmedspace\undefined
+
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+ASSIGNMENT-2
+%	}
+}
+\author{A Varun Naik - EE22BTECH11004}
+
+
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\prt}[2]{\ensuremath{p_{#1}^{\left(#2\right)} }}        % own macro for this question
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\cond}[2]{#1\middle|#2}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myaugvec}[2]{\ensuremath{\begin{amatrix}{#1}#2\end{amatrix}}}
+\providecommand{\rank}{\text{rank}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+	\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\diff}[2]{\ensuremath{\frac{d{#1}}{d{#2}}}}
+\providecommand{\myceil}[1]{\left \lceil #1 \right \rceil }
+\newcommand\figref{Fig.~\ref}
+\newcommand\tabref{Table~\ref}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+\let\vec\mathbf
+Question 12.13.5.10 :  A person buys a lottery ticket in 50 lotteries in each of which his chance of winning a prize is $\frac{1}{100}$. What is the probability that he will win a prize
+\begin{enumerate}[label=(\alph*)]
+ \item  atleast once 
+ \item exactly once 
+ \item atleast twice ?
+\end{enumerate}
+\fi
+\solution Let X be number of winning prizes in 50 lotteries. The trials are Bernoulli trials.X has binomial distribution with n = 50 and p = $\frac{1}{100}$ 
+\begin{table}[h]
+\centering
+\caption{parameters for CDF}
+\label{table.2:ncert/12/13/5/10/}
+\begin{tabular}{|c|c|}
+\hline
+parameter & value\\
+\hline
+$n$ & 50\\
+\hline
+$p$ & $\frac{1}{100}$\\
+\hline
+$q$ & $\frac{99}{100}$\\
+\hline
+\end{tabular}
+\end{table}
+\begin{align}
+q &= 1 - p = 1-\frac{1}{100} \\
+q &=   \frac{99}{100} \\
+p_X(k) &= \pr{X=k} \\
+p_X(k) &= \comb{n}{k} q^{n-k}p^{k} \\
+        &= \comb{50}{k}\brak{\frac{99}{100}}^{50-k}\brak{\frac{1}{100}}^{k} 
+\end{align} 
+
+The Cdf for the following pmf :  
+\begin{align}
+F_X(k) &= \sum_{i=0}^{k} \comb{5}{i}\brak{\frac{99}{100}}^{50-i}\brak{\frac{1}{100}}^{i}
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item
+  \begin{align}
+  \pr{X \geq 1} &= 1 - \pr{X < 1} \\
+  &= 1 - F_X(0)  \\
+  &= 1 - \comb{50}{0}\brak{\frac{99}{100}}^{50} \\
+  &= 0.394
+ \end{align}
+\item
+ \begin{align}
+  \pr{X=1} &= \comb{50}{1}\brak{\frac{99}{100}}^{49}\brak{\frac{1}{100}}^{1} \\
+  &= 0.3055
+\end{align} 
+\item
+\begin{align}
+  \pr{X \geq 2}  &= 1 - \pr{X<2}\\  
+   &= 1 - F_X(1) \\
+   &= \brak{1 - \frac{99}{100}}^{50} - \frac{1}{2}\brak{\frac{99}{100}}^{49} \\
+   &= 0.0894
+\end{align}
+\end{enumerate}
+%\end{document}
