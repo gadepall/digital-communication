@@ -1,0 +1,90 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 12.13.3.28}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\vspace{3cm}
+\textbf{Question:} A die is thrown three times. Let X be 'the number of twos seen'. Find the expectation of X.\\
+\solution
+\fi
+Let the random variables be:
+\begin{table}[h!]
+    \input{exemplar/12/13/3/28/tables/randomvar.tex}
+    \caption{Random Variables}
+    \label{tab:12_13_3_28}
+\end{table}\\
+For a single die roll, since the probability of rolling a two is $\frac{1}{6}$ the probability distribution function of $X_i$ is:
+\begin{align}
+    p_{X_i}(k) =
+    \begin{cases}
+        \frac{1}{6} & \text{if } k = 1\\
+        \frac{5}{6} & \text{if } k = 0
+    \end{cases}
+\end{align}\\
+Thus, 
+\begin{align}
+    E\brak{X_1} = E\brak{X_2} = E\brak{X_3} &= \sum_{k = 0}^{1} k p_{X_i}(k) \\
+    &= \frac{5}{6}\brak{0} + \frac{1}{6}\brak{1}\\
+    &= \frac{1}{6}
+\end{align}
+But, as all three dice rolls are independent, and expectation is linear:
+\begin{align}
+    X &= X_1 + X_2 + X_3\\
+    \therefore E\brak{X} &= E\brak{X_1 + X_2 + X_3}\\
+    &= E\brak{X_1} + E\brak{X_2} + E\brak{X_3} \\
+    &= \frac{1}{2}
+\end{align}
