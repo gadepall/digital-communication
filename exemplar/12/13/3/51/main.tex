@@ -1,0 +1,139 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,24pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 12.13.3.50}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\vspace{3cm}
+\textbf{Question:} The probability distribution of a random variable $X$ is given as under:
+\begin{align*}
+    p_X(x) =
+    \begin{cases}
+        kx^2 &\text{for } x = 1,2,3\\
+        2kx &\text{for } x = 4,5,6\\
+        0 & \text{otherwise}
+    \end{cases}
+\end{align*}
+where k is a constant. Calculate:
+\begin{enumerate}
+    \item $E\brak{X}$
+    \item $E\brak{3X^2}$
+    \item $\pr{X \geq 4}$
+\end{enumerate}
+\fi
+\solution
+From the axiom of total probability,
+\begin{align}
+    &\sum_{i = 1}^{6} p_X(i) = 1\\
+    \implies &\sum_{i = 1}^{3} ki^2 + \sum_{i = 4}^{6} 2ki = 1\\
+    \implies &k + 4k + 9k + 8k + 10k + 12k = 1\\
+    \implies &k = \frac{1}{44}
+\end{align}
+Thus, the probability distribution of $X$ is 
+\begin{align*}
+    p_X(x) =
+    \begin{cases}
+        \frac{x^2}{44} &\text{for } x = 1,2,3\\
+        \frac{2x}{44} &\text{for } x = 4,5,6\\
+        0 & \text{otherwise}
+    \end{cases}
+\end{align*}
+\begin{enumerate}
+    \item Calculating $E\brak{X}$:
+    \begin{align}
+        E\brak{X} 
+        &= \sum_{i = 1}^{6} ip_X(i)\\
+        &= 1\brak{\frac{1}{44}} + 2\brak{\frac{4}{44}} + 3\brak{\frac{9}{44}} + 4\brak{\frac{8}{44}} + 5\brak{\frac{10}{44}} + 6\brak{\frac{12}{44}}\\
+        &= \frac{95}{22}\\
+        &= 4.32
+    \end{align}
+    \item Calculating $E\brak{3X^2}$:
+    \begin{align}
+        E\brak{3X^2} &= 3E\brak{X^2}\\
+        &= 3\sum_{i = 1}^{6} i^2 p_{X}(i)\\
+        &= 3\brak{1\brak{\frac{1}{44}} + 4\brak{\frac{4}{44}} + 9\brak{\frac{9}{44}} + 16\brak{\frac{8}{44}} + 25\brak{\frac{10}{44}} + 36\brak{\frac{12}{44}}}\\
+        &= \frac{2724}{44}\\
+        &= 61.91
+    \end{align}
+    \item Firstly, calculating the CDF:
+    \begin{align}
+        F_X(x) &= \sum_{i = 1}^{x} p_X(i)\\ &= 
+        \begin{cases}
+            \sum_{i = 1}^{x} \frac{i^2}{44} & \text{if } x \leq 3\\
+            \sum_{i = 1}^{3} \frac{i^2}{44} + \sum_{i = 4}^{x} \frac{2i}{44} & \text{if } x \geq 4
+        \end{cases}\\
+        &=
+        \begin{cases}
+            \frac{x(x+1)(2x+1)}{6 \times 44} & \text{if } x \leq 3\\
+            \frac{14}{44} + \frac{x(x+1)}{44} - \frac{3 \times 4}{44} & \text{if } x \geq 4
+        \end{cases}\\
+        &=
+        \begin{cases}
+            \frac{x(x+1)(2x+1)}{264} & \text{if } x \leq 3\\
+            \frac{x(x+1) + 2}{44} & \text{if } x \geq 4
+        \end{cases}
+    \end{align}
+    
+    Calculating $\pr{X \geq 4}$:
+    \begin{align}
+        \pr{X \geq 4} &= 1 - \pr{X \leq 3}\\
+        &= 1 - F_X\brak{3}\\
+        &= 1 - \frac{3 \times 4 \times 7}{264}\\
+        &= \frac{15}{22}\\
+        &= 0.68
+    \end{align}
+\end{enumerate}
+
