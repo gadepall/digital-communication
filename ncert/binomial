@@ -335,6 +335,17 @@ six trials, there will be atleast 4 successes.
 selected (one by one with replacement) at random, what is the probability that
 there will be at least one defective watch?
 \\	\input{exemplar/12/13/3/23/main.tex}
+\item Suppose a random variable $X$ follows binomial distribution with parameters n and p, where $0 < p < 1 $. If \pr{X=r}/\pr{X=n-r} is independent of n and r, then p equals,
+\begin{enumerate}
+	\item $\frac{1}{2}$
+	\item $\frac{1}{3}$
+	\item $\frac{1}{5}$
+	\item $\frac{1}{7}$
+\end{enumerate}
+\\
+\solution
+\\
+\input{exemplar/12/13/3/90/main.tex}
 	\end{enumerate}
     \section{Triangular}
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
