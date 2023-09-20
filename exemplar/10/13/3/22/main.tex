@@ -114,7 +114,7 @@ Two dice are thrown together. Find the probability that the product of the numbe
 \solution
 \fi
 \textbf{Product:} Let the random variables be defined as:
-\begin{table}[H]
+\begin{table}[!ht]
         \caption{Description of random variables}
         \label{tab:ncert/10/13/3/22/}
         \centering
@@ -143,7 +143,7 @@ Assuming both dice rolls and equally likely,:
         &= \frac{1}{6} \sum_{i = 1}^{6} \frac{\sbrak{k \text{ mod } i = 0}}{6}\sbrak{\frac{k}{i} \leq 6}\\
         &= \frac{1}{36} \sum_{i = 1}^{6} \sbrak{k \text{ mod } i = 0}\sbrak{\frac{k}{i} \leq 6}
     \end{align}
-Thus, the probability of Apoorv rolling a 36 is:
+Thus, the probability of getting product less than 9 is:
     \begin{align}
     \pr{XY < 9} &= \sum_{i = 1}^{8}\brak{\frac{1}{36}\sum_{i = 1}^{6} \sbrak{j \text{ mod } i = 0}\sbrak{\frac{j}{i} \leq 6}} \\
     &= \frac{1}{36} \brak{ 1 + 2 + 2 + 3 + 2 + 4 + 2 } \\
