@@ -50,6 +50,11 @@ columns=fullflexible
 \providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\cond}[2]{#1\middle|#2}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 %\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
@@ -58,6 +63,7 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myaugvec}[2]{\ensuremath{\begin{amatrix}{#1}#2\end{amatrix}}}
 \providecommand{\rank}{\text{rank}}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -72,8 +78,6 @@ columns=fullflexible
 \newcommand\tabref{Table~\ref}
 \newcommand{\sinc}{\,\text{sinc}\,}
 \newcommand{\rect}{\,\text{rect}\,}
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\Var}{\mathrm{Var}}
 %%
 %	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 %\newcommand{\solution}{\noindent \textbf{Solution: }}
@@ -127,3 +131,13 @@ columns=fullflexible
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\newcounter{matchleft}\newcounter{matchright}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\arabic{matchleft}.}}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}\alph{matchright})}}X%
+    }%
+}{\endtabularx}
