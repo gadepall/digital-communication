@@ -1,0 +1,85 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 12.13.3.73}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\vspace{3cm}
+\textbf{Question:} Two events $E$ and $F$ are independent. If $\pr{E} = 0.3$, $\pr{E+F} = 0.5$, then $\pr{E|F}-\pr{F|E}$ equals
+\begin{enumerate}
+    \item[(a)] $\frac{2}{7}$
+    \item[(b)] $\frac{3}{35}$
+    \item[(c)] $\frac{1}{70}$
+    \item[(d)] $\frac{1}{7}$
+\end{enumerate}
+\solution
+\fi
+As $E$ and $F$ are independent:
+\begin{align}
+    \pr{EF} &= \pr{E}\pr{F}\\
+    \text{But }\pr{E+F} &= \pr{E} + \pr{F} - \pr{EF}\\
+    \therefore \pr{E+F} &= \pr{E} + \pr{F} - \pr{E}\pr{F}\\
+    0.5 &= 0.3 + \pr{F} - 0.3\pr{F}\\
+    \pr{F} &= \frac{2}{7}
+\end{align}
+As $E$ and $F$ are independent:
+\begin{align}
+    \pr{E|F} &= \pr{E}\\
+    \pr{F|E} &= \pr{F}\\
+    \therefore \pr{E|F} - \pr{F|E} &= \pr{E} - \pr{F}\\
+    &= \frac{3}{10} - \frac{2}{7}\\
+    &= \frac{1}{70}
+\end{align}
