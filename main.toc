@@ -15,12 +15,12 @@
 \contentsline {section}{\numberline {5.2}Multinomial}{193}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Uniform}{201}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Binomial}{208}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Triangular}{264}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Miscellaneous}{264}{section.5.6}%
+\contentsline {section}{\numberline {5.5}Triangular}{265}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Miscellaneous}{265}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Moments}{293}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Random Algebra}{317}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Examples}{317}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Exercises}{345}{section.7.2}%
+\contentsline {chapter}{\numberline {7}Random Algebra}{319}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Examples}{319}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Exercises}{347}{section.7.2}%
 \contentsline {chapter}{\numberline {8}Markov Chain}{371}{chapter.8}%
 \contentsline {chapter}{\numberline {9}Continuous Distributions}{379}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Uniform Random Numbers}{379}{section.9.1}%
