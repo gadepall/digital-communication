@@ -110,37 +110,29 @@ columns=fullflexible
 \textbf{Question 10.13.3.22}\\
 Two dice are thrown together. Find the probability that the product of the numbers on the top of the dice is less than 9\\ 
 \solution
-\fi 
-Let the random variables be defined as:
-\begin{table}[H]
-        \caption{Table}
-        \label{tab:ncert/10/13/3/22/}
-        \centering
-        \input{exemplar/10/13/3/22/tables/table.tex}
-\end{table}
-Assuming both dice rolls and equally likely,:
-    \begin{align}
-        p_X(k) &= 
-        \begin{cases}
-            \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
-            0 & \text{otherwise}
-        \end{cases}\label{eq:1}\\
-        p_Y(k) &=
-        \begin{cases}
-            \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
-            0 & \text{otherwise}
-        \end{cases}
-    \end{align}
-    The probability mass function is:
-    \begin{align}
-        p_{XY}(k) &= \pr{XY = k}\\
+\fi
+Let the $X$ and $Y$ be random variables denoting the roll of first dice snd second dice respectively.
+Assuming both dice rolls and equally likely:
+\begin{align}
+p_X(k) &= \begin{cases}
+          \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
+          0 & \text{otherwise}
+          \end{cases}\label{eq:1}\\
+p_Y(k) &= \begin{cases}
+          \frac{1}{6} & \text{if }k \in \{1, 2, 3, 4, 5, 6\}\\
+          0 & \text{otherwise}
+          \end{cases}
+\end{align}
+The probability mass function is:
+\begin{align}
+p_{XY}(k) &= \pr{XY = k}\\
         &= \pr{X = \frac{k}{Y}}\\
         &= E\brak{p_X\brak{\frac{k}{Y}}}\\
         &= \sum_{i = 1}^{6} p_X\brak{\frac{k}{i}} p_Y(i)\\
         &= \frac{1}{6} \sum_{i = 1}^{6} p_X\brak{\frac{k}{i}}\\
         &= \frac{1}{6} \sum_{i = 1}^{6} \frac{\sbrak{k \text{ mod } i = 0}}{6}\sbrak{\frac{k}{i} \leq 6}\\
         &= \frac{1}{36} \sum_{i = 1}^{6} \sbrak{k \text{ mod } i = 0}\sbrak{\frac{k}{i} \leq 6}
-    \end{align}
+\end{align}
 Thus, the probability of getting product less than 9 is:
 \begin{align}
     \pr{XY < 9} &= \sum_{i = 1}^{8}\brak{\frac{1}{36}\sum_{i = 1}^{6} \sbrak{j \text{ mod } i = 0}\sbrak{\frac{j}{i} \leq 6}} \\
@@ -148,3 +140,9 @@ Thus, the probability of getting product less than 9 is:
     &= \frac{16}{36} \\
     &= \frac{4}{9} 
 \end{align}
+\begin{table}[H]
+        \caption{Table}
+        \label{tab:ncert/10/13/3/22/}
+        \centering
+        \input{exemplar/10/13/3/22/tables/table.tex}
+\end{table}
