@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {5.2}Multinomial}{193}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Uniform}{201}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Binomial}{208}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Triangular}{266}{section.5.5}%
+\contentsline {section}{\numberline {5.5}Triangular}{267}{section.5.5}%
 \contentsline {section}{\numberline {5.6}Miscellaneous}{267}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Moments}{295}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Random Algebra}{319}{chapter.7}%
