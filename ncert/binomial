@@ -335,7 +335,6 @@ six trials, there will be atleast 4 successes.
 selected (one by one with replacement) at random, what is the probability that
 there will be at least one defective watch?
 \\	\input{exemplar/12/13/3/23/main.tex}
-	\end{enumerate}
     \section{Triangular}
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 	\item Two dice, one blue and one grey, are thrown at the same time.   The event defined by the sum of the two numbers appearing on the top of the dice can have 11 possible outcomes 2, 3, 4, 5, 6, 6, 8, 9, 10, 11 and 12.  A student argues that each of these outcomes has a probability $\frac{1}{11}$.  Do you agree with this argument?  Justify your answer.

@@ -75,6 +75,9 @@ probability that it is a vowel is
 \item The probability of getting a bad egg in a lot of 400 is 0.035. The number of bad eggs in the lot is\\
 \solution
 \input{exemplar/10/13/1/22/main.tex}
+\item someone is asked to take a number from 1 to 100.The probability that it is a prime number is\\
+\solution
+\input{ncert/10/13/1/25/ncert.tex}
     \end{enumerate}
     \section{Multinomial}
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
@@ -89,6 +92,14 @@ out of the box at random. What is the probability that the marble taken out will
 \end{enumerate}
 \solution
 \input{ncert/10/15/1/9/multinom.tex}
+\item A box contains 3 orange balls, 3 green balls and 2 blue balls. Three balls are drawn at random from the box without replacement. The probability of drawing 2 green balls and one blue ball is
+\begin{enumerate}
+\item $\frac{3}{28}$\\
+\item $\frac{2}{21}$\\
+\item $\frac{1}{28}$\\
+\item $\frac{167}{168}$
+\end{enumerate}
+\input{exemplar/12/13/3/79/main.tex}
 \item A game of chance consists of spinning an arrow
 which comes to rest pointing at one of the numbers
 1, 2, 3, 4, 5, 6, 7, 8 (see \figref{fig:ncert/10/15/1/12/my_label}), and these are equally
@@ -123,6 +134,7 @@ are drawn from the box, what is the probability that
 \item A box of oranges is inspected by examining three randomly selected oranges drawn without replacement. If all the three oranges are good, the box is approved for sale, otherwise, it is rejected. Find the probability that a box containing 15 oranges out of which 12 are good and 3 are bad ones will be approved for sale.\\
 	\solution
 \input{ncert/12/13/2/3/multinom.tex}
+\item \input{exemplar/12/13/3/74/main.tex}
     \end{enumerate}
     \section{Uniform}
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
@@ -360,6 +372,32 @@ there will be at least one defective watch?
  \item atleast twice ?
 \end{enumerate}
 \input{ncert/12/13/5/10/main.tex}
+\item The probability that a person is not a swimmer is 0.3. The probability that out of
+5 persons 4 are swimmers is
+\begin{enumerate}
+\item $\comb{5}{4}\brak{0.7}^4\brak{0.3}$
+\item $\comb{5}{1}\brak{0.7}\brak{0.3}^4$
+\item $\comb{5}{4}\brak{0.7}\brak{0.3}^4$
+\item $\brak{0.7}^4\brak{0.3}$
+\end{enumerate}
+\solution
+\input{exemplar/12/13/3/86/main.tex}
+\item Suppose a random variable $X$ follows binomial distribution with parameters n and p, where $0 < p < 1 $. If \pr{X=r}/\pr{X=n-r} is independent of n and r, then p equals,
+\begin{enumerate}
+	\item $\frac{1}{2}$
+	\item $\frac{1}{3}$
+	\item $\frac{1}{5}$
+	\item $\frac{1}{7}$
+\end{enumerate}
+\solution
+\\
+\input{exemplar/12/13/3/90/main.tex}
+\item The probability of guessing correctly at least 8 out of 10 answers on a true-false
+type examination is\\
+\solution
+\input{exemplar/12/13/3/85/main.tex}
+\item In a family having three children, there may be no girl, one girl, two girls, or three girls. So the probability of each is 1/4. Is this correct? Justify your answer.\\
+\input{exemplar/10/13/2/5/main.tex}
 \end{enumerate}
 
     \section{Triangular}
@@ -500,42 +538,13 @@ well shuffled ordinary deck of 52 cards.\\
 \solution
 \input{exemplar/12/13/3/25/main.tex}
 \item \input{exemplar/10/13/1/24/main.tex}
-\end{enumerate}
-    \section{Gaussian}
-\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
-\item There are 5\% defective items in a large bulk of items. What is the probability that a sample of 10 items will include not more than one defective item?
-	\\
-\solution
-%\input{ncert/12/13/5/3/binom.tex}
-\item Five cards are drawn successively with replacement from a well-shuffled deck
-of 52 cards. What is the probability that
+\item Three persons, A, B and C, fire at a target in turn, starting with A. Their probability of hitting the target are 0.4, 0.3 and 0.2 respectively. The probability of two hits is\\
 \begin{enumerate}
-    \item all the five cards are spades?
-    \item only 3 cards are spades?
-    \item none is a spade?
+\item 0.024
+\item 0.188
+\item 0.336
+\item 0.452
 \end{enumerate}
-\solution
-%\input{ncert/12/13/5/4/binom.tex}
-\item In an examination, 20 questions of true-false type are asked. Suppose a student tosses a fair coin to determine his answer to each question. If the coin falls heads, he answer true; if it falls tails, he answer false. Find the probability that he answers at least 12 questions correctly.\\
-\\
-\solution
-%\input{ncert/12/13/5/7/binom.tex}
-\item It is known that 10 $\%$ of certain articles manufactured are defective. What is the probability that in a random sample space of 12 such articles,9 are defective? \\
-\solution
-\input{ncert/12/13/5/13/binom.tex}
-\item The probability that a student is not a swimmer is $\frac{1}{5}$ .Then the probability that out of five students, four are swimmers 
-\begin{enumerate}
-    \item $\comb{5}{4}\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:12/13/5/15/1} \\
-    \item $\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:12/13/5/15/2}\\
-    \item \label{3}$\comb{5}{1}\frac{1}{5}\brak{\frac{4}{5}}^{4}$\\
-    \item None of these
-\end{enumerate}
-\solution
-\input{ncert/12/13/5/15/binom.tex}
-
-\item Suppose that 90 \% of people are right-handed. What is the probability that atmost 6 of a random sample of 10 people are right-handed. 
-	\\
-\solution
-\input{ncert/12/13/6/4/gauss.tex}
-
+\solution \\
+\input {exemplar/12/13/3/76/main.tex}
 \end{enumerate}

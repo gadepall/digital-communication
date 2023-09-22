@@ -1,0 +1,185 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\prt}[2]{\ensuremath{p_{#1}^{\left(#2\right)} }}        % own macro for this question
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\cond}[2]{#1\middle|#2}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myaugvec}[2]{\ensuremath{\begin{amatrix}{#1}#2\end{amatrix}}}
+\providecommand{\rank}{\text{rank}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+	\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\diff}[2]{\ensuremath{\frac{d{#1}}{d{#2}}}}
+\providecommand{\myceil}[1]{\left \lceil #1 \right \rceil }
+\newcommand\figref{Fig.~\ref}
+\newcommand\tabref{Table~\ref}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+%%
+%	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\cosec}{\,\text{cosec}\,}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+Question: Three persons, A, B and C, fire at a target in turn, starting with A. Their probability of hitting the target are 0.4, 0.3 and 0.2 respectively. The probability of two hits is\\
+(A) 0.024\\
+(B) 0.188\\
+(C) 0.336\\
+(D) 0.452\\
+\solution \\
+\fi
+Let $X$, $Y$ and $Z$ be random variables with definition given as under:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+    Random Variable &  Description\\
+    \hline
+    $X$ & A hitting the target \\
+    \hline
+    $Y$ &  B hitting the target \\
+    \hline
+    $Z$ &  C hitting the target\\
+    \hline
+\end{tabular}
+\caption{Definition of Random variables}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+    Bernouli probability & Value & Description\\
+    \hline
+    $p_1$ & Probability of A hitting the target &0.4\\
+    \hline
+    $p_2$ &  Probability of B hitting the target&0.3 \\
+    \hline
+    $p_3$ &  Probability of C hitting the target&0.2\\
+    \hline
+\end{tabular}
+\caption{Probabilities}
+\end{table}
+
+We want to find the probability of two hits, which corresponds to $S = X + Y + Z$ being equal to 2\\
+PMF of $S$ using $z$-transform:\\
+Applying the z-transform on both the sides\\
+\begin{align}
+	M_S(z) &= M_{X+Y+Z}(z)
+\end{align}
+Using the expectation operator:\\
+\begin{align}
+	E\sbrak{z^{-S}}= M_X(z)\cdot M_Y(z)\cdot M_Z(z)
+\end{align}
+For a Bernoulli random variable X with parameter p, the Z-transform is given by:
+\begin{align}
+M_X(z) = (1 - p_i) +zp_i 
+\end{align}
+For the random variables\\
+\begin{align}
+M_X(z)=(1-0.4)+0.4z=0.6+0.4z \\
+M_Y(z)=(1-0.3)+0.3z=0.7+0.3z \\
+M_Z(z)=(1-0.2)+0.2z=0.8+0.2z
+\end{align}
+Now, we can find the z-transform of S, denoted as $M_S(z)$, which is the product of the Z-transforms of $X$,$Y$ and $Z$ since they are independent\\
+Coefficient of the $z^{2}$ term in $M_S(z)$ is corresponds to the probability of two hits. \\
+\begin{align}
+M_S(z)&=M_X(z)M_Y(z)M_Z(z)\\
+ &= \prod_{k=1}^{3} (1 - p_i) +zp_i \\
+&=(0.6+0.4z) (0.7+0.3z) (0.8+0.2z)\\
+&=0.188z^{2}+1.208z+..\\
+\therefore \text{The probability of two hits} =0.188
+\end{align}
+
