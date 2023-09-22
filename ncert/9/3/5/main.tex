@@ -1,0 +1,116 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Probability Assignment}
+\author{EE22BTECH11022-G.SAI HARSHITH$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Question: It is known that $10\%$ of certain articles manufactered are defective. What is probability that a random sample space of 12 such articles,9 are defective?\\
+\solution
+\fi
+Let $X$ be random variable defined as
+\begin{table}[!ht]
+	\input{ncert/9/3/5/tables/table.tex}
+\end{table}\\
+$X$ has a binomial distribution with parameters
+\begin{align}
+n=12 \qquad p=\frac{10}{100}=\frac{1}{10}
+\end{align}
+Pmf of $X$ for $1 \leq k \leq 12$ is
+\begin{align}
+p_X(k)&=\comb{n}{k}p^k(1-p)^{n-k}
+\end{align}
+Probability that a random sample space of 12 such articles,9 are defective is
+\begin{align}
+p_X(9)&=\comb{12}{9}\left(\frac{1}{10}\right)^9\left(1-\frac{1}{10}\right)^{12-9}\\
+&=\frac{12!}{9!3!}\left(\frac{1}{10}\right)^9\left(\frac{9}{10}\right)^{3}\\
+&=220\left(\frac{1}{10^9}\right)\left(\frac{9^3}{10^3}\right)\\
+&=22\left(\frac{9^3}{10^{11}}\right)\\
+&=1.603773(10^{-7})
+\label{eq:9.3.5,1}
+\end{align}
+Let Y be goussian variable
+\begin{align}
+\mu&=np\\
+&=\frac{6}{5}
+\end{align}
+\begin{align}
+\sigma^2&=np(1-p)\\
+&=\frac{27}{25}
+\end{align}
+Using Normal distribution at X=9.
+\begin{align}
+Z&=\frac{X-\mu}{\sigma}\\
+&=\frac{9-\frac{6}{5}}{\sqrt{\frac{27}{25}}}\\
+&=7.50555
+\end{align}
+For pdf calculation
+\begin{align}
+f_Y(x)&=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\end{align}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{ncert/9/3/5/figs/figure.png}
+\caption{Binomial pmf vs Gaussian pdf }
+\label{fig:9.3.5}
+\end{figure}
+From the plot, pmf is close to normal distribution pdf.
+\begin{align}
+p_Y(9)&=p_Z(7.5055)\\
+&=1.6109(10^{-7})
+\label{eq:9.3.5,2}
+\end{align}
+From \eqref{eq:9.3.5,1} and \eqref{eq:9.3.5,2},
+\begin{align}
+p_X(9)\approx p_Y(9)
+\end{align}
