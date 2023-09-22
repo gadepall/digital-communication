@@ -1,0 +1,81 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Exemplar - 12.13.3.102}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\vspace{3cm}
+\textbf{Question:} If $A$ and $B$ are two events such that $\pr{A} > 0$ and $\pr{A} + \pr{B} > 1$, then 
+\begin{align*}
+    \pr{B | A} \geq 1 - \frac{\pr{B^\prime}}{\pr{A}}
+\end{align*}
+\solution
+\fi
+\begin{align}
+    \pr{B|A} &= \frac{\pr{AB}}{\pr{A}}\\
+    &= \frac{\pr{A} + \pr{B} - \pr{A+B}}{\pr{A}}
+\end{align}
+For any event E, $\pr{E} \leq 1$
+\begin{align}
+    \therefore \pr{A + B} &\leq 1\\
+    -\pr{A + B} &\geq -1\\
+    \frac{\pr{A} + \pr{B} - \pr{A + B}}{\pr{A}} &\geq \frac{\pr{A} + \pr{B} - 1}{\pr{A}}\\
+    \pr{B|A} &\geq \frac{\pr{A} - \brak{1 -\pr{B}}}{\pr{A}}\\
+    \pr{B|A} &\geq \frac{\pr{A} - \pr{B^\prime}}{\pr{A}}\\
+    \pr{B|A} &\geq 1 - \frac{\pr{B^\prime}}{\pr{A}}
+\end{align}
+$\therefore$ Proved.
+% \end{document}    
