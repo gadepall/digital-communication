@@ -1,0 +1,112 @@
+\iffalse
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\begin{document}
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\solution}{\noindent \textbf{solution: }}
+
+\textbf{Question 11.16.4.9}\\
+If 4-digit numbers greater than 5,000 are randomly formed from the digits 0, 1, 3, 5, and 7, what is the probability of forming a number divisible by 5 when:
+\begin{enumerate}
+    \item The digits are repeated?
+    \item The repetition of digits is not allowed?
+\end{enumerate}
+\fi
+\solution 
+Let $X$ be a random variable such that:
+\begin{align}
+	X = \begin{cases}
+		0 & n \not\equiv 0 \pmod{5}\\
+		1 & n \equiv 0 \pmod{5}\end{cases}
+\end{align}
+
+Let $N$ be a 4 digit number $X_{1}X_{2}X_{3}X_{4}$ where $X_{1},X_{2},X_{3},X_{4}$ are digits of the number N.
+
+\begin{table}[h]
+    \centering
+    \input{ncert/11/16/4/9/tables/table1.tex}
+    \caption{Listing variables}
+    \label{table_1_anek}
+    \end{table}
+
+Let's solve each part separately. \\
+
+\textbf{(i) Repetition of digits}\\
+Let number of favourable outcomes be N(A) and total outcomes be N(T).
+
+For N $>$ 5000,
+
+\begin{table}[h]
+    \centering
+    \input{ncert/11/16/4/9/tables/table2.tex}
+    \caption{Conditions for N greater than 5000}
+    \label{table_2_anek}
+    \end{table}
+
+We must also exclude the case of 5000.
+Hence,
+\begin{align}
+	N(T)=(2\times5\times5\times5)-1 \\
+	\implies N(T)=249
+\end{align}
+
+\begin{table}[h]
+    \centering
+    \input{ncert/11/16/4/9/tables/table3.tex}
+    \caption{Conditions for N greater than 5000 and divisible by 5}
+    \label{table_3_anek}
+    \end{table}
+
+Here also we must exclude the case of 5000.
+\begin{align}
+	N(A)=(2\times5\times5\times2)-1 \\
+	\implies N(A)=99
+\end{align}
+
+With this information we can find the required answer,
+\begin{align}
+	\pr{X=1}=\frac{N(A)}{N(T)}\\
+	\implies \pr{X=1}=\frac{33}{83}
+\end{align}
+
+\textbf{(ii) No Repetition of Digits}\\
+Let number of favourable outcomes be N(B) and total outcomes be N(T).
+
+For N $>$ 5000,
+
+H\begin{table}[h]
+    \centering
+    \input{ncert/11/16/4/9/tables/table4.tex}
+    \caption{Conditions for N greater than 5000}
+    \label{table_4_anek}
+    \end{table}
+Hence,
+\begin{align}
+	N(T)=(2\times4\times3\times2) \\
+	\implies N(T)=48
+\end{align}
+
+For N $>$ 5000 and also divisble by 5:
+
+\begin{align}
+	X_{4} = \begin{cases}
+		0 & X_{1}=5 \\
+		5,0 & X_{1}=7
+	\end{cases}
+\end{align}
+
+Hence,
+\begin{align}
+	N(B)=(1\times3\times2\times1)+(1\times3\times2\times2) \\
+	\implies N(B)=18
+\end{align}
+
+With this information we can find the required answer,
+\begin{align}
+	\pr{X=1}=\frac{N(B)}{N(T)}\\
+	\implies \pr{X=1}=\frac{3}{8}
+\end{align}
+
