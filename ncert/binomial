@@ -491,5 +491,13 @@ of 52 cards. What is the probability that
 	\\
 \solution
 \input{ncert/12/13/6/4/gauss.tex}
+\item A box has $100$ pens of which $10$ are defective. What is the probability that out of a sample of $5$ pens drawn one by one with replacement at most one is defective?
+\begin{enumerate}[label=(\alph*)]
+\item $\brak{\frac{9}{10}}^5$
+\item $\frac{1}{2}\brak{\frac{9}{10}}^4$
+\item $\frac{1}{2}\brak{\frac{9}{10}}^5$
+\item $\frac{1}{2}\brak{\frac{9}{10}}^4 + \brak{\frac{9}{10}}^5$
+\end{enumerate}
+\input{exemplar/12/13/3/93/main.tex}
 
 \end{enumerate}
