@@ -193,7 +193,7 @@ columns=fullflexible
 
 \title{
 %	\logo{
-ASSIGNEMNT-1 PROBABILITY
+ASSIGNEMNT-4 PROBABILITY
 }
 \author{ Katherapaka Nikhil EE22BTECH11028$^{*}$% <-this % stops a space 
 }	
@@ -242,43 +242,37 @@ ASSIGNEMNT-1 PROBABILITY
 %\IEEEpeerreviewmaketitle
 
 Question 12.13.3.65\\
-You are given that A and B are two events such that \pr{B}=$\frac{3}{5}$ \pr{A \ | \ B}=$\frac{1}{2}$ \pr{A+B}=$\frac{4}{5}$ and \pr{A}=$\frac{1}{2}$  \pr{B \ | \ A^\prime} is equal to\\
+If A and B are independent, then \\
+\pr{exactly one of A, B occurs} =\pr{B}\pr{A^{\prime}}+\pr{A}\pr{B^{\prime}}\\
 \fi
 \solution 
-You are given that events $A$ and $B$ have the following probabilities:
+Let E be the event for getting exactly one of A,B occurs.\\
+If $A$ and $B$ are independent events
 \begin{align}
-\pr{B} &= \frac{3}{5} \\
-\pr{A+B} &= \frac{4}{5} \\
-\pr{A} &= \frac{1}{2}
+&\pr{AB} = \pr{A} \pr{B}
 \end{align}
-\begin{align}
-\pr{AB}&=\pr{A}+\pr{B}-\pr{A+B}\\
-&=\frac{1}{2}+\frac{3}{5}-\frac{4}{5}\\
-&=\frac{3}{10}
-\end{align}
-We know that,
-\begin{align}
-A + A^{\prime} &= 1\\
-AA^{\prime} &= 0
-\end{align}
-We can write $\pr{B}$ as:
 \begin{align}
 \pr{B} &= \pr{B\brak{A + A^{\prime}}}\\
-	&= \pr{BA + BA^{\prime}}
-\end{align}
-By inclusion-exclusion principle,
-\begin{align}
-\pr{B} &= \pr{BA} + \pr{BA^{\prime}} + \pr{\brak{BA}\brak{BA^{\prime}}}\\
+	&= \pr{BA + BA^{\prime}}\\
+ &= \pr{BA} + \pr{BA^{\prime}} + \pr{\brak{BA}\brak{BA^{\prime}}}\\
 	&= \pr{BA} + \pr{BA^{\prime}} + \pr{\brak{BB}\brak{AA^{\prime}}}\\
 	&= \pr{BA} + \pr{BA^{\prime}}\\
 	\implies \pr{BA^{\prime}}&=\pr{B}-\pr{BA}\\
-	&=\frac{3}{5}-\frac{3}{10}\\
-	&=\frac{3}{10}
-\end{align} 
+	&=\pr{B}-\pr{A} \pr{B}\\
+	&=\pr{B}\brak{1-\pr{A}}\\
+	&=\pr{B}\pr{A^\prime}
+	\end{align}
 \begin{align}
-\pr{B \ | \ A^\prime} &= \frac{\pr{A^\prime B}}{\pr{A^\prime}} \\
-&=\frac{\frac{3}{10}}{\frac{1}{2}}\\
-&=\frac{3}{5}
+     \pr{A^\prime B}&= \pr{A^\prime} \pr{B}\\
+\pr{AB^\prime}&= \pr{A} \pr{B^\prime} 
 \end{align}
+\begin{align}
+\pr{E}&=\pr{A^\prime B+AB^\prime}\\
+&= \pr{A^\prime B} + \pr{AB^\prime}-\pr{A^\prime B AB^\prime} \\
+&= \pr{A^\prime} \pr{B} + \pr{A} \pr{B^\prime}-0 \quad \brak{AA^\prime=0}\\
+&= \pr{A^\prime} \pr{B} + \pr{A} \pr{B^\prime}
+\end{align}
+$\therefore$ The statement is true
+
 
 

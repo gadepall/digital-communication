@@ -1,17 +1,13 @@
-# Given probabilities
-pr_B = 3/5
-pr_A_given_B = 1/2
-pr_A_and_B = 4/5
-pr_A = 1/2
+# Define the probabilities
+prob_A = 0.3  # Probability of event A
+prob_B = 0.6  # Probability of event B
 
-# Calculate the probability of A' (not A)
-pr_A_prime = 1 - pr_A
+# Calculate the probabilities according to the statement
+exactly_one_A_or_B = (1 - prob_A) * prob_B + prob_A * (1 - prob_B)
 
-# Calculate the conditional probability of A' given B
-pr_A_prime_given_B = 1 - pr_A_given_B
-
-# Use Bayes' theorem to calculate P(B | A')
-pr_B_given_A_prime = (pr_A_prime_given_B * pr_B) / pr_A_prime
-
-print(f"The conditional probability P(B | A') is: {pr_B_given_A_prime}")
+# Output the result
+if exactly_one_A_or_B == prob_A * prob_B + (1 - prob_A) * prob_B + prob_A * (1 - prob_B):
+    print("The statement is false.")
+else:
+    print("The statement is true.")
 
