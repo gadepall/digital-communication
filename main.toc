@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {9.1}Uniform Random Numbers}{423}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Central Limit Theorem}{430}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Gaussian}{434}{section.9.3}%
-\contentsline {section}{\numberline {9.4}From Uniform to Other}{450}{section.9.4}%
+\contentsline {section}{\numberline {9.4}From Uniform to Other}{452}{section.9.4}%
 \contentsline {chapter}{\numberline {10}Maximum Likelihood Detection: BPSK}{453}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Maximum Likelihood}{453}{section.10.1}%
 \contentsline {chapter}{\numberline {11}Transformation of Random Variables}{455}{chapter.11}%
