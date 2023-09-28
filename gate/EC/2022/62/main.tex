@@ -1,0 +1,291 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[article]{IEEEtran}
+       \def\inputGnumericTable{}                                 %%
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\renewcommand{\theenumi}{\Alph{enumi}}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+ %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\prt}[2]{\ensuremath{p_{#1}^{\left(#2\right)} }}        % own macro for this question
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\cond}[2]{#1\middle|#2}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myaugvec}[2]{\ensuremath{\begin{amatrix}{#1}#2\end{amatrix}}}
+\providecommand{\rank}{\text{rank}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+	\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\diff}[2]{\ensuremath{\frac{d{#1}}{d{#2}}}}
+\providecommand{\myceil}[1]{\left \lceil #1 \right \rceil }
+\newcommand\figref{Fig.~\ref}
+\newcommand\tabref{Table~\ref}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+%%
+%	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\cosec}{\,\text{cosec}\,}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\bibliographystyle{IEEEtran}
+\title{
+%	\logo{
+Assignment
+%	}
+}
+\author{ Karthikeya hanu prakash kanithi (EE22BTECH11026)}
+\maketitle
+\parindent0px
+\vspace{3cm}
+Question : Consider communication over a memoryless binary symmetric channel using a
+(7, 4) Hamming code. Each transmitted bit is received correctly with probability$(1 - \epsilon)$, and flipped with probability $\epsilon$. For each codeword transmission, the receiver
+performs minimum Hamming distance decoding, and correctly decodes the message
+bits if and only if the channel introduces at most one bit error.
+\\For $\epsilon = 0.1$, the probability that a transmitted codeword is decoded correctly is
+ \textunderscore\textunderscore\textunderscore\textunderscore\textunderscore\textunderscore (rounded off to two decimal places).
+ (rounded off to two decimal places). 
+\fi
+\\ \solution 
+Given that,
+Let X be a random variable defined in the \autoref{tab:62/2022};
+\begin{table}[h]
+	\centering
+	\input{gate/EC/2022/62/tables/Table2.tex}
+	\caption{Random variable $X$ declaration}
+        \label{tab:62/2022}
+\end{table}
+\\Then, $X \sim Bin(n,p)$ where 
+\begin{align}
+	n = 7 \quad p = \epsilon = 0.1 
+	\label{eq:62/2022}
+\end{align}
+the pmf of X is given by
+\begin{align}
+    p_X(k) = \comb{7}{k} (\epsilon)^k (1 - \epsilon)^{7-k}
+    \label{eq:62/2022/2}
+\end{align}
+the cdf of X is given by
+\begin{align}
+    F_X(k) = \sum_{i=0}^{k} \comb{7}{i} (\epsilon)^i (1 - \epsilon)^{7-i}
+    \label{eq:62/2022/3}
+\end{align}
+From equation \eqref{eq:62/2022/3}, the probability of getting one or less error is given by 
+\begin{align}
+    F_X(1) &= \sum_{i=0}^{1} \comb{7}{i} (\epsilon)^i (1-\epsilon)^{7-i}\\
+    &= \comb{7}{0} (\epsilon)^0 (1-\epsilon)^{7} + \comb{7}{1} (\epsilon)^1 (1-\epsilon)^{6}\\
+    &= (1-\epsilon)^{7}+7(\epsilon)^1(1-\epsilon)^{6} \label{eq:62/2022/4}
+\end{align}
+From \eqref{eq:62/2022} and \eqref{eq:62/2022/4}, 
+\begin{align}
+    F_X(1) &= (1-0.1)^{7}+7(0.1)^1(1-0.1)^{6} \\
+    &= 0.85
+\end{align}
+$\therefore$ the probability that a transmitted codeword is decoded correctly is 0.85.
+\newpage
+\textbf{Gaussian}\\
+Let parameters be defined in the \autoref{tab:62/2022/2};
+\begin{table}[h]
+	\centering
+	\input{gate/EC/2022/62/tables/Table3.tex}
+	\caption{Parameters}
+        \label{tab:62/2022/2}
+\end{table}
+\\Let Y is the Gaussian obtained by approximating binomial with parameters n,p then By Central limit theroem, 
+\begin{align}
+	X \approx Y \sim \mathcal{N}(np,npq)
+\end{align}
+We need to find 
+\begin{align}
+	\pr{Y \le 1} = F_Y(1)
+\end{align}
+After corrections to make the vlaues more accurate, we need to find
+\begin{align}
+	\pr{Y \le 1.33} = F_Y(1.33)
+\end{align}
+then CDF of $Y$ is:
+\begin{align}
+	F_Y(x)&=\pr{Y \le x} \\
+	&=\pr{Y-\mu \le x-\mu} \\
+	&=\pr{\frac{Y-\mu}{\sigma} \le \frac{x-\mu}{\sigma}} \label{eq:62/2022/5}
+\end{align}
+Since, 
+\begin{align}
+	\frac{Y-\mu}{\sigma} \sim \mathcal{N}(0,1)
+\end{align}
+Q function is defined
+\begin{align}
+	\qfunc{x} &= \pr{Y > x} \, \forall x \in Y \sim \mathcal{N}(0,1) \label{eq:62/2022/6}
+\end{align}
+From \eqref{eq:62/2022/5} and \eqref{eq:62/2022/6}, 
+\begin{align}
+	F_Y(x)&=1-\pr{\frac{Y-\mu}{\sigma} > \frac{x-\mu}{\sigma}}\\
+	&= 
+    \begin{cases}
+        1-\qfunc{ \frac{x-\mu}{\sigma}}, &  x > \mu \\
+        \qfunc{ \frac{\mu-x}{\sigma}} , &  x < \mu
+    \end{cases} \label{eq:62/2022/7}
+\end{align}
+From \eqref{eq:62/2022/7} and \autoref{tab:62/2022/2},
+\begin{align}
+	F_Y(1.33)&=1-\qfunc{ \frac{1.33-0.7}{0.63}} \\
+	&= 1-\qfunc{1}\\
+	&= 0.8413
+\end{align}
+$\therefore$ the probability that a transmitted codeword is decoded correctly is 0.8413.
+\\The Binomial CDF vs. Guassian CDF plot is given in fig\ref{fig:62/2022}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\columnwidth]{gate/EC/2022/62/figs/figure1.png}
+    \caption{Binomial CDF vs. Guassian CDF}
+    \label{fig:62/2022}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
