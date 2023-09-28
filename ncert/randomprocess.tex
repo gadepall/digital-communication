@@ -1,10 +1,13 @@
 \begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
-\item Consider communication over a memoryless binary symmetric channel using a
-(7, 4) Hamming code. Each transmitted bit is received correctly with probability$(1 - \epsilon)$, and flipped with probability $\epsilon$. For each codeword transmission, the receiver
-performs minimum Hamming distance decoding, and correctly decodes the message
-bits if and only if the channel introduces at most one bit error.
-\\For $\epsilon = 0.1$, the probability that a transmitted codeword is decoded correctly is
- \textunderscore\textunderscore\textunderscore\textunderscore\textunderscore\textunderscore (rounded off to two decimal places).
-\\
-\input{gate/EC/2022/62/main.tex}
+\item The frequency response $H(f)$ of of a linear time-invariant syatem has magnitude as shown in \figref{fig:11}\\
+Statement 1: The system is necessarily a pure delay system for inputs which are bandlimited to $-a \leq f \leq a$.\\
+Statement 2: For any wide-sense stationary input process with power spectral density $S_X(f)$, the output power spectral density $S_Y(f)$ obeys $S_X(f)=S_Y(f)$ for $-a \leq f \leq a$.\\
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{figs/figure.png}
+\caption{$|H(f)|$ vs frequency}
+\label{gate/fig:23.2022,1}
+\end{figure}\\
+\input{gate/EC/2022/23/main.tex}
+\hfill (GATE EC 2022)
 \end{enumerate}
