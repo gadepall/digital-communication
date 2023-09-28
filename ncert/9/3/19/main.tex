@@ -1,0 +1,131 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Gaussian - 9.3.19}
+\author{EE22BTECH11039 - Pandrangi Aditya Sriram$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\vspace{3cm}
+\textbf{Question:} Suppose $X$ is a binomial distribution $B\left(6,\frac{1}{2}\right)$. Show that $X=3$ is the most likely outcome.
+(Hint : $P(X=3)$ is the maximum among all $P(x_i),x_i=0,1,2,3,4,5,6$)\\
+\solution
+\fi
+\begin{table}[h]
+    \input{ncert/9/3/19/tables/randomvar}
+    \label{tab:9.3.19_table}
+    \caption{Random Variables}
+\end{table}
+\begin{enumerate}
+\item \textbf{Binomial:}
+\begin{align}
+    X \sim Bin\brak{6,\frac{1}{2}} 
+\end{align}
+We know that, for $k \in \mathbb{W}$ and $k \in [0,n]$, the maximum of $\comb{n}{k}$ occurs at
+\begin{equation}
+    k =
+    \begin{cases}
+        \frac{n}{2}, & \text{if } n \text{ is even} \\
+        \frac{n+1}{2} \quad \text{or} \quad \frac{n-1}{2}, & \text{if } n \text{ is odd} 
+    \end{cases}
+\end{equation}
+As, 
+\begin{align}
+   	n&=6\\
+   	\implies k&=\frac{n}{2}
+   	=3
+\end{align}
+$\therefore X = 3$ is the most likely outcome.
+\begin{align}
+    p_X(k) &= \comb{6}{k} \brak{\frac{1}{2}}^6 \\
+    p_X(3) &= \comb{6}{3} \brak{\frac{1}{2}}^6 \\
+    &= \frac{5}{16}
+\end{align}
+\item \textbf{Gaussian:}
+The binomial distribution $X \sim Bin\brak{6,\frac{1}{2}}$ can be approximated as a Gaussian distribution $Y \sim \mathcal{N}\brak{\mu, \sigma^2}$ using the Mean $\mu$ and Standard Deviation $\sigma$ parameters.
+\begin{align}
+    \mu &= np = 6 \times \frac{1}{2} = 3\\
+    \sigma^2 &= npq = 6 \times \frac{1}{2} \times \frac{1}{2} = \frac{3}{2}
+\end{align}
+Thus, the Gaussian (normal) approximation is:
+\begin{align}
+    Y &\sim \mathcal{N}\brak{3, \frac{3}{2}}\\
+    \implies p_Y(x) &= \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2} \brak{\frac{x - \mu}{\sigma}}^2}\\
+    &= \frac{1}{\sqrt{3\pi}}e^{-\frac{\brak{x - 3}^2}{3}}
+\end{align}
+The most likely outcome is the mean of the Gaussian distribution. Thus, $Y = 3$ is the most likely outcome, as seen in the following plot.
+\end{enumerate}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{ncert/9/3/19/figures/PDF_and_PMF.png}
+\caption{Binomial Distribution and Gaussian Approximation}
+\label{fig:9.3.19}
+\end{figure}
+Comparing the values numerically:
+\begin{enumerate}
+\item Binomial
+\begin{align}
+	p_X(0) = p_X(6) &= \frac{1}{64} = 0.015625\\
+	p_X(1) = p_X(5) &= \frac{6}{64} = 0.09375\\
+	p_X(2) = p_X(4) &= \frac{15}{64} = 0.234375\\
+	p_X(3) &= \frac{20}{64} = 0.3125
+\end{align}
+\item Gaussian
+\begin{align}
+        p_Y(0) = p_Y(6) &= 0.01621739\\
+        p_Y(1) = p_Y(5) &= 0.08586282\\
+        p_Y(2) = p_Y(4) &= 0.23339933\\
+        p_Y(3) &= 0.32573501
+\end{align}
+\end{enumerate}
