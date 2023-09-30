@@ -695,7 +695,20 @@ Verify by plotting  the theoretical $P_e$ with respect to $A$ from 0 to 10 dB.
 		p_{X}(0) = p
 	\end{align}
 \item Repeat the above exercise using the MAP criterion.
-
+  \section{Examples}
+  \begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+\item 
+Consider a channel over which either symbol $x_{A}$ or symbol $x_{B}$ is transmitted. Let the output of the channel $Y$ be the input to a maximum likelihood (ML) detector at the receiver. The conditional probability density for $Y$ given $x_{A}$ and $x_{B}$ are:
+\begin{align*}
+f_{Y|x_{A}} \brak {y} &= e^{-\brak{y+1}}u\brak{y+1}\\
+f_{Y|x_{B}} \brak {y} &= e^{\brak{y-1}}\brak{1-u\brak{y-1}}
+\end{align*}
+where $u\brak{.}$ is the standard unit step function. the probability of symbol error for this system is \hfill(GATE EC 2022)
+\\
+\solution
+\\
+\input{}
 		\end{enumerate}
 		\iffalse
 \section{Gaussian to Other}
