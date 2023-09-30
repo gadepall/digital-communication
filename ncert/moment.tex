@@ -227,4 +227,22 @@ E($X^{2}$)is equal to\\
 	\\	\input{exemplar/12/13/3/54/main.tex}
  \item A biased die is such that $\pr{4} = \frac{1}{10}$ and other scores being equally likely. The die is tossed twice. If X is the 'number of fours seen', find the variance of the random variable X.\\
  \input{exemplar/12/13/3/27/main.tex}
+ \item One million random numbers are generated from a statistically stationary process with a Gaussian distribution with mean zero and standard deviation $\sigma_0$.\\
+The $\sigma_0$ is estimated by randomly drawing out 10,000 number of samples ($x_n$). The estimates $\hat{\sigma}^2_1$ and $\hat{\sigma}^2_2$ are computed in the following two ways:
+\[
+\hat{\sigma}^2_1 = \frac{1}{10000} \sum_{n=1}^{10000} x_n^2
+\]
+
+\[
+\hat{\sigma}^2_2 = \frac{1}{9999} \sum_{n=1}^{10000} x_n^2
+\]
+Which of the following statements is true?
+\begin{enumerate}
+\item $E(\hat{\sigma}^2_2) = \sigma_0^2$ \label{eq:Option1}
+\item $E(\hat{\sigma}_2) = \sigma_0$ \label{eq:Option2}
+\item $E(\hat{\sigma}^2_1) = \sigma_0^2$ \label{eq:Option3}
+\item $E(\hat{\sigma}_1) = E(\hat{\sigma}_2)$ \label{eq:Option4}
+\end{enumerate} \hfill ( GATE EE 2023) \\
+\solution
+\input{ncert/25/2023}
 \end{enumerate}
