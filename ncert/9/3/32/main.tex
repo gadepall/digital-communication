@@ -1,0 +1,77 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Probability Assignment}
+\author{EE22BTECH11028-Katherapaka Nikhil$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Question:If X follows a binomial distribution with parameters n = 5, p and
+$p_X(2) = 9p_X(3)$
+then p is?\\
+\fi
+\solution
+\begin{align}
+p_X(2) &= \comb{5}{2} p^2 (1 - p)^{5 - 2}\\
+&= \frac{5!}{2!3!} p^2 (1 - p)^3\\
+&= 10 p^2 (1 - p)^3\\
+p_X(3) &= \comb{5}{3} p^3 (1 - p)^{5 - 3}\\
+&= \frac{5!}{3!2!} p^3 (1 - p)^2\\
+&= 10 p^3 (1 - p)^2\\
+9p_X(3) &= 9 \times 10 p^3 (1 - p)^2\\
+&= 90 p^3 (1 - p)^2\\
+\text{Given that } p_X(2) &= 9p_X(3)\\
+\implies 10 p^2 (1 - p)^3 &= 90 p^3 (1 - p)^2\\
+\implies (1 - p) &= 9p\\
+\implies 10p &=1 \\
+\implies p&=\frac{1}{10}
+\end{align}
