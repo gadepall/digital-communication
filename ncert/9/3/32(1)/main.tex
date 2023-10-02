@@ -1,0 +1,93 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Probability Assignment}
+\author{EE22BTECH11028-Katherapaka Nikhil$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Question:If X follows a binomial distribution with parameters n = 5, p and
+$p_X(2) = 9p_X(3)$
+then p is?\\
+\solution
+\fi
+\begin{align}
+\mu&=np\\
+&=5p
+\end{align}
+\begin{align}
+\sigma^2&=np(1-p)\\
+&=5p(1-p)
+\end{align}
+\begin{align}
+	Y &\sim N\brak{\mu,\sigma}
+\end{align}
+Using the condition \(p_Y(2) = 9p_Y(3)\), we get:
+\begin{align}
+e^{-\frac{1}{2}(\frac{2-\mu}{\sigma})^2} &= 9 e^{-\frac{1}{2}\left(\frac{3-\mu}{\sigma}\right)^2} \\
+\implies e^{-\frac{1}{2}\left(\frac{2 -  5p}{\sqrt{5p(1-p)}}\right)^2} &= 9 e^{-\frac{1}{2}\left(\frac{3 - 5p}{\sqrt{5p(1-p)}}\right)^2} \\
+\implies e^{-\frac{1}{2}\left(\frac{2 - 5p}{\sqrt{5p(1-p)}}\right)^2} &= 9 e^{-\frac{1}{2}\left(\frac{3 - 5p}{\sqrt{5p(1-p)}}\right)^2} \\
+\implies e^{-\frac{1}{2}\left(\frac{(2 - 5p)^2-(3 - 5p)^2}{(\sqrt{5p(1-p)})^2}\right)}&=9
+\end{align}
+Taking the natural logarithm of both sides, we have:
+\begin{align}
+\implies -\frac{1}{2}\left(\frac{(2 - 5p)^2-(3 - 5p)^2}{5p(1-p)}\right) &= \ln(9) \\
+\implies 4+25p^2-20p-9-25p^2+30p &= -10p(1-p) \ln(9) \\
+\implies 10p-5 &= -10p(1-p) \ln(9) \\
+\implies 1-2p &= (2p-2p^2) \ln(9) \\
+\implies 2p^2\ln(9) - 2p\ln(9) - 2p + 1 &= 0 
+\end{align}
+\begin{align}
+p &= \frac{2\ln(9) + 2 \pm \sqrt{(-2\ln(9) - 2)^2 - 4(2\ln(9))(1)}}{2(2\ln(9))} \\
+ &= \frac{2\ln(9) + 2 \pm \sqrt{4(\ln(9))^2 +4}}{4\ln(9)}\\
+&=0.178211588
+\end{align}
