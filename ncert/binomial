@@ -493,6 +493,6 @@ of 52 cards. What is the probability that
 \input{ncert/12/13/6/4/gauss.tex}
 \item A die is thrown again and again until three sixes are obtained. Find the probability of obtaining third six on sixth throw of a die.
 	\\
-\solution
+\solution 
 \input{ncert/12/13/6/7/main.tex}
 \end{enumerate}
