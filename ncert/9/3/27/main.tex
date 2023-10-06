@@ -1,0 +1,199 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\prt}[2]{\ensuremath{p_{#1}^{\left(#2\right)} }}        % own macro for this question
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\cond}[2]{#1\middle|#2}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myaugvec}[2]{\ensuremath{\begin{amatrix}{#1}#2\end{amatrix}}}
+\providecommand{\rank}{\text{rank}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+	\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\diff}[2]{\ensuremath{\frac{d{#1}}{d{#2}}}}
+\providecommand{\myceil}[1]{\left \lceil #1 \right \rceil }
+\newcommand\figref{Fig.~\ref}
+\newcommand\tabref{Table~\ref}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+%%
+%	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\cosec}{\,\text{cosec}\,}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+
+\textbf{QUESTION : 12.13.3.7} 
+
+}
+\author{ ROLL NO:EE22BTECH11027\\
+         NAME: KATARI SIRI VARSHINI
+	}
+	
+	
+
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+9.3.27.The probability of a man hitting the target is 0.25. He shoots 7 times.What is the probability of his hitting the target atleast twice?
+\fi
+\\ \solution:
+\begin{table}[ht]
+    \centering
+    \caption{Variables}
+    \label{table:gaussian/9/3/27/}
+\begin{tabular}{|c|c|c|}
+\hline
+Variable & Value & Description \\
+\hline
+n & 7 & Number of trails\\
+\hline
+p & 0.25 & The probability of man hitting the target\\
+\hline
+q & 0.75 & The probability of man not hitting the target\\
+\hline
+$\mu=np$ & 1.75 & mean of distribution\\
+\hline
+$\sigma=\sqrt{npq}$ & 1.145 & variance of distribution\\
+\hline
+$X$ & $ X \ge 2 $ & Number of times man hits the target \\
+\hline
+\end{tabular} 
+\end{table}\\
+From gaussian,
+\begin{align}
+Y \sim \gauss{\mu}{\sigma^{2}}
+\end{align}
+CDF of Y is defined as:
+\begin{align}
+	F_Y\brak{X}&=\pr{Y<X}\\
+	&=\pr{\frac{Y-\mu}{\sigma}\le \frac{X-\mu}{\sigma}}\\
+	\implies \frac{Y-\mu}{\sigma} &\sim N\brak{0,1}\\
+	&=1-\pr{\frac{Y-\mu}{\sigma}>\frac{X-\mu}{\sigma}}\\
+	&=\begin{cases}
+		1-\qfunc{\frac{X-\mu}{\sigma}} & X \geq \mu\\
+		\qfunc{\frac{\mu -X}{\sigma}} & X < \mu 
+	\end{cases}
+\end{align}
+Hence, the probability of hitting target atleast twice using gaussian distribution is:\\
+without correction:
+\begin{align}
+\pr{Y \ge 2} &= 1-\pr{Y < 2}\\
+&= 1-F_Y\brak{2}\\
+\implies \pr{Y \ge 2} &= \qfunc{\frac{X-\mu}{\sigma}}\\
+&= \qfunc{0.218}\\
+\pr{Y \ge 2} &= 0.4137
+\end{align}
+with correction:
+\begin{align}
+\pr{Y \ge 2} &= \qfunc{\frac{X-0.5-\mu}{\sigma}}\\
+&= \qfunc{-0.218}\\
+\pr{Y \ge 2} &= 0.5862
+\end{align}
+Hence, the probability of hitting target atleast twice using binomial distribution is:
+\begin{align}
+\pr{X\ge 2} &= 1 - \pr{X<2} \\
+&= 1-\sum_{k=0}^{1}\comb{n}{k}p^k\brak{1-p}^{n-k} \\
+&= 0.55
+\end{align}
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{ncert/9/3/27/figure/9.3.27.png}
+\caption{gaussian and binomial}
+\label{fig1:gaussian/9/3/27/}
+\end{figure}
+
+
