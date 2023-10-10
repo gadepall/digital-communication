@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -213,9 +213,10 @@ a fair coin to determine his answer to each question. If the coin falls heads, h
 true; if it falls tails, he answer false. Find the probability that he answers at least 12
 questions correctly.\\
 \solution
+\fi
 Let us define:
 \begin{table}[!ht]
-\input{/home/sameer/9.3.12/tables/table1.tex}
+\input{ncert/9/3/12/tables/table1.tex}
 \end{table}\\
 \begin{enumerate}
 \item Gaussian:
@@ -241,7 +242,7 @@ F_Y\brak{y} &=
 \begin{cases}
            1-\qfunc{ \frac{y-\mu}{\sigma}}, &  y > \mu \\
            \qfunc{ \frac{\mu-y}{\sigma}} , &  y < \mu
-\end{cases} \label{eq:9.3.28.1}	
+\end{cases} %\label{eq:9.3.28.1}	
 \end{align}
 The probability of getting atleast 12 answers correct:\\
 considering 0.5 as coorection term:
@@ -254,13 +255,13 @@ considering 0.5 as coorection term:
 \end{align}
 \end{enumerate}
 \begin{table}[!ht]
-\input{/home/sameer/9.3.12/tables/table2.tex}
+\input{ncert/9/3/12/tables/table2.tex}
 \end{table}
 \textbf{Gaussian vs Binomial}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{/home/sameer/9.3.12/figs/fig.png}
+\includegraphics[width=\columnwidth]{ncert/9/3/12/figs/fig.png}
 \end{figure}
-\end{document}
+%\end{document}
 
 
