@@ -1,3 +1,4 @@
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -92,13 +93,14 @@ columns=fullflexible
 \vspace{3cm}
 
 \title{
-%	\logo{
-   Assignment 2\\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad
-%	}
-}
-\author{ Aditya Garg \\ CS22BTECH11002 \\ 26 April 2023	
-	
-}	
+  
+
+  Assignment -2 in \LaTeX
+    
+  }
+  \author{ Muzaan Mohammed Faizel A P\\
+  EE22BTECH11036
+  }	
 % make the title area
 \maketitle
 \newpage
@@ -113,8 +115,8 @@ Suppose the following experiment is performed. One of the two urns is chosen
 at random. Next a ball is randomly chosen from the urn. Then a second ball is
 chosen at random from the same urn without replacing the first ball.
 
-\begin{enumerate}[label=(\alph*)]
-% \item Write the sample space showing all possible outcomes
+\begin{enumerate}
+	
 \item What is the probability that two black balls are chosen?
 
 \item What is the probability that two balls of opposite colour are chosen?
@@ -123,97 +125,65 @@ chosen at random from the same urn without replacing the first ball.
 
 %Answer
 \solution
-
-% Probability of an event $E$, written as $\pr{E}$
-% \begin{align}
-% \pr{E}=\displaystyle\frac{\text{Number of outcomes favourable to $E$}}{\text{Total Number of possible outcomes }}
-% \end{align}
-Let $Z$ be a Bernoulli random variable
- \begin{equation}
-    Z=
+\fi
+Let $X$ be a Bernoulli random variable
+    \begin{align} 
+    X=
     \begin{cases}
-      0, & \text{if Urn 1 chosen }\\
-      1, & \text{if Urn 2 chosen}
+      0, & \text{ Urn 1  }\\
+      1, & \text{Urn 2}
     \end{cases}
-  \end{equation}
+\end{align}
   Since both events are equally likely
   \begin{align}
-  \pr{Z=0} &= \pr{Z=1}\\
+  \pr{X=0} &= \pr{X=1}\\
          &=\frac{1}{2}
   \end{align}
-  Let $X_i$ be a random variable 
-  where $i$ denotes the turn
-  \begin{equation}
-    X_i=
+  Let $Y_i$ be a random variable to denote the  turn
+  \begin{align}
+    Y_i=
     \begin{cases}
-      0, & \text{if Black ball chosen }\\
-      1, & \text{if White ball chosen}
+      0, & \text{Black ball }\\
+      1, & \text{White ball }
     \end{cases}
-  \end{equation}
-Let $X_1$ be a random variable denoting first ball is chosen and
- $X_2$ be random variable denoting second ball is chosen .
- % \begin{enumerate}
- %     \item $(X+Y =1,Z=0) $ represents 2 black balls are chosen.
- %     \item $(X+Y =1,Z=1) $ represents 2 white balls are chosen.
- %     \item $ (X+Y) > 1 $ represents 2 balls of opposite colors are chosen.
- % \end{enumerate}
- 
- 
-
+  \end{align}
+$Y_1$ denotes the first ball and $Y_2$ denotes the second ball.
 \begin{table}[ht!]
 		\centering
-		\input{tables/table1.tex}
-		\caption{}
-		\label{table:table1}	
+		\input{exemplar/11/16/3/12/tables/table1.tex}
+		\caption{Random variables for each ball}
+		\label{tab:table1exemp}	
 	\end{table}
+\begin{enumerate}
 
-% \begin{table}[ht!]
-% 		\centering
-% 		\input{table-2.tex}
-% 		\caption{}
-% 		\label{table:table2}	
-% 	\end{table}
-
- 
-\begin{enumerate}[label =(\alph*)]
-% \item Sample Space S:
-% \begin{align}
-% \lcbrak{001,010,002,020,021,012,101,}\\
-%  \rcbrak{110,102,120,121,112} 
-% \end{align} 
-% \begin{align}
-%     \therefore n(S) = 12
-% % \end{align}
-\item Let $E$ be event that 2 black balls are chosen.
+\item 
 \begin{align}
-E &= \brak{X_1+X_2}^\prime  \\
-&= X_1^\prime X_2^\prime
+E &= \brak{Y_1+Y_2}^\prime  \\
+&= Y_1^\prime Y_2^\prime
 \end{align}
 Required Probability:
 \begin{align}  
-&\pr{X_1^\prime X_2^\prime} \\ \nonumber
-&=\pr{X_1^\prime X_2^\prime | Z^\prime}\pr{Z^\prime} \\ \nonumber
-&= \frac{2}{3}\times\frac{1}{2}\times\frac{1}{2} \\ \label{eq:1}
+&\pr{Y_1^\prime Y_2^\prime}=\pr{Y_1^\prime Y_2^\prime | X^\prime}\pr{X^\prime} \\ 
+&= \frac{2}{3}\times\frac{1}{2}\times\frac{1}{2} \\ 
 &= 1/6 
 \end{align}
+Therefore,
 \begin{align}
-\therefore \pr{E} = \frac{1}{6} 
+\pr{E} = \frac{1}{6} 
 \end{align}
-\item Let $E$ be event that balls of opposite colours are chosen.
+\item 
 \begin{align}
-E &= X_1 \xor X_2 \\
-&= X_1 X_2^\prime + X_1^\prime X_2
+E&= Y_1 Y_2^\prime + Y_1^\prime Y_2
 \end{align}
 Required Probability : 
 \begin{align}
-&\pr{X_1 X_2^\prime + X_1^\prime X_2} \\
-&=\pr{X_1 X_2^\prime} + \pr{X_1^\prime X_2} \\
-&\because \pr{X_1 X_1 ^\prime X_2 X_2 ^\prime} = 0 \\
+&\pr{Y_1 Y_2^\prime + Y_1^\prime Y_2}=\pr{Y_1 Y_2^\prime} + \pr{Y_1^\prime Y_2} \\
 &=\brak{\frac{1}{3}\times\frac{1}{2} + \frac{2}{3}\times\frac{1}{2}\times\frac{1}{2}}\times 2 \\
 &=\frac{2}{3}
 \end{align}
+Therefore,
 \begin{align}
-\therefore \pr{E} &= \frac{2}{3}
+\pr{E} &= \frac{2}{3}
 \end{align}
 \end{enumerate}
-\end{document}
+
