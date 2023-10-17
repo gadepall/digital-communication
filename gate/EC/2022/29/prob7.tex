@@ -1,0 +1,370 @@
+\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{optidef}
+\usepackage{gvv}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+%  \logo{
+Solution Gate EC 29.2022
+%  }
+}
+\author{ Aditya Vikram Singh$^{*}$% <-this % stops a space
+  \thanks{*The author is with the Department
+    of Electrical Engineering, Indian Institute of Technology, Hyderabad
+    502285 India e-mail:  gadepall@iith.ac.in. All content in this manual is released under GNU GPL.  Free and open   
+    source.}}  
+%\title{
+%  \logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%%\author{<-this % stops a space
+%\thanks{}}
+%}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% make the title area
+\maketitle
+
+%\newpage
+
+%\tableofcontents
+
+%\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+\textbf{Question 29}
+Let $H\brak{X}$ denote the entropy of a discrete
+random variable X taking K possible distinct
+real values. Which of the following statements
+is/are necessarily true?
+\begin{enumerate}[label=(\Alph*)]
+\item 
+$H\brak{X}\leq \log _{2} K$ bits\\
+\item 
+$H\brak{X} \leq H\brak{2X}$\\
+\item
+$H\brak{X}\leq H\brak{X^2}$\\
+\item
+$H\brak{X} \leq H\brak{2^X}$\\
+\end{enumerate}
+\fi
+\solution
+\begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|c|}
+\hline
+Random independent variable	&	value	of R.V		   &Description\\
+\hline
+$X$                         & $X$ $\in(x_1,x_2 ... ,x_K)$                                & Value of the discrete variable X\\
+\hline
+\end{tabular}
+\end{table}
+\begin{enumerate}
+\item For Option(A) we will find  \\
+We know that :
+%\begin{align}
+%\sum_{k=0}^{K}p_X(k) &= 1\\
+% H\brak{X} &= \sum_{k=0}^{K}p_X(k) \log _{2} \frac{1}{p_X(k)}
+ %\end{align}
+ \begin{maxi*}|s|
+{p_X(k)}{H\brak{X}}
+{}{}
+\addConstraint\sum_{k=0}^{K}p_X(k) &= 1
+%{y_{i}(w\phi(x_{i}+b))+\xi_{i}-1}
+%\addConstraint{\xi\geq0}{}
+\end{maxi*}
+$\implies$
+\begin{maxi*}|s|
+{p_X(k)}{-\sum_{k = 0}^{K}p_X(k) \log _{2}p_X(k) }
+{}{}
+\addConstraint\sum_{k=0}^{K}p_X(k) &= 1
+%{y_{i}(w\phi(x_{i}+b))+\xi_{i}-1}
+%\addConstraint{\xi\geq0}{}
+\end{maxi*}
+Now,we use lagranges multiplier to find the maximum entropy subject to the lagranges multiplier constant 
+$\lambda$ and $p_X(k)$
+\begin{align}
+L\brak{p_X(k),\lambda} &= -\sum_{k = 0}^{K}p_X(k) \log _{2}p_X(k) + \lambda\brak{\sum_{k = 0}^{k}p_X(k) - 1}\\
+\frac{\partial L}{\partial p_X(k)} &= -\log _{2}p_X(k) -1 + \lambda
+\end{align}
+Now, we take the derivative of L with respect to each $p_X(k)$ equal to zero for $H\brak{X}max$
+\begin{align}
+\lambda = \log _{2}\frac{2}{k}\\
+p_X(k) = 1/K
+\end{align}
+%If all the $K$ distinct values of the variable have the same probability,
+%then Entropy will be maximum \\
+ On solving, we get the value of 
+ \begin{align}
+ H\brak{X}_{max} &= \log _{2}K 
+ \end{align}
+% but, we know that every $x_i$ will have a different value so,
+ \begin{align}
+ H\brak{X} \leq \log _{2}K 
+ \end{align}
+ Hence, Option(A) is correct\\
+\item Let's consider the discrete variable as follows
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$X \in x_i$	&	$p_X(k)$\\
+\hline
+$-1$                         & $\frac{1}{4} $ \\
+\hline
+$0$                         & $\frac{1}{2}$  \\
+\hline
+$1$                         & $\frac{1}{4} $ \\
+\hline
+\end{tabular}
+\end{table}
+\begin{align}
+H\brak{X} &= \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
+H\brak{X} &=  1.5 units
+ \end{align}
+ Now $ Y = 2X$
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&          $p_Y(k)$\\
+\hline
+$-2$                         & $\frac{1}{4} $       \\
+\hline
+$0$                         & $\frac{1}{2} $ \\
+\hline
+$2$                         & $\frac{1}{4}$ \\
+\hline
+\end{tabular}
+\end{table}
+\begin{align}
+H\brak{Y} &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H\brak{Y} &=  1.5 units\\
+  H\brak{Y} &= H(2X) =H\brak{X}
+ \end{align}
+ Hence, Option(B) is correct\\
+ \item Similarly on substituting $Y = X^2$\\
+  \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&	$p_Y(k)$\\
+\hline
+$0$                         & $\frac{1}{2} $       \\
+\hline
+$1$                         & $\frac{1}{2} $ \\
+\hline
+\end{tabular}
+\end{table}
+ \begin{align}
+H\brak{Y} &= \sum_{i=0}^{1}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H\brak{Y} &=  1units\\
+  H\brak{Y} &= H\brak{X^2} \leq H\brak{X}
+ \end{align}
+ Hence, Option(C) is incorrect\\
+ \item Now for $Y = 2^X$\\
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&	$p_Y(k)$\\
+\hline
+$2^{-1} = \frac{1}{2}$                         & $\frac{1}{4} $ \\
+\hline
+$2^0 = 1$                          & $\frac{1}{2}$  \\
+\hline
+$2^1 = 2$                          & $\frac{1}{4} $ \\
+\hline
+\end{tabular}
+\end{table}
+\begin{align}
+H\brak{Y} &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H\brak{Y} &=  1.5 units\\
+  H\brak{Y} &= H\brak{2^X} =H\brak{X}
+ \end{align}
+ Hence, Option(D) is correct\\
+ The ans is (A), (B), (D)\\
+ These options are correct for the particular example.
+ \end{enumerate}
+
