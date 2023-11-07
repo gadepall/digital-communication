@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{setspace}
 \usepackage{gensymb}
@@ -197,13 +198,13 @@ columns=fullflexible
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 question: A fair coin is tossed four times and a person win Re 1 for each head and lose Re 1.5 for each tail that turns up.from the sample space calculate how many different amounts of money you can have after four tosses and the probability of having each of these amounts.
-
+\fi
 \solution
 Let us define a random variable $X$, where getting heads is success. 
 
 \begin{table}[h]
 	\centering
-	\input{tables/Table.tex}
+	\input{ncert/9/3/20/tables/Table.tex}
 	\caption{Random variable $X$ declaration}
         \label{tab:3.20}
 \end{table}
@@ -220,7 +221,7 @@ y=k(1)+(4-k)(-1.5)
 \end{align}
 \begin{table}[h]
 	\centering
-	\input{tables/Table2.tex}
+	\input{ncert/9/3/20/tables/Table2.tex}
 	\caption{amounts possible}
         \label{tab:9.3.20}
 \end{table}
@@ -252,11 +253,11 @@ simulation steps:
 
 
 \begin{figure}[!ht]
-\includegraphics[width=\columnwidth]{figs/fig.png}
+\includegraphics[width=\columnwidth]{ncert/9/3/20/figs/fig.png}
 \caption{ distribution of Y}
 \label{fig:20}
 \end{figure}
 
-\end{document}
+
 
 
