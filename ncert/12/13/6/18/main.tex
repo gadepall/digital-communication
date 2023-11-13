@@ -1,7 +1,8 @@
 \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\documentclass[journal,12pt]{IEEEtran}
+
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -19,6 +20,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
+\usepackage{caption}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -116,8 +118,12 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
+
+
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -155,31 +161,35 @@ columns=fullflexible
 %\makeatletter
 %\@addtoreset{figure}{problem}
 %\makeatother
+
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 %\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
+
+
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
 %\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
 %     \def\rightbox#1{\makebox[0in][r]{#1}}
 %     \def\centbox#1{\makebox[0in]{#1}}
 %     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 %     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
 \vspace{3cm}
+
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
-}
-\author{Yasir Usmani$^{*}$\\AI22BTECH11031% <-this % stops a space
-  \thanks{*The student is with the Department
-    of Artificial Intelligence, Indian Institute of Technology, Hyderabad,
-    502285, India.\\ e-mail: ai22btech11031@iith.ac.in.}
-  
-}
+\Huge\ Assignment 1\\
+\Huge\ Probability And Random Processes\\
+\large\author{D Mohith Sai Naidu\\EE22BTECH11017}}
+	
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
+
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -193,6 +203,7 @@ columns=fullflexible
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
+
 %\author{<-this % stops a space
 %\thanks{}}
 %}
@@ -213,6 +224,9 @@ columns=fullflexible
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
+
+
+
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
@@ -223,18 +237,31 @@ columns=fullflexible
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
+
+
+
 % make the title area
-\maketitle{\huge }
+\maketitle
+
+\newpage
+
 %\tableofcontents
+
 \bigskip
+
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
+
 %\begin{abstract}
 %%\boldmath
 %In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
@@ -246,10 +273,14 @@ columns=fullflexible
 % then you can use LaTeX's standard command \boldmath at the very start
 % of the abstract to achieve this. Many IEEE journals frown on math
 % in the abstract anyway.
+
 % Note that keywords are not normally used for peerreview papers.
 %\begin{IEEEkeywords}
 %Cooperative diversity, decode and forward, piecewise linear
 %\end{IEEEkeywords}
+
+
+
 % For peer review papers, you can put extra information on the cover
 % page as needed:
 % \ifCLASSOPTIONpeerreview
@@ -259,22 +290,80 @@ columns=fullflexible
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%%%%%%%  This is my Assignment %%%%%%%%%%%%%%%%%%%%%
-\textbf{12.13.6.18: Question}. 
-\textbf{Answer: (3) \pr{B\mid A} $>$ \pr{B}}\\\\
-\solution
-Given:
+
+\textbf{12.13.6.18: Question}. If \pr{A|B} $>$ \pr{A}, then which of the following is correct :\\
+
+\begin{enumerate}[label=(\Alph*)]
+
+ \item  
+ \label{12.13.6.18.A}
+ \pr{B|A} $<$ \pr{B}\\
+ \item 
+  \label{12.13.6.18.B}
+ \pr{AB} $<$ \pr{A}\pr{B}\\
+ \item 
+ \label{12.13.6.18.C}
+ \pr{B|A} $>$ \pr{B}\\
+ \item 
+  \label{12.13.6.18.D}
+ \pr{B|A} = \pr{B}\\
+
+\end{enumerate}
+
+
+\textbf{Answer: (C) \pr{B|A} $>$ \pr{B}.}
+
 \fi
+\solution We know: 
 \begin{align}
- \pr{A\mid B}&>\pr{A}
- \implies  \frac{\pr{AB}}{\pr{B}} > \pr{A}\\
- \implies \pr{AB} &> \pr{A}\pr{B}
-    \implies \frac{\pr{AB}}{\pr{A}} > \pr{B} 
-     \end{align}
-     Since
+    \label{eq:12.13.6.18.1}
+	\pr{A|B} > \pr{A}
+\end{align}
 \begin{align}
- \pr{B\mid A} = \frac{\pr{AB}}{\pr{A}},
- \pr{B\mid A} &> \pr{B}
- \end{align}
-Hence, option \ref{eq:ncert/12/13/6/18/c} is correct.
+	\implies \frac{\pr{AB}}{\pr{B}} > \pr{A}
+\end{align}
+\begin{align}
+    \label{eq:12.13.6.18.2}
+	\implies \pr{AB} > \pr{A}\pr{B}
+\end{align}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item To find, \pr{B|A}
+\begin{align}
+	\pr{B|A} = \frac{\pr{AB}}{\pr{A}}
+\end{align}
+Dividing \pr{A} on both sides of equation (\eqref{eq:12.13.6.18.1})
+\begin{align}
+	\implies \frac{\pr{AB}}{\pr{A}} > \frac{\pr{A}\pr{B}}{\pr{A}}
+\end{align}
+\begin{align}
+    \label{eq:12.13.6.18.3}
+	\implies \pr{B|A} > \pr{B}
+\end{align}
+
+But given \pr{B|A} $<$ \pr{B}\ so option \ref{12.13.6.18.A} is incorrect
+
+   \item from equation \eqref{eq:12.13.6.18.2} we have
+\begin{align}
+	 \pr{AB} > \pr{A}\pr{B}
+\end{align}
+Therefore, option \ref{12.13.6.18.B} is incorrect   
+
+    \item from equation \eqref{eq:12.13.6.18.2} we have
+\begin{align}
+	\pr{B|A} > \pr{B}
+\end{align}
+which matches the given option \\
+Therefore, option \ref{12.13.6.18.C} is correct
+
+    \item from equation \eqref{eq:12.13.6.18.3} we have
+\begin{align}
+	 \pr{B|A} > \pr{B}
+\end{align}
+
+but given \pr{B|A} = \pr{B}\\
+
+Therefore, option \ref{12.13.6.18.D} is incorrect
+    
+\end{enumerate}
 
